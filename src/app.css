@@ -1,0 +1,31 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    h1, h2, h3, h4 {
+      @apply font-bold;
+    }
+  }
+
+  .bg-thistle {
+    background: #dcbbed;
+  }
+  .bg-lightblue {
+    background: lightblue;
+  }
+
+  .bg-whitesmoke {
+    background: whitesmoke;
+  }
+
+  .bg-gainsboro {
+    background: #cae6ea;
+  }
+  fieldset {
+    /* border: 2px gray solid; */
+    padding: 0;
+    /* margin: 4px; */
+    min-width: 0;
+
+  }
