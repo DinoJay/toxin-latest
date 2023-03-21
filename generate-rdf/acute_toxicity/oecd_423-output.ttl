@@ -1,0 +1,375 @@
+@prefix rr:    <http://www.w3.org/ns/r2rml#> .
+@prefix ont:   <http://ontologies.vub.be/oecd#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+
+<http://toxin.vub.be/resource/test/acute-toxicity/2>
+        a                               ont:Test ;
+        ont:SCCS_comment_to_test        "submission 2: regarding the composition of the test substance it is mentioned in the original study report “not specified; excluded from the statement of compliance”, i.e. the composition of the test substance is unknown to the sccs. although ld50 in rats has been reported to be > 2000 mg/kg bw, the acute toxicity of acetylated vetiver oil (avo) cannot be evaluated as the composition of the test substances used in the submitted acute toxicity studies is not provided. submission 3: the sccs has noted the analyses of the different samples of avo, and has considered that the range of this variability can be accepted for samples of natural origin. therefore the sccs accepts the outcome of the acute oral toxicity studies. in view of the data provided avo can be regarded as acutely orally nontoxic." ;
+        ont:additional_info             "test substance: vetiveryl acetate, ester content: 65.9%" ;
+        ont:additional_information      "test substance: vetiveryl acetate, ester content: 65.9%" ;
+        ont:administration_scheme       "single" ;
+        ont:chemical_batch_nr           "9000317035" ;
+        ont:compound                    <http://toxin.vub.be/resource/compound/vetiveryl%20acetate> ;
+        ont:conclusion                  "the acute oral ld50 value was >2000 mg/kg bw for male and female Wistar rats" ;
+        ont:discussion                  "there were no deaths, clinical signs, macroscopic findings or affected body weight gain in any of the dosed animals" ;
+        ont:dose_volume                 "10" ;
+        ont:gavage                      "yes" ;
+        ont:glp                         "yes" ;
+        ont:guideline                   "OECD 423" ;
+        ont:moribund_or_dead_animals_prior_to_study_termination
+                "no" ;
+        ont:n_animals_group             "6" ;
+        ont:observation_period          "14" ;
+        ont:physical_form               "yellow liquid" ;
+        ont:ref_in_dossier              "16, 48, 70 (in sumission 2)" ;
+        ont:rodent_strain               "rat / wistar" ;
+        ont:sccs_comment                "submission 2: regarding the composition of the test substance it is mentioned in the original study report “not specified; excluded from the statement of compliance”, i.e. the composition of the test substance is unknown to the sccs. although ld50 in rats has been reported to be > 2000 mg/kg bw, the acute toxicity of acetylated vetiver oil (avo) cannot be evaluated as the composition of the test substances used in the submitted acute toxicity studies is not provided. submission 3: the sccs has noted the analyses of the different samples of avo, and has considered that the range of this variability can be accepted for samples of natural origin. therefore the sccs accepts the outcome of the acute oral toxicity studies. in view of the data provided avo can be regarded as acutely orally nontoxic." ;
+        ont:sex                         "f & m" ;
+        ont:starting_dose_levels_unity  "mg/kg bw" ;
+        ont:starting_dose_levels_value  "2000" ;
+        ont:type                        "in vivo" ;
+        ont:vehicle_name                "polyethylene glycol (PEG 300)" ;
+        ont:year                        "1999" .
+
+<http://toxin.vub.be/resource/test/acute-toxicity/8>
+        a                               ont:Test ;
+        ont:administration_scheme       "single" ;
+        ont:animal_weight_changes       "body weight gain of 4/6 animals of the 50 mg/kg bw group was normal." ;
+        ont:changes_autonomic_central_nervous_system
+                "following the dose of 50 mg/kg bw ptosis was observed. the change was absent 4 hours after the administration; thereafter, any abnormalities were not observed from the next day of administration to the day of autopsy." ;
+        ont:changes_skin_fur_eyes_mucous_membranes
+                "following the dose of 50 mg/kg bw paleness of skin was observed. the change was absent 4 hours after the administration; thereafter, any abnormalities were not observed from the next day of administration to the day of autopsy." ;
+        ont:chemical_batch_nr           "a3221" ;
+        ont:composition                 "test substance dissolved in water" ;
+        ont:compound                    <http://toxin.vub.be/resource/compound/2%2C6-diaminopyridine> ;
+        ont:conclusion                  "the ld50 was between 50-300 mg/kg bw" ;
+        ont:convulsions                 "animals administered with 300 mg/kg of the test item showed clonic and tonic convulsions, and died within approximately 1 hour. " ;
+        ont:dose_volume                 "9" ;
+        ont:gavage                      "yes" ;
+        ont:glp                         "yes" ;
+        ont:guideline                   "OECD 423" ;
+        ont:moribund_or_dead_animals_prior_to_study_termination
+                "yes" ;
+        ont:n_animals_group             "3" ;
+        ont:observation_period          "15" ;
+        ont:physical_form               "solid" ;
+        ont:purity                      "99.7" ;
+        ont:ref_in_dossier              "2" ;
+        ont:rodent_strain               "rat/sprague-dawley [crl:cd (sd), spf]" ;
+        ont:salivation                  "animals administered with 300 mg/kg of the test item showed extreme salivation and died within approximately 1 hour. following the dose of 50 mg/kg bw salivation was observed. these changes were absent 4 hours after the administration; thereafter, any abnormalities were not observed from the next day of administration to the day of autopsy." ;
+        ont:sex                         "f" ;
+        ont:starting_dose_levels_unity  "mg/kg bw" ;
+        ont:starting_dose_levels_value  "300" ;
+        ont:tremors                     "animals administered with 300 mg/kg of the test item showed  tremor  and died within approximately 1 hour." ;
+        ont:type                        "in vivo" ;
+        ont:vehicle_name                "distilled water" .
+
+<http://toxin.vub.be/resource/compound/1%2C3%2C5-triazine%2C%202%2C4%2C6-tris%281%2C1%27-biphenyl%29-4-yl->
+        a               ont:Compound ;
+        rdfs:label      "1,3,5-triazine, 2,4,6-tris(1,1'-biphenyl)-4-yl-" ;
+        ont:compoundOf  <http://toxin.vub.be/resource/dossier/1%2C3%2C5-triazine%2C%202%2C4%2C6-tris%281%2C1%27-biphenyl%29-4-yl-> .
+
+<http://toxin.vub.be/resource/test/acute-toxicity/7>
+        a                               ont:Test ;
+        ont:additional_info             "test substance: fat 65’080/a" ;
+        ont:additional_information      "test substance: fat 65’080/a" ;
+        ont:animal_weight_changes       "when compared to historical control animals, a slight reduced body weight gain was recorded in 2/3 males given 200 mg/kg bw during the first or second week of the study. at 2000 mg/kg bw, a reduced body weight gain was noted in 1/3 females during the second week of the study. the overall body weight gain of the other animals was not affected by the treatment with the test substance." ;
+        ont:changes_autonomic_central_nervous_system
+                "at 2000 mg/kg bw hypoactivity in females, was observed in all animals on day 1." ;
+        ont:changes_respiratory_system  "at 2000 mg/kg bw, dyspnea in females was observed in all animals on day 1. " ;
+        ont:changes_skin_fur_eyes_mucous_membranes
+                "at 2000 mg/kg bw, piloerection in females, were observed in all animals on day 1." ;
+        ont:chemical_batch_nr           "eth  50/129b" ;
+        ont:compound                    <http://toxin.vub.be/resource/compound/1%2C3%2C5-triazine%2C%202%2C4%2C6-tris%281%2C1%27-biphenyl%29-4-yl-> ;
+        ont:conclusion                  "under the conditions of this study the median lethal dose of the test substance after oral dosing was found to be greater than 2000 mg/kg bw for male and female rats." ;
+        ont:discussion                  "at 200 mg/kg bw, no clinical signs were observed." ;
+        ont:dose_volume                 "10" ;
+        ont:gavage                      "yes" ;
+        ont:glp                         "yes" ;
+        ont:guideline                   "OECD 423" ;
+        ont:moribund_or_dead_animals_prior_to_study_termination
+                "no" ;
+        ont:n_animals_group             "3, 6" ;
+        ont:observation_period          "14" ;
+        ont:purity                      "> 98" ;
+        ont:ref_in_dossier              "1 (subm 1) annex 1" ;
+        ont:rodent_strain               "rat/ sprague dawley" ;
+        ont:sex                         "f & m" ;
+        ont:starting_dose_levels_unity  "mg/ kg group 1, group 2" ;
+        ont:starting_dose_levels_value  "200, 2000" ;
+        ont:type                        "in vivo" ;
+        ont:vehicle_concentration       "0.5" ;
+        ont:vehicle_name                "methylcellulose" .
+
+<http://toxin.vub.be/resource/test/acute-toxicity/1>
+        a                               ont:Test ;
+        ont:additional_info             "test substance: c 008, purity: mentioned under chemical identity by batch number" ;
+        ont:additional_information      "test substance: c 008, purity: mentioned under chemical identity by batch number" ;
+        ont:animal_weight_changes       "the mean body weight gain over the study period was considered to be normal." ;
+        ont:changes_autonomic_central_nervous_system
+                "hunched posture was noted in one female and 3 males on day 1" ;
+        ont:changes_skin_fur_eyes_mucous_membranes
+                "red staining of the back and/or snout and/or head was noted in 1 female and 2 males between days 1 and 11." ;
+        ont:chemical_batch_nr           "00506441 01" ;
+        ont:composition                 "test substance in propylene glycol" ;
+        ont:compound                    <http://toxin.vub.be/resource/compound/basic%20red%2076> ;
+        ont:conclusion                  "the oral ld50-value of C 008 in wistar rats was established to exceed 2000 mg/kg bw." ;
+        ont:gavage                      "yes" ;
+        ont:glp                         "yes" ;
+        ont:gross_necropsy              "no abnormalities were found at macroscopic post mortem examination of the animals" ;
+        ont:guideline                   "OECD 423" ;
+        ont:moribund_or_dead_animals_prior_to_study_termination
+                "no" ;
+        ont:n_animals_group             "3" ;
+        ont:observation_period          "15" ;
+        ont:other_signs_of_toxicity     "red and/or yellow faeces and/or yellow urine were seen among the animals on days 2 and/or 3." ;
+        ont:ref_in_dossier              "5" ;
+        ont:rodent_strain               "rat/wistar" ;
+        ont:sex                         "f & m" ;
+        ont:starting_dose_levels_unity  "mg/kg bw/d" ;
+        ont:starting_dose_levels_value  "2000" ;
+        ont:type                        "in vivo" ;
+        ont:vehicle_name                "propylene glycol" ;
+        ont:year                        "2004" .
+
+<http://toxin.vub.be/resource/dossier/2-amino-5-ethylphenol%20HCl>
+        a             ont:Report ;
+        rdfs:label    "2-amino-5-ethylphenol HCl" ;
+        ont:contains  <http://toxin.vub.be/resource/test/acute-toxicity/9> ;
+        ont:seeAlso   <http://toxin.vub.be/resource/pdfLink/https%3A%2F%2Fec.europa.eu%2Fhealth%2Fscientific_committees%2Fconsumer_safety%2Fdocs%2Fsccs_o_085.pdf> .
+
+<http://toxin.vub.be/resource/dossier/phenylene%20bis-diphenyltriazine>
+        a             ont:Report ;
+        rdfs:label    "phenylene bis-diphenyltriazine" ;
+        ont:contains  <http://toxin.vub.be/resource/test/acute-toxicity/4> ;
+        ont:seeAlso   <http://toxin.vub.be/resource/pdfLink/https%3A%2F%2Fec.europa.eu%2Fhealth%2Fsystem%2Ffiles%2F2021-08%2Fsccs_o_215_0.pdf> .
+
+<http://toxin.vub.be/resource/dossier/basic%20red%2076>
+        a             ont:Report ;
+        rdfs:label    "basic red 76" ;
+        ont:contains  <http://toxin.vub.be/resource/test/acute-toxicity/1> ;
+        ont:seeAlso   <http://toxin.vub.be/resource/pdfLink/https%3A%2F%2Fec.europa.eu%2Fhealth%2Fscientific_committees%2Fconsumer_safety%2Fdocs%2Fsccs_o_051.pdf> .
+
+<http://toxin.vub.be/resource/test/acute-toxicity/6>
+        a                               ont:Test ;
+        ont:additional_info             "test substance: fat 65'080/e. nano-sized material. particle size: d(0.5) = 81 nm. total particles dosed: 5.8x1014. surface area of particles dosed: 13.7 m2." ;
+        ont:additional_information      "test substance: fat 65'080/e. nano-sized material. particle size: d(0.5) = 81 nm. total particles dosed: 5.8x1014. surface area of particles dosed: 13.7 m2." ;
+        ont:administration_scheme       "single dose" ;
+        ont:animal_weight_changes       "in 2/6 animals, body weight was slightly reduced. the body weight gain of the other animals was not affected by treatment with the test item" ;
+        ont:chemical_batch_nr           "krg328-2" ;
+        ont:composition                 "test substance inin 0.5% methylcellulose" ;
+        ont:compound                    <http://toxin.vub.be/resource/compound/1%2C3%2C5-triazine%2C%202%2C4%2C6-tris%281%2C1%27-biphenyl%29-4-yl-> ;
+        ont:conclusion                  "under the conditions of this study the median lethal dose of the test substance after oral dosing was found to be greater than 2000 mg test substance/kg bw for female rats, corresponding to greater than 1000 mg eth50/kg bw." ;
+        ont:discussion                  "clinical signs of toxicity was not observed in any of the animals" ;
+        ont:dose_volume                 "10" ;
+        ont:gavage                      "yes" ;
+        ont:glp                         "yes" ;
+        ont:gross_necropsy              "at necropsy, no apparent abnormalities were observed in any animals." ;
+        ont:guideline                   "OECD 423" ;
+        ont:moribund_or_dead_animals_prior_to_study_termination
+                "no" ;
+        ont:n_animals_group             "3" ;
+        ont:observation_period          "14" ;
+        ont:purity                      "49.5" ;
+        ont:ref_in_dossier              "1 (subm 3)" ;
+        ont:rodent_strain               "rat/ sprague dawley" ;
+        ont:sex                         "f" ;
+        ont:starting_dose_levels_unity  "mg/kg bw" ;
+        ont:starting_dose_levels_value  "2000" ;
+        ont:type                        "in vivo" ;
+        ont:vehicle_name                "purified water" .
+
+<http://toxin.vub.be/resource/dossier/quinolinium%2C%204-formyl-1-methyl-%2C%20salt%20with%204-methylbenzene%20sulfonic%20acid%20%281%3A1%29>
+        a             ont:Report ;
+        rdfs:label    "quinolinium, 4-formyl-1-methyl-, salt with 4-methylbenzene sulfonic acid (1:1)" ;
+        ont:contains  <http://toxin.vub.be/resource/test/acute-toxicity/3> ;
+        ont:seeAlso   <http://toxin.vub.be/resource/pdfLink/https%3A%2F%2Fec.europa.eu%2Fhealth%2Fscientific_committees%2Fconsumer_safety%2Fdocs%2Fsccs_o_080.pdf> .
+
+<http://toxin.vub.be/resource/compound/1%2C5-naphthalenediol>
+        a               ont:Compound ;
+        rdfs:label      "1,5-naphthalenediol" ;
+        ont:compoundOf  <http://toxin.vub.be/resource/dossier/1%2C5-naphthalenediol> .
+
+<http://toxin.vub.be/resource/compound/2%2C6-diaminopyridine>
+        a               ont:Compound ;
+        rdfs:label      "2,6-diaminopyridine" ;
+        ont:compoundOf  <http://toxin.vub.be/resource/dossier/2%2C6-diaminopyridine> .
+
+<http://toxin.vub.be/resource/compound/basic%20red%2076>
+        a               ont:Compound ;
+        rdfs:label      "basic red 76" ;
+        ont:compoundOf  <http://toxin.vub.be/resource/dossier/basic%20red%2076> .
+
+<http://toxin.vub.be/resource/dossier/1%2C5-naphthalenediol>
+        a             ont:Report ;
+        rdfs:label    "1,5-naphthalenediol" ;
+        ont:contains  <http://toxin.vub.be/resource/test/acute-toxicity/5> ;
+        ont:seeAlso   <http://toxin.vub.be/resource/pdfLink/https%3A%2F%2Fec.europa.eu%2Fhealth%2Fscientific_committees%2Fconsumer_safety%2Fdocs%2Fsccs_o_033.pdf> .
+
+<http://toxin.vub.be/resource/test/acute-toxicity/5>
+        a                               ont:Test ;
+        ont:additional_info             "test substance: 1,5-naphtalenediol" ;
+        ont:additional_information      "test substance: 1,5-naphtalenediol" ;
+        ont:administration_scheme       "single" ;
+        ont:animal_weight_changes       "the body weight gain shown by the animals over the study period was considered to be normal." ;
+        ont:changes_autonomic_central_nervous_system
+                "hunched posture was noted in all animals on day 1." ;
+        ont:changes_skin_fur_eyes_mucous_membranes
+                "piloerection was noted in all animals on day 1. two males showed piloerection on day 2." ;
+        ont:chemical_batch_nr           "820211/01" ;
+        ont:compound                    <http://toxin.vub.be/resource/compound/1%2C5-naphthalenediol> ;
+        ont:conclusion                  "the oral ld50 value was established to exceed 2000 mg/kg bw" ;
+        ont:gavage                      "yes" ;
+        ont:gross_necropsy              "no abnormalities were found at macroscopic post mortem examination of the animals." ;
+        ont:guideline                   "OECD 423" ;
+        ont:moribund_or_dead_animals_prior_to_study_termination
+                "no" ;
+        ont:n_animals_group             "6" ;
+        ont:observation_period          "15" ;
+        ont:purity                      "> 99.9" ;
+        ont:ref_in_dossier              "4" ;
+        ont:rodent_strain               "rat/wistar strain crl:(wi) br (outbred, spf-quality)" ;
+        ont:sex                         "f & m" ;
+        ont:starting_dose_levels_unity  "mg/kg bw" ;
+        ont:starting_dose_levels_value  "2000" ;
+        ont:type                        "in vivo" ;
+        ont:vehicle_name                "propylene glycol" .
+
+<http://toxin.vub.be/resource/dossier/2%2C6-diaminopyridine>
+        a             ont:Report ;
+        rdfs:label    "2,6-diaminopyridine" ;
+        ont:contains  <http://toxin.vub.be/resource/test/acute-toxicity/8> ;
+        ont:seeAlso   <http://toxin.vub.be/resource/pdfLink/https%3A%2F%2Fec.europa.eu%2Fhealth%2Fscientific_committees%2Fconsumer_safety%2Fdocs%2Fsccs_o_084.pdf> .
+
+<http://toxin.vub.be/resource/test/acute-toxicity/4>
+        a                               ont:Test ;
+        ont:SCCS_comment_to_test        "the acute toxicity of wp30 can be considered as very low. the acute oral ld50 in rats > 2500 mg/kg bw." ;
+        ont:additional_info             "test substance: wp30" ;
+        ont:additional_information      "test substance: wp30" ;
+        ont:administration_scheme       "single, in a stepwise procedure with a maximum of 2 steps per dose-level; each step using 3 animals. the starting dose was fixed at 300 mg/kg; 2000 mg/kg was then tested in the absence of mortality at 300 mg/kg. for both dose levels, two steps were performed. " ;
+        ont:animal_weight_changes       "body weight gain was not affected by treatment." ;
+        ont:changes_skin_fur_eyes_mucous_membranes
+                "parameters evaluated included mortality and clinical signs which were recorded twice daily. body weights were measured on days 1, 3, 8 and 15 and necropsy findings noted for all animals on day 15. " ;
+        ont:chemical_batch_nr           "lp110" ;
+        ont:compound                    <http://toxin.vub.be/resource/compound/phenylene%20bis-diphenyltriazine> ;
+        ont:conclusion                  "the ld50 was estimated to be higher than 2500 mg/kg bw for female wistar rats." ;
+        ont:discussion                  "no abnormal clinical signs were observed at either dose level. within the experimental conditions of the study, wp30 led to no mortality." ;
+        ont:dose_volume                 "10" ;
+        ont:gavage                      "yes" ;
+        ont:glp                         "yes" ;
+        ont:guideline                   "OECD 423" ;
+        ont:microscopic_changes         "no abnormal findings were noted in the macroscopic examination." ;
+        ont:moribund_or_dead_animals_prior_to_study_termination
+                "no" ;
+        ont:n_animals_group             "3" ;
+        ont:observation_period          "14" ;
+        ont:physical_form               "solid, fine yellow powder" ;
+        ont:purity                      "99.6" ;
+        ont:ref_in_dossier              "32 (subm.2)" ;
+        ont:rodent_strain               "rat/wistar rjhan: wi" ;
+        ont:sccs_comment                "the acute toxicity of wp30 can be considered as very low. the acute oral ld50 in rats > 2500 mg/kg bw." ;
+        ont:sex                         "f" ;
+        ont:starting_dose_levels_unity  "mg/kg" ;
+        ont:starting_dose_levels_value  "300" ;
+        ont:type                        "in vivo" ;
+        ont:vehicle_name                "corn oil" ;
+        ont:year                        "2009" .
+
+<http://toxin.vub.be/resource/dossier/vetiveryl%20acetate>
+        a             ont:Report ;
+        rdfs:label    "vetiveryl acetate" ;
+        ont:contains  <http://toxin.vub.be/resource/test/acute-toxicity/2> ;
+        ont:seeAlso   <http://toxin.vub.be/resource/pdfLink/https%3A%2F%2Fec.europa.eu%2Fhealth%2Fscientific_committees%2Fconsumer_safety%2Fdocs%2Fsccs_o_167.pdf%20%26%20https%3A%2F%2Fec.europa.eu%2Fhealth%2Fsystem%2Ffiles%2F2021-08%2Fsccs_o_221_0.pdf> .
+
+<http://toxin.vub.be/resource/compound/2-amino-5-ethylphenol%20HCl>
+        a               ont:Compound ;
+        rdfs:label      "2-amino-5-ethylphenol HCl" ;
+        ont:compoundOf  <http://toxin.vub.be/resource/dossier/2-amino-5-ethylphenol%20HCl> .
+
+<http://toxin.vub.be/resource/compound/quinolinium%2C%204-formyl-1-methyl-%2C%20salt%20with%204-methylbenzene%20sulfonic%20acid%20%281%3A1%29>
+        a               ont:Compound ;
+        rdfs:label      "quinolinium, 4-formyl-1-methyl-, salt with 4-methylbenzene sulfonic acid (1:1)" ;
+        ont:compoundOf  <http://toxin.vub.be/resource/dossier/quinolinium%2C%204-formyl-1-methyl-%2C%20salt%20with%204-methylbenzene%20sulfonic%20acid%20%281%3A1%29> .
+
+<http://toxin.vub.be/resource/test/acute-toxicity/3>
+        a                               ont:Test ;
+        ont:additional_info             "test substance: 4-formyl-1-methylquinolonium-p-toluenesulfonate" ;
+        ont:additional_information      "test substance: 4-formyl-1-methylquinolonium-p-toluenesulfonate" ;
+        ont:administration_scheme       "single" ;
+        ont:animal_weight_changes       "the body weights were within the normal range" ;
+        ont:chemical_batch_nr           "moe-hm-6116-190" ;
+        ont:composition                 "test substance in vehicle" ;
+        ont:compound                    <http://toxin.vub.be/resource/compound/quinolinium%2C%204-formyl-1-methyl-%2C%20salt%20with%204-methylbenzene%20sulfonic%20acid%20%281%3A1%29> ;
+        ont:conclusion                  "the ld50 is greater than 2000 mg/kg bw." ;
+        ont:discussion                  "no clinical-toxicological findings were seen." ;
+        ont:gavage                      "yes" ;
+        ont:glp                         "yes" ;
+        ont:gross_necropsy              "no macroscopic findings were recorded at necropsy." ;
+        ont:guideline                   "OECD 423" ;
+        ont:moribund_or_dead_animals_prior_to_study_termination
+                "no" ;
+        ont:n_animals_group             "6" ;
+        ont:observation_period          "14" ;
+        ont:purity                      "97.9" ;
+        ont:ref_in_dossier              "5" ;
+        ont:rodent_strain               "rat/ hanIbm:wist (spf)" ;
+        ont:sex                         "f & m" ;
+        ont:starting_dose_levels_unity  "mg/kg bw" ;
+        ont:starting_dose_levels_value  "2000" ;
+        ont:type                        "in vivo" ;
+        ont:vehicle_name                "bi-distilled water" .
+
+<http://toxin.vub.be/resource/compound/phenylene%20bis-diphenyltriazine>
+        a               ont:Compound ;
+        rdfs:label      "phenylene bis-diphenyltriazine" ;
+        ont:compoundOf  <http://toxin.vub.be/resource/dossier/phenylene%20bis-diphenyltriazine> .
+
+<http://toxin.vub.be/resource/test/acute-toxicity/9>
+        a                               ont:Test ;
+        ont:additional_info             "test substance: 2-amino-5-ethylphenol phosphate (wr 802433)" ;
+        ont:additional_information      "test substance: 2-amino-5-ethylphenol phosphate (wr 802433)" ;
+        ont:administration_scheme       "single" ;
+        ont:animal_weight_changes       "the body weights of the animals were within the range commonly recorded for this strain and age." ;
+        ont:changes_activity_behaviour_pattern
+                "muscle twitching was observed in 3 rats. padding movements were observed in 2 rats. any abnormalities were not observed from the test day 9 to the end of the study." ;
+        ont:changes_autonomic_central_nervous_system
+                "ventral or lateral recumbency was noted in all animals. hunched posture was observed in the remaining 5 survival rats which was absent 5 days after the administration. any abnormalities were not observed from the test day 9 to the end of the study." ;
+        ont:changes_respiratory_system  "tachypnea in one rats and disappeared 2-hours after administration. any abnormalities were not observed from the test day 9 to the end of the study." ;
+        ont:changes_skin_fur_eyes_mucous_membranes
+                "cyanosis was noted in all rats. slight lacrimation, ruffled fur were observed in the remaining 5 survival rats which were absent 5 days after the administration. paleness of skin was observed in 3 rats. any abnormalities were not observed from the test day 9 to the end of the study." ;
+        ont:chemical_batch_nr           "gst 079-03/52-09" ;
+        ont:compound                    <http://toxin.vub.be/resource/compound/2-amino-5-ethylphenol%20HCl> ;
+        ont:conclusion                  "the acute toxicity of 2-amino-5-ethylphenol phosphate is low after single oral administration to female rats. the ld50 of 2-amino-5-ethylphenol phosphate is greater than 2000 mg/kg bw, corresponding to 1476 mg/kg bw as hydrochloride salt." ;
+        ont:dose_volume                 "10" ;
+        ont:gavage                      "yes" ;
+        ont:glp                         "yes" ;
+        ont:gross_necropsy              "no macroscopic findings were recorded at necropsy, except in the animal killed in extremis in which the fatty tissue was slightly yellow." ;
+        ont:guideline                   "OECD 423" ;
+        ont:moribund_or_dead_animals_prior_to_study_termination
+                "yes" ;
+        ont:n_animals_group             "3" ;
+        ont:observation_period          "15" ;
+        ont:other_signs_of_toxicity     "orange urine were observed in the remaining 5 survival rats which was absent 5 days after the administration. hypothermia was observed in 3 rats. any abnormalities were not observed from the test day 9 to the end of the study." ;
+        ont:purity                      "99.9" ;
+        ont:ref_in_dossier              "13" ;
+        ont:rodent_strain               "rat/hanrcc:wist (spf)" ;
+        ont:sex                         "f" ;
+        ont:sleep                       "slight to marked sedation was observed in all treated animals. any abnormalities were not observed from the test day 9 to the end of the study." ;
+        ont:starting_dose_levels_unity  "mg/kg bw" ;
+        ont:starting_dose_levels_value  "2000" ;
+        ont:type                        "in vivo" ;
+        ont:vehicle_name                "purified water" ;
+        ont:year                        "2005" .
+
+<http://toxin.vub.be/resource/dossier/1%2C3%2C5-triazine%2C%202%2C4%2C6-tris%281%2C1%27-biphenyl%29-4-yl->
+        a             ont:Report ;
+        rdfs:label    "1,3,5-triazine, 2,4,6-tris(1,1'-biphenyl)-4-yl-" ;
+        ont:contains  <http://toxin.vub.be/resource/test/acute-toxicity/7> , <http://toxin.vub.be/resource/test/acute-toxicity/6> ;
+        ont:seeAlso   <http://toxin.vub.be/resource/pdfLink/https%3A%2F%2Fec.europa.eu%2Fhealth%2Fscientific_committees%2Fconsumer_safety%2Fdocs%2Fsccs_o_070.pdf> .
+
+<http://toxin.vub.be/resource/compound/vetiveryl%20acetate>
+        a               ont:Compound ;
+        rdfs:label      "vetiveryl acetate" ;
+        ont:compoundOf  <http://toxin.vub.be/resource/dossier/vetiveryl%20acetate> .

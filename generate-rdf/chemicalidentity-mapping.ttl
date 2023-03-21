@@ -1,0 +1,268 @@
+@prefix rr: <http://www.w3.org/ns/r2rml#> .
+@prefix ont: <http://ontologies.vub.be/oecd#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+
+<#PDFlinkTriplesFirstMap>
+    rr:logicalTable [ rr:sqlQuery """
+                WITH RECURSIVE PDFLINKFIRST (ID, PDFLINKFIRST, REST) AS
+                            (
+                                    SELECT
+                        ID,
+                        NULL,
+                        PDFLINKFIRST || ','
+                    FROM (  SELECT
+                                ROWNUM() AS ID,
+                                \"PDF link\" AS PDFLINKFIRST
+                            FROM CHEMICALIDENTITY WHERE \"PDF link\" IS NOT NULL
+                    )
+                                    UNION ALL
+                                    SELECT
+                        ID,
+                        TRIM(SUBSTR(REST, 0, INSTR(REST, ',') - 1)),
+                        SUBSTR(REST, INSTR(REST, ',') + 1)
+                    FROM PDFLINKFIRST WHERE REST <> ''
+                            ) SELECT DISTINCT * FROM PDFLINKFIRST
+        """ ] ;
+
+            rr:subjectMap [
+        rr:template "http://toxin.vub.be/resource/pdfLink/{PDFLINKFIRST}" ;
+    ] ;
+.
+
+<#DossierTriplesMap>
+    rr:logicalTable [ rr:sqlQuery "SELECT ROWNUM() AS ID, * FROM CHEMICALIDENTITY" ] ;
+
+    rr:subjectMap [
+        rr:template "http://toxin.vub.be/resource/dossier/{DOSSIER}" ;
+        rr:class ont:Report ;
+    ] ;
+
+    rr:predicateObjectMap [
+        rr:predicate ont:contains ;
+        rr:objectMap [ 
+            rr:parentTriplesMap <#CompoundTriplesMap> ; 
+            rr:joinCondition [ rr:child "ID" ; rr:parent "ID" ; ] ;
+        ] ;
+    ] ;
+
+    rr:predicateObjectMap [
+        rr:predicate rdfs:label ;
+        rr:objectMap [ rr:column "DOSSIER" ; ] ;
+    ] ;
+    
+    rr:predicateObjectMap [
+        rr:predicate ont:seeAlso;
+        rr:objectMap [
+            rr:parentTriplesMap <#PDFlinkTriplesFirstMap> ;
+            rr:joinCondition [ rr:child "ID" ; rr:parent "ID" ; ] ;
+        ] ;
+    ] ;
+    .
+<#CompoundTriplesMap>
+    # todo: \"type of study ( in vivo, in vitro, in silico, in chemico\" -> camelcase
+    rr:logicalTable [ rr:sqlQuery """
+        SELECT 
+            ROWNUM() AS ID, 
+            COALESCE(\"Primary name\", DOSSIER) AS URIIDENTIFIER,
+
+            * 
+        FROM CHEMICALIDENTITY
+    """ ] ;
+
+    rr:subjectMap [
+        rr:template "http://toxin.vub.be/resource/chemicalidentity/{URIIDENTIFIER}" ;
+        rr:class ont:Compound ;
+    ] ;
+
+    rr:predicateObjectMap [
+        rr:predicate rdfs:label ;
+        rr:objectMap [ rr:column "DOSSIER" ; ] ;
+    ] ;
+
+    rr:predicateObjectMap [
+        rr:predicate rdfs:comment, ont:chemical_identity ;
+        rr:objectMap [ rr:column "\"Chemical identity\"" ; ] ;
+    ] ;
+
+    rr:predicateObjectMap [
+        rr:predicate rdfs:label, ont:primary_name ;
+        rr:objectMap [ rr:column "\"Primary name\"" ; ] ;
+    ] ;
+
+    rr:predicateObjectMap [
+        rr:predicate rdfs:label, ont:INCI ;
+        rr:objectMap [ rr:column "\"INCI name\"" ; ] ;
+    ] ;
+
+    # TODO: Clean up delimiters in chemical names
+    # TODO: Clean up delimiters in names and abbreviations
+    # TODO: Clean up delimiters in synonyms
+   
+    rr:predicateObjectMap [
+        rr:predicate ont:CAS_number ;
+        rr:objectMap [ rr:column "\"CAS number\"" ; ] ;
+    ] ;
+
+    rr:predicateObjectMap [
+        rr:predicate ont:EC_number ;
+        rr:objectMap [ rr:column "\"EC number\"" ; ] ;
+    ] ;
+
+    rr:predicateObjectMap [
+        rr:predicate ont:CMR_classification ;
+        rr:objectMap [ rr:column "\"CMR classification\"" ; ] ;
+    ] ;
+
+    rr:predicateObjectMap [
+        rr:predicate ont:concentration_limits ;
+        rr:objectMap [ rr:column "\"Concentration limits\"" ; ] ;
+    ] ;
+
+    rr:predicateObjectMap [
+        rr:predicate ont:particle_size ;
+        rr:objectMap [ rr:column "\"Particle size\"" ; ] ;
+    ] ;
+
+    rr:predicateObjectMap [
+        rr:predicate ont:SMILES ;
+        rr:objectMap [ rr:column "\"SMILES\"" ; ] ;
+    ] ;
+
+    rr:predicateObjectMap [
+        rr:predicate ont:empirical_formula ;
+        rr:objectMap [ rr:column "\"Empirical formula\"" ; ] ;
+    ] ;
+
+    rr:predicateObjectMap [
+        rr:predicate ont:physical_form ;
+        rr:objectMap [ rr:column "\"Physical form\"" ; ] ;
+    ] ;
+
+    rr:predicateObjectMap [
+        rr:predicate ont:molecularweight ;
+        rr:objectMap [ rr:column "\"Molecular weight g/mol\"" ; ] ;
+    ] ;
+
+
+    rr:predicateObjectMap [
+        rr:predicate ont:purity ;
+        rr:objectMap [ rr:column "\"Purity/composition/substance codes\"" ; ] ;
+    ] ;
+
+    rr:predicateObjectMap [
+        rr:predicate ont:impurity ;
+        rr:objectMap [ rr:column "\"Impurities/accompanying contaminants\"" ; ] ;
+    ] ;
+
+    rr:predicateObjectMap [
+        rr:predicate ont:organic_solvents ;
+        rr:objectMap [ rr:column "\"organic solvents\"" ; ] ;
+    ] ;
+
+    rr:predicateObjectMap [
+        rr:predicate ont:inorganic_solvents ;
+        rr:objectMap [ rr:column "\"inorganic solvents\"" ; ] ;
+    ] ;
+
+    rr:predicateObjectMap [
+        rr:predicate ont:mixtures ;
+        rr:objectMap [ rr:column "\"MIXTURES\"" ; ] ;
+    ] ;
+
+    
+    rr:predicateObjectMap [
+        rr:predicate ont:partition_coefficient ;
+        rr:objectMap [ rr:column "\"Partition coefficient (log Pow)\"" ; ] ;
+    ] ;
+
+    ## TODO: DELETE DEGREE CHARACTER FROM TABLE
+
+    rr:predicateObjectMap [
+        rr:predicate ont:melting_point ;
+        rr:objectMap [ rr:column "\"Melting point C\"" ; ] ;
+    ] ;
+
+    rr:predicateObjectMap [
+        rr:predicate ont:boiling_point ;
+        rr:objectMap [ rr:column "\"Boiling point C\"" ; ] ;
+    ] ;
+
+    rr:predicateObjectMap [
+        rr:predicate ont:flash_point ;
+        rr:objectMap [ rr:column "\"Flash point C\"" ; ] ;
+    ] ;
+
+    rr:predicateObjectMap [
+        rr:predicate ont:vapour_pressure ;
+        rr:objectMap [ rr:column "\"Vapour pressure\"" ; ] ;
+    ] ;
+
+
+    rr:predicateObjectMap [
+        rr:predicate ont:density ;
+        rr:objectMap [ rr:column "\"DENSITY\"" ; ] ;
+    ] ;
+
+    rr:predicateObjectMap [
+        rr:predicate ont:viscosity ;
+        rr:objectMap [ rr:column "\"VISCOSITY\"" ; ] ;
+    ] ;
+
+    rr:predicateObjectMap [
+        rr:predicate ont:pKa ;
+        rr:objectMap [ rr:column "\"PKA\"" ; ] ;
+    ] ;
+
+    rr:predicateObjectMap [
+        rr:predicate ont:refractive_index ;
+        rr:objectMap [ rr:column "\"Refractive index\"" ; ] ;
+    ] ;
+
+
+    rr:predicateObjectMap [
+        rr:predicate ont:pH ;
+        rr:objectMap [ rr:column "\"PH\"" ; ] ;
+    ] ;
+
+    rr:predicateObjectMap [
+        rr:predicate ont:peroxide_and_acid_value ;
+        rr:objectMap [ rr:column "\"Peroxide and acid value\"" ; ] ;
+    ] ;
+
+    rr:predicateObjectMap [
+        rr:predicate ont:UV_Vis_spectrum ;
+        rr:objectMap [ rr:column "\"UV-Vis spectrum\"" ; ] ;
+    ] ;
+
+    rr:predicateObjectMap [
+        rr:predicate ont:spectroscopy ;
+        rr:objectMap [ rr:column "\"SPECTROSCOPY\"" ; ] ;
+    ] ;
+
+    rr:predicateObjectMap [
+        rr:predicate ont:specific_rotation ;
+        rr:objectMap [ rr:column "\"Specific rotation\"" ; ] ;
+    ] ;
+    rr:predicateObjectMap [
+        rr:predicate ont:specific_gravity ;
+        rr:objectMap [ rr:column "\"Specific gravity\"" ; ] ;
+    ] ;
+    rr:predicateObjectMap [
+        rr:predicate ont:homogeneity_and_stability ;
+        rr:objectMap [ rr:column "\"Homogeneity and Stability\"" ; ] ;
+    ] ;
+    rr:predicateObjectMap [
+        rr:predicate ont:function_and_uses ;
+        rr:objectMap [ rr:column "\"Function and uses\"" ; ] ;
+    ] ;
+    rr:predicateObjectMap [
+        rr:predicate ont:additional_info ;
+        rr:objectMap [ rr:column "\"additional information\"" ; ] ;
+    ] ;
+    rr:predicateObjectMap [
+        rr:predicate ont:comments, rdfs:comment ;
+        rr:objectMap [ rr:column "\"own comments\"" ; ] ;
+    ] ;
+.

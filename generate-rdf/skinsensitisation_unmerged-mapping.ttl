@@ -1,0 +1,288 @@
+@prefix rr: <http://www.w3.org/ns/r2rml#> .
+@prefix ont: <http://ontologies.vub.be/oecd#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+
+<#PDFlinkTriplesFirstMap>
+    rr:logicalTable [ rr:sqlQuery """
+                WITH RECURSIVE PDFLINKFIRST (ID, PDFLINKFIRST, REST) AS
+                            (
+                                    SELECT
+                        ID,
+                        NULL,
+                        PDFLINKFIRST || ','
+                    FROM (  SELECT
+                                ROWNUM() AS ID,
+                                \"PDF link\" AS PDFLINKFIRST
+                            FROM SKINSENSITISATION_UNMERGED WHERE \"PDF link\" IS NOT NULL
+                    )
+                                    UNION ALL
+                                    SELECT
+                        ID,
+                        TRIM(SUBSTR(REST, 0, INSTR(REST, ',') - 1)),
+                        SUBSTR(REST, INSTR(REST, ',') + 1)
+                    FROM PDFLINKFIRST WHERE REST <> ''
+                            ) SELECT DISTINCT * FROM PDFLINKFIRST
+        """ ] ;
+
+            rr:subjectMap [
+        rr:template "http://toxin.vub.be/resource/pdfLink/{PDFLINKFIRST}" ;
+    ] ;
+.
+
+<#DossierTriplesMap>
+    rr:logicalTable [ rr:sqlQuery "SELECT ROWNUM() AS ID, * FROM SKINSENSITISATION_UNMERGED" ] ;
+
+
+    rr:subjectMap [
+        rr:template "http://toxin.vub.be/resource/dossier/{DOSSIER}" ;
+        rr:class ont:Report ;
+    ] ;
+
+    rr:predicateObjectMap [
+        rr:predicate ont:contains ;
+        rr:objectMap [ 
+            rr:parentTriplesMap <#TestTriplesMap> ; 
+            rr:joinCondition [ rr:child "ID" ; rr:parent "ID" ; ] ;
+        ] ;
+    ] ;
+
+    rr:predicateObjectMap [
+        rr:predicate rdfs:label ;
+        rr:objectMap [ rr:column "DOSSIER" ; ] ;
+    ] ;
+
+    rr:predicateObjectMap [
+        rr:predicate ont:seeAlso;
+        rr:objectMap [
+            rr:parentTriplesMap <#PDFlinkTriplesFirstMap> ;
+            rr:joinCondition [ rr:child "ID" ; rr:parent "ID" ; ] ;
+        ] ;
+    ] ;
+.
+
+<#CompoundTriplesMap>
+    rr:logicalTable [ rr:sqlQuery "SELECT ROWNUM() AS ID, * FROM SKINSENSITISATION_UNMERGED" ] ;
+
+    rr:subjectMap [
+        rr:template "http://toxin.vub.be/resource/compound/{DOSSIER}" ;
+        rr:class ont:Compound ;
+    ] ;
+
+    rr:predicateObjectMap [
+        rr:predicate rdfs:label ;
+        rr:objectMap [ rr:column "DOSSIER" ; ] ;
+    ] ;
+.
+
+<#TestTriplesMap>
+    # todo: \"type of study ( in vivo, in vitro, in silico, in chemico\" -> camelcase
+    rr:logicalTable [ rr:sqlQuery "SELECT ROWNUM() AS ID, * FROM SKINSENSITISATION_UNMERGED" ] ;
+
+    ## BEGIN LINK WITH COMPOUND
+    rr:predicateObjectMap [
+        rr:predicate ont:compound ;
+        rr:objectMap [ 
+            rr:parentTriplesMap <#CompoundTriplesMap> ; 
+            rr:joinCondition [ rr:child "ID" ; rr:parent "ID" ; ] ;
+        ] ;
+    ] ;
+    ### END LINK WITH COMPOUND
+
+    rr:subjectMap [
+        rr:template "http://toxin.vub.be/resource/test/skinsensitisation-unmerged/{ID}" ;
+        rr:class ont:Test ;
+    ] ;
+
+    rr:predicateObjectMap [
+        rr:predicate rdfs:label ;
+        rr:objectMap [ rr:template "{DOSSIER} Test ({ID})" ; rr:termType rr:Literal ;] ;
+    ] ;
+
+    rr:predicateObjectMap [
+        rr:predicate rdf:type ;
+        rr:objectMap [ rr:template "http://ontologies.vub.be/oecd#{type of study}" ; ] ;
+        rr:objectMap [ rr:column "type of study" ; ] ;
+    ] ;
+
+    rr:predicateObjectMap [
+        rr:predicate ont:oecd_test_nr ;
+        rr:objectMap [ rr:column "\"GUIDELINE\"" ; ] ;
+    ] ; 
+
+#observations and recording of toxicity	stimulation index (SI)	
+    rr:predicateObjectMap [
+        rr:predicate ont:observations_and_recording_of_toxicity ;
+        rr:objectMap [ rr:column "\"429_442A_442B_observations and recording of toxicity\"" ; ] ;
+    ] ; 
+#429_442A_442B_stimulation index (SI)	
+    rr:predicateObjectMap [
+        rr:predicate ont:stimulation_index ;
+        rr:objectMap [ rr:column "\"429_442A_442B_stimulation index (SI)\"" ; ] ;
+    ] ; 
+#429_442A_442B_ATP measurments	
+    rr:predicateObjectMap [
+        rr:predicate ont:atp_measurments ;
+        rr:objectMap [ rr:column "\"429_442A_442B_ATP measurments\"" ; ] ;
+    ] ; 
+#429_442A_442B_relative luminecence units (RLU)	
+    rr:predicateObjectMap [
+        rr:predicate ont:relative_luminecence_units;
+        rr:objectMap [ rr:column "\"429_442A_442B_relative luminecence units (RLU)\"" ; ] ;
+    ] ; 
+#429_442A_442B_BrdI labelling index	
+    rr:predicateObjectMap [
+        rr:predicate ont:relative_luminecence_units;
+        rr:objectMap [ rr:column "\"429_442A_442B_BrdI labelling index\"" ; ] ;
+    ] ; 
+#429_442A_442B_erythema scores	
+    rr:predicateObjectMap [
+        rr:predicate ont:erythema_scores;
+        rr:objectMap [ rr:column "\"429_442A_442B_erythema scores\"" ; ] ;
+    ] ; 
+#429_442A_442B_ear thickness	
+    rr:predicateObjectMap [
+        rr:predicate ont:ear_thickness;
+        rr:objectMap [ rr:column "\"429_442A_442B_ear thickness\"" ; ] ;
+    ] ; 
+#429_442A_442B_conclusion	
+    rr:predicateObjectMap [
+        rr:predicate ont:conclusion;
+        rr:objectMap [ rr:column "\"429_442A_442B_conclusion\"" ; ] ;
+    ] ; 
+# #429_442A_442B_homogeneity	
+    rr:predicateObjectMap [
+        rr:predicate ont:homogeneity;
+        rr:objectMap [ rr:column "429_442A_442B_homogeneity" ; ] ;
+    ] ; 
+# #429_442A_442B_pH	
+    rr:predicateObjectMap [
+        rr:predicate ont:ph;
+        rr:objectMap [ rr:column "429_442A_442B_pH" ; ] ;
+    ] ; 
+#429_442A_442B_physical form	
+    rr:predicateObjectMap [
+        rr:predicate ont:physical_form;
+        rr:objectMap [ rr:column "429_442A_442B_physical form" ; ] ;
+    ] ; 
+#429_442A_442B_concentration (%)	
+    rr:predicateObjectMap [
+        rr:predicate ont:concentration; 
+        rr:objectMap [ rr:column "429_442A_442B_concentration (%)" ; ] ;
+    ] ; 
+#429_442A_442B_composition	
+    rr:predicateObjectMap [
+        rr:predicate ont:composition; 
+        rr:objectMap [ rr:column "429_442A_442B_composition" ; ] ;
+    ] ; 
+#429_442A_442B_purity (%)	
+    rr:predicateObjectMap [
+        rr:predicate ont:purity; 
+        rr:objectMap [ rr:column "429_442A_442B_purity (%)" ; ] ;
+    ] ; 
+#429_442A_442B_solubility in vehicle	
+    rr:predicateObjectMap [
+        rr:predicate ont:solubility_in_vehicle; 
+        rr:objectMap [ rr:column "429_442A_442B_solubility in vehicle" ; ] ;
+    ] ; 
+#429_442A_442B_chemical batch nr	
+    rr:predicateObjectMap [
+        rr:predicate ont:chemical_batch_nr; 
+        rr:objectMap [ rr:column "429_442A_442B_chemical batch nr" ; ] ;
+    ] ; 
+#429_442A_442B_additional info	
+    rr:predicateObjectMap [
+        rr:predicate ont:additional_info; 
+        rr:objectMap [ rr:column "429_442A_442B_additional info" ; ] ;
+    ] ; 
+#429_442A_442B_species/strain	
+    rr:predicateObjectMap [
+        rr:predicate ont:species_strain; 
+        rr:objectMap [ rr:column "\"429_442A_442B_species/strain\"" ; ] ;
+    ] ; 
+#429_442A_442B_age at start of experiment	
+    rr:predicateObjectMap [
+        rr:predicate ont:age_at_start_of_experiment; 
+        rr:objectMap [ rr:column "\"429_442A_442B_age at start of experiment\"" ; ] ;
+    ] ; 
+#429_442A_442B_sex	
+    rr:predicateObjectMap [
+        rr:predicate ont:sex; 
+        rr:objectMap [ rr:column "\"429_442A_442B_sex\"" ; ] ;
+    ] ; 
+#429_442A_442B_feed	
+    rr:predicateObjectMap [
+        rr:predicate ont:feed; 
+        rr:objectMap [ rr:column "\"429_442A_442B_feed\"" ; ] ;
+    ] ; 
+#429_442A_442B_n animals / group	
+    rr:predicateObjectMap [
+        rr:predicate ont:n_animals_group; 
+        rr:objectMap [ rr:column "\"429_442A_442B_n animals / group\"" ; ] ;
+    ] ; 
+#429_442A_442B_deviation from guideline	
+    rr:predicateObjectMap [
+        rr:predicate ont:deviation_from_guideline; 
+        rr:objectMap [ rr:column "\"429_442A_442B_deviation from guideline\"" ; ] ;
+    ] ; 
+#429_442A_442B_dose levels	
+    rr:predicateObjectMap [
+        rr:predicate ont:dose_levels; 
+        rr:objectMap [ rr:column "\"429_442A_442B_dose levels\"" ; ] ;
+    ] ; 
+#429_442A_442B_volume	
+    rr:predicateObjectMap [
+        rr:predicate ont:volume; 
+        rr:objectMap [ rr:column "\"429_442A_442B_volume\"" ; ] ;
+    ] ; 
+#429_442A_442B_administration scheme	
+    rr:predicateObjectMap [
+        rr:predicate ont:administration_scheme; 
+        rr:objectMap [ rr:column "\"429_442A_442B_administration scheme\"" ; ] ;
+    ] ; 
+#429_442A_442B_vehicle	
+    rr:predicateObjectMap [
+        rr:predicate ont:vehicle; 
+        rr:objectMap [ rr:column "\"429_442A_442B_vehicle\"" ; ] ;
+    ] ; 
+#429_442A_442B_year	
+    rr:predicateObjectMap [
+        rr:predicate ont:year; 
+        rr:objectMap [ rr:column "\"429_442A_442B_year\"" ; ] ;
+    ] ; 
+#429_442A_442B_GLP	
+    rr:predicateObjectMap [
+        rr:predicate ont:glp; 
+        rr:objectMap [ rr:column "\"429_442A_442B_GLP\"" ; ] ;
+    ] ; 
+#429_442A_442B_SCCS comment to test	
+    rr:predicateObjectMap [
+        rr:predicate ont:sccs_comment_to_test; 
+        rr:objectMap [ rr:column "\"429_442A_442B_SCCS comment to test\"" ; ] ;
+    ] ; 
+#429_442A_442B_Ref. in dossier	
+    rr:predicateObjectMap [
+        rr:predicate ont:ref_in_dossier; 
+        rr:objectMap [ rr:column "\"429_442A_442B_Ref. in dossier\"" ; ] ;
+    ] ; 
+#429_442A_442B_control group	
+    rr:predicateObjectMap [
+        rr:predicate ont:control_group; 
+        rr:objectMap [ rr:column "\"429_442A_442B_control group\"" ; ] ;
+    ] ; 
+#429_442A_442B_preliminary test	
+    rr:predicateObjectMap [
+        rr:predicate ont:preliminary_test; 
+        rr:objectMap [ rr:column "\"429_442A_442B_preliminary test\"" ; ] ;
+    ] ; 
+#429_442A_442B_additional information	
+    rr:predicateObjectMap [
+        rr:predicate ont:additional_information; 
+        rr:objectMap [ rr:column "\"429_442A_442B_additional information\"" ; ] ;
+    ] ; 
+#429_442A_442B_own comments
+    rr:predicateObjectMap [
+        rr:predicate ont:own_comments; 
+        rr:objectMap [ rr:column "\"429_442A_442B_own comments\"" ; ] ;
+    ] ; 

@@ -1,0 +1,501 @@
+@prefix rr: <http://www.w3.org/ns/r2rml#> .
+@prefix ont: <http://ontologies.vub.be/oecd#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+
+<#PDFlinkTriplesFirstMap>
+    rr:logicalTable [ rr:sqlQuery """
+                WITH RECURSIVE PDFLINKFIRST (ID, PDFLINKFIRST, REST) AS
+                            (
+                                    SELECT
+                        ID,
+                        NULL,
+                        PDFLINKFIRST || ','
+                    FROM (  SELECT
+                                ROWNUM() AS ID,
+                                \"pdf link\" AS PDFLINKFIRST
+                            FROM OECD_407 WHERE \"pdf link\" IS NOT NULL
+                    )
+                                    UNION ALL
+                                    SELECT
+                        ID,
+                        TRIM(SUBSTR(REST, 0, INSTR(REST, ',') - 1)),
+                        SUBSTR(REST, INSTR(REST, ',') + 1)
+                    FROM PDFLINKFIRST WHERE REST <> ''
+                            ) SELECT DISTINCT * FROM PDFLINKFIRST
+        """ ] ;
+
+            rr:subjectMap [
+        rr:template "http://toxin.vub.be/resource/pdfLink/{PDFLINKFIRST}" ;
+    ] ;
+.
+
+<#DossierTriplesMap>
+    rr:logicalTable [ rr:sqlQuery "SELECT ROWNUM() AS ID, * FROM oecd_407" ] ;
+
+    rr:subjectMap [
+        rr:template "http://toxin.vub.be/resource/dossier/{DOSSIER}" ;
+        rr:class ont:Report ;
+    ] ;
+
+    rr:predicateObjectMap [
+        rr:predicate ont:contains ;
+        rr:objectMap [ 
+            rr:parentTriplesMap <#TestTriplesMap> ; 
+            rr:joinCondition [ rr:child "ID" ; rr:parent "ID" ; ] ;
+        ] ;
+    ] ;
+
+    rr:predicateObjectMap [
+        rr:predicate rdfs:label ;
+        rr:objectMap [ rr:column "DOSSIER" ; ] ;
+    ] ;
+
+    #  rr:predicateObjectMap [
+    #     rr:predicate ont:guideline ;
+    #     rr:objectMap [ rr:column "\"GUIDELINE\"" ; ] ;
+    # ] ; 
+
+     rr:predicateObjectMap [
+        rr:predicate ont:guideline ;
+
+        rr:objectMap [ 
+            # rr:column "GUIDELINE" ; 
+            #TODO: everywhere
+            rr:template "http://toxin.vub.be/resource/guideline/{GUIDELINE}" ; 
+            # rr:column "\"GUIDELINE\"" ;
+        ] ;
+    ] ; 
+
+
+    rr:predicateObjectMap [
+            rr:predicate ont:seeAlso;
+            rr:objectMap [
+                rr:parentTriplesMap <#PDFlinkTriplesFirstMap> ;
+                rr:joinCondition [ rr:child "ID" ; rr:parent "ID" ; ] ;
+            ] ;
+    ] ;
+.
+
+<#CompoundTriplesMap>
+    rr:logicalTable [ rr:sqlQuery "SELECT ROWNUM() AS ID, * FROM oecd_407" ] ;
+
+    rr:subjectMap [
+        rr:template "http://toxin.vub.be/resource/compound/{DOSSIER}" ;
+        rr:class ont:Compound ;
+    ] ;
+
+    rr:predicateObjectMap [
+        rr:predicate rdfs:label ;
+        rr:objectMap [ rr:column "DOSSIER" ; ] ;
+    ] ;
+
+    rr:predicateObjectMap [
+        rr:predicate ont:compoundOf ;
+        rr:objectMap [ 
+            rr:parentTriplesMap <#DossierTriplesMap> ; 
+            rr:joinCondition [ rr:child "ID" ; rr:parent "ID" ; ] ;
+        ] ;
+    ] ;
+.
+
+
+<#TestTriplesMap>
+
+    rr:logicalTable [ rr:sqlQuery "SELECT ROWNUM() AS ID, * FROM oecd_407" ] ;
+  
+     rr:predicateObjectMap [
+        rr:predicate ont:guideline ;
+        rr:objectMap [ rr:column "\"GUIDELINE\"" ; ] ;
+    ] ; 
+
+    rr:subjectMap [
+        rr:template "http://toxin.vub.be/resource/test/repeated-dose-toxicity/{ID}" ;
+        rr:class ont:Test ;
+    ] ;
+
+     rr:predicateObjectMap [
+        rr:predicate ont:guideline ;
+        rr:objectMap [ rr:column "\"TYPE\"" ; ] ;
+    ] ; 
+    ### BEGIN LINK WITH COMPOUND
+    rr:predicateObjectMap [
+        rr:predicate ont:compound ;
+        rr:objectMap [ 
+            rr:parentTriplesMap <#CompoundTriplesMap> ; 
+            rr:joinCondition [ rr:child "ID" ; rr:parent "ID" ; ] ;
+        ] ;
+    ] ;
+    ### END LINK WITH COMPOUND
+
+   rr:predicateObjectMap [
+        rr:predicate ont:clinical_observation ;
+        rr:objectMap [ rr:column "changes in skin, fur, eyes, mucous membranes" ; ] ;
+    ] ; 
+
+   rr:predicateObjectMap [
+        rr:predicate ont:secretions_and_excretions ;
+        rr:objectMap [ rr:column "secretions and excretions \"Fluids and Secretions\"[Mesh]" ; ] ;
+    ] ; 
+    
+   rr:predicateObjectMap [
+        rr:predicate ont:autonomic_activity ;
+        rr:objectMap [ rr:column "autonomic activity ( lacrimination, piloerection \"Piloerection\"[Mesh], pupil size, unusual respiratory pattern)" ; ] ;
+    ] ; 
+
+   rr:predicateObjectMap [
+        rr:predicate ont:movement ;
+        rr:objectMap [ rr:column "clonic or tonic movement" ; ] ;
+    ] ; 
+
+   rr:predicateObjectMap [
+        rr:predicate ont:stereotypes ;
+        rr:objectMap [ rr:column "stereotypies \"Stereotypic Movement Disorder\"[Mesh]" ; ] ;
+    ] ; 
+   rr:predicateObjectMap [
+        rr:predicate ont:bizzare_behaviors ;
+        rr:objectMap [ rr:column "bizzare behaviours" ; ] ;
+    ] ; 
+   rr:predicateObjectMap [
+        rr:predicate ont:sensor_activity ;
+        rr:objectMap [ rr:column "sensor activity, grip strength; assessment of motor activity" ; ] ;
+    ] ; 
+   rr:predicateObjectMap [
+        rr:predicate ont:body_weight_and_food_water_consumption ;
+        rr:objectMap [ rr:column "body weight and food/water consumption" ; ] ;
+    ] ; 
+   rr:predicateObjectMap [
+        rr:predicate ont:body_weight_and_food_water_consumption ;
+        rr:objectMap [ rr:column "satellite (recovery) group" ; ] ;
+    ] ; 
+   rr:predicateObjectMap [
+        rr:predicate ont:haematocrit ;
+        rr:objectMap [ rr:column "haematocrit \"Hematocrit\"[Mesh]" ; ] ;
+    ] ; 
+   rr:predicateObjectMap [
+        rr:predicate ont:haematocrit ;
+        rr:objectMap [ rr:column "haemaglobin \"Hemoglobins\"[Mesh] concentration" ; ] ;
+    ] ; 
+    
+   rr:predicateObjectMap [
+        rr:predicate ont:erythrocyte_count ;
+        rr:objectMap [ rr:column "erythrocyte count \"Erythrocyte Count\"[Mesh]" ; ] ;
+    ] ; 
+
+   rr:predicateObjectMap [
+        rr:predicate ont:leucocyte ;
+        rr:objectMap [ rr:column "total and differential leucocyte \"Leukocytes\"[Mesh] count" ; ] ;
+    ] ; 
+
+   rr:predicateObjectMap [
+        rr:predicate ont:platelet_count ;
+        rr:objectMap [ rr:column "platelet count \"Platelet Count\"[Mesh]" ; ] ;
+    ] ; 
+
+   rr:predicateObjectMap [
+        rr:predicate ont:blood_clotting ;
+        rr:objectMap [ rr:column "measure of blood clotting time/potential" ; ] ;
+    ] ; 
+
+   rr:predicateObjectMap [
+        rr:predicate ont:blood_origin ;
+        rr:objectMap [ rr:column "blood samples origin" ; ] ;
+    ] ; 
+
+   rr:predicateObjectMap [
+        rr:predicate ont:sodium ;
+        rr:objectMap [ rr:column "sodium \"Sodium\"[Mesh]" ; ] ;
+    ] ; 
+
+   rr:predicateObjectMap [
+        rr:predicate ont:potassium ;
+        rr:objectMap [ rr:column "potassium \"Potassium\"[Mesh]" ; ] ;
+    ] ; 
+
+   rr:predicateObjectMap [
+        rr:predicate ont:glucose ;
+        rr:objectMap [ rr:column "glucose \"Glucose\"[Mesh]" ; ] ;
+    ] ; 
+
+   rr:predicateObjectMap [
+        rr:predicate ont:cholesterol ;
+        rr:objectMap [ rr:column "total cholesterol \"Cholesterol\"[Mesh]" ; ] ;
+    ] ; 
+
+   rr:predicateObjectMap [
+        rr:predicate ont:urea ;
+        rr:objectMap [ rr:column " urea \"Urea\"[Mesh]" ; ] ;
+    ] ; 
+
+   rr:predicateObjectMap [
+        rr:predicate ont:creatinine ;
+        rr:objectMap [ rr:column "creatinine \"Creatinine\"[Mesh]" ; ] ;
+    ] ; 
+
+   rr:predicateObjectMap [
+        rr:predicate ont:total_protein ;
+        rr:objectMap [ rr:column "total protein \"Proteins\"[Mesh]" ; ] ;
+    ] ; 
+
+   rr:predicateObjectMap [
+        rr:predicate ont:albumin ;
+        rr:objectMap [ rr:column "albumin \"Albumins\"[Mesh]" ; ] ;
+    ] ; 
+
+   rr:predicateObjectMap [
+        rr:predicate ont:alanine_aminotransferase ;
+        rr:objectMap [ rr:column "alanine aminotransferase \"D-Alanine Transaminase\"[Mesh]" ; ] ;
+    ] ; 
+
+   rr:predicateObjectMap [
+        rr:predicate ont:aspartate_aminotransferase ;
+        rr:objectMap [ rr:column "aspartate aminotransferase \"Aspartate Aminotransferases\"[Mesh]" ; ] ;
+    ] ; 
+
+   rr:predicateObjectMap [
+        rr:predicate ont:alkaline_phosphatase ;
+        rr:objectMap [ rr:column "alkaline phosphatase \"Alkaline Phosphatase\"[Mesh]" ; ] ;
+    ] ; 
+
+   rr:predicateObjectMap [
+        rr:predicate ont:alkaline_phosphatase ;
+        rr:objectMap [ rr:column "alkaline phosphatase \"Alkaline Phosphatase\"[Mesh]" ; ] ;
+    ] ; 
+
+   rr:predicateObjectMap [
+        rr:predicate ont:gamma_glutamyl_transpeptidase ;
+        rr:objectMap [ rr:column "gamma glutamyl transpeptidase \"gamma-Glutamyltransferase\"[Mesh]" ; ] ;
+    ] ; 
+
+   rr:predicateObjectMap [
+        rr:predicate ont:gamma_glutamyl_transpeptidase ;
+        rr:objectMap [ rr:column "gamma glutamyl transpeptidase \"gamma-Glutamyltransferase\"[Mesh]" ; ] ;
+    ] ; 
+
+    # AH
+   rr:predicateObjectMap [
+        rr:predicate ont:sorbitol_dehydrogenase ;
+        rr:objectMap [ rr:column "sorbitol dehydrogenase \"L-Iditol 2-Dehydrogenase\"[Mesh]" ; ] ;
+    ] ; 
+
+
+   rr:predicateObjectMap [
+        rr:predicate ont:other_enzymes_and_bile_acids ;
+        rr:objectMap [ rr:column "other enzymes and bile acids \"Bile Acids and Salts\"[Mesh]" ; ] ;
+    ] ; 
+
+   rr:predicateObjectMap [
+        rr:predicate ont:appearance ;
+        rr:objectMap [ rr:column "APPEARANCE" ; ] ;
+    ] ; 
+
+   rr:predicateObjectMap [
+        rr:predicate ont:volume ;
+        rr:objectMap [ rr:column "VOLUME" ; ] ;
+    ] ; 
+
+   rr:predicateObjectMap [
+        rr:predicate ont:osmolarity_specific_gravity ;
+        rr:objectMap [ rr:column "osmolarity or specific gravity" ; ] ;
+    ] ; 
+
+   rr:predicateObjectMap [
+        rr:predicate ont:ph ;
+        rr:objectMap [ rr:column "PH" ; ] ;
+    ] ; 
+
+   rr:predicateObjectMap [
+        rr:predicate ont:protein ;
+        rr:objectMap [ rr:column "protein \"Proteinuria\"[Mesh]" ; ] ;
+    ] ; 
+
+   rr:predicateObjectMap [
+        rr:predicate ont:glucose ;
+        rr:objectMap [ rr:column "glucose \"Glycosuria\"[Mesh]" ; ] ;
+    ] ; 
+
+   rr:predicateObjectMap [
+        rr:predicate ont:blood_blood_cells ;
+        rr:objectMap [ rr:column "blood/blood cells \"Hematuria\"[Mesh]" ; ] ;
+    ] ; 
+
+   rr:predicateObjectMap [
+        rr:predicate ont:calcium  ;
+        rr:objectMap [ rr:column "calcium \"Calcium\"[Mesh]" ; ] ;
+    ] ; 
+
+   rr:predicateObjectMap [
+        rr:predicate ont:phosphate  ;
+        rr:objectMap [ rr:column "phosphate \"Phosphates\"[Mesh]" ; ] ;
+    ] ; 
+
+   rr:predicateObjectMap [
+        rr:predicate ont:fasting  ;
+        rr:objectMap [ rr:column "fasting \"Fasting\"[Mesh] triglycerides \"Triglycerides\"[Mesh]" ; ] ;
+    ] ; 
+
+   rr:predicateObjectMap [
+        rr:predicate ont:hormones  ;
+        rr:objectMap [ rr:column "hormones \"Hormones\"[Mesh]" ; ] ;
+    ] ; 
+
+   rr:predicateObjectMap [
+        rr:predicate ont:methaemoglobin  ;
+        rr:objectMap [ rr:column "methaemoglobin \"Methemoglobin\"[Mesh]" ; ] ;
+    ] ; 
+
+   rr:predicateObjectMap [
+        rr:predicate ont:cholinesterase  ;
+        rr:objectMap [ rr:column "cholinesterase \"Cholinesterases\"[Mesh]" ; ] ;
+    ] ; 
+
+   rr:predicateObjectMap [
+        rr:predicate ont:serum_other  ;
+        rr:objectMap [ rr:column "serum: other" ; ] ;
+    ] ; 
+
+   rr:predicateObjectMap [
+        rr:predicate ont:gross_necropsy_all_gross_lesions  ;
+        rr:objectMap [ rr:column "gross necropsy: all gross lesions" ; ] ;
+    ] ; 
+
+   rr:predicateObjectMap [
+        rr:predicate ont:gross_necropsy_brain;
+        rr:objectMap [ rr:column "gross necropsy: brain \"Brain\"[Mesh]" ; ] ;
+    ] ; 
+
+   rr:predicateObjectMap [
+        rr:predicate ont:gross_necropsy_spinal_cord;
+        rr:objectMap [ rr:column "gross necropsy: spinal cord \"Spinal Cord\"[Mesh]" ; ] ;
+    ] ; 
+
+   rr:predicateObjectMap [
+        rr:predicate ont:gross_necropsy_stomach;
+        rr:objectMap [ rr:column "gross necropsy: stomach \"Stomach\"[Mesh]" ; ] ;
+    ] ; 
+
+   rr:predicateObjectMap [
+        rr:predicate ont:gross_necropsy_intestines;
+        rr:objectMap [ rr:column "gross necropsy: small and large intestines \"Intestines\"[Mesh]" ; ] ;
+    ] ; 
+
+   rr:predicateObjectMap [
+        rr:predicate ont:gross_necropsy_liver;
+        rr:objectMap [ rr:column "gross necropsy: liver \"Liver\"[Mesh]" ; ] ;
+    ] ; 
+
+   rr:predicateObjectMap [
+        rr:predicate ont:gross_necropsy_kidneys;
+        rr:objectMap [ rr:column "gross necropsy: kidneys \"Kidney\"[Mesh]" ; ] ;
+    ] ; 
+
+   rr:predicateObjectMap [
+        rr:predicate ont:gross_necropsy_adrenals;
+        rr:objectMap [ rr:column "gross necropsy: adrenals \"Adrenal Glands\"[Mesh]" ; ] ;
+    ] ; 
+
+   rr:predicateObjectMap [
+        rr:predicate ont:gross_necropsy_spleen;
+        rr:objectMap [ rr:column "gross necropsy: spleen \"Spleen\"[Mesh]" ; ] ;
+    ] ; 
+
+   rr:predicateObjectMap [
+        rr:predicate ont:gross_necropsy_heart;
+        rr:objectMap [ rr:column "gross necropsy: heart \"Heart\"[Mesh]" ; ] ;
+    ] ; 
+
+   rr:predicateObjectMap [
+        rr:predicate ont:gross_necropsy_thymus;
+        rr:objectMap [ rr:column "gross necropsy: thymus \"Thymus Gland\"[Mesh]" ; ] ;
+    ] ; 
+
+   rr:predicateObjectMap [
+        rr:predicate ont:gross_necropsy_thyroid;
+        rr:objectMap [ rr:column "gross necropsy: thyroid \"Thyroid Gland\"[Mesh]" ; ] ;
+    ] ; 
+
+   rr:predicateObjectMap [
+        rr:predicate ont:gross_necropsy_trachea;
+        rr:objectMap [ rr:column "gross necropsy: trachea \"Trachea\"[Mesh]" ; ] ;
+    ] ; 
+
+   rr:predicateObjectMap [
+        rr:predicate ont:gross_necropsy_lungs;
+        rr:objectMap [ rr:column "gross necropsy: lungs \"Lung\"[Mesh]" ; ] ;
+    ] ; 
+
+   rr:predicateObjectMap [
+        rr:predicate ont:gross_necropsy_gonads;
+        rr:objectMap [ rr:column "gross necropsy: gonads \"Gonads\"[Mesh]" ; ] ;
+    ] ; 
+
+   rr:predicateObjectMap [
+        rr:predicate ont:gross_necropsy_sex_organs;
+        rr:objectMap [ rr:column "gross necropsy: accessory sex organs \"Genitalia\"[Mesh]" ; ] ;
+    ] ; 
+
+   rr:predicateObjectMap [
+        rr:predicate ont:gross_necropsy_urinary_bladder;
+        rr:objectMap [ rr:column "gross necropsy: urinary bladder \"Urinary Bladder\"[Mesh]" ; ] ;
+    ] ; 
+
+   rr:predicateObjectMap [
+        rr:predicate ont:gross_necropsy_lymph_nodes;
+        rr:objectMap [ rr:column "gross necropsy: lymph nodes \"Lymph Nodes\"[Mesh]" ; ] ;
+    ] ; 
+
+   rr:predicateObjectMap [
+        rr:predicate ont:gross_necropsy_peripheral_nerve;
+        rr:objectMap [ rr:column "gross necropsy: peripheral nerve \"Peripheral Nerves\"[Mesh]" ; ] ;
+    ] ; 
+
+   rr:predicateObjectMap [
+        rr:predicate ont:gross_necropsy_bone_marrow;
+        rr:objectMap [ rr:column "gross necropsy: bone marrow \"Bone Marrow\"[Mesh]" ; ] ;
+    ] ; 
+
+   rr:predicateObjectMap [
+        rr:predicate ont:gross_necropsy_bone_other_organs;
+        rr:objectMap [ rr:column "gross necropsy: other organs http://purl.obolibrary.org/obo/UBERON_0000062" ; ] ;
+    ] ; 
+# <#SPECIESTriplesMap>
+#     # todo: \"type of study ( in vivo, in vitro, in silico, in chemico\" -> camelcase
+#     rr:logicalTable [ rr:sqlQuery """
+#             WITH RECURSIVE SPECIES (ID, SPECIES, REST) AS 
+# 			( 
+# 				SELECT 
+#                     ID, 
+#                     NULL, 
+#                     SPECIES || ',' 
+#                 FROM (  SELECT 
+#                             ROWNUM() AS ID, 
+#                             \"species/strain\" AS SPECIES 
+#                         FROM REPEATEDTOXICITY WHERE \"species/strain\" IS NOT NULL
+#                 ) 
+# 				UNION ALL 
+# 				SELECT 
+#                     ID, 
+#                     TRIM(SUBSTR(REST, 0, INSTR(REST, ',') - 1)), 
+#                     SUBSTR(REST, INSTR(REST, ',') + 1) 
+#                 FROM SPECIES WHERE REST <> '' 
+# 			) SELECT DISTINCT * FROM SPECIES
+#     """ ] ;
+
+#     rr:subjectMap [
+#         rr:template "http://toxin.vub.be/resource/species/{SPECIES}" ;
+#         rr:class ont:Species ;
+#     ] ;
+
+#     # rr:predicateObjectMap [
+#     #     # CLEANUP ONTOLOGY, NORMALIZE WITH IRIS
+#     #     rr:predicate ont:species_strain ;
+#     #     rr:objectMap [ rr:column "\"species/strain\"" ; ] ;
+#     # ] ; 
+
+#     rr:predicateObjectMap [
+#         rr:predicate rdfs:label ;
+#         rr:objectMap [ rr:column "SPECIES" ; ] ;
+#     ] ; 
+
+# .

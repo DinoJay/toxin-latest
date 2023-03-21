@@ -1,0 +1,56 @@
+@prefix rr:    <http://www.w3.org/ns/r2rml#> .
+@prefix ont:   <http://ontologies.vub.be/oecd#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+
+<http://toxin.vub.be/resource/compound/phenoxyethanol>
+        a               ont:Compound ;
+        rdfs:label      "phenoxyethanol" ;
+        ont:compoundOf  <http://toxin.vub.be/resource/dossier/phenoxyethanol> .
+
+<http://toxin.vub.be/resource/dossier/decamethylcyclopentasiloxane>
+        a              ont:Report ;
+        rdfs:label     "decamethylcyclopentasiloxane" ;
+        rdfs:seeAlso   <https://ec.europa.eu/health/scientific_committees/consumer_safety/docs/sccs_o_174.pdf> ;
+        ont:contains   <http://toxin.vub.be/resource/test/repeated-dose-toxicity/2> ;
+        ont:guideline  <http://toxin.vub.be/resource/guideline/OECD%20412> .
+
+<http://toxin.vub.be/resource/dossier/phenoxyethanol>
+        a              ont:Report ;
+        rdfs:label     "phenoxyethanol" ;
+        rdfs:seeAlso   <https://ec.europa.eu/health/scientific_committees/consumer_safety/docs/sccs_o_195.pdf> ;
+        ont:contains   <http://toxin.vub.be/resource/test/repeated-dose-toxicity/1> ;
+        ont:guideline  <http://toxin.vub.be/resource/guideline/OECD%20412> .
+
+<http://toxin.vub.be/resource/test/repeated-dose-toxicity/1>
+        a                            ont:Test ;
+        ont:compound                 <http://toxin.vub.be/resource/compound/phenoxyethanol> ;
+        ont:convulsions              "nasal cavity, larynx and lung " ;
+        ont:diarrhea                 "no" ;
+        ont:guideline                "OECD 412" ;
+        ont:observation_circulatory  "on exposure days, the clinical examination was performed before, during and after exposure. body weight and food consumption were determined at the start of the exposure period, on day 7 and on day 13. at study termination, clinical-pathological examinations of the blood, gross necropsy, measurement of organ weights and histopathological examinations of selected organs were conducted (liver, kidneys, adrenals, testes, thymus, spleen, lung).low inhalation toxicity, decreased body weight gain (females only) and food consumption (males and females) were observed in animals exposed to 1000 mg/m�� of 2-phenoxyethanol. there were no treatment-related changes in clinical chemistry or haematology and no treatment related histopathological changes indicative of systemic toxicity. morphological changes such as minimal to slight degeneration/squamous metaplasia, hyperplasia/hypertrophy and minimal to slight inflammatory cell infiltrates were noted, indicating irritation potential in the nasal cavity, larynx and lung in mid- and high-dose animals. lung weights were increased in mid- and high-dose males. " ;
+        ont:observation_organ_weight_organ_body_weight
+                "lung weights were increased in mid- and high-dose males." ;
+        ont:observation_somatomotor_behavior_activity
+                "34.4" ;
+        ont:sleep                    "the noaec for local effects in upper airways and lung was determined to be 48.2mg/m3/day" ;
+        ont:tremors                  "noaec  mg/m3/day" ;
+        ont:type                     "in vivo" .
+
+<http://toxin.vub.be/resource/compound/decamethylcyclopentasiloxane>
+        a               ont:Compound ;
+        rdfs:label      "decamethylcyclopentasiloxane" ;
+        ont:compoundOf  <http://toxin.vub.be/resource/dossier/decamethylcyclopentasiloxane> .
+
+<http://toxin.vub.be/resource/test/repeated-dose-toxicity/2>
+        a                          ont:Test ;
+        ont:changes_skin_fur_eyes_mucous_membranes
+                "no behavioural abnormalities or mortalities were seen during the study. no effects were seen on mortality, body weight or body weight gain, food intake, or clinical signs. urinalysis and biochemistry data indicated no changes of toxicological significance at termination of the treatment. however, a few minor changes with statistical significance were recorded in rats exposed to 1.5 and 2.29 mg/L (96 and 151/197 ppm). an increase (>10%) in absolute and relative liver weight with slight hepatocellular hypertrophy (females only), increased incidence of goblet cell proliferation in the nasal cavity (males and females), and minimal to slight interstitial inflammation in the lungs (males and females) were observed at the highest exposure concentration of 2.29/3.71 mg d5/L. i.e. 151/197 ppm. " ;
+        ont:clinical_observation   "no behavioural abnormalities or mortalities were seen during the study. no effects were seen on mortality, body weight or body weight gain, food intake, or clinical signs. urinalysis and biochemistry data indicated no changes of toxicological significance at termination of the treatment. however, a few minor changes with statistical significance were recorded in rats exposed to 1.5 and 2.29 mg/L (96 and 151/197 ppm). an increase (>10%) in absolute and relative liver weight with slight hepatocellular hypertrophy (females only), increased incidence of goblet cell proliferation in the nasal cavity (males and females), and minimal to slight interstitial inflammation in the lungs (males and females) were observed at the highest exposure concentration of 2.29/3.71 mg d5/L. i.e. 151/197 ppm. " ;
+        ont:compound               <http://toxin.vub.be/resource/compound/decamethylcyclopentasiloxane> ;
+        ont:gross_pathology_liver  "an increase (>10%) in absolute and relative liver weight with slight hepatocellular hypertrophy (females only) were observed at the highest exposure concentration of 2.29/3.71 mg d5/L. i.e. 151/197 ppm." ;
+        ont:guideline              "OECD 412" ;
+        ont:observation_organ_weight_organ_body_weight
+                "in rats exposed to 1.5 and 2.29 mg/L (96 and 151/197 ppm). an increase (>10%) in absolute and relative liver weight with slight hepatocellular hypertrophy (females only).  mean lung absolute weights and lung to brain weight ratios were significantly increased (<10%) in males and females at the highest dose." ;
+        ont:type                   "in vivo" .

@@ -1,0 +1,83 @@
+@prefix rr:    <http://www.w3.org/ns/r2rml#> .
+@prefix ont:   <http://ontologies.vub.be/oecd#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+
+<http://toxin.vub.be/resource/compound/2-amino-4-hydroxyethylaminoanisole%20sulfate>
+        a               ont:Compound ;
+        rdfs:label      "2-amino-4-hydroxyethylaminoanisole sulfate" ;
+        ont:compoundOf  <http://toxin.vub.be/resource/dossier/2-amino-4-hydroxyethylaminoanisole%20sulfate> .
+
+<http://toxin.vub.be/resource/dossier/decamethylcyclopentasiloxane>
+        a              ont:Report ;
+        rdfs:label     "decamethylcyclopentasiloxane" ;
+        rdfs:seeAlso   <https://ec.europa.eu/health/scientific_committees/consumer_safety/docs/sccs_o_174.pdf> ;
+        ont:contains   <http://toxin.vub.be/resource/test/repeated-dose-toxicity/4> , <http://toxin.vub.be/resource/test/repeated-dose-toxicity/3> ;
+        ont:guideline  "OECD 410" .
+
+<http://toxin.vub.be/resource/dossier/hydroxyethyl-p-phenylenediamine%20sulfate>
+        a              ont:Report ;
+        rdfs:label     "hydroxyethyl-p-phenylenediamine sulfate" ;
+        rdfs:seeAlso   <https://ec.europa.eu/health/scientific_committees/consumer_safety/docs/sccs_o_017.pdf> ;
+        ont:contains   <http://toxin.vub.be/resource/test/repeated-dose-toxicity/1> ;
+        ont:guideline  "OECD 410" .
+
+<http://toxin.vub.be/resource/test/repeated-dose-toxicity/3>
+        a              ont:Test ;
+        ont:compound   <http://toxin.vub.be/resource/compound/decamethylcyclopentasiloxane> ;
+        ont:guideline  "OECD 410" ;
+        ont:type       "in vivo" .
+
+<http://toxin.vub.be/resource/test/repeated-dose-toxicity/1>
+        a                           ont:Test ;
+        ont:changes_skin_fur_eyes_mucous_membranes
+                "staining of skin, fur and bedding material in all dosed animals was observed: the incidence and the intensity of the staining increased with dose indicating that the staining was most probably due to oxytol-b-sulfate. these effects are regarded non-toxic. chromodacryorrhoea (excessive secretion of coloured tears) was observed with increased dose. " ;
+        ont:clinical_observation    "staining of skin, fur and bedding material in all dosed animals was observed: the incidence and the intensity of the staining increased with dose indicating that the staining was most probably due to oxytol-b-sulfate. these effects are regarded non-toxic. chromodacryorrhoea (excessive secretion of coloured tears) was observed with increased dose. " ;
+        ont:compound                <http://toxin.vub.be/resource/compound/hydroxyethyl-p-phenylenediamine%20sulfate> ;
+        ont:food_water_consumption  "no significant effect on feed consumption was observed." ;
+        ont:guideline               "OECD 410" ;
+        ont:histopathology_all_gross_lesions
+                "in one of the animals showing acanthosis also an ulcer was observed. no other histopathological alterations were found." ;
+        ont:observation_ophtalmological_examination
+                "no dose-related abnormalities with respect to ophthalmoscopy were observed." ;
+        ont:observation_organ_weight_organ_body_weight
+                "no significant effect on body weight and organ weight  was observed." ;
+        ont:type                    "in vivo" .
+
+<http://toxin.vub.be/resource/compound/hydroxyethyl-p-phenylenediamine%20sulfate>
+        a               ont:Compound ;
+        rdfs:label      "hydroxyethyl-p-phenylenediamine sulfate" ;
+        ont:compoundOf  <http://toxin.vub.be/resource/dossier/hydroxyethyl-p-phenylenediamine%20sulfate> .
+
+<http://toxin.vub.be/resource/compound/decamethylcyclopentasiloxane>
+        a               ont:Compound ;
+        rdfs:label      "decamethylcyclopentasiloxane" ;
+        ont:compoundOf  <http://toxin.vub.be/resource/dossier/decamethylcyclopentasiloxane> .
+
+<http://toxin.vub.be/resource/test/repeated-dose-toxicity/4>
+        a              ont:Test ;
+        ont:compound   <http://toxin.vub.be/resource/compound/decamethylcyclopentasiloxane> ;
+        ont:guideline  "OECD 410" ;
+        ont:type       "in vivo" .
+
+<http://toxin.vub.be/resource/dossier/2-amino-4-hydroxyethylaminoanisole%20sulfate>
+        a              ont:Report ;
+        rdfs:label     "2-amino-4-hydroxyethylaminoanisole sulfate" ;
+        rdfs:seeAlso   <https://ec.europa.eu/health//sites/health/files/scientific_committees/consumer_safety/opinions/sccs_o_003.pdf> ;
+        ont:contains   <http://toxin.vub.be/resource/test/repeated-dose-toxicity/2> ;
+        ont:guideline  "OECD 410" .
+
+<http://toxin.vub.be/resource/test/repeated-dose-toxicity/2>
+        a                              ont:Test ;
+        ont:changes_skin_fur_eyes_mucous_membranes
+                "the daily skin evaluation revealed no indications of erythema or oedema formation. the hyperplasia and hyperkeratosis noted in some animals were considered due to mechanical irritations caused by the clipping process and were not considered to be treatment-related." ;
+        ont:clinical_observation       "the daily skin evaluation revealed no indications of erythema or oedema formation. the hyperplasia and hyperkeratosis noted in some animals were considered due to mechanical irritations caused by the clipping process and were not considered to be treatment-related." ;
+        ont:compound                   <http://toxin.vub.be/resource/compound/2-amino-4-hydroxyethylaminoanisole%20sulfate> ;
+        ont:guideline                  "OECD 410" ;
+        ont:haemoglobin_concentration  "the stability and homogeneity of the test solutions were analytically verified and were in good agreement with the nominal doses, if analysis was done within 1 h after preparation. thus, a sufficient stability and correctness of the dosing solutions can be assumed during the application period of 1 h." ;
+        ont:observation_organ_weight_organ_body_weight
+                "organ weights did not reveal any differences between the dose groups." ;
+        ont:observation_other_signs_of_toxicity
+                "no mortalities or clinical signs of toxicity were noted. the body weight was not affected by the treatment." ;
+        ont:type                       "in vivo" .

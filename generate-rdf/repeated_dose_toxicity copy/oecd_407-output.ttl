@@ -1,0 +1,399 @@
+@prefix rr:    <http://www.w3.org/ns/r2rml#> .
+@prefix ont:   <http://ontologies.vub.be/oecd#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+
+<http://toxin.vub.be/resource/dossier/quinolinium%2C%204-formyl-1-methyl-%2C%20salt%20with%204-methylbenzene%20sulfonic%20acid%20%281%3A1%29>
+        a              ont:Report ;
+        rdfs:label     "quinolinium, 4-formyl-1-methyl-, salt with 4-methylbenzene sulfonic acid (1:1)" ;
+        ont:contains   <http://toxin.vub.be/resource/test/repeated-dose-toxicity/2> ;
+        ont:guideline  <http://toxin.vub.be/resource/guideline/OECD%20407> ;
+        ont:seeAlso    <http://toxin.vub.be/resource/pdfLink/https%3A%2F%2Fec.europa.eu%2Fhealth%2Fscientific_committees%2Fconsumer_safety%2Fdocs%2Fsccs_o_080.pdf> .
+
+<http://toxin.vub.be/resource/test/repeated-dose-toxicity/9>
+        a                              ont:Test ;
+        ont:body_weight_and_food_water_consumption
+                "in high dose males the food intake and the mean body weight and body weight gain was slightly lower." ;
+        ont:compound                   <http://toxin.vub.be/resource/compound/basic%20yellow%2087> ;
+        ont:creatinine                 "a slightly reduced total protein and globulin level were recorded in males of the high dose group" ;
+        ont:guideline                  "in vivo" , "OECD 407" ;
+        ont:secretions_and_excretions  "yellow discoloration of the faeces was noted in all rats of the high dose group and deep yellow urine discoloration was observed in all animals receiving the substance." ;
+        ont:total_protein              "a slightly increased albumin to globulin ratio was recorded in males of the high dose group." .
+
+<http://toxin.vub.be/resource/compound/2%2C5%2C6-triamino-4-pyrimidinol%20sulfate>
+        a               ont:Compound ;
+        rdfs:label      "2,5,6-triamino-4-pyrimidinol sulfate" ;
+        ont:compoundOf  <http://toxin.vub.be/resource/dossier/2%2C5%2C6-triamino-4-pyrimidinol%20sulfate> .
+
+<http://toxin.vub.be/resource/test/repeated-dose-toxicity/11>
+        a                               ont:Test ;
+        ont:aspartate_aminotransferase  "increase of GOT activity in group 4 (males and females) and group 3 (males) was registered." ;
+        ont:clinical_observation        "orange discoloration of the urines was observed throughout the study groups 3 and 4 and orange discoloration of the fur in group 4 females from day 7 on." ;
+        ont:compound                    <http://toxin.vub.be/resource/compound/o-aminophenol> ;
+        ont:gross_necropsy_kidneys      "increased relative kidney weight in group 4 males and females was recorded. kidneys were pale or mottled at macroscopic examination" ;
+        ont:gross_necropsy_liver        "increased relative liver weight in group 4 males and females was recorded." ;
+        ont:guideline                   "OECD 407" , "in vivo" ;
+        ont:other_enzymes_and_bile_acids
+                "increase of blood urea nitrogen was observed in group 4 females" ;
+        ont:protein                     "an increase of urinary proteins in group 4 males and females." .
+
+<http://toxin.vub.be/resource/test/repeated-dose-toxicity/3>
+        a                              ont:Test ;
+        ont:appearance                 "in rats treated at the dose of 250 mg/kg bw/day : slightly brown urine was seen in two females and three males on the last day of treatment." ;
+        ont:autonomic_activity         "in rats treated at the dose of 250 mg/kg bw/day : decreased spontaneous activity was observed in one female on treatment day 4 and 5 and in one male on treatment day 6." ;
+        ont:body_weight_and_food_water_consumption
+                "in rats treated at the dose of 250 mg/kg bw/day : slight emaciation was observed in four females and two males in the first treatment week and moderate emaciation in a further male on treatment day 6. mean absolute food intake was slightly decreased and the mean relative food intake was also decreased in males and females treated at this dose when compared to control rats. mean absolute body weights were decreased in males treated at the dose of 250 mg/kg bw/day when compared to the control group. in females of this dose group a not statistically significant decrease was observed. mean body weight gain was decreased in males and females from the high dose group." ;
+        ont:clinical_observation       "animals treated at the dose of 20 mg/kg bw/day or 100 mg/kg bw/day showed no treatment related clinical effects. in rats treated at the dose of 250 mg/kg bw/day : during the first treatment week, slightly ruffled fur was observed in one female on treatment days 4 and 5 and in an other one on treatment day 3. " ;
+        ont:compound                   <http://toxin.vub.be/resource/compound/picramic%20acid%20and%20sodium%20picramate> ;
+        ont:gross_necropsy_all_gross_lesions
+                "macroscopic lesions observed and possibly related to treatment consisted of enlarged spleen observed in 3 male rats and 1 female rat of the 250 mg/kg bw group. they could be correlated to the increase of the weight of the spleen and were considered related to the treatment." ;
+        ont:gross_necropsy_brain       "increase of the mean brain to body weight ratio was also observed in male rats at the dose of 250 mg/kg bw/day." ;
+        ont:gross_necropsy_intestines  "changes in colon as foci, nodules or thickened organ were observed in three male rats and one female rats treated at the dose of 250 mg/kg bw/day and in one female rat treated at the dose of 100 mg/kg bw/day. thickened caecum was observed in three male rats and foci were seen on the caecum of two males and two females treated at the dose of 250 mg/kg bw/day. " ;
+        ont:gross_necropsy_liver       "mean liver to body weight ratio was increased in males treated at the dose of 100 mg/kg bw/day or 250 mg/kg bw/day and in females at the dose of 250 mg/kg bw/day and 100 mg/kg bw/day but at this dose the increase was not statistically significant." ;
+        ont:gross_necropsy_lungs       "discoloration of lung, lung not collapsed but not considered to be related to the treatment with sodium picramate. " ;
+        ont:gross_necropsy_sex_organs  "reduced size of testes, epididymes, prostate and seminal vesicles was seen in three males treated at the dose of 250 mg/kg bw/day. " ;
+        ont:gross_necropsy_spleen      "increased dose-related mean spleen weights and spleen to body ratios were observed in males and females rats treated at 250 mg/kg bw/day." ;
+        ont:gross_necropsy_thymus      "thickened thymus but not considered to be related to the treatment with sodium picramate." ;
+        ont:guideline                  "OECD 407" , "in vivo" ;
+        ont:secretions_and_excretions  "clinical signs, food consumption and body weights were recorded periodically during acclimatization and the treatment period. at the end of the treatment period, all animals were killed, necropsied and examined post mortem. histological examinations were performed on organs and tissues from all control and high dose animals, and all gross lesions from all animals were recorded.. control animals, animals treated at the dose of 20 mg/kg bw/day or 100 mg/kg bw/day showed no treatment related clinical effects. in rats treated at the dose of 250 mg/kg bw/day several clinical signs were observed: during the first treatment week, slightly ruffled fur was observed in one female on treatment days 4 and 5 and in an other one on treatment day 3; slight emaciation was observed in four females and two males in the first treatment week and moderate emaciation in a further male on treatment day 6. decreased spontaneous activity was observed in one female on treatment day 4 and 5 and in one male on treatment day 6. slightly brown urine was seen in two females and three males on the last day of treatment. mean absolute food intake was slightly decreased in males and females treated at the dose of 250 mg/kg bw/day and the mean relative food intake was also decreased in males and females treated at this dose when compared to control rats. mean absolute body weights were decreased in males treated at the dose of 250 mg/kg bw/day when compared to the control group. in females of this dose group a not statistically significant decrease was observed. mean body weight gain was decreased in males and females from the high dose group. increased dose-related mean spleen weights and spleen to body ratios were observed in males and females rats treated at 250 mg/kg bw/day. mean liver to body weight ratio was increased in males treated at the dose of 100 mg/kg bw/day or 250 mg/kg bw/day and in females at the dose of 250 mg/kg bw/day and 100 mg/kg bw/day but at this dose the increase was not statistically significant. increase of the mean brain to body weight ratio was also observed in male rats at the dose of 250 mg/kg bw/day. macroscopic lesions observed and possibly related to treatment consisted of enlarged spleen observed in 3 male rats and 1 female rat of the 250 mg/kg bw group. they could be correlated to the increase of the weight of the spleen and were considered related to the treatment. reduced size of testes, epididymes, prostate and seminal vesicles was seen in three males treated at the dose of 250 mg/kg bw/day. changes in colon as foci, nodules or thickened organ were observed in three male rats and one female rats treated at the dose of 250 mg/kg bw/day and in one female rat treated at the dose of 100 mg/kg bw/day. thickened caecum was observed in three male rats and foci were seen on the caecum of two males and two females treated at the dose of 250 mg/kg bw/day. other signs observed were discoloration of lung, lung not collapsed and thickened thymus, but they were not considered to be related to the treatment with sodium picramate. " .
+
+<http://toxin.vub.be/resource/compound/basic%20yellow%2087>
+        a               ont:Compound ;
+        rdfs:label      "basic yellow 87" ;
+        ont:compoundOf  <http://toxin.vub.be/resource/dossier/basic%20yellow%2087> .
+
+<http://toxin.vub.be/resource/compound/4-chlororesorcinol>
+        a               ont:Compound ;
+        rdfs:label      "4-chlororesorcinol" ;
+        ont:compoundOf  <http://toxin.vub.be/resource/dossier/4-chlororesorcinol> .
+
+<http://toxin.vub.be/resource/test/repeated-dose-toxicity/8>
+        a                           ont:Test ;
+        ont:albumin                 "elevated albumin in females at high dose considered to be incidental and unrelated to the treatment." ;
+        ont:blood_clotting          "slightly prolonged activated partial thromboplastin time considered to be incidental and unrelated to the treatment" ;
+        ont:body_weight_and_food_water_consumption
+                "dose-related decreased food consumption was observed in the mid and high dose group males and in the high-dose group females. the relative food consumption reflected these differences. mean body weight and body weight gain were lower in high-dose group compared with the control." ;
+        ont:compound                <http://toxin.vub.be/resource/compound/basic%20orange%2031> ;
+        ont:fasting                 "increase of triglyceride levels in males at high dose considered to be incidental and unrelated to the treatment" ;
+        ont:gross_necropsy_all_gross_lesions
+                "no test substance related differences in any organ weights or organ weight ratios compared with the controls were evident either at the end of the treatment or recovery." ;
+        ont:gross_necropsy_bone_other_organs
+                "bilateral dilatation of the uterine horns considered to be within the normal range of background findings commonly seen in rats of this strain and age and not related to mip orange 3100." ;
+        ont:gross_necropsy_kidneys  "renal pelvic dilatation considered to be within the normal range of background findings commonly seen in rats of this strain and age and not related to mip orange 3100." ;
+        ont:gross_necropsy_lungs    "incomplete deflation of the lung considered to be within the normal range of background findings commonly seen in rats of this strain and age and not related to mip orange 3100." ;
+        ont:guideline               "OECD 407" , "in vivo" ;
+        ont:movement                "similar in the high dose and control groups" ;
+        ont:ph                      "pH slightly more alkaline in females at the high-dose considered to be incidental and unrelated to the treatment" ;
+        ont:sensor_activity         "similar in the high dose and control groups" ;
+        ont:total_protein           "elevated total protein level in females at the high-dose group considered to be incidental and unrelated to the treatment." .
+
+<http://toxin.vub.be/resource/test/repeated-dose-toxicity/10>
+        a              ont:Test ;
+        ont:compound   <http://toxin.vub.be/resource/compound/bis%28butylbenzoate%29%20diaminotriazine%20aminopropyltrisiloxane> ;
+        ont:guideline  "in vivo" , "OECD 407" ;
+        ont:hormones   "the test item caused increases in t3 and tsh levels in males and t4 levels in females at all dose-levels, as well as increased t4 levels in males at 1000 mg/kg bw/day." .
+
+<http://toxin.vub.be/resource/dossier/basic%20red%2051>
+        a              ont:Report ;
+        rdfs:label     "basic red 51" ;
+        ont:contains   <http://toxin.vub.be/resource/test/repeated-dose-toxicity/6> ;
+        ont:guideline  <http://toxin.vub.be/resource/guideline/OECD%20407> ;
+        ont:seeAlso    <http://toxin.vub.be/resource/pdfLink/https%3A%2F%2Fec.europa.eu%2Fhealth%2Fscientific_committees%2Fconsumer_safety%2Fdocs%2Fsccs_o_067.pdf> .
+
+<http://toxin.vub.be/resource/test/repeated-dose-toxicity/2>
+        a                         ont:Test ;
+        ont:appearance            "no treatment related effects were found with regard to urinalysis" ;
+        ont:body_weight_and_food_water_consumption
+                "no treatment related effects were found with regard to feed consumption" ;
+        ont:clinical_observation  "no treatment related effects were found with regard to clinical signs" ;
+        ont:compound              <http://toxin.vub.be/resource/compound/quinolinium%2C%204-formyl-1-methyl-%2C%20salt%20with%204-methylbenzene%20sulfonic%20acid%20%281%3A1%29> ;
+        ont:gross_necropsy_all_gross_lesions
+                "no treatment related effects were found with regard to  organ weights and pathology." ;
+        ont:guideline             "in vivo" , "OECD 407" .
+
+<http://toxin.vub.be/resource/dossier/o-aminophenol>
+        a              ont:Report ;
+        rdfs:label     "o-aminophenol" ;
+        ont:contains   <http://toxin.vub.be/resource/test/repeated-dose-toxicity/12> , <http://toxin.vub.be/resource/test/repeated-dose-toxicity/11> ;
+        ont:guideline  <http://toxin.vub.be/resource/guideline/OECD%20407> ;
+        ont:seeAlso    <http://toxin.vub.be/resource/pdfLink/https%3A%2F%2Fec.europa.eu%2Fhealth%2Fscientific_committees%2Fconsumer_safety%2Fdocs%2Fsccs_o_025.pdf> .
+
+<http://toxin.vub.be/resource/compound/hydroxyethyl-2-nitro-p-toluidine>
+        a               ont:Compound ;
+        rdfs:label      "hydroxyethyl-2-nitro-p-toluidine" ;
+        ont:compoundOf  <http://toxin.vub.be/resource/dossier/hydroxyethyl-2-nitro-p-toluidine> .
+
+<http://toxin.vub.be/resource/compound/vetiveryl%20acetate>
+        a               ont:Compound ;
+        rdfs:label      "vetiveryl acetate" ;
+        ont:compoundOf  <http://toxin.vub.be/resource/dossier/vetiveryl%20acetate> .
+
+<http://toxin.vub.be/resource/compound/hc%20blue%20n%FFFD%FFFD%2015>
+        a               ont:Compound ;
+        rdfs:label      "hc blue n�� 15" ;
+        ont:compoundOf  <http://toxin.vub.be/resource/dossier/hc%20blue%20n%FFFD%FFFD%2015> .
+
+<http://toxin.vub.be/resource/compound/triclosan>
+        a               ont:Compound ;
+        rdfs:label      "triclosan" ;
+        ont:compoundOf  <http://toxin.vub.be/resource/dossier/triclosan> .
+
+<http://toxin.vub.be/resource/dossier/basic%20orange%2031>
+        a              ont:Report ;
+        rdfs:label     "basic orange 31" ;
+        ont:contains   <http://toxin.vub.be/resource/test/repeated-dose-toxicity/8> ;
+        ont:guideline  <http://toxin.vub.be/resource/guideline/OECD%20407> ;
+        ont:seeAlso    <http://toxin.vub.be/resource/pdfLink/https%3A%2F%2Fec.europa.eu%2Fhealth%2Fscientific_committees%2Fconsumer_safety%2Fdocs%2Fsccs_o_082.pdf> .
+
+<http://toxin.vub.be/resource/dossier/hydroxyethyl-2-nitro-p-toluidine>
+        a              ont:Report ;
+        rdfs:label     "hydroxyethyl-2-nitro-p-toluidine" ;
+        ont:contains   <http://toxin.vub.be/resource/test/repeated-dose-toxicity/4> ;
+        ont:guideline  <http://toxin.vub.be/resource/guideline/OECD%20407> ;
+        ont:seeAlso    <http://toxin.vub.be/resource/pdfLink/https%3A%2F%2Fec.europa.eu%2Fhealth%2Fscientific_committees%2Fconsumer_safety%2Fdocs%2Fsccs_o_061.pdf> .
+
+<http://toxin.vub.be/resource/test/repeated-dose-toxicity/15>
+        a                           ont:Test ;
+        ont:autonomic_activity      "during the first few treatment days sedation was observed in all high dose animals. additional signs including breathing rales were noted during weeks 3 and 4." ;
+        ont:body_weight_and_food_water_consumption
+                "the overall mean food intake over the entire treatment period did not show relevant differences between controls and treated groups. the body weight development in male and female groups was not affected by treatment" ;
+        ont:clinical_observation    "during the first few treatment days ruffled fur was observed in all high dose animals." ;
+        ont:compound                <http://toxin.vub.be/resource/compound/4-chlororesorcinol> ;
+        ont:gross_necropsy_kidneys  "macroscopic lesions observed and possibly related to treatment consisted of bilateral pelvic dilation of 1 female animal of the 150 mg/kg group and 1 male animal of the 300 mg/kg group. they could be correlated to pelvic dilation and unilateral hydronephrosis. a slight increase in incidence/severity of hyaline droplets in males of the 150 mg/kg group (4/1.0 in the control group versus 5/1.4 in the 150 mg/kg group) was observed. there were two cases of slight degree unilateral hydronephrosis (one case in the 300 mg/kg group, male and the 150 mg/kg group, female each) that went along with contralateral pelvic dilation." ;
+        ont:guideline               "OECD 407" , "in vivo" ;
+        ont:movement                "during the first few treatment days tremor was observed in all high dose animals. additional signs including convulsions wasnoted during weeks 3 and 4." ;
+        ont:other_enzymes_and_bile_acids
+                "T3 / T4 hormone level determination in blood plasma revealed no relevant differences between controls and groups treated with the test item." ;
+        ont:sensor_activity         "no" .
+
+<http://toxin.vub.be/resource/test/repeated-dose-toxicity/7>
+        a                               ont:Test ;
+        ont:appearance                  "slight orange discoloration of the urine was observed in all dosed animals and was attributed to ingestion of the dye rather than to a specific toxic effect." ;
+        ont:aspartate_aminotransferase  "none" ;
+        ont:body_weight_and_food_water_consumption
+                "no changes in food consumption or body weight" ;
+        ont:clinical_observation        "45 mg/kg bw/day:  blue discoloration of body extremities from d6" ;
+        ont:compound                    <http://toxin.vub.be/resource/compound/hc%20blue%20n%FFFD%FFFD%2015> ;
+        ont:gross_necropsy_bone_other_organs
+                "15 mg/kg bw/day: discoloration of salivary glands, 45 mg/kg bw/day: blue discoloration of the salivary glands and exorbital lacrimal gland; " ;
+        ont:gross_necropsy_liver        "15 mg/kg bw/day: increased liver weights, coinciding with slight to minimal centrilobular hypertrophy in the liver, 45 mg/kg bw/day: discoloration of the liver  increased liver weights, coinciding with slight to minimal centrilobular hypertrophy in the liver (more severe in females than in males). " ;
+        ont:gross_necropsy_thymus       "45 mg/kg bw/day: blue discoloration of thymus (or discoloured foci)" ;
+        ont:guideline                   "OECD 407" , "in vivo" ;
+        ont:haematocrit                 "no clinical signs of toxicological relevance and no changes in haematology parameters." ;
+        ont:secretions_and_excretions   "5 mg/kg bw/day: slightly pale faeces from d11 of treatment onwards. 15 mg/kg bw/day: blue discoloration of faeces from d6 onwards, 45 mg/kg bw/day: blue discoloration of faeces from d3 onwards" .
+
+<http://toxin.vub.be/resource/compound/bis%28butylbenzoate%29%20diaminotriazine%20aminopropyltrisiloxane>
+        a               ont:Compound ;
+        rdfs:label      "bis(butylbenzoate) diaminotriazine aminopropyltrisiloxane" ;
+        ont:compoundOf  <http://toxin.vub.be/resource/dossier/bis%28butylbenzoate%29%20diaminotriazine%20aminopropyltrisiloxane> .
+
+<http://toxin.vub.be/resource/test/repeated-dose-toxicity/1>
+        a                              ont:Test ;
+        ont:alanine_aminotransferase   "increased (p<.01) in females treated with 1000 mg/kg bw/day. the effect was not observed in any males or the females treated with 125 or 350 mg/kg bw/day." ;
+        ont:appearance                 "there were no treatment-related effects urinalysis" ;
+        ont:body_weight_and_food_water_consumption
+                "increased cholesterol was observed in recovery females treated with 1000 mg/kg bw/day. the kidneys' histopathology changes did not regress in the recovery males, which also showed mononuclear cell foci and interstitial fibrosis in the kidneys" , "water consumption was increased at 1000 mg/kg bw/day during the final two weeks of treatment. there were no treatment-related effects on body weight or body weight gain, food consumption" ;
+        ont:cholesterol                "increased (p<0.05) in females treated with 1000 mg/kg bw/day. the effect was not observed in any males or the females treated with 125 or 350 mg/kg bw/day." ;
+        ont:compound                   <http://toxin.vub.be/resource/compound/vetiveryl%20acetate> ;
+        ont:gross_necropsy_all_gross_lesions
+                "no macroscopic abnormalities were detected at necropsy" ;
+        ont:gross_necropsy_kidneys     "males from all treatment groups had significantly increased kidney weights (both absolute and relative), which extended to the recovery males" ;
+        ont:gross_necropsy_liver       "statistically significantly increased liver weights (both absolute and relative) were observed in both sexes for all treatment non-recovery groups; this was considered by the study report authors to be an adaptive response to the test item in the absence of any histopathological changes and therefore not considered to be an adverse effect." ;
+        ont:gross_necropsy_sex_organs  "a vaginal smear was taken from all female animals and the stage of oestrus was recorded. there were no treatment-related effects on  stage of oestrus at termination" ;
+        ont:guideline                  "OECD 407" , "in vivo" ;
+        ont:haematocrit                "there were no treatment-related effects haematology" ;
+        ont:secretions_and_excretions  "increased salivation in animals in both sexes at 350 and 1000 mg/kg bw/day (from day 10 and day 4 onwards, respectively)" ;
+        ont:total_protein              "increased (p<0.05) in females treated with 1000 mg/kg bw/day. the effect was not observed in any males or the females treated with 125 or 350 mg/kg bw/day." .
+
+<http://toxin.vub.be/resource/dossier/triclosan>
+        a              ont:Report ;
+        rdfs:label     "triclosan" ;
+        ont:contains   <http://toxin.vub.be/resource/test/repeated-dose-toxicity/5> ;
+        ont:guideline  <http://toxin.vub.be/resource/guideline/OECD%20407> ;
+        ont:seeAlso    <http://toxin.vub.be/resource/pdfLink/https%3A%2F%2Fec.europa.eu%2Fhealth%2Fph_risk%2Fcommittees%2F04_sccp%2Fdocs%2Fsccp_o_166.pdf> .
+
+<http://toxin.vub.be/resource/dossier/vetiveryl%20acetate>
+        a              ont:Report ;
+        rdfs:label     "vetiveryl acetate" ;
+        ont:contains   <http://toxin.vub.be/resource/test/repeated-dose-toxicity/1> ;
+        ont:guideline  <http://toxin.vub.be/resource/guideline/OECD%20407> ;
+        ont:seeAlso    <http://toxin.vub.be/resource/pdfLink/https%3A%2F%2Fec.europa.eu%2Fhealth%2Fscientific_committees%2Fconsumer_safety%2Fdocs%2Fsccs_o_167.pdf%3B%20https%3A%2F%2Fec.europa.eu%2Fhealth%2Fsites%2Fhealth%2Ffiles%2Fscientific_committees%2Fconsumer_safety%2Fdocs%2Fsccs_o_221.pdf> .
+
+<http://toxin.vub.be/resource/test/repeated-dose-toxicity/14>
+        a                         ont:Test ;
+        ont:appearance            "a discoloration of the urine was observed in the dose groups 200 mg/kg bw/day (deep-yellow) and 1000 mg/kg bw/day (deepbrown)." ;
+        ont:autonomic_activity    "one female of the 1000 mg/kg bw/day group showed clinical signs (sedation)." ;
+        ont:body_weight_and_food_water_consumption
+                "one female of the 1000 mg/kg bw/day group showed clinical signs (body weight loss)." ;
+        ont:clinical_observation  "one female of the 1000 mg/kg bw/day group showed clinical signs ( ruffled fur)." ;
+        ont:compound              <http://toxin.vub.be/resource/compound/2%2C5%2C6-triamino-4-pyrimidinol%20sulfate> ;
+        ont:guideline             "in vivo" , "OECD 407" .
+
+<http://toxin.vub.be/resource/test/repeated-dose-toxicity/6>
+        a                              ont:Test ;
+        ont:appearance                 "in the high dose group, urine of 9 males and 3 females was a deep yellow colour after 4 weeks but by week 6, the urine colour was normal." ;
+        ont:body_weight_and_food_water_consumption
+                "a lack of appetite was observed in females of the high-dose group only during the treatment period. the relative food consumption was similar in all groups. mean body weight and body weight gain were slightly increased in the mid and low dose group males, and reduced in high-dose group females when compared with the control" , "at end of the treatment-free recovery period, these haematological parameters were found to be similar to the controls, indicating reversibility. at the end of the treatment-free recovery period, there was an indication of reversibility for most clinical biochemitsry parameters. however, slightly higher significant (p<0.05) values were still observed in the triglyceride, phospholipid and albumin concentrations in male rats." ;
+        ont:cholesterol                "total cholesterol level slightly increased in both males and females (p<0.01)" ;
+        ont:compound                   <http://toxin.vub.be/resource/compound/basic%20red%2051> ;
+        ont:erythrocyte_count          "minor clinical laboratory changes were recorded after 4 weeks treatment between the high dose group and the controls. at the high dose, there was a slight increase in circulating lymphocytes (relative) as well as a slight decrease in segmented neutrophils (relative and/or absolute) in both sexes (p<0.05). at end of the treatment-free recovery period, these haematological parameters were found to be similar to the controls, indicating reversibility." ;
+        ont:fasting                    "triglyceride level slightly increased in both males (p<0.01) and females (p<0.05); a slight increase was also recorded in the mid-dose group females (p<0.05)" ;
+        ont:gross_necropsy_all_gross_lesions
+                "all other lesions recorded were considered to be within the normal range of background findings commonly seen in rats of this strain and age." ;
+        ont:gross_necropsy_thyroid     "macroscopically, there was a reddish brown discoloration of the thyroid gland observed at 4 weeks in 80% of the males and in all the females of the high-dose group, 40% of the males in mid-dose group and one control female. at 6 weeks, all the high dose recovery group animals showed thyroid discoloration" ;
+        ont:guideline                  "OECD 407" , "in vivo" ;
+        ont:secretions_and_excretions  "dark discoloration of the faeces was observed in all animals of the high-dose group on day 3 dosing to day 3 recovery" ;
+        ont:serum_other                "phospholipid level slightly increased in both males and females (p<0.01). globulin level slightly reduced in both males (p<0.05) and females (statistically not significant). albumin to globulin ratio slightly increased in both males and females (p<0.05)." .
+
+<http://toxin.vub.be/resource/dossier/basic%20yellow%2087>
+        a              ont:Report ;
+        rdfs:label     "basic yellow 87" ;
+        ont:contains   <http://toxin.vub.be/resource/test/repeated-dose-toxicity/9> ;
+        ont:guideline  <http://toxin.vub.be/resource/guideline/OECD%20407> ;
+        ont:seeAlso    <http://toxin.vub.be/resource/pdfLink/https%3A%2F%2Fec.europa.eu%2Fhealth%2Fscientific_committees%2Fconsumer_safety%2Fdocs%2Fsccs_o_081.pdf> .
+
+<http://toxin.vub.be/resource/dossier/picramic%20acid%20and%20sodium%20picramate>
+        a              ont:Report ;
+        rdfs:label     "picramic acid and sodium picramate" ;
+        ont:contains   <http://toxin.vub.be/resource/test/repeated-dose-toxicity/3> ;
+        ont:guideline  <http://toxin.vub.be/resource/guideline/OECD%20407> ;
+        ont:seeAlso    <http://toxin.vub.be/resource/pdfLink/https%3A%2F%2Fec.europa.eu%2Fhealth%2Fscientific_committees%2Fconsumer_safety%2Fdocs%2Fsccs_o_042.pdf> .
+
+<http://toxin.vub.be/resource/test/repeated-dose-toxicity/13>
+        a                              ont:Test ;
+        ont:autonomic_activity         "hypersalivation, decreased blood glucose (male), increased cholesterol and triglycerides, increased urine volume, (female), higher incidence of acidophilic globules in the tubular cortical epithelium and tubular basophilia, " ;
+        ont:body_weight_and_food_water_consumption
+                "the mean body weight gain and food consumption were comparable for all dose groups." ;
+        ont:cholesterol                "in the females, there was a statistically significant increase in cholesterol  at 300 mg/kg bw/day " ;
+        ont:clinical_observation       "the main macroscopic findings related to the staining properties of the compound. yellow to orange staining of the fur, tail, body extremities and urine was seen in all treated animals" ;
+        ont:compound                   <http://toxin.vub.be/resource/compound/HC%20Yellow%20n%FFFD%FFFD9> ;
+        ont:fasting                    "in the females, there was a statistically significant increase in triglycerides at 300 mg/kg bw/day " ;
+        ont:glucose                    "there was a statistically significant decrease in blood glucose in males at the 100 and 300 mg/kg bw/day." ;
+        ont:gross_necropsy_spleen      "there was a statistically significant decrease in mean absolute and relative spleen weights in females treated with 300 mg/kg bw/day (-21% and ���18% respectively)." ;
+        ont:guideline                  "OECD 407" , "in vivo" ;
+        ont:haematocrit                "there were no other statistically significant differences in haematological parameters measured." ;
+        ont:phosphate                  "in the females, there was a statistically significant increase in inorganic phosphorus at 30 mg/kg bw/day." ;
+        ont:secretions_and_excretions  "hypersalivation was reported in 4/6 females at 300 mg/kg bw/day." ;
+        ont:serum_other                "there were no other statistically significant differences in biochemical parameters measured." ;
+        ont:stereotypes                "spleen, kidney" ;
+        ont:volume                     "there was a statistically significant increase in urinary volume produced by the females at 300 mg/kg bw/day. there were no other statistically significant differences in the urine analysis parameters measured." .
+
+<http://toxin.vub.be/resource/test/repeated-dose-toxicity/5>
+        a                      ont:Test ;
+        ont:compound           <http://toxin.vub.be/resource/compound/triclosan> ;
+        ont:creatinine         "slight changes in high-dose females, not fully reversed " ;
+        ont:erythrocyte_count  "slight, but significant reversible decreases in erythroid parameters." ;
+        ont:gross_necropsy_all_gross_lesions
+                "no macroscopic findings" ;
+        ont:guideline          "OECD 407" , "in vivo" ;
+        ont:haematocrit        "slight, but significant reversible decreases in erythroid parameters. low-dose animals showed no changes in haematology" ;
+        ont:other_enzymes_and_bile_acids
+                "significant increases (2-to 3-fold) in liver function enzymes in plasma (high-dose animals); changes were almost completely reversed by the end of 14-d recovery. low-dose animals showed no changes in blood chemistry except for a slight, not significant increase in liver function enzymes in males of the low-dose group" ;
+        ont:phosphate          "reversible decrease in phosphate in females of both doses" ;
+        ont:urea               "slight changes in high-dose animals not fully reversed" .
+
+<http://toxin.vub.be/resource/dossier/bis%28butylbenzoate%29%20diaminotriazine%20aminopropyltrisiloxane>
+        a              ont:Report ;
+        rdfs:label     "bis(butylbenzoate) diaminotriazine aminopropyltrisiloxane" ;
+        ont:contains   <http://toxin.vub.be/resource/test/repeated-dose-toxicity/10> ;
+        ont:guideline  <http://toxin.vub.be/resource/guideline/OECD%20407> ;
+        ont:seeAlso    <http://toxin.vub.be/resource/pdfLink/https%3A%2F%2Fec.europa.eu%2Fhealth%2Fscientific_committees%2Fconsumer_safety%2Fdocs%2Fsccs_o_055.pdf> .
+
+<http://toxin.vub.be/resource/compound/basic%20red%2051>
+        a               ont:Compound ;
+        rdfs:label      "basic red 51" ;
+        ont:compoundOf  <http://toxin.vub.be/resource/dossier/basic%20red%2051> .
+
+<http://toxin.vub.be/resource/dossier/HC%20Yellow%20n%FFFD%FFFD9>
+        a              ont:Report ;
+        rdfs:label     "HC Yellow n��9" ;
+        ont:contains   <http://toxin.vub.be/resource/test/repeated-dose-toxicity/13> ;
+        ont:guideline  <http://toxin.vub.be/resource/guideline/OECD%20407> ;
+        ont:seeAlso    <http://toxin.vub.be/resource/pdfLink/https%3A%2F%2Fec.europa.eu%2Fhealth%2Fscientific_committees%2Fconsumer_safety%2Fdocs%2Fsccs_o_026.pdf> .
+
+<http://toxin.vub.be/resource/dossier/hc%20blue%20n%FFFD%FFFD%2015>
+        a              ont:Report ;
+        rdfs:label     "hc blue n�� 15" ;
+        ont:contains   <http://toxin.vub.be/resource/test/repeated-dose-toxicity/7> ;
+        ont:guideline  <http://toxin.vub.be/resource/guideline/OECD%20407> ;
+        ont:seeAlso    <http://toxin.vub.be/resource/pdfLink/https%3A%2F%2Fec.europa.eu%2Fhealth%2Fscientific_committees%2Fconsumer_safety%2Fdocs%2Fsccs_o_089.pdf> .
+
+<http://toxin.vub.be/resource/compound/quinolinium%2C%204-formyl-1-methyl-%2C%20salt%20with%204-methylbenzene%20sulfonic%20acid%20%281%3A1%29>
+        a               ont:Compound ;
+        rdfs:label      "quinolinium, 4-formyl-1-methyl-, salt with 4-methylbenzene sulfonic acid (1:1)" ;
+        ont:compoundOf  <http://toxin.vub.be/resource/dossier/quinolinium%2C%204-formyl-1-methyl-%2C%20salt%20with%204-methylbenzene%20sulfonic%20acid%20%281%3A1%29> .
+
+<http://toxin.vub.be/resource/compound/picramic%20acid%20and%20sodium%20picramate>
+        a               ont:Compound ;
+        rdfs:label      "picramic acid and sodium picramate" ;
+        ont:compoundOf  <http://toxin.vub.be/resource/dossier/picramic%20acid%20and%20sodium%20picramate> .
+
+<http://toxin.vub.be/resource/compound/HC%20Yellow%20n%FFFD%FFFD9>
+        a               ont:Compound ;
+        rdfs:label      "HC Yellow n��9" ;
+        ont:compoundOf  <http://toxin.vub.be/resource/dossier/HC%20Yellow%20n%FFFD%FFFD9> .
+
+<http://toxin.vub.be/resource/compound/basic%20orange%2031>
+        a               ont:Compound ;
+        rdfs:label      "basic orange 31" ;
+        ont:compoundOf  <http://toxin.vub.be/resource/dossier/basic%20orange%2031> .
+
+<http://toxin.vub.be/resource/dossier/2%2C5%2C6-triamino-4-pyrimidinol%20sulfate>
+        a              ont:Report ;
+        rdfs:label     "2,5,6-triamino-4-pyrimidinol sulfate" ;
+        ont:contains   <http://toxin.vub.be/resource/test/repeated-dose-toxicity/14> ;
+        ont:guideline  <http://toxin.vub.be/resource/guideline/OECD%20407> ;
+        ont:seeAlso    <http://toxin.vub.be/resource/pdfLink/https%3A%2F%2Fec.europa.eu%2Fhealth%2Fscientific_committees%2Fconsumer_safety%2Fdocs%2Fsccs_o_185.pdf> .
+
+<http://toxin.vub.be/resource/compound/o-aminophenol>
+        a               ont:Compound ;
+        rdfs:label      "o-aminophenol" ;
+        ont:compoundOf  <http://toxin.vub.be/resource/dossier/o-aminophenol> .
+
+<http://toxin.vub.be/resource/test/repeated-dose-toxicity/12>
+        a                           ont:Test ;
+        ont:body_weight_and_food_water_consumption
+                "reduced bodyweight gains were recorded in males and females of group 4 and in females of group 2 and 3." ;
+        ont:compound                <http://toxin.vub.be/resource/compound/o-aminophenol> ;
+        ont:glucose                 "an increased plasma glucose level was recorded in males group 4" ;
+        ont:gross_necropsy_thyroid  "increases in absolute (not significant) and relative (significant) thyroid weights were recorded in females group 4" ;
+        ont:guideline               "in vivo" , "OECD 407" .
+
+<http://toxin.vub.be/resource/test/repeated-dose-toxicity/4>
+        a                               ont:Test ;
+        ont:alanine_aminotransferase    "in the high dose group, males showed a statistically significant increase in gpt" ;
+        ont:alkaline_phosphatase        "in the high dose group, males showed a statistically significant increase in alkaline phosphatase, whereas in the females there was only a slight increase in alkaline phosphatase. " ;
+        ont:appearance                  "urine was collected between study days ���1/0 and 27/28. the urine was intensively stained (dark yellow to dark red). this indicated renal excretion of the dye. this colouration made it impossible to use test sticks for determination of all scheduled parameters [mid dose: 2/5 male and 1/5 female; high dose 4/5 male and 3/5 female] and for determination of ketones, urobilinogen and bilirubin [low dose: 2/5 male and 1/5 female; mid dose: 4/5 male and 5/5 female; high dose: 5/5 male and 5/5 female]" ;
+        ont:aspartate_aminotransferase  "in the high dose group, males showed a statistically significant increase in got" ;
+        ont:blood_origin                "the daily amounts needed were suspended in CMC." ;
+        ont:body_weight_and_food_water_consumption
+                "clinical biochemistry and haematology were performed in the satellite group on day 42. urine was collected in the satellite group on day 41/42. by the end of the recovery period, got and gpt were still statistically significant elevated in males. the low pH in both sexes persisted till the end of the recovery period. " , "body weights of all treated groups were comparable to the control group, even in the high dose females that had decreased food consumption during dosing and increased food consumption in males in the satellite group recovery period. " ;
+        ont:calcium                     "in the high dose group, males showed a statistically significant increase in calcium" ;
+        ont:cholesterol                 "in the high dose group, males showed a statistically significant  decreases in cholesterol" ;
+        ont:clinical_observation        "all treated animals had stained fur, tails and bedding." ;
+        ont:compound                    <http://toxin.vub.be/resource/compound/hydroxyethyl-2-nitro-p-toluidine> ;
+        ont:erythrocyte_count           "females showed a decrease in  erythrocytes." ;
+        ont:glucose                     "in the high dose group, males showed a statistically significant  decreases in glucose" ;
+        ont:gross_necropsy_adrenals     "lower absolute adrenal weights in females" ;
+        ont:gross_necropsy_all_gross_lesions
+                "post mortem showed tissue staining, particularly of fat and especially in the high dose group. " ;
+        ont:gross_necropsy_bone_other_organs
+                "ophthalmological examinations were performed before treatment and on day 28" ;
+        ont:gross_necropsy_kidneys      "kidney weight was affected but there was no dose response or consistency." ;
+        ont:gross_necropsy_liver        "lower relative liver weights in males." ;
+        ont:gross_necropsy_thymus       "the thymus was stained red in one animal from both the mid and high dose male groups" ;
+        ont:guideline                   "OECD 407" , "in vivo" ;
+        ont:haematocrit                 "there was a statistically significant decrease in the haematocrit values in the mid-dose females but only a slight decrease in the high dose females." , "females showed a decrease in haemoglobin concentration (Hb). in the high dose group, males showed a decrease in mean corpuscular haemoglobin concentration (mchc)" ;
+        ont:leucocyte                   "in the high dose group, males showed a decrease in lymphocytes but increased neutrophils. " ;
+        ont:ph                          "urinalysis showed low pH in both sexes. however, it was statistically significant lower in males" ;
+        ont:secretions_and_excretions   "in the high dose group there was increased salivation and soft faeces." ;
+        ont:serum_other                 "in the high dose group, males showed a statistically significant increase in total bilirubin " ;
+        ont:sodium                      "clinical biochemistry was performed on study days ���1 and 28" .
+
+<http://toxin.vub.be/resource/dossier/4-chlororesorcinol>
+        a              ont:Report ;
+        rdfs:label     "4-chlororesorcinol" ;
+        ont:contains   <http://toxin.vub.be/resource/test/repeated-dose-toxicity/15> ;
+        ont:guideline  <http://toxin.vub.be/resource/guideline/OECD%20407> ;
+        ont:seeAlso    <http://toxin.vub.be/resource/pdfLink/https%3A%2F%2Fec.europa.eu%2Fhealth%2Fscientific_committees%2Fconsumer_safety%2Fdocs%2Fsccs_o_016.pdf> .

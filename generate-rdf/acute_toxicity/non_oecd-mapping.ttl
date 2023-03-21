@@ -1,0 +1,420 @@
+@prefix rr: <http://www.w3.org/ns/r2rml#> .
+@prefix ont: <http://ontologies.vub.be/oecd#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+<#DossierTriplesMap>
+    rr:logicalTable [ rr:sqlQuery "SELECT ROWNUM() AS ID, * FROM non_oecd" ] ;
+
+    rr:subjectMap [
+        rr:template "http://toxin.vub.be/resource/dossier/{DOSSIER}" ;
+        rr:class ont:Report ;
+    ] ;
+
+    rr:predicateObjectMap [
+        rr:predicate ont:contains ;
+        rr:objectMap [ 
+            rr:parentTriplesMap <#TestTriplesMap> ; 
+            rr:joinCondition [ rr:child "ID" ; rr:parent "ID" ; ] ;
+        ] ;
+    ] ;
+
+    rr:predicateObjectMap [
+        rr:predicate rdfs:label ;
+        rr:objectMap [ rr:column "DOSSIER" ; ] ;
+    ] ;
+
+    #  rr:predicateObjectMap [
+    #     rr:predicate ont:guideline ;
+    #     rr:objectMap [ rr:column "\"GUIDELINE\"" ; ] ;
+    # ] ; 
+
+    # rr:predicateObjectMap [
+    #     rr:predicate rdfs:seeAlso ;
+    #     rr:objectMap [ rr:column "\"pdf link\"" ; rr:termType rr:IRI ; ] ;
+    # ] ;
+.
+
+<#CompoundTriplesMap>
+    rr:logicalTable [ rr:sqlQuery "SELECT ROWNUM() AS ID, * FROM non_oecd" ] ;
+
+    rr:subjectMap [
+        rr:template "http://toxin.vub.be/resource/compound/{DOSSIER}" ;
+        rr:class ont:Compound ;
+    ] ;
+
+    rr:predicateObjectMap [
+        rr:predicate rdfs:label ;
+        rr:objectMap [ rr:column "DOSSIER" ; ] ;
+    ] ;
+
+    rr:predicateObjectMap [
+        rr:predicate ont:compoundOf ;
+        rr:objectMap [ 
+            rr:parentTriplesMap <#DossierTriplesMap> ; 
+            rr:joinCondition [ rr:child "ID" ; rr:parent "ID" ; ] ;
+        ] ;
+    ] ;
+.
+
+
+<#TestTriplesMap>
+
+    rr:logicalTable [ rr:sqlQuery "SELECT ROWNUM() AS ID, * FROM non_oecd" ] ;
+  
+     rr:predicateObjectMap [
+        rr:predicate ont:guideline ;
+        rr:objectMap [ rr:column "\"OECD guideline\"" ; ] ;
+    ] ; 
+
+     rr:predicateObjectMap [
+        rr:predicate ont:type ;
+        rr:objectMap [ rr:column "type of study" ; ] ;
+    ] ; 
+
+    rr:subjectMap [
+        rr:template "http://toxin.vub.be/resource/test/repeated-dose-toxicity/{ID}" ;
+        rr:class ont:Test ;
+    ] ;
+
+    ### BEGIN LINK WITH COMPOUND
+    rr:predicateObjectMap [
+        rr:predicate ont:compound ;
+        rr:objectMap [ 
+            rr:parentTriplesMap <#CompoundTriplesMap> ; 
+            rr:joinCondition [ rr:child "ID" ; rr:parent "ID" ; ] ;
+        ] ;
+    ] ;
+    ### END LINK WITH COMPOUND
+
+
+   rr:predicateObjectMap [
+        rr:predicate ont:clinical_observations ;
+        rr:objectMap [ rr:column "clinical examination" ; ] ;
+    ] ; 
+
+
+   rr:predicateObjectMap [
+        rr:predicate ont:microscopic_finding ;
+        rr:objectMap [ rr:column "microscopic finding" ; ] ;
+    ] ; 
+
+   rr:predicateObjectMap [
+        rr:predicate ont:gross_pathology ;
+        rr:objectMap [ rr:column "gross pathology" ; ] ;
+    ] ; 
+
+   rr:predicateObjectMap [
+        rr:predicate ont:dose_descriptor  ;
+        rr:objectMap [ rr:column "dose descriptor" ; ] ;
+    ] ; 
+
+   rr:predicateObjectMap [
+        rr:predicate ont:dose_descriptor_unit ;
+        rr:objectMap [ rr:column "dose descriptor unit" ; ] ;
+    ] ; 
+    
+   rr:predicateObjectMap [
+        rr:predicate ont:moribund_or_dead_animals_prior_to_study_termination  ;
+        rr:objectMap [ rr:column "moribund or dead animals prior to study termination" ; ] ;
+    ] ; 
+
+   rr:predicateObjectMap [
+        rr:predicate ont:mortality_rate ;
+        rr:objectMap [ rr:column "mortality rate" ; ] ;
+    ] ; 
+
+
+   rr:predicateObjectMap [
+        rr:predicate ont:conclusion ;
+        rr:objectMap [ rr:column "CONCLUSION" ; ] ;
+    ] ; 
+
+   rr:predicateObjectMap [
+        rr:predicate ont:homogeneity_and_stability ;
+        rr:objectMap [ rr:column "homogeneity and stability" ; ] ;
+    ] ; 
+
+   rr:predicateObjectMap [
+        rr:predicate ont:treatment_prior_to_application ;
+        rr:objectMap [ rr:column "treatment prior to application" ; ] ;
+    ] ; 
+
+   rr:predicateObjectMap [
+        rr:predicate ont:ph ;
+        rr:objectMap [ rr:column "PH" ; ] ;
+    ] ; 
+
+   rr:predicateObjectMap [
+        rr:predicate ont:solid ;
+        rr:objectMap [ rr:column "SOLID" ; ] ;
+    ] ; 
+
+   rr:predicateObjectMap [
+        rr:predicate ont:solubility_in_vehicle ;
+        rr:objectMap [ rr:column "solubility in vehicle" ; ] ;
+    ] ; 
+
+   rr:predicateObjectMap [
+        rr:predicate ont:conclusion ;
+        rr:objectMap [ rr:column "CONCLUSION" ; ] ;
+    ] ; 
+
+   rr:predicateObjectMap [
+        rr:predicate ont:liquid ;
+        rr:objectMap [ rr:column "LIQUID" ; ] ;
+    ] ; 
+
+   rr:predicateObjectMap [
+        rr:predicate ont:aerosol_dust_vapour  ;
+        rr:objectMap [ rr:column "aerosol/dust/vapour" ; ] ;
+    ] ; 
+
+   rr:predicateObjectMap [
+        rr:predicate ont:particle_size_shape_and_density_distribution  ;
+        rr:objectMap [ rr:column "particle size, shape and density distribution" ; ] ;
+    ] ; 
+
+   rr:predicateObjectMap [
+        rr:predicate ont:concentration  ;
+        rr:objectMap [ rr:column "concentration (% nominal and actual)" ; ] ;
+    ] ; 
+
+   rr:predicateObjectMap [
+        rr:predicate ont:composition  ;
+        rr:objectMap [ rr:column "COMPOSITION" ; ] ;
+    ] ; 
+
+   rr:predicateObjectMap [
+        rr:predicate ont:purity ;
+        rr:objectMap [ rr:column "purity (%)" ; ] ;
+    ] ; 
+
+   rr:predicateObjectMap [
+        rr:predicate ont:chemical_batch_nr ;
+        rr:objectMap [ rr:column "chemical batch nr" ; ] ;
+    ] ; 
+
+   rr:predicateObjectMap [
+        rr:predicate ont:purity;
+        rr:objectMap [ rr:column "purity (%)" ; ] ;
+    ] ; 
+
+   rr:predicateObjectMap [
+        rr:predicate ont:additional_info;
+        rr:objectMap [ rr:column "additional info" ; ] ;
+    ] ; 
+
+   rr:predicateObjectMap [
+        rr:predicate ont:species_strain;
+        rr:objectMap [ rr:column "species/strain" ; ] ;
+    ] ; 
+
+   rr:predicateObjectMap [
+        rr:predicate ont:source;
+        rr:objectMap [ rr:column "SOURCE" ; ] ;
+    ] ; 
+
+   rr:predicateObjectMap [
+        rr:predicate ont:age_value_at_start_of_experiment ;
+        rr:objectMap [ rr:column "age value at start of experiment" ; ] ;
+    ] ; 
+
+   rr:predicateObjectMap [
+        rr:predicate ont:age_unit ;
+        rr:objectMap [ rr:column "age unit (day, week, month, year)" ; ] ;
+    ] ; 
+
+   rr:predicateObjectMap [
+        rr:predicate ont:sex ;
+        rr:objectMap [ rr:column "sex (female, male)" ; ] ;
+    ] ; 
+
+   rr:predicateObjectMap [
+        rr:predicate ont:weight ;
+        rr:objectMap [ rr:column "WEIGHT" ; ] ;
+    ] ; 
+
+   rr:predicateObjectMap [
+        rr:predicate ont:feed  ;
+        rr:objectMap [ rr:column "FEED" ; ] ;
+    ] ; 
+
+   rr:predicateObjectMap [
+        rr:predicate ont:n_animals_dose ;
+        rr:objectMap [ rr:column "n animals / dose" ; ] ;
+    ] ; 
+
+   rr:predicateObjectMap [
+        rr:predicate ont:dose_levels ;
+        rr:objectMap [ rr:column "dose levels" ; ] ;
+    ] ; 
+    
+   rr:predicateObjectMap [
+        rr:predicate ont:dose_level_unit ;
+        rr:objectMap [ rr:column "dose level unit ( or extra info)" ; ] ;
+    ] ; 
+
+   rr:predicateObjectMap [
+        rr:predicate ont:administration_scheme ;
+        rr:objectMap [ rr:column "administration scheme" ; ] ;
+    ] ; 
+
+   rr:predicateObjectMap [
+        rr:predicate ont:oral ;
+        rr:objectMap [ rr:column "oral (gavage, drink water, feed)" ; ] ;
+    ] ; 
+
+   rr:predicateObjectMap [
+        rr:predicate ont:dermal ;
+        rr:objectMap [ rr:column "DERMAL" ; ] ;
+    ] ; 
+
+   rr:predicateObjectMap [
+        rr:predicate ont:body_surface_area ;
+        rr:objectMap [ rr:column "body surface area" ; ] ;
+    ] ; 
+
+   rr:predicateObjectMap [
+        rr:predicate ont:patching_technique ;
+        rr:objectMap [ rr:column "patching technique ( open, semi-occluded, occluded)" ; ] ;
+    ] ; 
+
+   rr:predicateObjectMap [
+        rr:predicate ont:skin_condition_and_region ;
+        rr:objectMap [ rr:column "skin condition and region" ; ] ;
+    ] ; 
+
+   rr:predicateObjectMap [
+        rr:predicate ont:inhalation ;
+        rr:objectMap [ rr:column "inhalation (nose (head) -only, whole body)" ; ] ;
+    ] ; 
+   rr:predicateObjectMap [
+        rr:predicate ont:occular ;
+        rr:objectMap [ rr:column "OCCULAR" ; ] ;
+    ] ; 
+
+   rr:predicateObjectMap [
+        rr:predicate ont:other ;
+        rr:objectMap [ rr:column "OTHER" ; ] ;
+    ] ; 
+
+   rr:predicateObjectMap [
+        rr:predicate ont:dose_volume  ;
+        rr:objectMap [ rr:column "dose volume ml/kg bw" ; ] ;
+    ] ; 
+
+   rr:predicateObjectMap [
+        rr:predicate ont:rinsing_procedure ;
+        rr:objectMap [ rr:column "rinsing procedure" ; ] ;
+    ] ; 
+
+   rr:predicateObjectMap [
+        rr:predicate ont:use_of_anaesthetics_and_analgesics ;
+        rr:objectMap [ rr:column "use of anaesthetics and analgesics" ; ] ;
+    ] ; 
+
+   rr:predicateObjectMap [
+        rr:predicate ont:inhalation ;
+        rr:objectMap [ rr:column "inhalation (nose (head) -only, whole body)" ; ] ;
+    ] ; 
+
+   rr:predicateObjectMap [
+        rr:predicate ont:vehicle_name ;
+        rr:objectMap [ rr:column "vehicle name" ; ] ;
+    ] ; 
+
+   rr:predicateObjectMap [
+        rr:predicate ont:vehicle_concentration;
+        rr:objectMap [ rr:column "vehicle concentration %" ; ] ;
+    ] ; 
+
+   rr:predicateObjectMap [
+        rr:predicate ont:exposure_time ;
+        rr:objectMap [ rr:column "exposure time (hour)" ; ] ;
+    ] ; 
+
+   rr:predicateObjectMap [
+        rr:predicate ont:observation_period  ;
+        rr:objectMap [ rr:column "observation period (day)" ; ] ;
+    ] ; 
+
+   rr:predicateObjectMap [
+        rr:predicate ont:sccs_comment_to_test ;
+        rr:objectMap [ rr:column "SCCS comment to test" ; ] ;
+    ] ; 
+
+   rr:predicateObjectMap [
+        rr:predicate ont:year ;
+        rr:objectMap [ rr:column "YEAR" ; ] ;
+    ] ; 
+
+   rr:predicateObjectMap [
+        rr:predicate ont:control_groups ;
+        rr:objectMap [ rr:column "control groups" ; ] ;
+    ] ; 
+
+   rr:predicateObjectMap [
+        rr:predicate ont:glp ;
+        rr:objectMap [ rr:column "GLP" ; ] ;
+    ] ; 
+
+   rr:predicateObjectMap [
+        rr:predicate ont:preliminary_test ;
+        rr:objectMap [ rr:column "preliminary test" ; ] ;
+    ] ; 
+
+   rr:predicateObjectMap [
+        rr:predicate ont:klimisch_score ;
+        rr:objectMap [ rr:column "Klimisch score" ; ] ;
+    ] ; 
+
+   rr:predicateObjectMap [
+        rr:predicate ont:ref_in_dossier ;
+        rr:objectMap [ rr:column "Ref. in dossier" ; ] ;
+    ] ; 
+
+   rr:predicateObjectMap [
+        rr:predicate ont:additional_information ;
+        rr:objectMap [ rr:column "additional information" ; ] ;
+    ] ; 
+# <#SPECIESTriplesMap>
+#     # todo: \"type of study ( in vivo, in vitro, in silico, in chemico\" -> camelcase
+#     rr:logicalTable [ rr:sqlQuery """
+#             WITH RECURSIVE SPECIES (ID, SPECIES, REST) AS 
+# 			( 
+# 				SELECT 
+#                     ID, 
+#                     NULL, 
+#                     SPECIES || ',' 
+#                 FROM (  SELECT 
+#                             ROWNUM() AS ID, 
+#                             \"species/strain\" AS SPECIES 
+#                         FROM REPEATEDTOXICITY WHERE \"species/strain\" IS NOT NULL
+#                 ) 
+# 				UNION ALL 
+# 				SELECT 
+#                     ID, 
+#                     TRIM(SUBSTR(REST, 0, INSTR(REST, ',') - 1)), 
+#                     SUBSTR(REST, INSTR(REST, ',') + 1) 
+#                 FROM SPECIES WHERE REST <> '' 
+# 			) SELECT DISTINCT * FROM SPECIES
+#     """ ] ;
+
+#     rr:subjectMap [
+#         rr:template "http://toxin.vub.be/resource/species/{SPECIES}" ;
+#         rr:class ont:Species ;
+#     ] ;
+
+#     # rr:predicateObjectMap [
+#     #     # CLEANUP ONTOLOGY, NORMALIZE WITH IRIS
+#     #     rr:predicate ont:species_strain ;
+#     #     rr:objectMap [ rr:column "\"species/strain\"" ; ] ;
+#     # ] ; 
+
+#     rr:predicateObjectMap [
+#         rr:predicate rdfs:label ;
+#         rr:objectMap [ rr:column "SPECIES" ; ] ;
+#     ] ; 
+
+# .

@@ -1,0 +1,260 @@
+@prefix rr:    <http://www.w3.org/ns/r2rml#> .
+@prefix ont:   <http://ontologies.vub.be/oecd#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+
+<http://toxin.vub.be/resource/dossier/1%2C3%2C5-triazine%2C%202%2C4%2C6-tris%281%2C1%27-biphenyl%29-4-yl->
+        a             ont:Report ;
+        rdfs:label    "1,3,5-triazine, 2,4,6-tris(1,1'-biphenyl)-4-yl-" ;
+        ont:contains  <http://toxin.vub.be/resource/test/acute-toxicity/3> ;
+        ont:seeAlso   <http://toxin.vub.be/resource/pdfLink/https%3A%2F%2Fec.europa.eu%2Fhealth%2Fscientific_committees%2Fconsumer_safety%2Fdocs%2Fsccs_o_070.pdf> .
+
+<http://toxin.vub.be/resource/test/acute-toxicity/4>
+        a                              ont:Test ;
+        ont:additional_info            "test substance: 18247 pyrazol" ;
+        ont:chemical_batch_nr          "et046" ;
+        ont:clinical_examiniation      "treatment-related effects included a slight to moderate decreased breathing frequency during exposure,  and discolouration of the fur of the animals, which was visible from just after exposure until necropsy 14 days later." ;
+        ont:compound                   <http://toxin.vub.be/resource/compound/1-hydroxyethyl-4%2C5-diamino%20pyrazole%20sulfate> ;
+        ont:conclusion                 "in rats the 4 h lc50 value of an aerosol of the test substance was larger than 5.24 g/m³ for both sexes" ;
+        ont:exposure_time_hour         "4" ;
+        ont:glp                        "yes" ;
+        ont:gross_pathology            "grey discoloured areas on the lungs in half of the animals at necropsy," ;
+        ont:guideline                  "OECD 403" ;
+        ont:lc50                       "5.24" ;
+        ont:lc50_unit                  "g/m3" ;
+        ont:moribund_or_dead_animals_prior_to_study_termination
+                "no" ;
+        ont:n_animals_group            "10" ;
+        ont:nominal_dose_levels_unity  "g/m³" ;
+        ont:nominal_dose_levels_value  "5.24 ± 0.31" ;
+        ont:observation_period         "14" ;
+        ont:observation_period_day     "14" ;
+        ont:particle_size_concentration
+                "the mass median aerodynamic (mmad) size of the particles in the test atmosphere was 3.3 µm and the distribution of particle sizes had a geometric standard deviation of 1.8." ;
+        ont:particle_size_distribution_shape_and_density
+                "mmad in the range of 1-4 µm. the mass median aerodynamic (mmad) size of the particles in the test atmosphere was 3.3 µm and the distribution of particle sizes had a geometric standard deviation of 1.8." ;
+        ont:purity                     "99.8" ;
+        ont:ref_in_dossier             "16" ;
+        ont:sec_type                   "in vivo" ;
+        ont:sex                        "f & m" ;
+        ont:species_strain             "rat/wistar (crl:[wi]wu br)" ;
+        ont:treatment_prior_to_use     "the test material was milled before use to obtain an mmad in the range of 1-4 µm." ;
+        ont:type                       "in vivo" .
+
+<http://toxin.vub.be/resource/dossier/polysilicone-15>
+        a             ont:Report ;
+        rdfs:label    "polysilicone-15" ;
+        ont:contains  <http://toxin.vub.be/resource/test/acute-toxicity/2> ;
+        ont:seeAlso   <http://toxin.vub.be/resource/pdfLink/https%3A%2F%2Fec.europa.eu%2Fhealth%2Fscientific_committees%2Fconsumer_safety%2Fdocs%2Fsccs_o_024.pdf> .
+
+<http://toxin.vub.be/resource/compound/zinc%20pyrithione>
+        a               ont:Compound ;
+        rdfs:label      "zinc pyrithione" ;
+        ont:compoundOf  <http://toxin.vub.be/resource/dossier/zinc%20pyrithione> .
+
+<http://toxin.vub.be/resource/dossier/1-hydroxyethyl-4%2C5-diamino%20pyrazole%20sulfate>
+        a             ont:Report ;
+        rdfs:label    "1-hydroxyethyl-4,5-diamino pyrazole sulfate" ;
+        ont:contains  <http://toxin.vub.be/resource/test/acute-toxicity/4> ;
+        ont:seeAlso   <http://toxin.vub.be/resource/pdfLink/https%3A%2F%2Fec.europa.eu%2Fhealth%2Fscientific_committees%2Fconsumer_safety%2Fdocs%2Fsccs_o_079.pdf> .
+
+<http://toxin.vub.be/resource/compound/1-hydroxyethyl-4%2C5-diamino%20pyrazole%20sulfate>
+        a               ont:Compound ;
+        rdfs:label      "1-hydroxyethyl-4,5-diamino pyrazole sulfate" ;
+        ont:compoundOf  <http://toxin.vub.be/resource/dossier/1-hydroxyethyl-4%2C5-diamino%20pyrazole%20sulfate> .
+
+<http://toxin.vub.be/resource/test/acute-toxicity/2>
+        a                             ont:Test ;
+        ont:actual_dose_levels_unit   "mg/l" ;
+        ont:actual_dose_levels_value  "0.285, 1.838 " ;
+        ont:additional_information    "the generated aerosol at chemically determined mean concentrations of 0.285 mg/l air (group 1) or 1.838 mg/l air (group 2)" ;
+        ont:clinical_examiniation     "there were no clinical signs during or after the inhalation exposure in group 1. in group 2, clinical signs were only seen from the day after the exposure. the clinical signs consisted of restlessness and ruffled fur, both findings slight to marked in degree, and of tachypnea and hunched posture and were followed by premature death or had cleared within 3 to 5 days in the one survivor of this group. this survivor remained free from clinical signs from five days after exposure onwards. there were no relevant, adverse effects on body weight development in the survivors of groups 1 and 2." ;
+        ont:compound                  <http://toxin.vub.be/resource/compound/polysilicone-15> ;
+        ont:conclusion                "no lc50 of parsol slx was calculated from this study, but was estimated to be between 0.285 and 1.838 mg/l air." ;
+        ont:design                    "flow-past" ;
+        ont:exposure_time_hour        "4" ;
+        ont:glp                       "yes" ;
+        ont:gross_pathology           "necropsy did not reveal any macroscopic pathology changes in any of the survivors either of group 1 or group 2. in the two decedents of group 1 the lungs were dark red discoloured and incompletely collapsed, and in the nine decedents of group 2 the lungs were dark red discoloured. " ;
+        ont:guideline                 "OECD 403" ;
+        ont:lc50                      "0.285 --> 1.838" ;
+        ont:lc50_unit                 "mg/l" ;
+        ont:moribund_or_dead_animals_prior_to_study_termination
+                "yes" ;
+        ont:mortality_rate            "in group 1, two of ten animals were found dead on the day after the exposure. in group 2 nine of ten animals were found dead, one or two days after exposure." ;
+        ont:n_animals_group           "10" ;
+        ont:observation_period        "15" ;
+        ont:observation_period_day    "15" ;
+        ont:oro_nasal_head_only_whole_body
+                "nose only" ;
+        ont:particle_size_concentration
+                "two gravimetric measurements of particle size distribution produced mmad and gsd of 2.64 µm (gsd 2.63) and 3.03 µm (gsd 2.49) for group 1, and 2.67 µm (gsd 2.74) and 2.66 µm (gsd 2.73) for group 2. " ;
+        ont:ref_in_dossier            "9 (subm.2), 12(subm.2)" ;
+        ont:sec_type                  "in vivo" ;
+        ont:sex                       "f & m" ;
+        ont:species_strain            "rat/han wistar" ;
+        ont:treatment_prior_to_use    "at ambient temperature, the test substance was too viscous for aerosol generation. therefore, the test material was to a temperature of 55°C prior to nebulisation." ;
+        ont:type                      "in vivo" .
+
+<http://toxin.vub.be/resource/compound/polysilicone-15>
+        a               ont:Compound ;
+        rdfs:label      "polysilicone-15" ;
+        ont:compoundOf  <http://toxin.vub.be/resource/dossier/polysilicone-15> .
+
+<http://toxin.vub.be/resource/test/acute-toxicity/5>
+        a                             ont:Test ;
+        ont:SCCS_comment_to_test      "the concentration used is above the saturated vapour concentration (139 ppm or 2.1 mg/l) and therefore a proportion of the test substance would have been inhaled as an aerosol, rather than a vapour. based on the available data, theLC50 of D5 in rats was calculated to be 8.67 mg (560 ppm)." ;
+        ont:actual_dose_levels_unit   "mg/l (300, 434, 634, 1000 ppm)" ;
+        ont:actual_dose_levels_value  "4.64, 6.73, 9.82, 15.37 " ;
+        ont:additional_information    "taken from sccs 1241/10. four groups of 5 male and 5 female fischer 344 rats were exposed by whole body inhalation to d5 during a single, continuous 4-hour period, followed by an observation period of 15 days. " ;
+        ont:age_value_at_start_of_experiment
+                "test substance: D5" ;
+        ont:clinical_examiniation     "The food consumption and mean body weights were decreased in animals exposed to concentrations of 6.73 mg D5/l (434 ppm) and above but these effects were reversible during the observation period. the clinical signs that were observed following exposure were of low incidence." ;
+        ont:compound                  <http://toxin.vub.be/resource/compound/Decamethylcyclopentasiloxane> ;
+        ont:conclusion                "the LC50 for both sexes was calculated to be 8.67 mg d5/L (560 ppm)." ;
+        ont:exposure_time_hour        "4" ;
+        ont:glp                       "yes" ;
+        ont:gross_pathology           "In animals dying spontaneously post exposure, the lungs were affected (red lungs partly collapsed) while no macroscopic observations were recorded in any animals necropsied at the scheduled sacrifice date. no animals died at the lowest exposure concentration. " ;
+        ont:guideline                 "OECD 403" ;
+        ont:lc50                      "8.67" ;
+        ont:lc50_unit                 "mg d5/L (560 ppm)" ;
+        ont:moribund_or_dead_animals_prior_to_study_termination
+                "yes" ;
+        ont:mortality_rate            "at the intermediate exposure concentrations, four animals of each sex died. all animals at the highest exposure concentration died during the exposure phase." ;
+        ont:n_animals_group           "10" ;
+        ont:observation_period        "15" ;
+        ont:observation_period_day    "15" ;
+        ont:oro_nasal_head_only_whole_body
+                "whole body" ;
+        ont:ref_in_dossier            "15" ;
+        ont:sccs_comment              "the concentration used is above the saturated vapour concentration (139 ppm or 2.1 mg/l) and therefore a proportion of the test substance would have been inhaled as an aerosol, rather than a vapour. based on the available data, theLC50 of D5 in rats was calculated to be 8.67 mg (560 ppm)." ;
+        ont:sccs_comment_to_test      "the concentration used is above the saturated vapour concentration (139 ppm or 2.1 mg/l) and therefore a proportion of the test substance would have been inhaled as an aerosol, rather than a vapour. based on the available data, theLC50 of D5 in rats was calculated to be 8.67 mg (560 ppm)." ;
+        ont:sec_type                  "in vivo" ;
+        ont:sex                       "f&m" ;
+        ont:species_strain            "rat/Fischer 344" ;
+        ont:type                      "in vivo" .
+
+<http://toxin.vub.be/resource/compound/Decamethylcyclopentasiloxane>
+        a               ont:Compound ;
+        rdfs:label      "Decamethylcyclopentasiloxane" ;
+        ont:compoundOf  <http://toxin.vub.be/resource/dossier/Decamethylcyclopentasiloxane> .
+
+<http://toxin.vub.be/resource/test/acute-toxicity/3>
+        a                              ont:Test ;
+        ont:SCCS_comment_to_test       "the observed effects are similar to those observed upon inhalation of particulate materials in general including some nano-particles. however, the massive influx of neutrophils and the increase of macrophages by approximately a factor 2 cannot be considered to be merely a mild inflammation after inhalation of particles. none of the results in the cited reference stone et al. 2007 supports this conclusion. in contrary, these results presented here clearly indicate a strong inflammatory response of the host. the fact that even on day 15 a few parameters differed from those of the controls confirms this strong adverse reaction after inhalation of eth50 (109)." ;
+        ont:actual_concentration       "10" ;
+        ont:actual_dose_levels_unit    "mg/l" ;
+        ont:actual_dose_levels_value   "0.602" ;
+        ont:additional_info            "test substance: fat 65'080/f. concentration: 47.6 % of the active uv filter eth50,  the target concentration as active ingredient of uv filter eth50 was 10%" ;
+        ont:additional_information     "the first satellite group was sacrificed about 14 hours post end of exposure for bronchoalveolar lavage fluid (balf) and plasma sampling, the second group was assigned to interim pathology at approximately 24 hours post end of exposure (test day 2), and the third was assigned to pathology at 14 days post exposure (test day 15). all animals were observed for clinical signs and mortality during and following the inhalation exposure, i.e. until interim sacrifice or over a 15-day observation period. body weights were recorded before exposure on test day 1 in all animals and during the observation period on test days 4, 8 and 15 in all animals assigned to be sacrificed on day 15. the BALF examinations comprised total and differential cell counts and the determination of total protein, TNF-α and IL-6. in addition, total protein was determined in blood plasma from the animals assigned to balf sampling. pathology examinations comprised complete macroscopic pathology, the determination of lung weight and histopathology of the lungs and tracheobronchial lymph nodes on days 2 and 15.  test item: mmad: 1.2 µm; median droplet volume cm³: 9.05E-19; number of particle a.i./L: 1.15E+12; approx. surface area (m²) / L: 0.0275. placebo: MMAD: 1.08 µm; median droplet volume cm³: 6.60E-19; number of particle a.i./L: --; approx. surface area (m²) / L: --." ;
+        ont:chemical_batch_nr          "lot04122fc7" ;
+        ont:clinical_examiniation      "clinical signs attributable to treatment with the aqueous placebo dilution or test item dilution did not occur and no premature deaths occurred during the study. in balf collected at about 14 hours after end of exposure the total cell count (mainly macrophage and neutrophil numbers), TNFα and total protein were considerably higher in both sexes of test item-treated animals than in placebo control animals, while total protein levels in plasma did not distinguish the two groups. the changes in balf were consistent with the histopathology findings of granulocytic infiltration in alveolar wall and lumen, diffuse alveolar histiocytosis and alveolar lining cell activation seen in all test item-treated animals assigned to interim pathology at approximately 24 hours post end of exposure (test day 2). increases of total cell count, TNFα and total protein in balf and of absolute and relative lung weight, and the histopathology findings of granulocytic infiltration, diffuse alveolar histiocytosis and alveolar lining cell activation seen in the test item group on test day 2 were attributed to the treatment with the test item. increase in neutrophil numbers in balf on test day 2 was considered to be indicative of an inflammatory reaction. the study authors considered the findings noted in test item-treated animals on test day 2 to represent an acute clearance reaction to the lung burden of test item. this is further supported by the absence of these findings by test day 15. this response is well documented for particle exposures to lung (stone et al. 2007) and the cellular response is not characteristic of immunologic response profiles reflected in the low numbers of lymphocytes at day 2 and their absence histologically at day 15 (holt, p. et al. 2008) ." ;
+        ont:compound                   <http://toxin.vub.be/resource/compound/1%2C3%2C5-triazine%2C%202%2C4%2C6-tris%281%2C1%27-biphenyl%29-4-yl-> ;
+        ont:conclusion                 "the applicant argued that such pulmonary inflammatory responses are not expected with use of eth50 in sunscreens or other products from spray-on dispensers. spray applicators are generally pump-type dispensers with some increase in marketed products using fine-spray aerosol type dispensers. in each of these applicators, the droplet sizes (aerosol) are designed to be at least 30 times larger than those used in this rat inhalation test. according to durand et al. (2007), sunscreen sprayable formulations should be dispensed with droplet size of more than 30 µm (mmad) with not more than 1% of droplets of aerodynamic diameter at or below 10 µm. the authors concluded that for nanosized eth50 the inhalation lc50 is greater than the highest technically achievable aerosol concentration level of 4.976 mg formulation/L air, or greater than 0.4976 mg eth50/L air, according to this study’s results with mmad of about 1.2 µm. a notable but reversible lung inflammatory response occurred which is considered a normal non-allergenic type response to particle exposures." ;
+        ont:design                     "flow-past" ;
+        ont:exposure_time_hour         "4" ;
+        ont:glp                        "yes" ;
+        ont:guideline                  "OECD 403" ;
+        ont:lc50                       "> 0.4976" ;
+        ont:lc50_unit                  "mg/l" ;
+        ont:moribund_or_dead_animals_prior_to_study_termination
+                "no" ;
+        ont:n_animals_group            "30" ;
+        ont:nominal_dose_levels_unity  "mg/l" ;
+        ont:nominal_dose_levels_value  "0.4976" ;
+        ont:observation_period         "14" ;
+        ont:observation_period_day     "14" ;
+        ont:oro_nasal_head_only_whole_body
+                "nose only" ;
+        ont:particle_size_concentration
+                "the particle size distribution was determined twice during each exposure using a mercer 7 stage cascade impactor (model 02-1300). two gravimetric measurements of particle size distribution during exposure indicated mass median aerodynamic diameters (mmads) and geometric standard deviations (gsd) of 1.23 µm (gsd 2.13) and 1.27 µm (gsd 2.19)." ;
+        ont:particle_size_distribution_shape_and_density
+                "nano-sized material. d(0.5)=109 nm." ;
+        ont:ref_in_dossier             "5 (subm 3)" ;
+        ont:sccs_comment               "the observed effects are similar to those observed upon inhalation of particulate materials in general including some nano-particles. however, the massive influx of neutrophils and the increase of macrophages by approximately a factor 2 cannot be considered to be merely a mild inflammation after inhalation of particles. none of the results in the cited reference stone et al. 2007 supports this conclusion. in contrary, these results presented here clearly indicate a strong inflammatory response of the host. the fact that even on day 15 a few parameters differed from those of the controls confirms this strong adverse reaction after inhalation of eth50 (109)." ;
+        ont:sccs_comment_to_test       "the observed effects are similar to those observed upon inhalation of particulate materials in general including some nano-particles. however, the massive influx of neutrophils and the increase of macrophages by approximately a factor 2 cannot be considered to be merely a mild inflammation after inhalation of particles. none of the results in the cited reference stone et al. 2007 supports this conclusion. in contrary, these results presented here clearly indicate a strong inflammatory response of the host. the fact that even on day 15 a few parameters differed from those of the controls confirms this strong adverse reaction after inhalation of eth50 (109)." ;
+        ont:sec_type                   "in vivo" ;
+        ont:sex                        "f & m" ;
+        ont:species_strain             "rat/ wistar [hanrcc:wist(spf)]" ;
+        ont:treatment_prior_to_use     "the test item and the placebo were prepared as aqueous dilutions at a ratio (w/w) of 20% fat65’080/f or 20% fat65’080-placebo plus 80% purified water, the tarhet concentration as active ingredient of uv filter eth50 was 10%" ;
+        ont:type                       "in vivo" ;
+        ont:year                       "an additional group of 15 males and 15 females was exposed to an aqueous dilution of the control item, fat 65’080placebo, at aerosol generation conditions similar to those used for the test item " .
+
+<http://toxin.vub.be/resource/test/acute-toxicity/1>
+        a                              ont:Test ;
+        ont:SCCS_comment_to_test       "this study shows that systemic effects on hind legs might occur after inhalation exposure." ;
+        ont:additional_info            "test substance: zinc pyrithion, label: zinc-pyrion" ;
+        ont:chemical_batch_nr          "tox 1000" ;
+        ont:clinical_examiniation      "all surviving animals showed signs of toxicity (one of the two surviving females exposed to 1.82 mg/l showed stiffness in the hind legs) which improved until the end of the observation period. except one female exposed to 0.53 mg/l, normal bodyweight development was observed during the second week." ;
+        ont:compound                   <http://toxin.vub.be/resource/compound/zinc%20pyrithione> ;
+        ont:conclusion                 "the results of this study lead to classification as acute tox 3; H331 (toxic if inhaled) according to CLP (Regulation (EC) No 1272/2008) by the registrant." ;
+        ont:exposure_time_hour         "4" ;
+        ont:glp                        "yes" ;
+        ont:gross_pathology            "lung abnormalities (swelling, pallor, abnormally dark appearance, dark patches and foci) and liver changes (dark appearance) were observed in animals that died. except one female exposed to 0.53 mg/l, no abnormalities were observed in animals that were killed at the end of the observation period." ;
+        ont:guideline                  "OECD 403" ;
+        ont:lc50                       "0.84" ;
+        ont:lc50_female                "1.03" ;
+        ont:lc50_male                  "1.34" ;
+        ont:lc50_unit                  "mg/l" ;
+        ont:moribund_or_dead_animals_prior_to_study_termination
+                "yes" ;
+        ont:mortality_rate             "all deaths occurred on day 1 after exposure as follows: 1 of 5 males and 0 of 5 females at 0.53 mg/l; 3 of 5 males and 2 of 5 females at 0.95 mg/l; 5 of 5 males and 3 of 5 females at 1.82 mg/l." ;
+        ont:n_animals_group            "10" ;
+        ont:nominal_dose_levels_unity  "mg/l" ;
+        ont:nominal_dose_levels_value  "0.53, 0.95, 1.82" ;
+        ont:observation_period         "14" ;
+        ont:observation_period_day     "14" ;
+        ont:oro_nasal_head_only_whole_body
+                "nose only" ;
+        ont:particle_size_distribution_shape_and_density
+                "mmadss: 3.3, 3.5, 3.8 μm " ;
+        ont:physical_form              "aerosol dust" ;
+        ont:ref_in_dossier             "e2" ;
+        ont:sccs_comment               "this study shows that systemic effects on hind legs might occur after inhalation exposure." ;
+        ont:sccs_comment_to_test       "this study shows that systemic effects on hind legs might occur after inhalation exposure." ;
+        ont:sec_type                   "in vivo" ;
+        ont:sex                        "f & m" ;
+        ont:species_strain             "rat/sprague-dawley" ;
+        ont:type                       "in vivo" ;
+        ont:year                       "1996" .
+
+<http://toxin.vub.be/resource/test/acute-toxicity/6>
+        a                              ont:Test ;
+        ont:SCCS_comment_to_test       "the concentration used is above the saturated vapour concentration (139 ppm or 2.1 mg/l) and therefore a proportion of the test substance would have been inhaled as an aerosol, rather than a vapour. based on the available data, theLC50 of D5 in rats was calculated to be 8.67 mg (560 ppm)." ;
+        ont:age_value_at_start_of_experiment
+                "test substance: D5" ;
+        ont:compound                   <http://toxin.vub.be/resource/compound/Decamethylcyclopentasiloxane> ;
+        ont:conclusion                 "all animals survived a single four hour whole body vapour exposure of >545 ppm of D5 with no overt signs of toxicity and no mortality." ;
+        ont:exposure_time_hour         "4" ;
+        ont:guideline                  "OECD 403" ;
+        ont:moribund_or_dead_animals_prior_to_study_termination
+                "no" ;
+        ont:n_animals_group            "10" ;
+        ont:nominal_dose_levels_unity  "ppm" ;
+        ont:nominal_dose_levels_value  ">545" ;
+        ont:oro_nasal_head_only_whole_body
+                "whole body" ;
+        ont:ref_in_dossier             "16" ;
+        ont:sccs_comment               "the concentration used is above the saturated vapour concentration (139 ppm or 2.1 mg/l) and therefore a proportion of the test substance would have been inhaled as an aerosol, rather than a vapour. based on the available data, theLC50 of D5 in rats was calculated to be 8.67 mg (560 ppm)." ;
+        ont:sccs_comment_to_test       "the concentration used is above the saturated vapour concentration (139 ppm or 2.1 mg/l) and therefore a proportion of the test substance would have been inhaled as an aerosol, rather than a vapour. based on the available data, theLC50 of D5 in rats was calculated to be 8.67 mg (560 ppm)." ;
+        ont:sec_type                   "in vivo" ;
+        ont:sex                        "f&m" ;
+        ont:species_strain             "rat/Wistar" ;
+        ont:type                       "in vivo" .
+
+<http://toxin.vub.be/resource/dossier/Decamethylcyclopentasiloxane>
+        a             ont:Report ;
+        rdfs:label    "Decamethylcyclopentasiloxane" ;
+        ont:contains  <http://toxin.vub.be/resource/test/acute-toxicity/6> , <http://toxin.vub.be/resource/test/acute-toxicity/5> ;
+        ont:seeAlso   <http://toxin.vub.be/resource/pdfLink/https%3A%2F%2Fec.europa.eu%2Fhealth%2Fscientific_committees%2Fconsumer_safety%2Fdocs%2Fsccs_o_174.pdf> .
+
+<http://toxin.vub.be/resource/dossier/zinc%20pyrithione>
+        a             ont:Report ;
+        rdfs:label    "zinc pyrithione" ;
+        ont:contains  <http://toxin.vub.be/resource/test/acute-toxicity/1> ;
+        ont:seeAlso   <http://toxin.vub.be/resource/pdfLink/https%3A%2F%2Fec.europa.eu%2Fhealth%2Fscientific_committees%2Fconsumer_safety%2Fdocs%2Fsccs_o_133.pdf> .
+
+<http://toxin.vub.be/resource/compound/1%2C3%2C5-triazine%2C%202%2C4%2C6-tris%281%2C1%27-biphenyl%29-4-yl->
+        a               ont:Compound ;
+        rdfs:label      "1,3,5-triazine, 2,4,6-tris(1,1'-biphenyl)-4-yl-" ;
+        ont:compoundOf  <http://toxin.vub.be/resource/dossier/1%2C3%2C5-triazine%2C%202%2C4%2C6-tris%281%2C1%27-biphenyl%29-4-yl-> .

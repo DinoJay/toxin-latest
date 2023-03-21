@@ -1,0 +1,654 @@
+@prefix rr:    <http://www.w3.org/ns/r2rml#> .
+@prefix ont:   <http://ontologies.vub.be/oecd#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+
+<http://toxin.vub.be/resource/compound/2%2C6-dihydroxyethylaminotoluene>
+        a               ont:Compound ;
+        rdfs:label      "2,6-dihydroxyethylaminotoluene" ;
+        ont:compoundOf  <http://toxin.vub.be/resource/dossier/2%2C6-dihydroxyethylaminotoluene> .
+
+<http://toxin.vub.be/resource/test/carcinogenicity/11>
+        a                       ont:Test ;
+        ont:compound            <http://toxin.vub.be/resource/compound/trisodium%20nitrilotriacetate> ;
+        ont:observation_period  "non OECD" ;
+        ont:type                "in vivo" .
+
+<http://toxin.vub.be/resource/dossier/hc%20yellow%20n°%202>
+        a             ont:Report ;
+        rdfs:label    "hc yellow n° 2" ;
+        rdfs:seeAlso  <https://ec.europa.eu/health/scientific_committees/consumer_safety/docs/sccs_o_038.pdf> ;
+        ont:contains  <http://toxin.vub.be/resource/test/carcinogenicity/40> , <http://toxin.vub.be/resource/test/carcinogenicity/39> .
+
+<http://toxin.vub.be/resource/test/carcinogenicity/52>
+        a                       ont:Test ;
+        ont:compound            <http://toxin.vub.be/resource/compound/hc%20red%20n°%203> ;
+        ont:observation_period  "non OECD" ;
+        ont:type                "in vivo" .
+
+<http://toxin.vub.be/resource/test/carcinogenicity/24>
+        a                       ont:Test ;
+        ont:compound            <http://toxin.vub.be/resource/compound/p-aminophenol> ;
+        ont:observation_period  "/" ;
+        ont:type                "in vitro" .
+
+<http://toxin.vub.be/resource/test/carcinogenicity/37>
+        a                       ont:Test ;
+        ont:compound            <http://toxin.vub.be/resource/compound/o-aminophenol> ;
+        ont:observation_period  "https://ec.europa.eu/health/scientific_committees/consumer_safety/docs/sccs_o_025.pdf" ;
+        ont:type                "in vivo" .
+
+<http://toxin.vub.be/resource/test/carcinogenicity/3>
+        a                          ont:Test ;
+        ont:administration_scheme  "daily" ;
+        ont:chemical_batch_nr      "PKM4201, PKF5373" ;
+        ont:compound               <http://toxin.vub.be/resource/compound/phenoxyethanol> ;
+        ont:conclusion             "no evidence of carcinogenicity, no treatment-related histopathological findings, some treatment-related changes in liver chemistry without any histopathological changes in liver. therefore the NOAEL is 468 mg/kg/day in males and 586 in females" ;
+        ont:glp                    "yes" ;
+        ont:n_animals_group        "100" ;
+        ont:observation_period     "OECD 451" ;
+        ont:observations           "grow rates suppressed in both sexes at 10,000ppm and above in a dose-related manner, terminal body weights decreased in all doses, food consumtion decresed, water consumption decresed dose-dependently, plasma chemistry analysis showed an increase in ALP in females at 20,000ppm, decrese in choleterol and phospholipids in males at 10,000 and 20,000ppm. a dose-dependent diminution of triglycerides and ALT at 20,000ppm in both sexes, LDH decresed in females in a dose-related manner. urine pH low in both sexes at 10,000 and 20,000 ppm due to the excretion of the major metabolite 2-phenoxyacetic acid." ;
+        ont:oral                   "drinking water" ;
+        ont:purity                 "≥ 99.8" ;
+        ont:ref_in_dossier         "subm II, ref. 5" ;
+        ont:species_strain         "mouse/B6D2F1/Crlj" ;
+        ont:study_duration         "105 weeks" ;
+        ont:type                   "in vivo" ;
+        ont:vehicle                "water" ;
+        ont:year                   "2007" .
+
+<http://toxin.vub.be/resource/dossier/2%2C6-dihydroxyethylaminotoluene>
+        a             ont:Report ;
+        rdfs:label    "2,6-dihydroxyethylaminotoluene" ;
+        rdfs:seeAlso  <https://ec.europa.eu/health/scientific_committees/consumer_safety/docs/sccs_o_188.pdf> ;
+        ont:contains  <http://toxin.vub.be/resource/test/carcinogenicity/46> .
+
+<http://toxin.vub.be/resource/dossier/2%2C6-diaminopyridine>
+        a             ont:Report ;
+        rdfs:label    "2,6-diaminopyridine" ;
+        rdfs:seeAlso  <https://ec.europa.eu/health/scientific_committees/consumer_safety/docs/sccs_o_084.pdf> ;
+        ont:contains  <http://toxin.vub.be/resource/test/carcinogenicity/45> .
+
+<http://toxin.vub.be/resource/test/carcinogenicity/31>
+        a                       ont:Test ;
+        ont:compound            <http://toxin.vub.be/resource/compound/hc%20yellow%20n°%204> ;
+        ont:observation_period  "non OECD" ;
+        ont:type                "in vivo" .
+
+<http://toxin.vub.be/resource/dossier/acid%20orange%207>
+        a             ont:Report ;
+        rdfs:label    "acid orange 7" ;
+        rdfs:seeAlso  <https://ec.europa.eu/health/scientific_committees/consumer_safety/docs/sccs_o_158.pdf> ;
+        ont:contains  <http://toxin.vub.be/resource/test/carcinogenicity/57> , <http://toxin.vub.be/resource/test/carcinogenicity/56> .
+
+<http://toxin.vub.be/resource/dossier/hydroxypropyl%20p-phenylenediamine%20and%20its%20dihydrochloride%20salt>
+        a             ont:Report ;
+        rdfs:label    "hydroxypropyl p-phenylenediamine and its dihydrochloride salt" ;
+        rdfs:seeAlso  <https://ec.europa.eu/health/sites/health/files/scientific_committees/consumer_safety/docs/sccs_o_230.pdf> ;
+        ont:contains  <http://toxin.vub.be/resource/test/carcinogenicity/22> .
+
+<http://toxin.vub.be/resource/test/carcinogenicity/44>
+        a             ont:Test ;
+        ont:compound  <http://toxin.vub.be/resource/compound/n-methyl-2-pyrrolidone%20%28NMP%29> ;
+        ont:type      "in vivo" .
+
+<http://toxin.vub.be/resource/test/carcinogenicity/16>
+        a                       ont:Test ;
+        ont:compound            <http://toxin.vub.be/resource/compound/toluene-2%2C5-diamine%20and%20its%20sulfate> ;
+        ont:observation_period  "/" ;
+        ont:type                "in vivo" .
+
+<http://toxin.vub.be/resource/test/carcinogenicity/57>
+        a                       ont:Test ;
+        ont:compound            <http://toxin.vub.be/resource/compound/acid%20orange%207> ;
+        ont:observation_period  "non OECD" ;
+        ont:type                "in vitro" .
+
+<http://toxin.vub.be/resource/test/carcinogenicity/29>
+        a                       ont:Test ;
+        ont:compound            <http://toxin.vub.be/resource/compound/hydroxyethyl-2-nitro-p-toluidine> ;
+        ont:observation_period  "https://ec.europa.eu/health/scientific_committees/consumer_safety/docs/sccs_o_061.pdf" ;
+        ont:type                "in vitro" .
+
+<http://toxin.vub.be/resource/compound/2%2C6-diaminopyridine>
+        a               ont:Compound ;
+        rdfs:label      "2,6-diaminopyridine" ;
+        ont:compoundOf  <http://toxin.vub.be/resource/dossier/2%2C6-diaminopyridine> .
+
+<http://toxin.vub.be/resource/compound/toluene-2%2C5-diamine%20and%20its%20sulfate>
+        a               ont:Compound ;
+        rdfs:label      "toluene-2,5-diamine and its sulfate" ;
+        ont:compoundOf  <http://toxin.vub.be/resource/dossier/toluene-2%2C5-diamine%20and%20its%20sulfate> .
+
+<http://toxin.vub.be/resource/test/carcinogenicity/8>
+        a                       ont:Test ;
+        ont:compound            <http://toxin.vub.be/resource/compound/trisodium%20nitrilotriacetate> ;
+        ont:observation_period  "non OECD" ;
+        ont:type                "in vivo" .
+
+<http://toxin.vub.be/resource/test/carcinogenicity/10>
+        a                       ont:Test ;
+        ont:compound            <http://toxin.vub.be/resource/compound/trisodium%20nitrilotriacetate> ;
+        ont:observation_period  "non OECD" ;
+        ont:type                "in vivo" .
+
+<http://toxin.vub.be/resource/test/carcinogenicity/51>
+        a                       ont:Test ;
+        ont:compound            <http://toxin.vub.be/resource/compound/hc%20red%20n°%203> ;
+        ont:observation_period  "non OECD" ;
+        ont:type                "in vitro" .
+
+<http://toxin.vub.be/resource/test/carcinogenicity/23>
+        a                       ont:Test ;
+        ont:compound            <http://toxin.vub.be/resource/compound/resorcinol> ;
+        ont:observation_period  "/" ;
+        ont:type                "in vivo" .
+
+<http://toxin.vub.be/resource/dossier/trisodium%20nitrilotriacetate>
+        a             ont:Report ;
+        rdfs:label    "trisodium nitrilotriacetate" ;
+        rdfs:seeAlso  <https://ec.europa.eu/health/scientific_committees/consumer_safety/docs/sccs_o_046.pdf> ;
+        ont:contains  <http://toxin.vub.be/resource/test/carcinogenicity/13> , <http://toxin.vub.be/resource/test/carcinogenicity/11> , <http://toxin.vub.be/resource/test/carcinogenicity/14> , <http://toxin.vub.be/resource/test/carcinogenicity/6> , <http://toxin.vub.be/resource/test/carcinogenicity/8> , <http://toxin.vub.be/resource/test/carcinogenicity/12> , <http://toxin.vub.be/resource/test/carcinogenicity/4> , <http://toxin.vub.be/resource/test/carcinogenicity/10> , <http://toxin.vub.be/resource/test/carcinogenicity/7> , <http://toxin.vub.be/resource/test/carcinogenicity/9> , <http://toxin.vub.be/resource/test/carcinogenicity/5> , <http://toxin.vub.be/resource/test/carcinogenicity/15> .
+
+<http://toxin.vub.be/resource/dossier/resorcinol>
+        a             ont:Report ;
+        rdfs:label    "resorcinol" ;
+        rdfs:seeAlso  <https://ec.europa.eu/health/scientific_committees/consumer_safety/docs/sccs_o_015.pdf> ;
+        ont:contains  <http://toxin.vub.be/resource/test/carcinogenicity/23> .
+
+<http://toxin.vub.be/resource/test/carcinogenicity/36>
+        a                       ont:Test ;
+        ont:compound            <http://toxin.vub.be/resource/compound/o-aminophenol> ;
+        ont:observation_period  "https://ec.europa.eu/health/scientific_committees/consumer_safety/docs/sccs_o_025.pdf" ;
+        ont:type                "in vivo" .
+
+<http://toxin.vub.be/resource/test/carcinogenicity/2>
+        a                          ont:Test ;
+        ont:administration_scheme  "daily" ;
+        ont:chemical_batch_nr      "PKF5373" ;
+        ont:compound               <http://toxin.vub.be/resource/compound/phenoxyethanol> ;
+        ont:conclusion             "no evidence of carcinogenicity, no clear treatment-related haematological effects, the kidnet is a target organ in males, histopathology of liver was unremarkable, NOAEL=249 mg/kg/day" ;
+        ont:glp                    "yes" ;
+        ont:n_animals_group        "100" ;
+        ont:observation_period     "OECD 451" ;
+        ont:observations           "growth rates suppresed in females at all doses and in males only at highest dose, a statistically significant decrease in terminal body weight in the high-dose groups.a decrease in food and water consumption. soiled fur around the genitalia in males at 10,000ppm and in females at all doses. " ;
+        ont:oral                   "drinking water" ;
+        ont:purity                 "99.8-99.9" ;
+        ont:ref_in_dossier         "subm II, ref. 4" ;
+        ont:species_strain         "rat/F344/DuCrlCrlj" ;
+        ont:study_duration         "104 weeks" ;
+        ont:type                   "in vivo" ;
+        ont:vehicle                "water" ;
+        ont:year                   "2007" .
+
+<http://toxin.vub.be/resource/test/carcinogenicity/49>
+        a                               ont:Test ;
+        ont:compound                    <http://toxin.vub.be/resource/compound/triclosan> ;
+        ont:conclusion                  "in summary, triclosan had little to no effect in hamsters at 12 and 75 mg/kg bw/d, and toxic effects at 250 mg/kg bw/d that resulted in the general deterioration of highdose males after week 80. overall results show that triclosan is not tumourigenic in hamsters at doses of up to 250 mg/kg bw/d. however, survival in females at 90 weeks was poor. noael=75 mg/kg bw/d." ;
+        ont:control_and_recovery_group  "+ 10/sex/ dose (52- week interim)" ;
+        ont:glp                         "yes" ;
+        ont:n_animals_group             "120" ;
+        ont:observation_period          "males: 95 weeks, females; 90 weeks" , "OECD 451" ;
+        ont:observations                "survival was significantly decreased in males and was generally poor (38-58%) in females at 90 weeks. body weight gain was significantly decreased in all high-dose hamsters and was accompanied by a slight (3%), but significant decrease in food consumption in high-dose females. biochemical changes observed at termination included increases (<50%) in blood urea nitrogen in high-dose hamsters and in triglycerides in mid- and high-dose males. haematological changes observed included slight (<15%), but significant decreases in erythroid parameters in mid- and high-dose animals, increased white blood cells in high-dose animals, and increased lymphocytes in high-dose females at termination. significant observations at 52 weeks (interim) were mainly renal changes in high-dose animals. at termination, renal nephropathy was observed in animals of all dose groups, with increased  incidence and severity at the high-dose level. in addition, males showed atypical hyperplasia in the stomachs (fundic region), along with spermatozoa and germ cell effects at the high dose. one high-dose female showed atypical hyperplasia in the fundic region that was considered to be treatment-related. high-dose females showed distended gastric glands and a few treated females of all doses showed benign papillomas of the non-glandular region of the stomach (not discussed in report). hepatic effects were few, with only rarified hepatocytes reported in a few male animals (6/60 in high dose vs. 3/121 in controls). there were no tumours considered to be treatment-related." ;
+        ont:ref_in_dossier              "68" ;
+        ont:sex                         "f & m" ;
+        ont:species_strain              "hamster/syrian" ;
+        ont:type                        "in vivo" ;
+        ont:year                        "1999" .
+
+<http://toxin.vub.be/resource/dossier/sodium%20perborate%20and%20perboric%20acid>
+        a             ont:Report ;
+        rdfs:label    "sodium perborate and perboric acid" ;
+        rdfs:seeAlso  <https://ec.europa.eu/health/scientific_committees/consumer_safety/docs/sccs_o_031.pdf> ;
+        ont:contains  <http://toxin.vub.be/resource/test/carcinogenicity/21> .
+
+<http://toxin.vub.be/resource/dossier/phenoxyethanol>
+        a             ont:Report ;
+        rdfs:label    "phenoxyethanol" ;
+        rdfs:seeAlso  <https://ec.europa.eu/health/scientific_committees/consumer_safety/docs/sccs_o_195.pdf> ;
+        ont:contains  <http://toxin.vub.be/resource/test/carcinogenicity/3> , <http://toxin.vub.be/resource/test/carcinogenicity/2> .
+
+<http://toxin.vub.be/resource/compound/hydroxypropyl%20p-phenylenediamine%20and%20its%20dihydrochloride%20salt>
+        a               ont:Compound ;
+        rdfs:label      "hydroxypropyl p-phenylenediamine and its dihydrochloride salt" ;
+        ont:compoundOf  <http://toxin.vub.be/resource/dossier/hydroxypropyl%20p-phenylenediamine%20and%20its%20dihydrochloride%20salt> .
+
+<http://toxin.vub.be/resource/test/carcinogenicity/30>
+        a                       ont:Test ;
+        ont:compound            <http://toxin.vub.be/resource/compound/hc%20yellow%20n°%204> ;
+        ont:observation_period  "non OECD" ;
+        ont:type                "in vivo" .
+
+<http://toxin.vub.be/resource/compound/hydroxyethyl-2-nitro-p-toluidine>
+        a               ont:Compound ;
+        rdfs:label      "hydroxyethyl-2-nitro-p-toluidine" ;
+        ont:compoundOf  <http://toxin.vub.be/resource/dossier/hydroxyethyl-2-nitro-p-toluidine> .
+
+<http://toxin.vub.be/resource/dossier/o-aminophenol>
+        a             ont:Report ;
+        rdfs:label    "o-aminophenol" ;
+        ont:contains  <http://toxin.vub.be/resource/test/carcinogenicity/38> , <http://toxin.vub.be/resource/test/carcinogenicity/37> , <http://toxin.vub.be/resource/test/carcinogenicity/36> .
+
+<http://toxin.vub.be/resource/test/carcinogenicity/43>
+        a             ont:Test ;
+        ont:compound  <http://toxin.vub.be/resource/compound/n-methyl-2-pyrrolidone%20%28NMP%29> ;
+        ont:type      "in vivo" .
+
+<http://toxin.vub.be/resource/compound/trisodium%20nitrilotriacetate>
+        a               ont:Compound ;
+        rdfs:label      "trisodium nitrilotriacetate" ;
+        ont:compoundOf  <http://toxin.vub.be/resource/dossier/trisodium%20nitrilotriacetate> .
+
+<http://toxin.vub.be/resource/compound/resorcinol>
+        a               ont:Compound ;
+        rdfs:label      "resorcinol" ;
+        ont:compoundOf  <http://toxin.vub.be/resource/dossier/resorcinol> .
+
+<http://toxin.vub.be/resource/test/carcinogenicity/15>
+        a                       ont:Test ;
+        ont:compound            <http://toxin.vub.be/resource/compound/trisodium%20nitrilotriacetate> ;
+        ont:observation_period  "non OECD" ;
+        ont:type                "in vivo" .
+
+<http://toxin.vub.be/resource/compound/β-arbutin>
+        a               ont:Compound ;
+        rdfs:label      "β-arbutin" ;
+        ont:compoundOf  <http://toxin.vub.be/resource/dossier/β-arbutin> .
+
+<http://toxin.vub.be/resource/test/carcinogenicity/56>
+        a                       ont:Test ;
+        ont:compound            <http://toxin.vub.be/resource/compound/acid%20orange%207> ;
+        ont:observation_period  "non OECD" ;
+        ont:type                "in vivo" .
+
+<http://toxin.vub.be/resource/test/carcinogenicity/28>
+        a                       ont:Test ;
+        ont:compound            <http://toxin.vub.be/resource/compound/p-aminophenol> ;
+        ont:observation_period  "/" ;
+        ont:type                "in vivo" .
+
+<http://toxin.vub.be/resource/compound/triclosan>
+        a               ont:Compound ;
+        rdfs:label      "triclosan" ;
+        ont:compoundOf  <http://toxin.vub.be/resource/dossier/triclosan> .
+
+<http://toxin.vub.be/resource/test/carcinogenicity/7>
+        a                       ont:Test ;
+        ont:compound            <http://toxin.vub.be/resource/compound/trisodium%20nitrilotriacetate> ;
+        ont:observation_period  "non OECD" ;
+        ont:type                "in vivo" .
+
+<http://toxin.vub.be/resource/dossier/p-aminophenol>
+        a             ont:Report ;
+        rdfs:label    "p-aminophenol" ;
+        rdfs:seeAlso  <https://ec.europa.eu/health/scientific_committees/consumer_safety/docs/sccs_o_078.pdf> ;
+        ont:contains  <http://toxin.vub.be/resource/test/carcinogenicity/28> , <http://toxin.vub.be/resource/test/carcinogenicity/27> , <http://toxin.vub.be/resource/test/carcinogenicity/26> , <http://toxin.vub.be/resource/test/carcinogenicity/25> , <http://toxin.vub.be/resource/test/carcinogenicity/24> .
+
+<http://toxin.vub.be/resource/dossier/hydroxyethyl-2-nitro-p-toluidine>
+        a             ont:Report ;
+        rdfs:label    "hydroxyethyl-2-nitro-p-toluidine" ;
+        ont:contains  <http://toxin.vub.be/resource/test/carcinogenicity/29> .
+
+<http://toxin.vub.be/resource/compound/n-methyl-2-pyrrolidone%20%28NMP%29>
+        a               ont:Compound ;
+        rdfs:label      "n-methyl-2-pyrrolidone (NMP)" ;
+        ont:compoundOf  <http://toxin.vub.be/resource/dossier/n-methyl-2-pyrrolidone%20%28NMP%29> .
+
+<http://toxin.vub.be/resource/test/carcinogenicity/50>
+        a                       ont:Test ;
+        ont:compound            <http://toxin.vub.be/resource/compound/hc%20red%20n°%203> ;
+        ont:observation_period  "non OECD" ;
+        ont:type                "in vitro" .
+
+<http://toxin.vub.be/resource/test/carcinogenicity/22>
+        a                       ont:Test ;
+        ont:compound            <http://toxin.vub.be/resource/compound/hydroxypropyl%20p-phenylenediamine%20and%20its%20dihydrochloride%20salt> ;
+        ont:observation_period  "non-OECD" ;
+        ont:type                "in vitro" .
+
+<http://toxin.vub.be/resource/test/carcinogenicity/35>
+        a                       ont:Test ;
+        ont:compound            <http://toxin.vub.be/resource/compound/o-phenylphenol%2C%20sodium%20o-phenylphenate%20and%20potassium%20o-phenylphenate> ;
+        ont:observation_period  "/" ;
+        ont:type                "in vivo" .
+
+<http://toxin.vub.be/resource/test/carcinogenicity/1>
+        a                       ont:Test ;
+        ont:compound            <http://toxin.vub.be/resource/compound/β-arbutin> ;
+        ont:observation_period  "national official protocol (Japan)" ;
+        ont:type                "in vivo" .
+
+<http://toxin.vub.be/resource/compound/sodium%20perborate%20and%20perboric%20acid>
+        a               ont:Compound ;
+        rdfs:label      "sodium perborate and perboric acid" ;
+        ont:compoundOf  <http://toxin.vub.be/resource/dossier/sodium%20perborate%20and%20perboric%20acid> .
+
+<http://toxin.vub.be/resource/test/carcinogenicity/48>
+        a                               ont:Test ;
+        ont:administration_scheme       "repeated for 104 weeks" ;
+        ont:compound                    <http://toxin.vub.be/resource/compound/triclosan> ;
+        ont:conclusion                  "in summary, the results show that triclosan is not tumourigenic in a 2-year study in rats at doses of up to 127 mg/kg bw/d in males and 190 mg/kg bw/d in females. a noel of 1,000 ppm was determined (48 mg/kg bw/d for females and males combined). sccp considers the noael as 12 mg/kg bw/d due to haematoxicity and decreased absolute and relative spleen weights (mid dose females)." ;
+        ont:control_and_recovery_group  "20/ dose or 40/ dose control group 52-weeks interim in high-dose" ;
+        ont:glp                         "yes" ;
+        ont:n_animals_group             "120" ;
+        ont:observation_period          "104 weeks" , "OECD 453" ;
+        ont:observations                "increased food intake was found in high-dose males. mean body weight decreases were observed to be transient during the study except for consistent significant decreases of up to 10% in high-dose females. sporadic changes such as slight changes in protein, glucose, bilirubin, triglyceride, and blood urea nitrogen found in the first 52 weeks of the study had disappeared by 78-104 weeks. slight changes in erythroid parameters were sporadic. decreases in monocytes and white blood cells in F and increased clotting time in males was observed at 104 weeks. absolute adrenal weights were increased in mid-dose males; absolute brain weights were decreased in high-dose males; absolute and relative ovary weights were increased in high-dose females; absolute and relative spleen weights were decreased in mid-dose females, and relative spleen weights were decreased in high-dose females at 104 weeks. hepatocyte hypertrophy and hepatocytic inclusions (hyaline-staining) were occasionally noted in male rats at early time points but were not seen at 104 weeks. no other histological lesions, either neoplastic or non-neoplastic, were observed that were considered to be treatment-related. specifically, there were no treatment-related tumours, including hepatic tumours, in any of the treated rats examined histologically at 52 or 104 weeks. animals in the additional high-dose group killed at 52 weeks (247 or 422 mg/kg bw/d in males and females, respectively) showed similar types of toxicity as the main study animals, excepting that the severity or incidences of events were increased. no tumours were observed in these animals" ;
+        ont:oral                        "diet" ;
+        ont:ref_in_dossier              "67" ;
+        ont:sex                         "f &m" ;
+        ont:species_strain              "rat/sprague dawley" ;
+        ont:type                        "in vivo" ;
+        ont:year                        "1986" .
+
+<http://toxin.vub.be/resource/dossier/acid%20red%2092>
+        a             ont:Report ;
+        rdfs:label    "acid red 92" ;
+        rdfs:seeAlso  <https://ec.europa.eu/health/scientific_committees/consumer_safety/docs/sccs_o_087.pdf> ;
+        ont:contains  <http://toxin.vub.be/resource/test/carcinogenicity/58> .
+
+<http://toxin.vub.be/resource/dossier/β-arbutin>
+        a             ont:Report ;
+        rdfs:label    "β-arbutin" ;
+        rdfs:seeAlso  <http://ec.europa.eu/health/scientific_committees/consumer_safety/docs/sccs_o_169.pdf> ;
+        ont:contains  <http://toxin.vub.be/resource/test/carcinogenicity/1> .
+
+<http://toxin.vub.be/resource/test/carcinogenicity/42>
+        a             ont:Test ;
+        ont:compound  <http://toxin.vub.be/resource/compound/n-methyl-2-pyrrolidone%20%28NMP%29> ;
+        ont:type      "in vivo" .
+
+<http://toxin.vub.be/resource/test/carcinogenicity/14>
+        a                       ont:Test ;
+        ont:compound            <http://toxin.vub.be/resource/compound/trisodium%20nitrilotriacetate> ;
+        ont:observation_period  "non OECD" ;
+        ont:type                "in vivo" .
+
+<http://toxin.vub.be/resource/dossier/triclosan>
+        a             ont:Report ;
+        rdfs:label    "triclosan" ;
+        rdfs:seeAlso  <https://ec.europa.eu/health/ph_risk/committees/04_sccp/docs/sccp_o_166.pdf> ;
+        ont:contains  <http://toxin.vub.be/resource/test/carcinogenicity/49> , <http://toxin.vub.be/resource/test/carcinogenicity/48> , <http://toxin.vub.be/resource/test/carcinogenicity/47> .
+
+<http://toxin.vub.be/resource/test/carcinogenicity/55>
+        a                       ont:Test ;
+        ont:compound            <http://toxin.vub.be/resource/compound/hc%20red%20n°%203> ;
+        ont:observation_period  "non OECD" ;
+        ont:type                "in vivo" .
+
+<http://toxin.vub.be/resource/test/carcinogenicity/27>
+        a                       ont:Test ;
+        ont:compound            <http://toxin.vub.be/resource/compound/p-aminophenol> ;
+        ont:observation_period  "/" ;
+        ont:type                "in vivo" .
+
+<http://toxin.vub.be/resource/test/carcinogenicity/6>
+        a                       ont:Test ;
+        ont:compound            <http://toxin.vub.be/resource/compound/trisodium%20nitrilotriacetate> ;
+        ont:observation_period  "non OECD" ;
+        ont:type                "in vivo" .
+
+<http://toxin.vub.be/resource/test/carcinogenicity/21>
+        a             ont:Test ;
+        ont:compound  <http://toxin.vub.be/resource/compound/sodium%20perborate%20and%20perboric%20acid> ;
+        ont:type      "in vitro" .
+
+<http://toxin.vub.be/resource/compound/hc%20yellow%20n°%204>
+        a               ont:Compound ;
+        rdfs:label      "hc yellow n° 4" ;
+        ont:compoundOf  <http://toxin.vub.be/resource/dossier/hc%20yellow%20n°%204> .
+
+<http://toxin.vub.be/resource/test/carcinogenicity/34>
+        a                       ont:Test ;
+        ont:compound            <http://toxin.vub.be/resource/compound/hc%20yellow%20n°%204> ;
+        ont:observation_period  "non OECD" ;
+        ont:type                "in vivo" .
+
+<http://toxin.vub.be/resource/test/carcinogenicity/47>
+        a                               ont:Test ;
+        ont:additional_info             "test substance: triclosan" ;
+        ont:administration_scheme       "repeated for 18 months" ;
+        ont:compound                    <http://toxin.vub.be/resource/compound/triclosan> ;
+        ont:conclusion                  "investigators concluded that there was no noel based on liver changes at all dose levels. the loael was 10 mg/kg bw/d based on liver changes. this dose level was considered as noael based on haematotoxicity when excepting the target organ liver." ;
+        ont:control_and_recovery_group  "40 animals/ dose (6-month interim)" ;
+        ont:glp                         "yes" ;
+        ont:n_animals_group             "100" ;
+        ont:observation_period          "OECD 451" , "18 months" ;
+        ont:observations                "decreased survival occurred in males (100 mg/kg bw/d) and high-dose females (a smaller decrease in high-dose males was not significant); therefore, only the survival in females was considered to be affected by triclosan. increased plasma levels of liver function enzymes were observed in higher dose mice, and decreased cholesterol was measured at all doses. there were no biochemical or pathological indications of kidney effects. increased incidences of hepatic nodules or masses or discolorations were observed in higher dose animals. no histopathological changes other than in liver (hepatocellular hypertrophy in all animals except lowdose females) were attributed to triclosan treatment. data show dose-dependent increases in liver adenomas and carcinomas, with increased incidence in males vs. females. Incidences of mice bearing at least 1 hepatic tumour (i.e., combined adenoma and carcinoma data) were: 6, 10, 17, 32, 42 in males and 0, 1, 3, 6, 20 in females at doses of 0, 10, 30, 100, and 200 mg/kg bw/d, respectively. in summary, effects in the liver, serum cholesterol decreases (males and females) and hepatocellular hypertrophy (males only) were observed at the lowest dose of 10 mg/kg bw/d;" ;
+        ont:oral                        "yes, diet " ;
+        ont:ref_in_dossier              "66" ;
+        ont:sccs_comment_to_test        "doses tested in the 3 carcinogenicity assays were comparable, ranging from 10 to 200 mg/kg body weight/day in mice, 12 to 127 mg/kg body weight/day (for males) and 17 to 190 mg/kg body weight/day (for females) in rats, and 12 to 250 mg/kg body weight/day in hamsters. survival was not altered by triclosan treatment in the rat study, whereas decreased survival was observed in both the hamster and the mouse studies. in general, neither biochemistry/clinical chemistry nor haematology analyses showed any serious  effects that could be attributed to triclosan treatment, except in the case of liver-related changes in the mouse study. rats showed no changes in liver function enzyme activity in plasma, including alanine aminotransferase (alt) and aspartate aminotransferase (ast), which would be indicative of hepatic damage. liver effects in rats in the carcinogenicity study were limited to increased incidences of hepatocyte hypertrophy and hyaline-staining inclusions in high-dose males at early time points in the study. these findings were not observed in animals at the termination of the study. as with rats, hamsters showed no alterations in liver function enzymes. the effects of triclosan in hamster liver, as observed in the carcinogenicity study, were limited to a slight decrease in organ weight in high-dose females. this finding was attributed to the decreased body weight gain at this dose level. in addition to the organ weight effects, slight, but statistically significant, decreases in erythroid parameters and in triglycerides were measured in mid-dose females. the only notable histopathological finding was an increased incidence of rarified hepatocytes in a few high-dose males. in contrast to observations in rats and hamsters, liver effects in the mouse included increased liver function enzymes in plasma; decreased blood cholesterol levels; significant increases in liver weights; increased incidences of hepatic nodules, discolorations, or masses; hepatocellular hypertrophy; and, increased incidences of both hepatocellular adenomas and hepatocellular carcinomas, depending on dose level. Signs of liver effects, increases in cholesterol (both sexes) and hypertrophy (males only) were seen at the lowest dose of 10 mg/kg body weight/day. hypertrophy was seen in mice of both sexes at 30 mg/kg body weight/day, and increases in liver function enzyme levels were seen in mice of both sexes at doses of 100 and 200 mg/kg body weight/day. Increases in numbers of hepatic tumours were observed at doses of 30 mg/kg body weight/day and higher. summary and noael values from the rodent carcinogenicity studies : three rodent lifetime bioassays have been conducted to evaluate the carcinogenic potential of triclosan. triclosan produced hepatic effects and hepatic tumours in mice, but little evidence of toxicity and no tumours in rats. hamsters showed increased liver toxicity relative to the rat, but no tumours. no noael could be determined for the mouse, based on findings of liver effects at all doses (effects of hepatocyte hypertrophy and decreased plasma cholesterol). increased incidences of liver tumours were observed at doses of 30 mg/kg body weight/day and higher in mice. it should be noted that triclosan is a peroxisome proliferator in mouse liver. the noel for the rat study was determined by study investigators to be the mid-dose of 1,000 ppm, or ~48 mg/kg body weight/day for males and females combined, based on the finding of hepatocyte changes in the high-dose group of 3,000 ppm (~127 mg/kg body weight/day in males and 190 mg/kg body weight/day in females). although absolute adrenal weights were elevated at the 1,000 ppm dose in rats, this change was not considered to be adverse for a number of reasons, including a lack of change in relative adrenal weights, a lack of change in adrenal weights in the high-dose group, and the absence of accompanying histopathological changes in the adrenal glands. the noael for the hamster study was determined to be the mid-dose of 75 mg/kg body weight/day. although the values for certain haematologic parameters were significantly altered at doses of 12 and 75 mg/kg body weight/day, the erythroid changes were slight (on the order of 5 to 10%), and not considered to be adverse effects per se. an increase in triglycerides (40 to 50%) was not considered to be an adverse effect, as the increase was not accompanied by any changes in liver weight or histopathology. the noael values for the three rodent lifetime cancer bioassays are summarized below:  species : noael (mg/kg bw/day) : comment;  mouse : 10 (this value is a loel for tumour formation only) : no overall noael due to hepatotoxic effects observed at the lowest dose tested. there were no tumours observed in other tissues; rat :  ~48 (noael, 1000 ppm ~48 mg/kg body weight/day for males and females, combined : noael based on systemic toxicity. there was no evidence of tumour formation, including in liver. there was no evidence of hepatotoxicity; hamster : 75 : noael based on systemic toxicity. there was no evidence of tumour formation, including in liver. comment: according to the eu classification system, triclosan is not considered classifiable as a carcinogen. it should be noted that triclosan is a peroxisome proliferator in mouse liver. " ;
+        ont:sex                         "f & m" ;
+        ont:species_strain              "mouse/cd-1" ;
+        ont:type                        "in vivo" ;
+        ont:year                        "1995" .
+
+<http://toxin.vub.be/resource/test/carcinogenicity/19>
+        a                       ont:Test ;
+        ont:compound            <http://toxin.vub.be/resource/compound/toluene-2%2C5-diamine%20and%20its%20sulfate> ;
+        ont:observation_period  "/" ;
+        ont:type                "in vivo" .
+
+<http://toxin.vub.be/resource/compound/2%2C4-diaminophenoxyethanol%20dihydrochloride%20and%20sulfate>
+        a               ont:Compound ;
+        rdfs:label      "2,4-diaminophenoxyethanol dihydrochloride and sulfate" ;
+        ont:compoundOf  <http://toxin.vub.be/resource/dossier/2%2C4-diaminophenoxyethanol%20dihydrochloride%20and%20sulfate> .
+
+<http://toxin.vub.be/resource/test/carcinogenicity/41>
+        a                       ont:Test ;
+        ont:compound            <http://toxin.vub.be/resource/compound/2%2C4-diaminophenoxyethanol%20dihydrochloride%20and%20sulfate> ;
+        ont:observation_period  "/" ;
+        ont:type                "in vivo" .
+
+<http://toxin.vub.be/resource/test/carcinogenicity/13>
+        a                       ont:Test ;
+        ont:compound            <http://toxin.vub.be/resource/compound/trisodium%20nitrilotriacetate> ;
+        ont:observation_period  "non OECD" ;
+        ont:type                "in vivo" .
+
+<http://toxin.vub.be/resource/dossier/hc%20yellow%20n°%204>
+        a             ont:Report ;
+        rdfs:label    "hc yellow n° 4" ;
+        rdfs:seeAlso  <https://ec.europa.eu/health/scientific_committees/consumer_safety/docs/sccs_o_008.pdf> ;
+        ont:contains  <http://toxin.vub.be/resource/test/carcinogenicity/34> , <http://toxin.vub.be/resource/test/carcinogenicity/33> , <http://toxin.vub.be/resource/test/carcinogenicity/32> , <http://toxin.vub.be/resource/test/carcinogenicity/31> , <http://toxin.vub.be/resource/test/carcinogenicity/30> .
+
+<http://toxin.vub.be/resource/test/carcinogenicity/54>
+        a                       ont:Test ;
+        ont:compound            <http://toxin.vub.be/resource/compound/hc%20red%20n°%203> ;
+        ont:observation_period  "non OECD" ;
+        ont:type                "in vivo" .
+
+<http://toxin.vub.be/resource/test/carcinogenicity/26>
+        a                       ont:Test ;
+        ont:compound            <http://toxin.vub.be/resource/compound/p-aminophenol> ;
+        ont:observation_period  "/" ;
+        ont:type                "in vivo" .
+
+<http://toxin.vub.be/resource/test/carcinogenicity/39>
+        a                       ont:Test ;
+        ont:compound            <http://toxin.vub.be/resource/compound/hc%20yellow%20n°%202> ;
+        ont:observation_period  "/" ;
+        ont:type                "in vivo" .
+
+<http://toxin.vub.be/resource/test/carcinogenicity/5>
+        a                       ont:Test ;
+        ont:compound            <http://toxin.vub.be/resource/compound/trisodium%20nitrilotriacetate> ;
+        ont:observation_period  "non OECD" ;
+        ont:type                "in vivo" .
+
+<http://toxin.vub.be/resource/compound/hc%20red%20n°%203>
+        a               ont:Compound ;
+        rdfs:label      "hc red n° 3" ;
+        ont:compoundOf  <http://toxin.vub.be/resource/dossier/hc%20red%20n°%203> .
+
+<http://toxin.vub.be/resource/test/carcinogenicity/20>
+        a                       ont:Test ;
+        ont:compound            <http://toxin.vub.be/resource/compound/toluene-2%2C5-diamine%20and%20its%20sulfate> ;
+        ont:observation_period  "/" ;
+        ont:type                "in vivo" .
+
+<http://toxin.vub.be/resource/dossier/toluene-2%2C5-diamine%20and%20its%20sulfate>
+        a             ont:Report ;
+        rdfs:label    "toluene-2,5-diamine and its sulfate" ;
+        rdfs:seeAlso  <https://ec.europa.eu/health/scientific_committees/consumer_safety/docs/sccs_o_052.pdf> ;
+        ont:contains  <http://toxin.vub.be/resource/test/carcinogenicity/20> , <http://toxin.vub.be/resource/test/carcinogenicity/19> , <http://toxin.vub.be/resource/test/carcinogenicity/18> , <http://toxin.vub.be/resource/test/carcinogenicity/17> , <http://toxin.vub.be/resource/test/carcinogenicity/16> .
+
+<http://toxin.vub.be/resource/test/carcinogenicity/33>
+        a                       ont:Test ;
+        ont:compound            <http://toxin.vub.be/resource/compound/hc%20yellow%20n°%204> ;
+        ont:observation_period  "non OECD" ;
+        ont:type                "in vivo" .
+
+<http://toxin.vub.be/resource/compound/acid%20red%2092>
+        a               ont:Compound ;
+        rdfs:label      "acid red 92" ;
+        ont:compoundOf  <http://toxin.vub.be/resource/dossier/acid%20red%2092> .
+
+<http://toxin.vub.be/resource/dossier/n-methyl-2-pyrrolidone%20%28NMP%29>
+        a             ont:Report ;
+        rdfs:label    "n-methyl-2-pyrrolidone (NMP)" ;
+        rdfs:seeAlso  <https://ec.europa.eu/health/scientific_committees/consumer_safety/docs/sccs_o_050.pdf> ;
+        ont:contains  <http://toxin.vub.be/resource/test/carcinogenicity/44> , <http://toxin.vub.be/resource/test/carcinogenicity/43> , <http://toxin.vub.be/resource/test/carcinogenicity/42> .
+
+<http://toxin.vub.be/resource/test/carcinogenicity/46>
+        a                       ont:Test ;
+        ont:compound            <http://toxin.vub.be/resource/compound/2%2C6-dihydroxyethylaminotoluene> ;
+        ont:observation_period  "/" ;
+        ont:type                "in vitro" .
+
+<http://toxin.vub.be/resource/test/carcinogenicity/18>
+        a                       ont:Test ;
+        ont:compound            <http://toxin.vub.be/resource/compound/toluene-2%2C5-diamine%20and%20its%20sulfate> ;
+        ont:observation_period  "/" ;
+        ont:type                "in vivo" .
+
+<http://toxin.vub.be/resource/compound/phenoxyethanol>
+        a               ont:Compound ;
+        rdfs:label      "phenoxyethanol" ;
+        ont:compoundOf  <http://toxin.vub.be/resource/dossier/phenoxyethanol> .
+
+<http://toxin.vub.be/resource/test/carcinogenicity/40>
+        a                       ont:Test ;
+        ont:compound            <http://toxin.vub.be/resource/compound/hc%20yellow%20n°%202> ;
+        ont:observation_period  "/" ;
+        ont:type                "in vivo" .
+
+<http://toxin.vub.be/resource/dossier/o-phenylphenol%2C%20sodium%20o-phenylphenate%20and%20potassium%20o-phenylphenate>
+        a             ont:Report ;
+        rdfs:label    "o-phenylphenol, sodium o-phenylphenate and potassium o-phenylphenate" ;
+        rdfs:seeAlso  <https://ec.europa.eu/health/scientific_committees/consumer_safety/docs/sccs_o_177.pdf> ;
+        ont:contains  <http://toxin.vub.be/resource/test/carcinogenicity/35> .
+
+<http://toxin.vub.be/resource/test/carcinogenicity/12>
+        a                       ont:Test ;
+        ont:compound            <http://toxin.vub.be/resource/compound/trisodium%20nitrilotriacetate> ;
+        ont:observation_period  "non OECD" ;
+        ont:type                "in vivo" .
+
+<http://toxin.vub.be/resource/compound/acid%20orange%207>
+        a               ont:Compound ;
+        rdfs:label      "acid orange 7" ;
+        ont:compoundOf  <http://toxin.vub.be/resource/dossier/acid%20orange%207> .
+
+<http://toxin.vub.be/resource/dossier/2%2C4-diaminophenoxyethanol%20dihydrochloride%20and%20sulfate>
+        a             ont:Report ;
+        rdfs:label    "2,4-diaminophenoxyethanol dihydrochloride and sulfate" ;
+        rdfs:seeAlso  <https://ec.europa.eu/health/scientific_committees/consumer_safety/docs/sccs_o_035.pdf> ;
+        ont:contains  <http://toxin.vub.be/resource/test/carcinogenicity/41> .
+
+<http://toxin.vub.be/resource/test/carcinogenicity/53>
+        a                       ont:Test ;
+        ont:compound            <http://toxin.vub.be/resource/compound/hc%20red%20n°%203> ;
+        ont:observation_period  "non OECD" ;
+        ont:type                "in vivo" .
+
+<http://toxin.vub.be/resource/test/carcinogenicity/25>
+        a                               ont:Test ;
+        ont:administration_scheme       "daily for at least 101 weeks" ;
+        ont:age_at_start_of_experiment  "approximately 6 weeks old" ;
+        ont:chemical_batch_nr           "2070155" ;
+        ont:composition                 "p-aminophenol suspended in 0.5 w/w aqueous carboxymethylcellulose" ;
+        ont:compound                    <http://toxin.vub.be/resource/compound/p-aminophenol> ;
+        ont:conclusion                  "the test substance showed neither a carcinogenic potential nor an effect on the incident of spontaneously occurring tumours at any dose level" ;
+        ont:glp                         "yes" ;
+        ont:moribound_or_dead_animals_prior_to_study_termination
+                "yes" ;
+        ont:n_animals_group             "20" ;
+        ont:observation_period          "OECD 451" ;
+        ont:observations                "study was scheduled for at least 104 weeks, however, since the survival in the control groups was only 26% in males and 32% in females in week 101, it was decided to terminate the study and all surviving animals were killed. representative organs were weighed and the animal submitted to microscopic necropsy observations. no major difference from the controls was noted in the mean bodyweight of treated males and females or in the survival except for a lower survival of the high dosed females (20% compared to 32% at week 101). orange coloured urine was noted from week 10 in almost all the animals given 30 mg/kg bw/d. the number of animals with more than one primary neoplasm and the number of benign and malignant tumours were comparatively similar in all groups including the control group, except for a marginal increase in the number of malignant lymphoma in males given 30 mg/kg bw/d (3 cases of heterogeneous malignant lymphoma compared to 1 in the control group and 1 in the low dose group)." ;
+        ont:oral                        "oral, gavage" ;
+        ont:purity                      "99% ± 0.5%" ;
+        ont:ref_in_dossier              "col. 93" ;
+        ont:sccs_comment_to_test        "an oral rat study with p-aminophenol has been performed according to OECD guideline No. 451. the mortality in the control group was very high. the study was negative." ;
+        ont:sex                         "f & m" ;
+        ont:species_strain              "rat/sprague-dawley" ;
+        ont:type                        "in vivo" ;
+        ont:vehicle                     "aqueous carboxymethylcellulose" .
+
+<http://toxin.vub.be/resource/test/carcinogenicity/38>
+        a                       ont:Test ;
+        ont:compound            <http://toxin.vub.be/resource/compound/o-aminophenol> ;
+        ont:observation_period  "https://ec.europa.eu/health/scientific_committees/consumer_safety/docs/sccs_o_025.pdf" ;
+        ont:type                "in vivo" .
+
+<http://toxin.vub.be/resource/test/carcinogenicity/4>
+        a                       ont:Test ;
+        ont:compound            <http://toxin.vub.be/resource/compound/trisodium%20nitrilotriacetate> ;
+        ont:observation_period  "non OECD" ;
+        ont:type                "in vivo" .
+
+<http://toxin.vub.be/resource/compound/o-aminophenol>
+        a               ont:Compound ;
+        rdfs:label      "o-aminophenol" ;
+        ont:compoundOf  <http://toxin.vub.be/resource/dossier/o-aminophenol> .
+
+<http://toxin.vub.be/resource/compound/hc%20yellow%20n°%202>
+        a               ont:Compound ;
+        rdfs:label      "hc yellow n° 2" ;
+        ont:compoundOf  <http://toxin.vub.be/resource/dossier/hc%20yellow%20n°%202> .
+
+<http://toxin.vub.be/resource/compound/o-phenylphenol%2C%20sodium%20o-phenylphenate%20and%20potassium%20o-phenylphenate>
+        a               ont:Compound ;
+        rdfs:label      "o-phenylphenol, sodium o-phenylphenate and potassium o-phenylphenate" ;
+        ont:compoundOf  <http://toxin.vub.be/resource/dossier/o-phenylphenol%2C%20sodium%20o-phenylphenate%20and%20potassium%20o-phenylphenate> .
+
+<http://toxin.vub.be/resource/test/carcinogenicity/32>
+        a                       ont:Test ;
+        ont:compound            <http://toxin.vub.be/resource/compound/hc%20yellow%20n°%204> ;
+        ont:observation_period  "non OECD" ;
+        ont:type                "in vivo" .
+
+<http://toxin.vub.be/resource/test/carcinogenicity/45>
+        a                       ont:Test ;
+        ont:compound            <http://toxin.vub.be/resource/compound/2%2C6-diaminopyridine> ;
+        ont:observation_period  "/" ;
+        ont:type                "in vitro" .
+
+<http://toxin.vub.be/resource/test/carcinogenicity/17>
+        a                       ont:Test ;
+        ont:compound            <http://toxin.vub.be/resource/compound/toluene-2%2C5-diamine%20and%20its%20sulfate> ;
+        ont:observation_period  "/" ;
+        ont:type                "in vivo" .
+
+<http://toxin.vub.be/resource/compound/p-aminophenol>
+        a               ont:Compound ;
+        rdfs:label      "p-aminophenol" ;
+        ont:compoundOf  <http://toxin.vub.be/resource/dossier/p-aminophenol> .
+
+<http://toxin.vub.be/resource/test/carcinogenicity/58>
+        a                       ont:Test ;
+        ont:compound            <http://toxin.vub.be/resource/compound/acid%20red%2092> ;
+        ont:observation_period  "non OECD" ;
+        ont:type                "in vivo" .
+
+<http://toxin.vub.be/resource/dossier/hc%20red%20n°%203>
+        a             ont:Report ;
+        rdfs:label    "hc red n° 3" ;
+        rdfs:seeAlso  <https://ec.europa.eu/health/scientific_committees/consumer_safety/docs/sccs_o_043.pdf> ;
+        ont:contains  <http://toxin.vub.be/resource/test/carcinogenicity/55> , <http://toxin.vub.be/resource/test/carcinogenicity/54> , <http://toxin.vub.be/resource/test/carcinogenicity/53> , <http://toxin.vub.be/resource/test/carcinogenicity/52> , <http://toxin.vub.be/resource/test/carcinogenicity/51> , <http://toxin.vub.be/resource/test/carcinogenicity/50> .
+
+<http://toxin.vub.be/resource/test/carcinogenicity/9>
+        a                       ont:Test ;
+        ont:compound            <http://toxin.vub.be/resource/compound/trisodium%20nitrilotriacetate> ;
+        ont:observation_period  "non OECD" ;
+        ont:type                "in vivo" .

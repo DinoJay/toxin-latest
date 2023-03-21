@@ -1,0 +1,501 @@
+@prefix rr: <http://www.w3.org/ns/r2rml#> .
+@prefix ont: <http://ontologies.vub.be/oecd#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+
+<#PDFlinkTriplesFirstMap>
+    rr:logicalTable [ rr:sqlQuery """
+                WITH RECURSIVE PDFLINKFIRST (ID, PDFLINKFIRST, REST) AS
+                            (
+                                    SELECT
+                        ID,
+                        NULL,
+                        PDFLINKFIRST || ','
+                    FROM (  SELECT
+                                ROWNUM() AS ID,
+                                \"PDF link\" AS PDFLINKFIRST
+                            FROM MUTAGENICITY WHERE \"PDF link\" IS NOT NULL
+                    )
+                                    UNION ALL
+                                    SELECT
+                        ID,
+                        TRIM(SUBSTR(REST, 0, INSTR(REST, ',') - 1)),
+                        SUBSTR(REST, INSTR(REST, ',') + 1)
+                    FROM PDFLINKFIRST WHERE REST <> ''
+                            ) SELECT DISTINCT * FROM PDFLINKFIRST
+        """ ] ;
+
+            rr:subjectMap [
+        rr:template "http://toxin.vub.be/resource/pdfLink/{PDFLINKFIRST}" ;
+    ] ;
+.
+
+<#DossierTriplesMap>
+    rr:logicalTable [ rr:sqlQuery "SELECT ROWNUM() AS ID, * FROM MUTAGENICITY" ] ;
+
+
+    rr:subjectMap [
+        rr:template "http://toxin.vub.be/resource/dossier/{DOSSIER}" ;
+        rr:class ont:Report ;
+    ] ;
+
+    rr:predicateObjectMap [
+        rr:predicate ont:contains ;
+        rr:objectMap [ 
+            rr:parentTriplesMap <#TestTriplesMap> ; 
+            rr:joinCondition [ rr:child "ID" ; rr:parent "ID" ; ] ;
+        ] ;
+    ] ;
+
+    rr:predicateObjectMap [
+        rr:predicate rdfs:label ;
+        rr:objectMap [ rr:column "DOSSIER" ; ] ;
+    ] ;
+
+    rr:predicateObjectMap [
+        rr:predicate ont:seeAlso;
+        rr:objectMap [
+            rr:parentTriplesMap <#PDFlinkTriplesFirstMap> ;
+            rr:joinCondition [ rr:child "ID" ; rr:parent "ID" ; ] ;
+        ] ;
+    ] ;
+.
+
+<#CompoundTriplesMap>
+    rr:logicalTable [ rr:sqlQuery "SELECT ROWNUM() AS ID, * FROM MUTAGENICITY" ] ;
+
+    rr:subjectMap [
+        rr:template "http://toxin.vub.be/resource/compound/{DOSSIER}" ;
+        rr:class ont:Compound ;
+    ] ;
+
+    rr:predicateObjectMap [
+        rr:predicate rdfs:label ;
+        rr:objectMap [ rr:column "DOSSIER" ; ] ;
+    ] ;
+.
+
+<#TestTriplesMap>
+    # todo: \"type of study ( in vivo, in vitro, in silico, in chemico\" -> camelcase
+    rr:logicalTable [ rr:sqlQuery "SELECT ROWNUM() AS ID, * FROM MUTAGENICITY" ] ;
+
+    ## BEGIN LINK WITH COMPOUND
+    rr:predicateObjectMap [
+        rr:predicate ont:compound ;
+        rr:objectMap [ 
+            rr:parentTriplesMap <#CompoundTriplesMap> ; 
+            rr:joinCondition [ rr:child "ID" ; rr:parent "ID" ; ] ;
+        ] ;
+    ] ;
+    ### END LINK WITH COMPOUND
+
+    rr:subjectMap [
+        rr:template "http://toxin.vub.be/resource/test/mutagenicity/{ID}" ;
+        rr:class ont:Test ;
+    ] ;
+
+    rr:predicateObjectMap [
+        rr:predicate rdfs:label ;
+        rr:objectMap [ rr:template "{DOSSIER} Test ({ID})" ; rr:termType rr:Literal ;] ;
+    ] ;
+
+    rr:predicateObjectMap [
+        rr:predicate rdf:type ;
+        rr:objectMap [ rr:template "http://ontologies.vub.be/oecd#{type of study}" ; ] ;
+        rr:objectMap [ rr:column "type of study" ; ] ;
+    ] ;
+
+    rr:predicateObjectMap [
+        rr:predicate ont:oecd_test_nr ;
+        rr:objectMap [ rr:column "\"GUIDELINE\"" ; ] ;
+    ] ; 
+
+    rr:predicateObjectMap [
+        rr:predicate ont:positive_mutant_frequency_result_at_dose ;
+        rr:objectMap [ rr:column "positive mutant frequency result at dose" ; ] ;
+    ] ; 
+
+    rr:predicateObjectMap [
+        rr:predicate ont:relative_cell_survival_perc_at_dose;
+        rr:objectMap [ rr:column "relative cell survival % at dose" ; ] ;
+    ] ; 
+
+    # TODO
+    # rr:predicateObjectMap [
+    #     rr:predicate ont:oecd_476_relative_cell_survival_perc_at_dose_s9;
+    #     rr:objectMap [ rr:column "OECD_476_relative cell survival % at dose + S9" ; ] ;
+    # ] ; 
+
+    rr:predicateObjectMap [
+        rr:predicate ont:outcome;
+        rr:objectMap [ rr:column "OUTCOME" ; ] ;
+    ] ; 
+
+    rr:predicateObjectMap [
+        rr:predicate ont:conclusion;
+        rr:objectMap [ rr:column "CONCLUSION" ; ] ;
+    ] ; 
+
+    rr:predicateObjectMap [
+        rr:predicate ont:solubility_in_vehicle;
+        rr:objectMap [ rr:column "solubility in vehicle" ; ] ;
+    ] ; 
+
+    rr:predicateObjectMap [
+        rr:predicate ont:dose_related_increase_in_mutant_frequency ;
+        rr:objectMap [ rr:column "dose related increase in mutant frequency" ; ] ;
+    ] ; 
+
+    rr:predicateObjectMap [
+        rr:predicate ont:mean_number_of_mutants_dose ;
+        rr:objectMap [ rr:column "\"mean number of mutants /dose\"" ; ] ;
+    ] ; 
+
+    rr:predicateObjectMap [
+        rr:predicate ont:moribound_or_dead_animals_prior_to_study_termination ;
+        rr:objectMap [ rr:column "moribound or dead animals prior to study termination" ; ] ;
+    ] ; 
+
+    
+    rr:predicateObjectMap [
+        rr:predicate ont:species_strain;
+        rr:objectMap [ rr:column "\"species/strain\"" ; ] ;
+    ] ; 
+
+
+    rr:predicateObjectMap [
+        rr:predicate ont:sex;
+        rr:objectMap [ rr:column "\"SEX\"" ; ] ;
+    ] ; 
+
+    rr:predicateObjectMap [
+        rr:predicate ont:method_of_euthanasia;
+        rr:objectMap [ rr:column "\"method of euthanasia\"" ; ] ;
+    ] ; 
+
+    # rr:predicateObjectMap [
+    #     rr:predicate ont:oecd_488_animals_group;
+    #     rr:objectMap [ rr:column "\"OECD_488_animals group\"" ; ] ;
+    # ] ; 
+
+    rr:predicateObjectMap [
+        rr:predicate ont:dose_volume;
+        rr:objectMap [ rr:column "\"dose volume\"" ; ] ;
+    ] ; 
+
+
+    rr:predicateObjectMap [
+        rr:predicate ont:sampling_time;
+        rr:objectMap [ rr:column "\"sampling time\"" ; ] ;
+    ] ; 
+
+    rr:predicateObjectMap [
+        rr:predicate ont:transgenic_model;
+        rr:objectMap [ rr:column "\"transgenic model\"" ; ] ;
+    ] ; 
+
+    rr:predicateObjectMap [
+        rr:predicate ont:method_for_dna_isolation;
+        rr:objectMap [ rr:column "\"method for DNA isolation\"" ; ] ;
+    ] ; 
+
+    rr:predicateObjectMap [
+        rr:predicate ont:method_for_molecular_analysis_of_mutants;
+        rr:objectMap [ rr:column "\"method for molecular analysis of mutants\"" ; ] ;
+    ] ; 
+    rr:predicateObjectMap [
+        rr:predicate ont:glp;
+        rr:objectMap [ rr:column "\"GLP\"" ; ] ;
+    ] ; 
+    
+    rr:predicateObjectMap [
+        rr:predicate ont:ref_in_dossier;
+        rr:objectMap [ rr:column "\"Ref. in dossier\"" ; ] ;
+    ] ; 
+
+    rr:predicateObjectMap [
+        rr:predicate ont:control_groups;
+        rr:objectMap [ rr:column "\"control groups\"" ; ] ;
+    ] ; 
+
+    rr:predicateObjectMap [
+        rr:predicate ont:own_comment;
+        rr:objectMap [ rr:column "\"own comment\"" ; ] ;
+    ] ; 
+
+    rr:predicateObjectMap [
+        rr:predicate ont:tissues_with_significant_increase_in_dna_strand_breaks;
+        rr:objectMap [ rr:column "\"tissues with significant increase in DNA strand breaks\"" ; ] ;
+    ] ; 
+
+
+    rr:predicateObjectMap [
+        rr:predicate ont:homogeneity;
+        rr:objectMap [ rr:column "\"HOMOGENEITY\"" ; ] ;
+    ] ; 
+
+    rr:predicateObjectMap [
+        rr:predicate ont:age_at_start_of_experiment ;
+        rr:objectMap [ rr:column "\"age at start of experiment\"" ; ] ;
+    ] ; 
+
+     rr:predicateObjectMap [
+        rr:predicate ont:oral ;
+        rr:objectMap [ rr:column "\"ORAL\"" ; ] ;
+    ] ; 
+
+    rr:predicateObjectMap [
+        rr:predicate ont:subcutaneous ;
+        rr:objectMap [ rr:column "\"SUBCUTANEOUS\"" ; ] ;
+    ] ; 
+
+    rr:predicateObjectMap [
+        rr:predicate ont:cell_nuclei_isolation_method ;
+        rr:objectMap [ rr:column "\"cell/nuclei isolation method\"" ; ] ;
+    ] ; 
+
+    rr:predicateObjectMap [
+        rr:predicate ont:od_for_scoring_and_measuring_comets ;
+        rr:objectMap [ rr:column "\"method for scoring and measuring comets\"" ; ] ;
+    ] ; 
+
+    rr:predicateObjectMap [
+        rr:predicate ont:observations_and_recording ;
+        rr:objectMap [ rr:column "\"observations and recording\"" ; ] ;
+    ] ; 
+
+
+       rr:predicateObjectMap [
+        rr:predicate ont:cytotoxicity_measurment ;
+        rr:objectMap [ rr:column "\"cytotoxicity measurment\"" ; ] ;
+    ] ; 
+
+    # rr:predicateObjectMap [
+    #     rr:predicate ont:oecd_486_viability_of_cells;
+    #     rr:objectMap [ rr:column "\"OECD_486_viability of cells\"" ; ] ;
+    # ] ; 
+
+    rr:predicateObjectMap [
+        rr:predicate ont:administration_scheme;
+        rr:objectMap [ rr:column "\"administration scheme\"" ; ] ;
+    ] ; 
+
+    rr:predicateObjectMap [
+        rr:predicate ont:intravenous;
+        rr:objectMap [ rr:column "\"INTRAVENOUS\"" ; ] ;
+    ] ; 
+
+    rr:predicateObjectMap [
+        rr:predicate ont:method_of_liver_cell_preparation_and_autoradiographic_technique;
+        rr:objectMap [ rr:column "\"method of liver cell preparation and autoradiographic technique\"" ; ] ;
+    ] ; 
+
+    rr:predicateObjectMap [
+        rr:predicate ont:time_between_sacrifice_and_last_treatment;
+        rr:objectMap [ rr:column "\"time between sacrifice and last treatment (h)\"" ; ] ;
+    ] ; 
+
+    rr:predicateObjectMap [
+        rr:predicate ont:number_of_cells_scored;
+        rr:objectMap [ rr:column "\"number of cells scored\"" ; ] ;
+    ] ; 
+
+    rr:predicateObjectMap [
+        rr:predicate ont:number_of_slides_prepared;
+        rr:objectMap [ rr:column "\"number of slides prepared\"" ; ] ;
+    ] ; 
+
+    rr:predicateObjectMap [
+        rr:predicate ont:range_finding_study;
+        rr:objectMap [ rr:column "\"range-finding study\"" ; ] ;
+    ] ; 
+
+    rr:predicateObjectMap [
+        rr:predicate ont:observations;
+        rr:objectMap [ rr:column "\"OBSERVATIONS\"" ; ] ;
+    ] ; 
+
+
+    rr:predicateObjectMap [
+        rr:predicate ont:ph;
+        rr:objectMap [ rr:column "\"PH\"" ; ] ;
+    ] ; 
+
+    rr:predicateObjectMap [
+        rr:predicate ont:concentration;
+        rr:objectMap [ rr:column "\"concentration (%)\"" ; ] ;
+    ] ; 
+
+    rr:predicateObjectMap [
+        rr:predicate ont:composition;
+        rr:objectMap [ rr:column "\"COMPOSITION\"" ; ] ;
+    ] ; 
+
+    rr:predicateObjectMap [
+        rr:predicate ont:chemical_batch_nr;
+        rr:objectMap [ rr:column "\"chemical batch nr\"" ; ] ;
+    ] ; 
+
+    rr:predicateObjectMap [
+        rr:predicate ont:tmax;
+        rr:objectMap [ rr:column "\"TMAX\"" ; ] ;
+    ] ; 
+
+    rr:predicateObjectMap [
+        rr:predicate ont:additional_info;
+        rr:objectMap [ rr:column "\"additional info\"" ; ] ;
+    ] ; 
+
+    rr:predicateObjectMap [
+        rr:predicate ont:source;
+        rr:objectMap [ rr:column "\"SOURCE\"" ; ] ;
+    ] ; 
+
+
+    rr:predicateObjectMap [
+        rr:predicate ont:volume;
+        rr:objectMap [ rr:column "\"VOLUME\"" ; ] ;
+    ] ; 
+
+    rr:predicateObjectMap [
+        rr:predicate ont:perc_body_surface;
+        rr:objectMap [ rr:column "\"% of body surface\"" ; ] ;
+    ] ; 
+
+#OECD_474_area of body	
+    rr:predicateObjectMap [
+        rr:predicate ont:area_of_body;
+        rr:objectMap [ rr:column "\"area of body\"" ; ] ;
+    ] ; 
+
+#OECD_474_intraperitoneal	
+    rr:predicateObjectMap [
+        rr:predicate ont:intraperitoneal;
+        rr:objectMap [ rr:column "\"INTRAPERITONEAL\"" ; ] ;
+    ] ; 
+#OECD_474_vehicle	
+    rr:predicateObjectMap [
+        rr:predicate ont:vehicle;
+        rr:objectMap [ rr:column "\"VEHICLE\"" ; ] ;
+    ] ; 
+#OECD_474_time between last treatment and sacrifice (h)	
+    rr:predicateObjectMap [
+        rr:predicate ont:time_between_last_treatment_and_sacrifice;
+        rr:objectMap [ rr:column "\"time between last treatment and sacrifice  (h)\"" ; ] ;
+    ] ; 
+#OECD_474_bone marrow or blood used for isolation	
+    rr:predicateObjectMap [
+        rr:predicate ont:bone_marrow_or_blood_used_for_isolation;
+        rr:objectMap [ rr:column "\"bone marrow or blood used for isolation\"" ; ] ;
+    ] ; 
+#OECD_474_number of cells analyzed /animal	
+    rr:predicateObjectMap [
+        rr:predicate ont:number_of_cells_analyzed_animal;
+        rr:objectMap [ rr:column "\"number of cells analyzed /animal\"" ; ] ;
+    ] ; 
+#OECD_474_method to characterize micronuclei	
+    rr:predicateObjectMap [
+        rr:predicate ont:method_to_characterize_micronuclei;
+        rr:objectMap [ rr:column "\"method to characterize micronuclei\"" ; ] ;
+    ] ; 
+#OECD_474_year	
+    rr:predicateObjectMap [
+        rr:predicate ont:year;
+        rr:objectMap [ rr:column "\"YEAR\"" ; ] ;
+    ] ; 
+
+#OECD_474_control	
+    rr:predicateObjectMap [
+        rr:predicate ont:control;
+        rr:objectMap [ rr:column "\"CONTROL\"" ; ] ;
+    ] ; 
+
+#OECD_475_dose with significant increase in positive cells	
+    rr:predicateObjectMap [
+        rr:predicate ont:dose_with_significant_increase_in_positive_cells;
+        rr:objectMap [ rr:column "\"dose with significant increase in positive cells\"" ; ] ;
+    ] ; 
+#OECD_475_mean number of cells with abberations /dose	
+    rr:predicateObjectMap [
+        rr:predicate ont:mean_number_of_cells_with_abberations_dose;
+        rr:objectMap [ rr:column "\"mean number of cells with abberations /dose\"" ; ] ;
+    ] ; 
+#OECD_475_changes in ploidy	
+    rr:predicateObjectMap [
+        rr:predicate ont:changes_in_ploidy;
+        rr:objectMap [ rr:column "\"changes in ploidy\"" ; ] ;
+    ] ; 
+
+#OECD_475_purity (%)	
+    rr:predicateObjectMap [
+        rr:predicate ont:purity  ;
+        rr:objectMap [ rr:column "\"purity (%)\"" ; ] ;
+    ] ; 
+
+
+
+#OECD_475_feed	
+    rr:predicateObjectMap [
+        rr:predicate ont:feed  ;
+        rr:objectMap [ rr:column "\"FEED\"" ; ] ;
+    ] ; 
+#OECD_475_n animals / group	
+    rr:predicateObjectMap [
+        rr:predicate ont:n_animals_group  ;
+        rr:objectMap [ rr:column "\"n animals / group\"" ; ] ;
+    ] ; 
+#OECD_475_dose levels	
+    rr:predicateObjectMap [
+        rr:predicate ont:dose_levels  ;
+        rr:objectMap [ rr:column "\"dose levels\"" ; ] ;
+    ] ; 
+
+
+#OECD_475_vehicle	
+    rr:predicateObjectMap [
+        rr:predicate ont:vehicle ;
+        rr:objectMap [ rr:column "\"VEHICLE\"" ; ] ;
+    ] ; 
+
+#OECD_475_number of cells analyzed /animal	
+    rr:predicateobjectmap [
+        rr:predicate ont:oecd_475_number_of_cells_analyzed_animal ;
+        rr:objectmap [ rr:column "\"OECD_475_number of cells analyzed /animal\"" ; ] ;
+    ] ; 
+#OECD_475_method used for staining	
+    rr:predicateobjectmap [
+        rr:predicate ont:oecd_475_number_of_cells_analyzed_animal ;
+        rr:objectmap [ rr:column "\"OECD_475_method used for staining\"" ; ] ;
+    ] ; 
+#oecd_475_study duration	
+    rr:predicateobjectmap [
+        rr:predicate ont:study_duration ;
+        rr:objectmap [ rr:column "\"Study duration\"" ; ] ;
+    ] ; 
+#OECD_475_preliminary study $	
+    rr:predicateobjectmap [
+        rr:predicate ont:preliminary_study ;
+        rr:objectmap [ rr:column "\"preliminary study $\"" ; ] ;
+    ] ; 
+#OECD_475_controls	
+    rr:predicateobjectmap [
+        rr:predicate ont:oecd_475_controls ;
+        rr:objectmap [ rr:column "\"OECD_475_controls\"" ; ] ;
+    ] ; 
+#OECD_475_SCCS 
+    rr:predicateobjectmap [
+        rr:predicate ont:oecd_475_sccs ;
+        rr:objectmap [ rr:column "\"OECD_475_SCCS\"" ; ] ;
+    ] ; 
+#OECD_475_SCCS comment to test	
+    rr:predicateobjectmap [
+        rr:predicate ont:sccs_comment_to_test ;
+        rr:objectmap [ rr:column "\"SCCS comment to test\"" ; ] ;
+    ] ; 
+
+#Non-OECD_resume
+    rr:predicateobjectmap [
+        rr:predicate ont:non_oecd_resume ;
+        rr:objectmap [ rr:column "\"NON-OECD_RESUME\"" ; ] ;
+    ] ; 

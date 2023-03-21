@@ -1,0 +1,496 @@
+@prefix rr:    <http://www.w3.org/ns/r2rml#> .
+@prefix ont:   <http://ontologies.vub.be/oecd#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+
+<http://toxin.vub.be/resource/filter/sorbitol%20dehydrogenase%20%22L-Iditol%202-Dehydrogenase%22%5BMesh%5D>
+        a               skos:Concept , ont:Filter ;
+        ont:non_oecd    "blood and serum biomarkers" ;
+        ont:oecd_407    "other enzymes and bile acids \"Bile Acids and Salts\"[Mesh]" , "sorbitol dehydrogenase \"L-Iditol 2-Dehydrogenase\"[Mesh]" ;
+        ont:oecd_408    "sorbitol dehydrogenase \"L-Iditol 2-Dehydrogenase\"[Mesh]" ;
+        ont:oecd_409    "other enzymes and biomarker" ;
+        ont:oecd_411    "other enzymes and biomarker" ;
+        ont:oecd_412    "clinical chemistry: other" ;
+        ont:oecd_413    "other enzymes and biomarker" ;
+        skos:prefLabel  "sorbitol dehydrogenase \"L-Iditol 2-Dehydrogenase\"[Mesh]" .
+
+<http://toxin.vub.be/resource/filter/low-density%20lipoprotein%20%28ldl%29>
+        a               skos:Concept , ont:Filter ;
+        ont:non_oecd    "blood and serum biomarkers" ;
+        ont:oecd_407    "serum: other" ;
+        ont:oecd_408    "low-density lipoprotein (ldl)" ;
+        ont:oecd_409    "analyses of lipids" ;
+        ont:oecd_411    "analyses of lipids" ;
+        ont:oecd_412    "clinical chemistry: other" ;
+        ont:oecd_413    "lipids" ;
+        skos:prefLabel  "low-density lipoprotein (ldl)" .
+
+<http://toxin.vub.be/resource/filter/alkaline%20phosphatase>
+        a               skos:Concept , ont:Filter ;
+        ont:non_oecd    "blood and serum biomarkers" ;
+        ont:oecd_407    "other enzymes and bile acids \"Bile Acids and Salts\"[Mesh]" ;
+        ont:oecd_408    "alkaline phosphatase" ;
+        ont:oecd_409    "other enzymes and biomarker" ;
+        ont:oecd_411    "other enzymes and biomarker" ;
+        ont:oecd_412    "clinical chemistry: other" ;
+        ont:oecd_413    "alkaline phosphatase" ;
+        skos:prefLabel  "alkaline phosphatase" .
+
+<http://toxin.vub.be/resource/filter/high%20-density%20lipoprotein%20%28hdl%29>
+        a               ont:Filter , skos:Concept ;
+        ont:non_oecd    "blood and serum biomarkers" ;
+        ont:oecd_407    "serum: other" ;
+        ont:oecd_408    "high -density lipoprotein (hdl)" ;
+        ont:oecd_409    "analyses of lipids" ;
+        ont:oecd_411    "analyses of lipids" ;
+        ont:oecd_412    "clinical chemistry: other" ;
+        ont:oecd_413    "lipids" ;
+        skos:prefLabel  "high -density lipoprotein (hdl)" .
+
+<http://toxin.vub.be/resource/filter/albumin%20%22Albumins%22%5BMesh%5D>
+        a               skos:Concept , ont:Filter ;
+        ont:non_oecd    "blood and serum biomarkers" ;
+        ont:oecd_407    "albumin \"Albumins\"[Mesh]" ;
+        ont:oecd_408    "albumin \"Albumins\"[Mesh]" ;
+        ont:oecd_409    "albumin \"Albumins\"[Mesh]" ;
+        ont:oecd_411    "albumin \"Albumins\"[Mesh]" ;
+        ont:oecd_412    "albumin \"Albumins\"[Mesh]" ;
+        ont:oecd_413    "albumin \"Albumins\"[Mesh]" ;
+        skos:prefLabel  "albumin \"Albumins\"[Mesh]" .
+
+<http://toxin.vub.be/resource/filter/fasting%20%22Fasting%22%5BMesh%5D%20triglycerides%20%22Triglycerides%22%5BMesh%5D>
+        a               skos:Concept , ont:Filter ;
+        ont:non_oecd    "blood and serum biomarkers" ;
+        ont:oecd_407    "fasting \"Fasting\"[Mesh] triglycerides \"Triglycerides\"[Mesh]" ;
+        ont:oecd_408    "fasting \"Fasting\"[Mesh] triglycerides \"Triglycerides\"[Mesh]" ;
+        ont:oecd_409    "analyses of lipids" ;
+        ont:oecd_411    "analyses of lipids" ;
+        ont:oecd_412    "triglycerides" ;
+        ont:oecd_413    "triglycerides" ;
+        skos:prefLabel  "fasting \"Fasting\"[Mesh] triglycerides \"Triglycerides\"[Mesh]" .
+
+<http://toxin.vub.be/resource/filter/gross%20necropsy%20%3A%20liver%20%22Liver%22%5BMesh%5D>
+        a               ont:Filter , skos:Concept ;
+        ont:non_oecd    "gross pathology" ;
+        ont:oecd_407    "gross necropsy : liver \"Liver\"[Mesh]" ;
+        ont:oecd_408    "gross necropsy : liver \"Liver\"[Mesh]" ;
+        ont:oecd_409    "gross necropsy : liver \"Liver\"[Mesh]" ;
+        ont:oecd_411    "gross necropsy : liver \"Liver\"[Mesh]" ;
+        ont:oecd_412    "gross necropsy : liver \"Liver\"[Mesh]" ;
+        ont:oecd_413    "gross necropsy : liver \"Liver\"[Mesh]" ;
+        skos:prefLabel  "gross necropsy : liver \"Liver\"[Mesh]" .
+
+<http://toxin.vub.be/resource/filter/aspartate%20aminotransferase%20%22Alkaline%20Phosphatase%22%5BMesh%5D>
+        a               ont:Filter , skos:Concept ;
+        ont:non_oecd    "blood and serum biomarkers" ;
+        ont:oecd_407    "aspartate aminotransferase \"Alkaline Phosphatase\"[Mesh]" ;
+        ont:oecd_408    "aspartate aminotransferase \"Alkaline Phosphatase\"[Mesh]" ;
+        ont:oecd_409    "aspartate aminotransferase \"Alkaline Phosphatase\"[Mesh]" ;
+        ont:oecd_411    "aspartate aminotransferase \"Alkaline Phosphatase\"[Mesh]" ;
+        ont:oecd_412    "aspartate aminotransferase \"Alkaline Phosphatase\"[Mesh]" ;
+        ont:oecd_413    "aspartate aminotransferase \"Alkaline Phosphatase\"[Mesh]" ;
+        skos:prefLabel  "aspartate aminotransferase \"Alkaline Phosphatase\"[Mesh]" .
+
+<http://toxin.vub.be/resource/filter/alanine%20aminotransferase%20%22D-Alanine%20Transaminase%22%5BMesh%5D>
+        a               skos:Concept , ont:Filter ;
+        ont:non_oecd    "blood and serum biomarkers" ;
+        ont:oecd_407    "alanine aminotransferase \"D-Alanine Transaminase\"[Mesh]" ;
+        ont:oecd_408    "alanine aminotransferase \"D-Alanine Transaminase\"[Mesh]" ;
+        ont:oecd_409    "alanine aminotransferase \"D-Alanine Transaminase\"[Mesh]" ;
+        ont:oecd_411    "alanine aminotransferase \"D-Alanine Transaminase\"[Mesh]" ;
+        ont:oecd_412    "alanine aminotransferase \"D-Alanine Transaminase\"[Mesh]" ;
+        ont:oecd_413    "alanine aminotransferase \"D-Alanine Transaminase\"[Mesh]" ;
+        skos:prefLabel  "alanine aminotransferase \"D-Alanine Transaminase\"[Mesh]" .
+
+<http://toxin.vub.be/resource/filter/total%20protein%20%22Proteins%22%5BMesh%5D>
+        a               ont:Filter , skos:Concept ;
+        ont:non_oecd    "blood and serum biomarkers" ;
+        ont:oecd_407    "total protein \"Proteins\"[Mesh]" ;
+        ont:oecd_408    "total protein \"Proteins\"[Mesh]" ;
+        ont:oecd_409    "total protein \"Proteins\"[Mesh]" ;
+        ont:oecd_411    "total protein \"Proteins\"[Mesh]" ;
+        ont:oecd_412    "total protein \"Proteins\"[Mesh]" ;
+        ont:oecd_413    "total protein \"Proteins\"[Mesh]" ;
+        skos:prefLabel  "total protein \"Proteins\"[Mesh]" .
+
+<http://toxin.vub.be/resource/filter/total%20bilirubin%20%22Bilirubin%22%5BMesh%5D>
+        a               ont:Filter , skos:Concept ;
+        ont:non_oecd    "blood and serum biomarkers" ;
+        ont:oecd_407    "serum: other" ;
+        ont:oecd_408    "total bilirubin \"Bilirubin\"[Mesh]" ;
+        ont:oecd_409    "total bilirubin \"Bilirubin\"[Mesh]" ;
+        ont:oecd_411    "total bilirubin \"Bilirubin\"[Mesh]" ;
+        ont:oecd_412    "clinical chemistry: other" ;
+        ont:oecd_413    "total bilirubin \"Bilirubin\"[Mesh]" ;
+        skos:prefLabel  "total bilirubin \"Bilirubin\"[Mesh]" .
+
+<http://toxin.vub.be/resource/filter/histopathology%3A%20liver>
+        a               skos:Concept , ont:Filter ;
+        ont:non_oecd    "histopathology" ;
+        ont:oecd_407    "histopathology" ;
+        ont:oecd_408    "histopathology: liver" ;
+        ont:oecd_409    "histopathology: liver" ;
+        ont:oecd_411    "histopathology: liver" ;
+        ont:oecd_412    "histopathology: liver" ;
+        ont:oecd_413    "histopathology: liver" ;
+        skos:prefLabel  "histopathology: liver" .
+
+<http://toxin.vub.be/resource/filter/gamma%20glutamyl%20transpeptidase%20%22gamma-Glutamyltransferase%22%5BMesh%5D>
+        a               ont:Filter , skos:Concept ;
+        ont:non_oecd    "blood and serum biomarkers" ;
+        ont:oecd_407    "gamma glutamyl transpeptidase \"gamma-Glutamyltransferase\"[Mesh]" ;
+        ont:oecd_408    "gamma glutamyl transpeptidase \"gamma-Glutamyltransferase\"[Mesh]" ;
+        ont:oecd_409    "gamma glutamyl transpeptidase \"gamma-Glutamyltransferase\"[Mesh]" ;
+        ont:oecd_411    "gamma glutamyl transpeptidase \"gamma-Glutamyltransferase\"[Mesh]" ;
+        ont:oecd_412    "clinical chemistry: other" ;
+        ont:oecd_413    "gamma glutamyl transpeptidase \"gamma-Glutamyltransferase\"[Mesh]" ;
+        skos:prefLabel  "gamma glutamyl transpeptidase \"gamma-Glutamyltransferase\"[Mesh]" .
+
+<http://toxin.vub.be/resource/filter/total%20cholesterol%20%22Cholesterol%22%5BMesh%5D>
+        a               skos:Concept , ont:Filter ;
+        ont:non_oecd    "blood and serum biomarkers" ;
+        ont:oecd_407    "total cholesterol \"Cholesterol\"[Mesh]" ;
+        ont:oecd_408    "total cholesterol \"Cholesterol\"[Mesh]" ;
+        ont:oecd_409    "analyses of lipids" ;
+        ont:oecd_411    "analyses of lipids" ;
+        ont:oecd_412    "total cholesterol \"Cholesterol\"[Mesh]" ;
+        ont:oecd_413    "total cholesterol \"Cholesterol\"[Mesh]" ;
+        skos:prefLabel  "total cholesterol \"Cholesterol\"[Mesh]" .
+@prefix rr:    <http://www.w3.org/ns/r2rml#> .
+@prefix ont:   <http://ontologies.vub.be/oecd#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+
+<http://toxin.vub.be/resource/filter/sorbitol%20dehydrogenase%20%22L-Iditol%202-Dehydrogenase%22%5BMesh%5D>
+        ont:oecd_407  "other enzymes and bile acids \"Bile Acids and Salts\"[Mesh]" , "sorbitol dehydrogenase \"L-Iditol 2-Dehydrogenase\"[Mesh]" .
+
+<http://toxin.vub.be/resource/filter/low-density%20lipoprotein%20%28ldl%29>
+        ont:oecd_407  "serum: other" .
+
+<http://toxin.vub.be/resource/filter/alkaline%20phosphatase>
+        ont:oecd_407  "other enzymes and bile acids \"Bile Acids and Salts\"[Mesh]" .
+
+<http://toxin.vub.be/resource/filter/high%20-density%20lipoprotein%20%28hdl%29>
+        ont:oecd_407  "serum: other" .
+
+<http://toxin.vub.be/resource/filter/albumin%20%22Albumins%22%5BMesh%5D>
+        ont:oecd_407  "albumin \"Albumins\"[Mesh]" .
+
+<http://toxin.vub.be/resource/filter/fasting%20%22Fasting%22%5BMesh%5D%20triglycerides%20%22Triglycerides%22%5BMesh%5D>
+        ont:oecd_407  "fasting \"Fasting\"[Mesh] triglycerides \"Triglycerides\"[Mesh]" .
+
+<http://toxin.vub.be/resource/filter/gross%20necropsy%20%3A%20liver%20%22Liver%22%5BMesh%5D>
+        ont:oecd_407  "gross necropsy : liver \"Liver\"[Mesh]" .
+
+<http://toxin.vub.be/resource/filter/aspartate%20aminotransferase%20%22Alkaline%20Phosphatase%22%5BMesh%5D>
+        ont:oecd_407  "aspartate aminotransferase \"Alkaline Phosphatase\"[Mesh]" .
+
+<http://toxin.vub.be/resource/filter/alanine%20aminotransferase%20%22D-Alanine%20Transaminase%22%5BMesh%5D>
+        ont:oecd_407  "alanine aminotransferase \"D-Alanine Transaminase\"[Mesh]" .
+
+<http://toxin.vub.be/resource/filter/total%20protein%20%22Proteins%22%5BMesh%5D>
+        ont:oecd_407  "total protein \"Proteins\"[Mesh]" .
+
+<http://toxin.vub.be/resource/filter/total%20bilirubin%20%22Bilirubin%22%5BMesh%5D>
+        ont:oecd_407  "serum: other" .
+
+<http://toxin.vub.be/resource/filter/histopathology%3A%20liver>
+        ont:oecd_407  "histopathology" .
+
+<http://toxin.vub.be/resource/filter/gamma%20glutamyl%20transpeptidase%20%22gamma-Glutamyltransferase%22%5BMesh%5D>
+        ont:oecd_407  "gamma glutamyl transpeptidase \"gamma-Glutamyltransferase\"[Mesh]" .
+
+<http://toxin.vub.be/resource/filter/total%20cholesterol%20%22Cholesterol%22%5BMesh%5D>
+        ont:oecd_407  "total cholesterol \"Cholesterol\"[Mesh]" .
+@prefix rr:    <http://www.w3.org/ns/r2rml#> .
+@prefix ont:   <http://ontologies.vub.be/oecd#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+
+<http://toxin.vub.be/resource/filter/sorbitol%20dehydrogenase%20%22L-Iditol%202-Dehydrogenase%22%5BMesh%5D>
+        ont:oecd_409  "other enzymes and biomarker" .
+
+<http://toxin.vub.be/resource/filter/low-density%20lipoprotein%20%28ldl%29>
+        ont:oecd_409  "analyses of lipids" .
+
+<http://toxin.vub.be/resource/filter/alkaline%20phosphatase>
+        ont:oecd_409  "other enzymes and biomarker" .
+
+<http://toxin.vub.be/resource/filter/high%20-density%20lipoprotein%20%28hdl%29>
+        ont:oecd_409  "analyses of lipids" .
+
+<http://toxin.vub.be/resource/filter/albumin%20%22Albumins%22%5BMesh%5D>
+        ont:oecd_409  "albumin \"Albumins\"[Mesh]" .
+
+<http://toxin.vub.be/resource/filter/fasting%20%22Fasting%22%5BMesh%5D%20triglycerides%20%22Triglycerides%22%5BMesh%5D>
+        ont:oecd_409  "analyses of lipids" .
+
+<http://toxin.vub.be/resource/filter/gross%20necropsy%20%3A%20liver%20%22Liver%22%5BMesh%5D>
+        ont:oecd_409  "gross necropsy : liver \"Liver\"[Mesh]" .
+
+<http://toxin.vub.be/resource/filter/aspartate%20aminotransferase%20%22Alkaline%20Phosphatase%22%5BMesh%5D>
+        ont:oecd_409  "aspartate aminotransferase \"Alkaline Phosphatase\"[Mesh]" .
+
+<http://toxin.vub.be/resource/filter/alanine%20aminotransferase%20%22D-Alanine%20Transaminase%22%5BMesh%5D>
+        ont:oecd_409  "alanine aminotransferase \"D-Alanine Transaminase\"[Mesh]" .
+
+<http://toxin.vub.be/resource/filter/total%20protein%20%22Proteins%22%5BMesh%5D>
+        ont:oecd_409  "total protein \"Proteins\"[Mesh]" .
+
+<http://toxin.vub.be/resource/filter/total%20bilirubin%20%22Bilirubin%22%5BMesh%5D>
+        ont:oecd_409  "total bilirubin \"Bilirubin\"[Mesh]" .
+
+<http://toxin.vub.be/resource/filter/histopathology%3A%20liver>
+        ont:oecd_409  "histopathology: liver" .
+
+<http://toxin.vub.be/resource/filter/gamma%20glutamyl%20transpeptidase%20%22gamma-Glutamyltransferase%22%5BMesh%5D>
+        ont:oecd_409  "gamma glutamyl transpeptidase \"gamma-Glutamyltransferase\"[Mesh]" .
+
+<http://toxin.vub.be/resource/filter/total%20cholesterol%20%22Cholesterol%22%5BMesh%5D>
+        ont:oecd_409  "analyses of lipids" .
+@prefix rr:    <http://www.w3.org/ns/r2rml#> .
+@prefix ont:   <http://ontologies.vub.be/oecd#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+
+<http://toxin.vub.be/resource/filter/sorbitol%20dehydrogenase%20%22L-Iditol%202-Dehydrogenase%22%5BMesh%5D>
+        ont:non_oecd  "blood and serum biomarkers" .
+
+<http://toxin.vub.be/resource/filter/low-density%20lipoprotein%20%28ldl%29>
+        ont:non_oecd  "blood and serum biomarkers" .
+
+<http://toxin.vub.be/resource/filter/alkaline%20phosphatase>
+        ont:non_oecd  "blood and serum biomarkers" .
+
+<http://toxin.vub.be/resource/filter/high%20-density%20lipoprotein%20%28hdl%29>
+        ont:non_oecd  "blood and serum biomarkers" .
+
+<http://toxin.vub.be/resource/filter/albumin%20%22Albumins%22%5BMesh%5D>
+        ont:non_oecd  "blood and serum biomarkers" .
+
+<http://toxin.vub.be/resource/filter/fasting%20%22Fasting%22%5BMesh%5D%20triglycerides%20%22Triglycerides%22%5BMesh%5D>
+        ont:non_oecd  "blood and serum biomarkers" .
+
+<http://toxin.vub.be/resource/filter/gross%20necropsy%20%3A%20liver%20%22Liver%22%5BMesh%5D>
+        ont:non_oecd  "gross pathology" .
+
+<http://toxin.vub.be/resource/filter/aspartate%20aminotransferase%20%22Alkaline%20Phosphatase%22%5BMesh%5D>
+        ont:non_oecd  "blood and serum biomarkers" .
+
+<http://toxin.vub.be/resource/filter/alanine%20aminotransferase%20%22D-Alanine%20Transaminase%22%5BMesh%5D>
+        ont:non_oecd  "blood and serum biomarkers" .
+
+<http://toxin.vub.be/resource/filter/total%20protein%20%22Proteins%22%5BMesh%5D>
+        ont:non_oecd  "blood and serum biomarkers" .
+
+<http://toxin.vub.be/resource/filter/total%20bilirubin%20%22Bilirubin%22%5BMesh%5D>
+        ont:non_oecd  "blood and serum biomarkers" .
+
+<http://toxin.vub.be/resource/filter/histopathology%3A%20liver>
+        ont:non_oecd  "histopathology" .
+
+<http://toxin.vub.be/resource/filter/gamma%20glutamyl%20transpeptidase%20%22gamma-Glutamyltransferase%22%5BMesh%5D>
+        ont:non_oecd  "blood and serum biomarkers" .
+
+<http://toxin.vub.be/resource/filter/total%20cholesterol%20%22Cholesterol%22%5BMesh%5D>
+        ont:non_oecd  "blood and serum biomarkers" .
+@prefix rr:    <http://www.w3.org/ns/r2rml#> .
+@prefix ont:   <http://ontologies.vub.be/oecd#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+
+<http://toxin.vub.be/resource/filter/sorbitol%20dehydrogenase%20%22L-Iditol%202-Dehydrogenase%22%5BMesh%5D>
+        ont:oecd_408  "sorbitol dehydrogenase \"L-Iditol 2-Dehydrogenase\"[Mesh]" .
+
+<http://toxin.vub.be/resource/filter/low-density%20lipoprotein%20%28ldl%29>
+        ont:oecd_408  "low-density lipoprotein (ldl)" .
+
+<http://toxin.vub.be/resource/filter/alkaline%20phosphatase>
+        ont:oecd_408  "alkaline phosphatase" .
+
+<http://toxin.vub.be/resource/filter/high%20-density%20lipoprotein%20%28hdl%29>
+        ont:oecd_408  "high -density lipoprotein (hdl)" .
+
+<http://toxin.vub.be/resource/filter/albumin%20%22Albumins%22%5BMesh%5D>
+        ont:oecd_408  "albumin \"Albumins\"[Mesh]" .
+
+<http://toxin.vub.be/resource/filter/fasting%20%22Fasting%22%5BMesh%5D%20triglycerides%20%22Triglycerides%22%5BMesh%5D>
+        ont:oecd_408  "fasting \"Fasting\"[Mesh] triglycerides \"Triglycerides\"[Mesh]" .
+
+<http://toxin.vub.be/resource/filter/gross%20necropsy%20%3A%20liver%20%22Liver%22%5BMesh%5D>
+        ont:oecd_408  "gross necropsy : liver \"Liver\"[Mesh]" .
+
+<http://toxin.vub.be/resource/filter/aspartate%20aminotransferase%20%22Alkaline%20Phosphatase%22%5BMesh%5D>
+        ont:oecd_408  "aspartate aminotransferase \"Alkaline Phosphatase\"[Mesh]" .
+
+<http://toxin.vub.be/resource/filter/alanine%20aminotransferase%20%22D-Alanine%20Transaminase%22%5BMesh%5D>
+        ont:oecd_408  "alanine aminotransferase \"D-Alanine Transaminase\"[Mesh]" .
+
+<http://toxin.vub.be/resource/filter/total%20protein%20%22Proteins%22%5BMesh%5D>
+        ont:oecd_408  "total protein \"Proteins\"[Mesh]" .
+
+<http://toxin.vub.be/resource/filter/total%20bilirubin%20%22Bilirubin%22%5BMesh%5D>
+        ont:oecd_408  "total bilirubin \"Bilirubin\"[Mesh]" .
+
+<http://toxin.vub.be/resource/filter/histopathology%3A%20liver>
+        ont:oecd_408  "histopathology: liver" .
+
+<http://toxin.vub.be/resource/filter/gamma%20glutamyl%20transpeptidase%20%22gamma-Glutamyltransferase%22%5BMesh%5D>
+        ont:oecd_408  "gamma glutamyl transpeptidase \"gamma-Glutamyltransferase\"[Mesh]" .
+
+<http://toxin.vub.be/resource/filter/total%20cholesterol%20%22Cholesterol%22%5BMesh%5D>
+        ont:oecd_408  "total cholesterol \"Cholesterol\"[Mesh]" .
+@prefix rr:    <http://www.w3.org/ns/r2rml#> .
+@prefix ont:   <http://ontologies.vub.be/oecd#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+
+<http://toxin.vub.be/resource/filter/sorbitol%20dehydrogenase%20%22L-Iditol%202-Dehydrogenase%22%5BMesh%5D>
+        ont:oecd_413  "other enzymes and biomarker" .
+
+<http://toxin.vub.be/resource/filter/low-density%20lipoprotein%20%28ldl%29>
+        ont:oecd_413  "lipids" .
+
+<http://toxin.vub.be/resource/filter/alkaline%20phosphatase>
+        ont:oecd_413  "alkaline phosphatase" .
+
+<http://toxin.vub.be/resource/filter/high%20-density%20lipoprotein%20%28hdl%29>
+        ont:oecd_413  "lipids" .
+
+<http://toxin.vub.be/resource/filter/albumin%20%22Albumins%22%5BMesh%5D>
+        ont:oecd_413  "albumin \"Albumins\"[Mesh]" .
+
+<http://toxin.vub.be/resource/filter/fasting%20%22Fasting%22%5BMesh%5D%20triglycerides%20%22Triglycerides%22%5BMesh%5D>
+        ont:oecd_413  "triglycerides" .
+
+<http://toxin.vub.be/resource/filter/gross%20necropsy%20%3A%20liver%20%22Liver%22%5BMesh%5D>
+        ont:oecd_413  "gross necropsy : liver \"Liver\"[Mesh]" .
+
+<http://toxin.vub.be/resource/filter/aspartate%20aminotransferase%20%22Alkaline%20Phosphatase%22%5BMesh%5D>
+        ont:oecd_413  "aspartate aminotransferase \"Alkaline Phosphatase\"[Mesh]" .
+
+<http://toxin.vub.be/resource/filter/alanine%20aminotransferase%20%22D-Alanine%20Transaminase%22%5BMesh%5D>
+        ont:oecd_413  "alanine aminotransferase \"D-Alanine Transaminase\"[Mesh]" .
+
+<http://toxin.vub.be/resource/filter/total%20protein%20%22Proteins%22%5BMesh%5D>
+        ont:oecd_413  "total protein \"Proteins\"[Mesh]" .
+
+<http://toxin.vub.be/resource/filter/total%20bilirubin%20%22Bilirubin%22%5BMesh%5D>
+        ont:oecd_413  "total bilirubin \"Bilirubin\"[Mesh]" .
+
+<http://toxin.vub.be/resource/filter/histopathology%3A%20liver>
+        ont:oecd_413  "histopathology: liver" .
+
+<http://toxin.vub.be/resource/filter/gamma%20glutamyl%20transpeptidase%20%22gamma-Glutamyltransferase%22%5BMesh%5D>
+        ont:oecd_413  "gamma glutamyl transpeptidase \"gamma-Glutamyltransferase\"[Mesh]" .
+
+<http://toxin.vub.be/resource/filter/total%20cholesterol%20%22Cholesterol%22%5BMesh%5D>
+        ont:oecd_413  "total cholesterol \"Cholesterol\"[Mesh]" .
+@prefix rr:    <http://www.w3.org/ns/r2rml#> .
+@prefix ont:   <http://ontologies.vub.be/oecd#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+
+<http://toxin.vub.be/resource/filter/sorbitol%20dehydrogenase%20%22L-Iditol%202-Dehydrogenase%22%5BMesh%5D>
+        ont:oecd_412  "clinical chemistry: other" .
+
+<http://toxin.vub.be/resource/filter/low-density%20lipoprotein%20%28ldl%29>
+        ont:oecd_412  "clinical chemistry: other" .
+
+<http://toxin.vub.be/resource/filter/alkaline%20phosphatase>
+        ont:oecd_412  "clinical chemistry: other" .
+
+<http://toxin.vub.be/resource/filter/high%20-density%20lipoprotein%20%28hdl%29>
+        ont:oecd_412  "clinical chemistry: other" .
+
+<http://toxin.vub.be/resource/filter/albumin%20%22Albumins%22%5BMesh%5D>
+        ont:oecd_412  "albumin \"Albumins\"[Mesh]" .
+
+<http://toxin.vub.be/resource/filter/fasting%20%22Fasting%22%5BMesh%5D%20triglycerides%20%22Triglycerides%22%5BMesh%5D>
+        ont:oecd_412  "triglycerides" .
+
+<http://toxin.vub.be/resource/filter/gross%20necropsy%20%3A%20liver%20%22Liver%22%5BMesh%5D>
+        ont:oecd_412  "gross necropsy : liver \"Liver\"[Mesh]" .
+
+<http://toxin.vub.be/resource/filter/aspartate%20aminotransferase%20%22Alkaline%20Phosphatase%22%5BMesh%5D>
+        ont:oecd_412  "aspartate aminotransferase \"Alkaline Phosphatase\"[Mesh]" .
+
+<http://toxin.vub.be/resource/filter/alanine%20aminotransferase%20%22D-Alanine%20Transaminase%22%5BMesh%5D>
+        ont:oecd_412  "alanine aminotransferase \"D-Alanine Transaminase\"[Mesh]" .
+
+<http://toxin.vub.be/resource/filter/total%20protein%20%22Proteins%22%5BMesh%5D>
+        ont:oecd_412  "total protein \"Proteins\"[Mesh]" .
+
+<http://toxin.vub.be/resource/filter/total%20bilirubin%20%22Bilirubin%22%5BMesh%5D>
+        ont:oecd_412  "clinical chemistry: other" .
+
+<http://toxin.vub.be/resource/filter/histopathology%3A%20liver>
+        ont:oecd_412  "histopathology: liver" .
+
+<http://toxin.vub.be/resource/filter/gamma%20glutamyl%20transpeptidase%20%22gamma-Glutamyltransferase%22%5BMesh%5D>
+        ont:oecd_412  "clinical chemistry: other" .
+
+<http://toxin.vub.be/resource/filter/total%20cholesterol%20%22Cholesterol%22%5BMesh%5D>
+        ont:oecd_412  "total cholesterol \"Cholesterol\"[Mesh]" .
+@prefix rr:    <http://www.w3.org/ns/r2rml#> .
+@prefix ont:   <http://ontologies.vub.be/oecd#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+
+<http://toxin.vub.be/resource/filter/sorbitol%20dehydrogenase%20%22L-Iditol%202-Dehydrogenase%22%5BMesh%5D>
+        ont:oecd_411  "other enzymes and biomarker" .
+
+<http://toxin.vub.be/resource/filter/low-density%20lipoprotein%20%28ldl%29>
+        ont:oecd_411  "analyses of lipids" .
+
+<http://toxin.vub.be/resource/filter/alkaline%20phosphatase>
+        ont:oecd_411  "other enzymes and biomarker" .
+
+<http://toxin.vub.be/resource/filter/high%20-density%20lipoprotein%20%28hdl%29>
+        ont:oecd_411  "analyses of lipids" .
+
+<http://toxin.vub.be/resource/filter/albumin%20%22Albumins%22%5BMesh%5D>
+        ont:oecd_411  "albumin \"Albumins\"[Mesh]" .
+
+<http://toxin.vub.be/resource/filter/fasting%20%22Fasting%22%5BMesh%5D%20triglycerides%20%22Triglycerides%22%5BMesh%5D>
+        ont:oecd_411  "analyses of lipids" .
+
+<http://toxin.vub.be/resource/filter/gross%20necropsy%20%3A%20liver%20%22Liver%22%5BMesh%5D>
+        ont:oecd_411  "gross necropsy : liver \"Liver\"[Mesh]" .
+
+<http://toxin.vub.be/resource/filter/aspartate%20aminotransferase%20%22Alkaline%20Phosphatase%22%5BMesh%5D>
+        ont:oecd_411  "aspartate aminotransferase \"Alkaline Phosphatase\"[Mesh]" .
+
+<http://toxin.vub.be/resource/filter/alanine%20aminotransferase%20%22D-Alanine%20Transaminase%22%5BMesh%5D>
+        ont:oecd_411  "alanine aminotransferase \"D-Alanine Transaminase\"[Mesh]" .
+
+<http://toxin.vub.be/resource/filter/total%20protein%20%22Proteins%22%5BMesh%5D>
+        ont:oecd_411  "total protein \"Proteins\"[Mesh]" .
+
+<http://toxin.vub.be/resource/filter/total%20bilirubin%20%22Bilirubin%22%5BMesh%5D>
+        ont:oecd_411  "total bilirubin \"Bilirubin\"[Mesh]" .
+
+<http://toxin.vub.be/resource/filter/histopathology%3A%20liver>
+        ont:oecd_411  "histopathology: liver" .
+
+<http://toxin.vub.be/resource/filter/gamma%20glutamyl%20transpeptidase%20%22gamma-Glutamyltransferase%22%5BMesh%5D>
+        ont:oecd_411  "gamma glutamyl transpeptidase \"gamma-Glutamyltransferase\"[Mesh]" .
+
+<http://toxin.vub.be/resource/filter/total%20cholesterol%20%22Cholesterol%22%5BMesh%5D>
+        ont:oecd_411  "analyses of lipids" .

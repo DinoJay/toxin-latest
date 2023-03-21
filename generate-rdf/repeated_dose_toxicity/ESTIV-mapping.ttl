@@ -1,0 +1,81 @@
+#TODO: not complete
+@prefix rr: <http://www.w3.org/ns/r2rml#> .
+@prefix ont: <http://ontologies.vub.be/oecd#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+<#FilterTriplesMap>
+    rr:logicalTable [ rr:sqlQuery "SELECT * FROM ESTIV" ] ;
+
+     rr:subjectMap [
+        rr:template "http://toxin.vub.be/resource/name/{NAME}" ;
+#        rr:class ont:Filter ;
+        rr:class skos:Concept ;
+        rr:graph rr:defaultGraph
+    ] ;
+
+
+    rr:predicateObjectMap [
+        rr:predicate skos:prefLabel ;
+        rr:objectMap [ rr:column "NAME" ; ] ;
+    ] ;
+
+    rr:predicateObjectMap [
+        rr:predicate skos:altLabel ;
+
+        rr:objectMap [ rr:column "Non-OECD" ] ;
+        rr:graph <http://toxin.vub.be/resource/guideline/non%20OECD>
+
+    ] ;
+
+    rr:predicateObjectMap [
+        rr:predicate skos:altLabel ;
+
+        rr:objectMap [ rr:column "407" ] ;
+        rr:graph <http://toxin.vub.be/resource/guideline/OECD%20407>
+    ] ;
+
+    rr:predicateObjectMap [
+        rr:predicate skos:altLabel ;
+
+        rr:objectMap [ rr:column "412" ] ;
+        rr:graph <http://toxin.vub.be/resource/guideline/OECD%20412>
+    ] ;
+
+    rr:predicateObjectMap [
+        rr:predicate skos:altLabel ;
+
+        rr:objectMap [ rr:column "411" ] ;
+        rr:graph <http://toxin.vub.be/resource/guideline/OECD%20411>
+    ] ;
+
+    rr:predicateObjectMap [
+        rr:predicate skos:altLabel ;
+
+        rr:objectMap [ rr:column "409" ] ;
+        rr:graph <http://toxin.vub.be/resource/guideline/OECD%20409>
+    ] ;
+
+    rr:predicateObjectMap [
+        rr:predicate skos:altLabel ;
+
+        rr:objectMap [ rr:column "408" ] ;
+        rr:graph <http://toxin.vub.be/resource/guideline/OECD%20408>
+    ] ;
+    
+    rr:predicateObjectMap [
+        rr:predicate skos:altLabel ;
+
+        rr:objectMap [ rr:column "413" ] ;
+        rr:graph <http://toxin.vub.be/resource/guideline/OECD%20413>
+    ] ;
+
+    rr:predicateObjectMap [
+        rr:predicate skos:altLabel ;
+
+        rr:objectMap [ rr:column "422" ] ;
+        rr:graph <http://toxin.vub.be/resource/guideline/OECD%20422>
+    ] ;
+.

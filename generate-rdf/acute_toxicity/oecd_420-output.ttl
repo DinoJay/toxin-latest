@@ -1,0 +1,266 @@
+@prefix rr:    <http://www.w3.org/ns/r2rml#> .
+@prefix ont:   <http://ontologies.vub.be/oecd#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+
+<http://toxin.vub.be/resource/test/acute-toxicity/2>
+        a                               ont:Test ;
+        ont:additional_info             "test substance: resorcinol" ;
+        ont:administration_scheme       "single" ;
+        ont:animal_weight_changes       "no effect on body weight gain" ;
+        ont:changes_activity_behaviour_pattern
+                "hypoactivity obsereved in all animals on day 1. recovery was complet on day 2" ;
+        ont:changes_autonomic_central_nervous_system
+                "tremors obsereved in all animals on day 1. recovery was complet on day 2" ;
+        ont:changes_respiratory_system  "dyspnoea obsereved in all animals on day 1. recovery was complet on day 2" ;
+        ont:chemical_batch_nr           "706030517" ;
+        ont:compound                    <http://toxin.vub.be/resource/compound/resorcinol> ;
+        ont:conclusion                  "the maximal non-lethal dose (mnld) of resorcinol was 200 mg/kg bw." ;
+        ont:dose_levels_unity           "mg/kg bw" ;
+        ont:dose_levels_value           "200" ;
+        ont:gavage                      "yes" ;
+        ont:glp                         "yes" ;
+        ont:gross_necropsy              "no gross abnormalities" ;
+        ont:guideline                   "OECD 420" ;
+        ont:moribund_or_dead_animals_prior_to_study_termination
+                "no" ;
+        ont:n_animals_group             "5" ;
+        ont:observation_recovery_period
+                "14" ;
+        ont:own_comments                "the group size is mentioned 5 female animals in the resumé of the study but in the text the study is performed in a group of 4 female animals" ;
+        ont:purity                      "98.8" ;
+        ont:rat_strain                  "rat/sprague-dawley rj:sd (iops han)" ;
+        ont:ref_in_dossier              "1" ;
+        ont:sex                         "f" ;
+        ont:type                        "in vivo" ;
+        ont:year                        "2004" .
+
+<http://toxin.vub.be/resource/compound/alkyl%20%28c16%2C%20c18%2C%20c22%29%20trimethylammonium%20chloride>
+        a               ont:Compound ;
+        rdfs:label      "alkyl (c16, c18, c22) trimethylammonium chloride" ;
+        ont:compoundOf  <http://toxin.vub.be/resource/dossier/alkyl%20%28c16%2C%20c18%2C%20c22%29%20trimethylammonium%20chloride> .
+
+<http://toxin.vub.be/resource/test/acute-toxicity/1>
+        a                            ont:Test ;
+        ont:additional_info          "test substance: quartamin 60w25 (24-26% cetrimonium chloride in water)" ;
+        ont:animal_weight_changes    "neither clinical signs nor any effect on body weight development were observed at 500 mg/kg bw, while at 2000 mg/kg bw, body weight decreased in the majority of the animals during the first three days after treatment" ;
+        ont:changes_activity_behaviour_pattern
+                "the following clinical signs occurred at 2000 mg/kg bw during the first days after administration: decreased motor activity, ataxia, hunched back. all symptoms had completely disappeared by day 6." ;
+        ont:changes_skin_fur_eyes_mucous_membranes
+                "the following clinical signs occurred at 2000 mg/kg bw during the first days after administration: half-closed eyes, piloerection and salivation. all symptoms had completely disappeared by day 6." ;
+        ont:chemical_batch_nr        "3-4" ;
+        ont:compound                 <http://toxin.vub.be/resource/compound/alkyl%20%28c16%2C%20c18%2C%20c22%29%20trimethylammonium%20chloride> ;
+        ont:conclusion               "the study authors conclude that since no lethality occurred at 500 mg/kg bw and no significant clinical signs were observed at this dosage level, quartamin 60w25 can be considered to be moderately toxic to non-toxic. " ;
+        ont:dose_levels_unity        "mg/kg bw" ;
+        ont:dose_levels_value        "500, 2000 " ;
+        ont:gavage                   "yes" ;
+        ont:glp                      "yes" ;
+        ont:guideline                "OECD 420" ;
+        ont:microscopic_changes      "no macroscopic alterations were observed in rats that had received 500 or 2000 mg/kg bw." ;
+        ont:moribund_or_dead_animals_prior_to_study_termination
+                "yes" ;
+        ont:n_animals_group          "10" ;
+        ont:observation_recovery_period
+                "14" ;
+        ont:other_signs_of_toxicity  "the following clinical sign occurred at 2000 mg/kg bw during the first days after administration: diarrhoea. all symptoms had completely disappeared by day 6." ;
+        ont:rat_strain               "rat/sprague dawley" ;
+        ont:ref_in_dossier           "7" ;
+        ont:sex                      "f & m" ;
+        ont:type                     "in vivo" ;
+        ont:year                     "1997" .
+
+<http://toxin.vub.be/resource/dossier/resorcinol>
+        a             ont:Report ;
+        rdfs:label    "resorcinol" ;
+        ont:contains  <http://toxin.vub.be/resource/test/acute-toxicity/2> ;
+        ont:seeAlso   <http://toxin.vub.be/resource/pdfLink/https%3A%2F%2Fec.europa.eu%2Fhealth%2Fscientific_committees%2Fconsumer_safety%2Fdocs%2Fsccs_o_015.pdf> .
+
+<http://toxin.vub.be/resource/dossier/bis%28butylbenzoate%29%20diaminotriazine%20aminopropyltrisiloxane>
+        a             ont:Report ;
+        rdfs:label    "bis(butylbenzoate) diaminotriazine aminopropyltrisiloxane" ;
+        ont:contains  <http://toxin.vub.be/resource/test/acute-toxicity/6> ;
+        ont:seeAlso   <http://toxin.vub.be/resource/pdfLink/https%3A%2F%2Fec.europa.eu%2Fhealth%2Fscientific_committees%2Fconsumer_safety%2Fdocs%2Fsccs_o_055.pdf> .
+
+<http://toxin.vub.be/resource/compound/hc%20yellow%20n°9>
+        a               ont:Compound ;
+        rdfs:label      "hc yellow n°9" ;
+        ont:compoundOf  <http://toxin.vub.be/resource/dossier/hc%20yellow%20n°9> .
+
+<http://toxin.vub.be/resource/test/acute-toxicity/6>
+        a                          ont:Test ;
+        ont:SCCS_comment_to_test   "the test was performed with three animals only (including the animal used for the sighting study). oecd tg 420 states that normally 5 animals per group should be used." ;
+        ont:additional_info        "test substance: bbdapt; r0027603a" ;
+        ont:administration_scheme  "single" ;
+        ont:age_unit               "week" ;
+        ont:age_value_at_start_of_experiment
+                "8 --> 12" ;
+        ont:changes_skin_fur_eyes_mucous_membranes
+                "no clinical signs could be observed between day 1 and day 14." ;
+        ont:chemical_batch_nr      "054d001" ;
+        ont:compound               <http://toxin.vub.be/resource/compound/bis%28butylbenzoate%29%20diaminotriazine%20aminopropyltrisiloxane> ;
+        ont:conclusion             "under the conditions of this test, the oral LD50 of bbdapt was higher than 2000 mg/kg bw." ;
+        ont:dose_levels_unity      "mg/kg bw" ;
+        ont:dose_levels_value      "2000" ;
+        ont:dose_volume            "10" ;
+        ont:gavage                 "yes" ;
+        ont:glp                    "yes" ;
+        ont:gross_necropsy         "at gross necropsy, no organ or tissue gross finding was seen in the sighting and in the main test. " ;
+        ont:guideline              "OECD 420" ;
+        ont:housing_feeding        "overnight fasting" ;
+        ont:moribund_or_dead_animals_prior_to_study_termination
+                "no" ;
+        ont:n_animals_group        "3" ;
+        ont:observation_recovery_period
+                "14" ;
+        ont:purity                 "bbdapt; r0027603a" ;
+        ont:rat_strain             "rat/ sprague-dawley" ;
+        ont:ref_in_dossier         "1" ;
+        ont:sccs_comment           "the test was performed with three animals only (including the animal used for the sighting study). oecd tg 420 states that normally 5 animals per group should be used." ;
+        ont:sex                    "f" ;
+        ont:solubility_vehicle     "98 (hplc)" ;
+        ont:type                   "in vivo" ;
+        ont:vehicle_concentration  "0.5" ;
+        ont:vehicle_name           "caboxymethylcellulose" ;
+        ont:year                   "2006" .
+
+<http://toxin.vub.be/resource/compound/bis%28butylbenzoate%29%20diaminotriazine%20aminopropyltrisiloxane>
+        a               ont:Compound ;
+        rdfs:label      "bis(butylbenzoate) diaminotriazine aminopropyltrisiloxane" ;
+        ont:compoundOf  <http://toxin.vub.be/resource/dossier/bis%28butylbenzoate%29%20diaminotriazine%20aminopropyltrisiloxane> .
+
+<http://toxin.vub.be/resource/test/acute-toxicity/5>
+        a                               ont:Test ;
+        ont:additional_info             "test substance: 2-hydroxyethylamino-5-nitroanisole" ;
+        ont:animal_weight_changes       "he overall body weight was not affected" ;
+        ont:changes_activity_behaviour_pattern
+                "hypoactivity or sedation was noted on day 1 in all animals." ;
+        ont:changes_respiratory_system  "dyspnea was noted on day 1 in all animals." ;
+        ont:changes_skin_fur_eyes_mucous_membranes
+                "pilorection was noted on day 1 in all animals." ;
+        ont:chemical_batch_nr           "507391" ;
+        ont:composition                 "test substance suspended in the vehicle" ;
+        ont:compound                    <http://toxin.vub.be/resource/compound/2-hydroxyethylamino-5-nitroanisole> ;
+        ont:conclusion                  "the maximal non-lethal dose of the test substance was 500 mg/kg bw and the minimal lethal dose is 1000 mg/kg bw under the experimental conditions." ;
+        ont:dose_levels_unity           "mg/kg bw" ;
+        ont:dose_levels_value           "500" ;
+        ont:gavage                      "yes" ;
+        ont:glp                         "yes" ;
+        ont:gross_necropsy              "macroscopic examination revealed no abnormalities." ;
+        ont:guideline                   "OECD 420" ;
+        ont:moribund_or_dead_animals_prior_to_study_termination
+                "no" ;
+        ont:n_animals_group             "5" ;
+        ont:observation_recovery_period
+                "14" ;
+        ont:other_signs_of_toxicity     "yellow extremities was noted on day 1 in all animals." ;
+        ont:rat_strain                  "rat/sprague-dawley rj: sd (iops han)" ;
+        ont:ref_in_dossier              "1" ;
+        ont:sex                         "f" ;
+        ont:solubility_vehicle          "99.0" ;
+        ont:type                        "in vivo" ;
+        ont:vehicle_concentration       "0.5" ;
+        ont:vehicle_name                "methylcellulose" .
+
+<http://toxin.vub.be/resource/dossier/2-hydroxyethylamino-5-nitroanisole>
+        a             ont:Report ;
+        rdfs:label    "2-hydroxyethylamino-5-nitroanisole" ;
+        ont:contains  <http://toxin.vub.be/resource/test/acute-toxicity/5> ;
+        ont:seeAlso   <http://toxin.vub.be/resource/pdfLink/https%3A%2F%2Fec.europa.eu%2Fhealth%2Fph_risk%2Fcommittees%2F04_sccs%2Fdocs%2Fsccs_o_001.pdf> .
+
+<http://toxin.vub.be/resource/compound/resorcinol>
+        a               ont:Compound ;
+        rdfs:label      "resorcinol" ;
+        ont:compoundOf  <http://toxin.vub.be/resource/dossier/resorcinol> .
+
+<http://toxin.vub.be/resource/compound/2-hydroxyethylamino-5-nitroanisole>
+        a               ont:Compound ;
+        rdfs:label      "2-hydroxyethylamino-5-nitroanisole" ;
+        ont:compoundOf  <http://toxin.vub.be/resource/dossier/2-hydroxyethylamino-5-nitroanisole> .
+
+<http://toxin.vub.be/resource/dossier/hc%20yellow%20n°9>
+        a             ont:Report ;
+        rdfs:label    "hc yellow n°9" ;
+        ont:contains  <http://toxin.vub.be/resource/test/acute-toxicity/3> ;
+        ont:seeAlso   <http://toxin.vub.be/resource/pdfLink/https%3A%2F%2Fec.europa.eu%2Fhealth%2Fscientific_committees%2Fconsumer_safety%2Fdocs%2Fsccs_o_026.pdf> .
+
+<http://toxin.vub.be/resource/test/acute-toxicity/4>
+        a                               ont:Test ;
+        ont:SCCS_comment_to_test        "20 ml/kg is a high volume to be administered, especially of a solution containing carboxymethylcellulose. nevertheless, the substance is minimally toxic by ingestion of a single dose. " ;
+        ont:additional_info             "test substance: hc red n° 7" ;
+        ont:animal_weight_changes       "the overall body weight gain was not affected by treatment with the test item" ;
+        ont:changes_activity_behaviour_pattern
+                "hypoactivity was observed within 4 hours of treatment in the animals given 2000 mg/kg. hypoactivity or sedation was noted on day 1 only." ;
+        ont:changes_respiratory_system  "dyspnea was observed within 4 hours of treatment in the animals given 2000 mg/kg. it was noted on day 1 only." ;
+        ont:changes_skin_fur_eyes_mucous_membranes
+                "piloerection was observed within 4 hours of treatment in the animals given 2000 mg/kg. piloerection, purple urine and light red coloration of the extremities (ears, eyes, legs and nose) were noted on day 1 only. at 300mg/g bw, purple urine was noted in 1/5 females on day 1 only. ." ;
+        ont:chemical_batch_nr           "510149" ;
+        ont:compound                    <http://toxin.vub.be/resource/compound/hc%20red%20n°%207> ;
+        ont:conclusion                  "maximal non-lethal dose of hc red no. 7 (b036) (batch no. 0510149) of 300 mg/kg by the oral route in rats; 2000 mg/kg as the minimal lethal dose." ;
+        ont:dose_levels_unity           "mg/kg bw" ;
+        ont:dose_levels_value           "300, 2000" ;
+        ont:dose_volume                 "20" ;
+        ont:gavage                      "yes" ;
+        ont:glp                         "yes" ;
+        ont:gross_necropsy              "at necropsy,no apparent abnormalities were observed. " ;
+        ont:guideline                   "OECD 420" ;
+        ont:moribund_or_dead_animals_prior_to_study_termination
+                "yes" ;
+        ont:n_animals_group             "5" ;
+        ont:purity                      "99.3" ;
+        ont:rat_strain                  "rat/ sprague-dawley rj:sd (iops han)" ;
+        ont:ref_in_dossier              "1" ;
+        ont:sccs_comment                "20 ml/kg is a high volume to be administered, especially of a solution containing carboxymethylcellulose. nevertheless, the substance is minimally toxic by ingestion of a single dose. " ;
+        ont:sex                         "f" ;
+        ont:type                        "in vivo" ;
+        ont:vehicle_concentration       "0.5" ;
+        ont:vehicle_name                "carboxymethylcellulose in purified water" .
+
+<http://toxin.vub.be/resource/dossier/alkyl%20%28c16%2C%20c18%2C%20c22%29%20trimethylammonium%20chloride>
+        a             ont:Report ;
+        rdfs:label    "alkyl (c16, c18, c22) trimethylammonium chloride" ;
+        ont:contains  <http://toxin.vub.be/resource/test/acute-toxicity/1> ;
+        ont:seeAlso   <http://toxin.vub.be/resource/pdfLink/https%3A%2F%2Fec.europa.eu%2Fhealth%2Fscientific_committees%2Fconsumer_safety%2Fdocs%2Fsccs_o_012.pdf> .
+
+<http://toxin.vub.be/resource/test/acute-toxicity/3>
+        a                            ont:Test ;
+        ont:additional_info          "test substance: hc yellow n° 9" ;
+        ont:changes_activity_behaviour_pattern
+                "in the surviving animal hypoactivity or sedation was  noted on day 1 only." ;
+        ont:changes_skin_fur_eyes_mucous_membranes
+                "in the surviving animal in the high dosz group, piloerection was noted on day 1 only. in the low dose group, no clinical signs were noted in the surviving animals. the overall body weight gain of the surviving animals was not affected by treatment with the test item." ;
+        ont:chemical_batch_nr        "510071" ;
+        ont:composition              "test substance in the vehicle" ;
+        ont:compound                 <http://toxin.vub.be/resource/compound/hc%20yellow%20n°9> ;
+        ont:conclusion               "under the experimental conditions, the oral ld50 of hc yellow n° 9 was found to be between 200 and 500 mg/kg in rats. the maximum non-lethal dose-level is below 200 mg/kg" ;
+        ont:dose_levels_unity        "mg/kg bw" ;
+        ont:dose_levels_value        "200, 500" ;
+        ont:dose_volume              "10" ;
+        ont:gavage                   "yes" ;
+        ont:glp                      "yes" ;
+        ont:gross_necropsy           "at necropsy, no apparent abnormalities were observed." ;
+        ont:guideline                "OECD 420" ;
+        ont:housing_feeding          "fasted" ;
+        ont:moribund_or_dead_animals_prior_to_study_termination
+                "yes" ;
+        ont:n_animals_group          "5" ;
+        ont:other_signs_of_toxicity  "general malaise" ;
+        ont:purity                   "98.5" ;
+        ont:rat_strain               "rat/ sprague-dawley rj: sd (iops han)" ;
+        ont:ref_in_dossier           "1 (subm.3)" ;
+        ont:sex                      "f" ;
+        ont:type                     "in vivo" ;
+        ont:vehicle_concentration    "0.5" ;
+        ont:vehicle_name             "suspension of methylcellulose" ;
+        ont:year                     "2005" .
+
+<http://toxin.vub.be/resource/compound/hc%20red%20n°%207>
+        a               ont:Compound ;
+        rdfs:label      "hc red n° 7" ;
+        ont:compoundOf  <http://toxin.vub.be/resource/dossier/hc%20red%20n°%207> .
+
+<http://toxin.vub.be/resource/dossier/hc%20red%20n°%207>
+        a             ont:Report ;
+        rdfs:label    "hc red n° 7" ;
+        ont:contains  <http://toxin.vub.be/resource/test/acute-toxicity/4> ;
+        ont:seeAlso   <http://toxin.vub.be/resource/pdfLink/https%3A%2F%2Fec.europa.eu%2Fhealth%2Fscientific_committees%2Fconsumer_safety%2Fdocs%2Fsccs_o_007.pdf> .

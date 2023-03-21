@@ -1,0 +1,74 @@
+
+#TODO: not complete
+@prefix rr: <http://www.w3.org/ns/r2rml#> .
+@prefix ont: <http://ontologies.vub.be/oecd#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+<#ESTIVTriplesMap>
+    rr:logicalTable [ rr:sqlQuery "SELECT ROWNUM() AS ID, * FROM ESTIV" ] ;
+
+     rr:subjectMap [
+        rr:template "http://toxin.vub.be/resource/filter/{FILTER}" ;
+        rr:class ont:Filter ;
+    ] ;
+
+    rr:predicateObjectMap [
+        rr:predicate skos:Concept ;
+        skos:prefLabel "Filter";
+
+        rr:objectMap [ rr:column "Non-OECD" ] ;
+        rr:graph <http://toxin.vub.be/resource/guideline/non%20OECD>
+    ] ;
+
+    rr:predicateObjectMap [
+        rr:predicate skos:Concept ;
+        skos:prefLabel "Filter";
+
+        rr:objectMap [ rr:column "407" ] ;
+        rr:graph <http://toxin.vub.be/resource/guideline/OECD%20407>
+    ] ;
+
+    rr:predicateObjectMap [
+        rr:predicate skos:Concept ;
+        skos:prefLabel "Filter";
+
+        rr:objectMap [ rr:column "412" ] ;
+        rr:graph <http://toxin.vub.be/resource/guideline/OECD%20412>
+    ] ;
+
+    rr:predicateObjectMap [
+        rr:predicate skos:Concept ;
+        skos:prefLabel "Filter";
+
+        rr:objectMap [ rr:column "411" ] ;
+        rr:graph <http://toxin.vub.be/resource/guideline/OECD%20411>
+    ] ;
+
+    rr:predicateObjectMap [
+        rr:predicate skos:Concept ;
+        skos:prefLabel "Filter";
+
+        rr:objectMap [ rr:column "409" ] ;
+        rr:graph <http://toxin.vub.be/resource/guideline/OECD%20409>
+    ] ;
+
+    rr:predicateObjectMap [
+        rr:predicate skos:Concept ;
+        skos:prefLabel "Filter";
+
+        rr:objectMap [ rr:column "408" ] ;
+        rr:graph <http://toxin.vub.be/resource/guideline/OECD%20408>
+    ] ;
+    
+    rr:predicateObjectMap [
+        rr:predicate skos:Concept ;
+        skos:prefLabel "Filter";
+
+        rr:objectMap [ rr:column "413" ] ;
+        rr:graph <http://toxin.vub.be/resource/guideline/OECD%20413>
+    ] ;
+
+.

@@ -1,0 +1,369 @@
+@prefix rr:    <http://www.w3.org/ns/r2rml#> .
+@prefix ont:   <http://ontologies.vub.be/oecd#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+
+<http://toxin.vub.be/resource/dossier/hc%20yellow%20n°%202>
+        a             ont:Report ;
+        rdfs:label    "hc yellow n° 2" ;
+        rdfs:seeAlso  <https://ec.europa.eu/health/scientific_committees/consumer_safety/docs/sccs_o_038.pdf> ;
+        ont:contains  <http://toxin.vub.be/resource/test/repeatedtoxicity/149> , <http://toxin.vub.be/resource/test/repeatedtoxicity/148> .
+
+<http://toxin.vub.be/resource/dossier/quinolinium%2C%204-formyl-1-methyl-%2C%20salt%20with%204-methylbenzene%20sulfonic%20acid%20%281%3A1%29>
+        a             ont:Report ;
+        rdfs:label    "quinolinium, 4-formyl-1-methyl-, salt with 4-methylbenzene sulfonic acid (1:1)" ;
+        rdfs:seeAlso  <https://ec.europa.eu/health/scientific_committees/consumer_safety/docs/sccs_o_080.pdf> ;
+        ont:contains  <http://toxin.vub.be/resource/test/repeatedtoxicity/80> , <http://toxin.vub.be/resource/test/repeatedtoxicity/79> .
+
+<http://toxin.vub.be/resource/test/repeatedtoxicity/1>
+        a                  ont:Test ;
+        ont:exposure_time  "4" ;
+        ont:purity         "98" .
+
+<http://toxin.vub.be/resource/dossier/2-methoxy-methyl-p-phenylenediamine%20and%20its%20sulfate%20salt>
+        a             ont:Report ;
+        rdfs:label    "2-methoxy-methyl-p-phenylenediamine and its sulfate salt" ;
+        rdfs:seeAlso  <https://ec.europa.eu/health/scientific_committees/consumer_safety/docs/sccs_o_123.pdf> ;
+        ont:contains  <http://toxin.vub.be/resource/test/repeatedtoxicity/178> , <http://toxin.vub.be/resource/test/repeatedtoxicity/177> , <http://toxin.vub.be/resource/test/repeatedtoxicity/176> , <http://toxin.vub.be/resource/test/repeatedtoxicity/175> , <http://toxin.vub.be/resource/test/repeatedtoxicity/174> .
+
+<http://toxin.vub.be/resource/dossier/2%2C6-dihydroxyethylaminotoluene>
+        a             ont:Report ;
+        rdfs:label    "2,6-dihydroxyethylaminotoluene" ;
+        rdfs:seeAlso  <https://ec.europa.eu/health/scientific_committees/consumer_safety/docs/sccs_o_188.pdf> ;
+        ont:contains  <http://toxin.vub.be/resource/test/repeatedtoxicity/29> , <http://toxin.vub.be/resource/test/repeatedtoxicity/28> , <http://toxin.vub.be/resource/test/repeatedtoxicity/27> .
+
+<http://toxin.vub.be/resource/dossier/2%2C6-diaminopyridine>
+        a             ont:Report ;
+        rdfs:label    "2,6-diaminopyridine" ;
+        rdfs:seeAlso  <https://ec.europa.eu/health/scientific_committees/consumer_safety/docs/sccs_o_084.pdf> ;
+        ont:contains  <http://toxin.vub.be/resource/test/repeatedtoxicity/20> , <http://toxin.vub.be/resource/test/repeatedtoxicity/19> .
+
+<http://toxin.vub.be/resource/dossier/2-amino-4-hydroxyethylaminoanisole%20sulfate>
+        a             ont:Report ;
+        rdfs:label    "2-amino-4-hydroxyethylaminoanisole sulfate" ;
+        rdfs:seeAlso  <https://ec.europa.eu/health//sites/health/files/scientific_committees/consumer_safety/opinions/sccs_o_003.pdf> ;
+        ont:contains  <http://toxin.vub.be/resource/test/repeatedtoxicity/34> , <http://toxin.vub.be/resource/test/repeatedtoxicity/33> , <http://toxin.vub.be/resource/test/repeatedtoxicity/32> , <http://toxin.vub.be/resource/test/repeatedtoxicity/31> .
+
+<http://toxin.vub.be/resource/dossier/acid%20orange%207>
+        a             ont:Report ;
+        rdfs:label    "acid orange 7" ;
+        rdfs:seeAlso  <https://ec.europa.eu/health/scientific_committees/consumer_safety/docs/sccs_o_158.pdf> ;
+        ont:contains  <http://toxin.vub.be/resource/test/repeatedtoxicity/203> , <http://toxin.vub.be/resource/test/repeatedtoxicity/202> , <http://toxin.vub.be/resource/test/repeatedtoxicity/201> .
+
+<http://toxin.vub.be/resource/dossier/hydroxypropyl%20p-phenylenediamine%20and%20its%20dihydrochloride%20salt>
+        a             ont:Report ;
+        rdfs:label    "hydroxypropyl p-phenylenediamine and its dihydrochloride salt" ;
+        rdfs:seeAlso  <https://ec.europa.eu/health/sites/health/files/scientific_committees/consumer_safety/docs/sccs_o_230.pdf> ;
+        ont:contains  <http://toxin.vub.be/resource/test/repeatedtoxicity/84> , <http://toxin.vub.be/resource/test/repeatedtoxicity/83> .
+
+<http://toxin.vub.be/resource/dossier/2-amino-5-ethylphenol%20HCl>
+        a             ont:Report ;
+        rdfs:label    "2-amino-5-ethylphenol HCl" ;
+        rdfs:seeAlso  <https://ec.europa.eu/health/scientific_committees/consumer_safety/docs/sccs_o_085.pdf> ;
+        ont:contains  <http://toxin.vub.be/resource/test/repeatedtoxicity/101> , <http://toxin.vub.be/resource/test/repeatedtoxicity/100> , <http://toxin.vub.be/resource/test/repeatedtoxicity/99> .
+
+<http://toxin.vub.be/resource/dossier/hc%20yellow%20n°%207>
+        a             ont:Report ;
+        rdfs:label    "hc yellow n° 7" ;
+        rdfs:seeAlso  <https://ec.europa.eu/health/scientific_committees/consumer_safety/docs/sccs_o_032.pdf> ;
+        ont:contains  <http://toxin.vub.be/resource/test/repeatedtoxicity/24> , <http://toxin.vub.be/resource/test/repeatedtoxicity/23> .
+
+<http://toxin.vub.be/resource/dossier/hc%20yellow%20n°%2017%20%28b121%29>
+        a             ont:Report ;
+        rdfs:label    "hc yellow n° 17 (b121)" ;
+        rdfs:seeAlso  <https://ec.europa.eu/health/scientific_committees/consumer_safety/docs/sccs_o_186.pdf> ;
+        ont:contains  <http://toxin.vub.be/resource/test/repeatedtoxicity/151> , <http://toxin.vub.be/resource/test/repeatedtoxicity/150> .
+
+<http://toxin.vub.be/resource/dossier/phenylene%20bis-diphenyltriazine>
+        a             ont:Report ;
+        rdfs:label    "phenylene bis-diphenyltriazine" ;
+        rdfs:seeAlso  <https://ec.europa.eu/health/scientific_committees/consumer_safety/docs/sccs_o_184.pdf> , <https://ec.europa.eu/health/sites/health/files/scientific_committees/consumer_safety/docs/sccs_o_215.pdf> ;
+        ont:contains  <http://toxin.vub.be/resource/test/repeatedtoxicity/93> , <http://toxin.vub.be/resource/test/repeatedtoxicity/96> , <http://toxin.vub.be/resource/test/repeatedtoxicity/90> , <http://toxin.vub.be/resource/test/repeatedtoxicity/94> , <http://toxin.vub.be/resource/test/repeatedtoxicity/97> , <http://toxin.vub.be/resource/test/repeatedtoxicity/91> , <http://toxin.vub.be/resource/test/repeatedtoxicity/95> , <http://toxin.vub.be/resource/test/repeatedtoxicity/92> , <http://toxin.vub.be/resource/test/repeatedtoxicity/98> .
+
+<http://toxin.vub.be/resource/dossier/resorcinol>
+        a             ont:Report ;
+        rdfs:label    "resorcinol" ;
+        rdfs:seeAlso  <https://ec.europa.eu/health/scientific_committees/consumer_safety/docs/sccs_o_015.pdf> ;
+        ont:contains  <http://toxin.vub.be/resource/test/repeatedtoxicity/82> , <http://toxin.vub.be/resource/test/repeatedtoxicity/81> .
+
+<http://toxin.vub.be/resource/dossier/1-hexyl%204%2C5-diamino%20pyrazole%20sulfate>
+        a             ont:Report ;
+        rdfs:label    "1-hexyl 4,5-diamino pyrazole sulfate" ;
+        rdfs:seeAlso  <https://ec.europa.eu/health/scientific_committees/consumer_safety/docs/sccs_o_181.pdf> ;
+        ont:contains  <http://toxin.vub.be/resource/test/repeatedtoxicity/168> , <http://toxin.vub.be/resource/test/repeatedtoxicity/167> , <http://toxin.vub.be/resource/test/repeatedtoxicity/166> .
+
+<http://toxin.vub.be/resource/dossier/basic%20red%2051>
+        a             ont:Report ;
+        rdfs:label    "basic red 51" ;
+        rdfs:seeAlso  <https://ec.europa.eu/health/scientific_committees/consumer_safety/docs/sccs_o_067.pdf> ;
+        ont:contains  <http://toxin.vub.be/resource/test/repeatedtoxicity/163> , <http://toxin.vub.be/resource/test/repeatedtoxicity/162> .
+
+<http://toxin.vub.be/resource/dossier/phenoxyethanol>
+        a             ont:Report ;
+        rdfs:label    "phenoxyethanol" ;
+        rdfs:seeAlso  <http://ec.europa.eu/health/scientific_committees/consumer_safety/docs/sccs_o_195.pdf> ;
+        ont:contains  <http://toxin.vub.be/resource/test/repeatedtoxicity/37> , <http://toxin.vub.be/resource/test/repeatedtoxicity/36> .
+
+<http://toxin.vub.be/resource/dossier/hc%20red%20n°%207>
+        a             ont:Report ;
+        rdfs:label    "hc red n° 7" ;
+        rdfs:seeAlso  <https://ec.europa.eu/health/scientific_committees/consumer_safety/docs/sccs_o_007.pdf> ;
+        ont:contains  <http://toxin.vub.be/resource/test/repeatedtoxicity/156> , <http://toxin.vub.be/resource/test/repeatedtoxicity/155> .
+
+<http://toxin.vub.be/resource/dossier/o-aminophenol>
+        a             ont:Report ;
+        rdfs:label    "o-aminophenol" ;
+        rdfs:seeAlso  <https://ec.europa.eu/health/scientific_committees/consumer_safety/docs/sccs_o_025.pdf> ;
+        ont:contains  <http://toxin.vub.be/resource/test/repeatedtoxicity/128> , <http://toxin.vub.be/resource/test/repeatedtoxicity/127> , <http://toxin.vub.be/resource/test/repeatedtoxicity/126> .
+
+<http://toxin.vub.be/resource/dossier/hc%20yellow%20n°%2013>
+        a             ont:Report ;
+        rdfs:label    "hc yellow n° 13" ;
+        rdfs:seeAlso  <https://ec.europa.eu/health/scientific_committees/consumer_safety/docs/sccs_o_044.pdf> ;
+        ont:contains  <http://toxin.vub.be/resource/test/repeatedtoxicity/154> , <http://toxin.vub.be/resource/test/repeatedtoxicity/153> , <http://toxin.vub.be/resource/test/repeatedtoxicity/152> .
+
+<http://toxin.vub.be/resource/dossier/p-aminophenol>
+        a             ont:Report ;
+        rdfs:label    "p-aminophenol" ;
+        rdfs:seeAlso  <https://ec.europa.eu/health/scientific_committees/consumer_safety/docs/sccs_o_078.pdf> ;
+        ont:contains  <http://toxin.vub.be/resource/test/repeatedtoxicity/109> , <http://toxin.vub.be/resource/test/repeatedtoxicity/108> , <http://toxin.vub.be/resource/test/repeatedtoxicity/107> , <http://toxin.vub.be/resource/test/repeatedtoxicity/106> , <http://toxin.vub.be/resource/test/repeatedtoxicity/105> .
+
+<http://toxin.vub.be/resource/dossier/hydroxyethyl-2-nitro-p-toluidine>
+        a             ont:Report ;
+        rdfs:label    "hydroxyethyl-2-nitro-p-toluidine" ;
+        rdfs:seeAlso  <https://ec.europa.eu/health/scientific_committees/consumer_safety/docs/sccs_o_061.pdf> ;
+        ont:contains  <http://toxin.vub.be/resource/test/repeatedtoxicity/113> , <http://toxin.vub.be/resource/test/repeatedtoxicity/112> .
+
+<http://toxin.vub.be/resource/dossier/alkyl%20%28C16%2C%20C18%2C%20C22%29%20trimethylammonium%20chloride>
+        a             ont:Report ;
+        rdfs:label    "alkyl (C16, C18, C22) trimethylammonium chloride" ;
+        rdfs:seeAlso  <https://ec.europa.eu/health/scientific_committees/consumer_safety/docs/sccs_o_012.pdf> ;
+        ont:contains  <http://toxin.vub.be/resource/test/repeatedtoxicity/229> , <http://toxin.vub.be/resource/test/repeatedtoxicity/226> , <http://toxin.vub.be/resource/test/repeatedtoxicity/214> , <http://toxin.vub.be/resource/test/repeatedtoxicity/207> , <http://toxin.vub.be/resource/test/repeatedtoxicity/231> , <http://toxin.vub.be/resource/test/repeatedtoxicity/227> , <http://toxin.vub.be/resource/test/repeatedtoxicity/217> , <http://toxin.vub.be/resource/test/repeatedtoxicity/221> , <http://toxin.vub.be/resource/test/repeatedtoxicity/232> , <http://toxin.vub.be/resource/test/repeatedtoxicity/218> , <http://toxin.vub.be/resource/test/repeatedtoxicity/215> , <http://toxin.vub.be/resource/test/repeatedtoxicity/208> , <http://toxin.vub.be/resource/test/repeatedtoxicity/209> , <http://toxin.vub.be/resource/test/repeatedtoxicity/220> , <http://toxin.vub.be/resource/test/repeatedtoxicity/216> , <http://toxin.vub.be/resource/test/repeatedtoxicity/230> , <http://toxin.vub.be/resource/test/repeatedtoxicity/222> , <http://toxin.vub.be/resource/test/repeatedtoxicity/210> , <http://toxin.vub.be/resource/test/repeatedtoxicity/219> , <http://toxin.vub.be/resource/test/repeatedtoxicity/223> , <http://toxin.vub.be/resource/test/repeatedtoxicity/211> , <http://toxin.vub.be/resource/test/repeatedtoxicity/225> , <http://toxin.vub.be/resource/test/repeatedtoxicity/224> , <http://toxin.vub.be/resource/test/repeatedtoxicity/212> , <http://toxin.vub.be/resource/test/repeatedtoxicity/228> , <http://toxin.vub.be/resource/test/repeatedtoxicity/213> , <http://toxin.vub.be/resource/test/repeatedtoxicity/206> .
+
+<http://toxin.vub.be/resource/dossier/1%2C3%2C5-triazine%2C%202%2C4%2C6-tris%5B1%2C1’-biphenyl%5D-4-yl->
+        a             ont:Report ;
+        rdfs:label    "1,3,5-triazine, 2,4,6-tris[1,1’-biphenyl]-4-yl-" ;
+        rdfs:seeAlso  <https://ec.europa.eu/health/scientific_committees/consumer_safety/docs/sccs_o_070.pdf> ;
+        ont:contains  <http://toxin.vub.be/resource/test/repeatedtoxicity/2> , <http://toxin.vub.be/resource/test/repeatedtoxicity/1> .
+
+<http://toxin.vub.be/resource/dossier/1%2C5-naphthalenediol>
+        a             ont:Report ;
+        rdfs:label    "1,5-naphthalenediol" ;
+        rdfs:seeAlso  <https://ec.europa.eu/health/scientific_committees/consumer_safety/docs/sccs_o_033.pdf> ;
+        ont:contains  <http://toxin.vub.be/resource/test/repeatedtoxicity/165> , <http://toxin.vub.be/resource/test/repeatedtoxicity/164> .
+
+<http://toxin.vub.be/resource/dossier/acid%20red%2092>
+        a             ont:Report ;
+        rdfs:label    "acid red 92" ;
+        rdfs:seeAlso  <https://ec.europa.eu/health/scientific_committees/consumer_safety/docs/sccs_o_087.pdf> ;
+        ont:contains  <http://toxin.vub.be/resource/test/repeatedtoxicity/205> , <http://toxin.vub.be/resource/test/repeatedtoxicity/204> .
+
+<http://toxin.vub.be/resource/dossier/trisodium%20nitrilotriacetat>
+        a             ont:Report ;
+        rdfs:label    "trisodium nitrilotriacetat" ;
+        rdfs:seeAlso  <https://ec.europa.eu/health/scientific_committees/consumer_safety/docs/sccs_o_046.pdf> ;
+        ont:contains  <http://toxin.vub.be/resource/test/repeatedtoxicity/62> , <http://toxin.vub.be/resource/test/repeatedtoxicity/61> , <http://toxin.vub.be/resource/test/repeatedtoxicity/60> , <http://toxin.vub.be/resource/test/repeatedtoxicity/59> , <http://toxin.vub.be/resource/test/repeatedtoxicity/58> .
+
+<http://toxin.vub.be/resource/dossier/β-arbutin>
+        a             ont:Report ;
+        rdfs:label    "β-arbutin" ;
+        rdfs:seeAlso  <http://ec.europa.eu/health/scientific_committees/consumer_safety/docs/sccs_o_169.pdf> ;
+        ont:contains  <http://toxin.vub.be/resource/test/repeatedtoxicity/47> , <http://toxin.vub.be/resource/test/repeatedtoxicity/46> .
+
+<http://toxin.vub.be/resource/dossier/hc%20red%20n°%2017>
+        a             ont:Report ;
+        rdfs:label    "hc red n° 17" ;
+        ont:contains  <http://toxin.vub.be/resource/test/repeatedtoxicity/195> .
+
+<http://toxin.vub.be/resource/dossier/triclosan>
+        a             ont:Report ;
+        rdfs:label    "triclosan" ;
+        rdfs:seeAlso  <https://ec.europa.eu/health/ph_risk/committees/04_sccp/docs/sccp_o_166.pdf> ;
+        ont:contains  <http://toxin.vub.be/resource/test/repeatedtoxicity/190> , <http://toxin.vub.be/resource/test/repeatedtoxicity/187> , <http://toxin.vub.be/resource/test/repeatedtoxicity/193> , <http://toxin.vub.be/resource/test/repeatedtoxicity/192> , <http://toxin.vub.be/resource/test/repeatedtoxicity/194> , <http://toxin.vub.be/resource/test/repeatedtoxicity/189> , <http://toxin.vub.be/resource/test/repeatedtoxicity/188> , <http://toxin.vub.be/resource/test/repeatedtoxicity/191> .
+
+<http://toxin.vub.be/resource/dossier/5-amino-6-chloro-o-cresol>
+        a             ont:Report ;
+        rdfs:label    "5-amino-6-chloro-o-cresol" ;
+        rdfs:seeAlso  <https://ec.europa.eu/health/scientific_committees/consumer_safety/docs/sccs_o_005.pdf> ;
+        ont:contains  <http://toxin.vub.be/resource/test/repeatedtoxicity/184> , <http://toxin.vub.be/resource/test/repeatedtoxicity/183> .
+
+<http://toxin.vub.be/resource/dossier/methoxypropylamino%20cyclohexenylidene%20ethoxyethylcyanoacetate%20%28S87%29>
+        a             ont:Report ;
+        rdfs:label    "methoxypropylamino cyclohexenylidene ethoxyethylcyanoacetate (S87)" ;
+        rdfs:seeAlso  <https://ec.europa.eu/health/sites/health/files/scientific_committees/consumer_safety/docs/sccs_o_227.pdf> ;
+        ont:contains  <http://toxin.vub.be/resource/test/repeatedtoxicity/136> , <http://toxin.vub.be/resource/test/repeatedtoxicity/135> , <http://toxin.vub.be/resource/test/repeatedtoxicity/134> , <http://toxin.vub.be/resource/test/repeatedtoxicity/133> , <http://toxin.vub.be/resource/test/repeatedtoxicity/132> , <http://toxin.vub.be/resource/test/repeatedtoxicity/131> .
+
+<http://toxin.vub.be/resource/dossier/hydroxyethyl-p-phenylenediamine%20sulfate>
+        a             ont:Report ;
+        rdfs:label    "hydroxyethyl-p-phenylenediamine sulfate" ;
+        rdfs:seeAlso  <https://ec.europa.eu/health/scientific_committees/consumer_safety/docs/sccs_o_017.pdf> ;
+        ont:contains  <http://toxin.vub.be/resource/test/repeatedtoxicity/138> , <http://toxin.vub.be/resource/test/repeatedtoxicity/137> .
+
+<http://toxin.vub.be/resource/dossier/vetiveryl%20acetate>
+        a             ont:Report ;
+        rdfs:label    "vetiveryl acetate" ;
+        rdfs:seeAlso  <https://ec.europa.eu/health/scientific_committees/consumer_safety/docs/sccs_o_167.pdf> ;
+        ont:contains  <http://toxin.vub.be/resource/test/repeatedtoxicity/68> , <http://toxin.vub.be/resource/test/repeatedtoxicity/67> , <http://toxin.vub.be/resource/test/repeatedtoxicity/66> , <http://toxin.vub.be/resource/test/repeatedtoxicity/65> , <http://toxin.vub.be/resource/test/repeatedtoxicity/64> , <http://toxin.vub.be/resource/test/repeatedtoxicity/63> .
+
+<http://toxin.vub.be/resource/dossier/methylimidazoliumpropyl%20p-phenylenediamine%20HCl>
+        a             ont:Report ;
+        rdfs:label    "methylimidazoliumpropyl p-phenylenediamine HCl" ;
+        rdfs:seeAlso  <https://ec.europa.eu/health/sites/health/files/scientific_committees/consumer_safety/docs/sccs_o_231.pdf> ;
+        ont:contains  <http://toxin.vub.be/resource/test/repeatedtoxicity/104> , <http://toxin.vub.be/resource/test/repeatedtoxicity/103> , <http://toxin.vub.be/resource/test/repeatedtoxicity/102> .
+
+<http://toxin.vub.be/resource/dossier/2%2C6-diamino-3-%28%28pyridin-3-yl%29azo%29pyridine%20>
+        a             ont:Report ;
+        rdfs:label    "2,6-diamino-3-((pyridin-3-yl)azo)pyridine " ;
+        rdfs:seeAlso  <https://ec.europa.eu/health/scientific_committees/consumer_safety/docs/sccs_o_065.pdf> ;
+        ont:contains  <http://toxin.vub.be/resource/test/repeatedtoxicity/26> , <http://toxin.vub.be/resource/test/repeatedtoxicity/25> .
+
+<http://toxin.vub.be/resource/dossier/tetrabromophenol%20blue>
+        a             ont:Report ;
+        rdfs:label    "tetrabromophenol blue" ;
+        rdfs:seeAlso  <https://ec.europa.eu/health/sites/health/files/scientific_committees/consumer_safety/docs/sccs_o_232.pdf> ;
+        ont:contains  <http://toxin.vub.be/resource/test/repeatedtoxicity/71> , <http://toxin.vub.be/resource/test/repeatedtoxicity/70> , <http://toxin.vub.be/resource/test/repeatedtoxicity/69> .
+
+<http://toxin.vub.be/resource/dossier/1-hydroxyethyl-4%2C5-diamino%20pyrazole%20sulfate>
+        a             ont:Report ;
+        rdfs:label    "1-hydroxyethyl-4,5-diamino pyrazole sulfate" ;
+        rdfs:seeAlso  <https://ec.europa.eu/health/scientific_committees/consumer_safety/docs/sccs_o_079.pdf> ;
+        ont:contains  <http://toxin.vub.be/resource/test/repeatedtoxicity/5> , <http://toxin.vub.be/resource/test/repeatedtoxicity/4> , <http://toxin.vub.be/resource/test/repeatedtoxicity/3> .
+
+<http://toxin.vub.be/resource/dossier/polysilicone-15>
+        a             ont:Report ;
+        rdfs:label    "polysilicone-15" ;
+        rdfs:seeAlso  <https://ec.europa.eu/health/scientific_committees/consumer_safety/docs/sccs_o_024.pdf> ;
+        ont:contains  <http://toxin.vub.be/resource/test/repeatedtoxicity/87> , <http://toxin.vub.be/resource/test/repeatedtoxicity/86> , <http://toxin.vub.be/resource/test/repeatedtoxicity/85> .
+
+<http://toxin.vub.be/resource/dossier/hydroxypropyl%20bis%28n-hydroxyethyl-p-phenylenediamine%29%20HCl>
+        a             ont:Report ;
+        rdfs:label    "hydroxypropyl bis(n-hydroxyethyl-p-phenylenediamine) HCl" ;
+        rdfs:seeAlso  <https://ec.europa.eu/health/scientific_committees/consumer_safety/docs/sccs_o_011.pdf> ;
+        ont:contains  <http://toxin.vub.be/resource/test/repeatedtoxicity/161> , <http://toxin.vub.be/resource/test/repeatedtoxicity/160> , <http://toxin.vub.be/resource/test/repeatedtoxicity/159> , <http://toxin.vub.be/resource/test/repeatedtoxicity/158> , <http://toxin.vub.be/resource/test/repeatedtoxicity/157> .
+
+<http://toxin.vub.be/resource/dossier/sodium%20perborate%20%20and%20perboric%20acid>
+        a             ont:Report ;
+        rdfs:label    "sodium perborate  and perboric acid" ;
+        rdfs:seeAlso  <https://ec.europa.eu/health/scientific_committees/consumer_safety/docs/sccs_o_031.pdf> ;
+        ont:contains  <http://toxin.vub.be/resource/test/repeatedtoxicity/78> , <http://toxin.vub.be/resource/test/repeatedtoxicity/77> .
+
+<http://toxin.vub.be/resource/dossier/2-hydroxyethylamino-5-nitroanisole>
+        a             ont:Report ;
+        rdfs:label    "2-hydroxyethylamino-5-nitroanisole" ;
+        rdfs:seeAlso  <https://ec.europa.eu/health/ph_risk/committees/04_sccs/docs/sccs_o_001.pdf> ;
+        ont:contains  <http://toxin.vub.be/resource/test/repeatedtoxicity/170> , <http://toxin.vub.be/resource/test/repeatedtoxicity/169> .
+
+<http://toxin.vub.be/resource/dossier/hc%20yellow%20n°9>
+        a             ont:Report ;
+        rdfs:label    "hc yellow n°9" ;
+        rdfs:seeAlso  <https://ec.europa.eu/health/scientific_committees/consumer_safety/docs/sccs_o_026.pdf> ;
+        ont:contains  <http://toxin.vub.be/resource/test/repeatedtoxicity/147> , <http://toxin.vub.be/resource/test/repeatedtoxicity/146> , <http://toxin.vub.be/resource/test/repeatedtoxicity/145> , <http://toxin.vub.be/resource/test/repeatedtoxicity/144> .
+
+<http://toxin.vub.be/resource/dossier/vitamin%20a>
+        a             ont:Report ;
+        rdfs:label    "vitamin a" ;
+        rdfs:seeAlso  <https://ec.europa.eu/health/scientific_committees/consumer_safety/docs/sccs_o_199.pdf> ;
+        ont:contains  <http://toxin.vub.be/resource/test/repeatedtoxicity/39> , <http://toxin.vub.be/resource/test/repeatedtoxicity/45> , <http://toxin.vub.be/resource/test/repeatedtoxicity/42> , <http://toxin.vub.be/resource/test/repeatedtoxicity/40> , <http://toxin.vub.be/resource/test/repeatedtoxicity/43> , <http://toxin.vub.be/resource/test/repeatedtoxicity/38> , <http://toxin.vub.be/resource/test/repeatedtoxicity/41> , <http://toxin.vub.be/resource/test/repeatedtoxicity/44> .
+
+<http://toxin.vub.be/resource/dossier/hc%20yellow%20n°%204>
+        a             ont:Report ;
+        rdfs:label    "hc yellow n° 4" ;
+        rdfs:seeAlso  <https://ec.europa.eu/health/scientific_committees/consumer_safety/docs/sccs_o_008.pdf> ;
+        ont:contains  <http://toxin.vub.be/resource/test/repeatedtoxicity/111> , <http://toxin.vub.be/resource/test/repeatedtoxicity/110> .
+
+<http://toxin.vub.be/resource/dossier/hydroxyethoxyphenyl%20butanone>
+        a             ont:Report ;
+        rdfs:label    "hydroxyethoxyphenyl butanone" ;
+        rdfs:seeAlso  <https://ec.europa.eu/health/sites/health/files/scientific_committees/consumer_safety/docs/sccs_o_225.pdf> ;
+        ont:contains  <http://toxin.vub.be/resource/test/repeatedtoxicity/143> , <http://toxin.vub.be/resource/test/repeatedtoxicity/142> , <http://toxin.vub.be/resource/test/repeatedtoxicity/141> , <http://toxin.vub.be/resource/test/repeatedtoxicity/140> , <http://toxin.vub.be/resource/test/repeatedtoxicity/139> .
+
+<http://toxin.vub.be/resource/dossier/picramic%20acid%20and%20sodium%20picramate>
+        a             ont:Report ;
+        rdfs:label    "picramic acid and sodium picramate" ;
+        rdfs:seeAlso  <https://ec.europa.eu/health/scientific_committees/consumer_safety/docs/sccs_o_042.pdf> ;
+        ont:contains  <http://toxin.vub.be/resource/test/repeatedtoxicity/89> , <http://toxin.vub.be/resource/test/repeatedtoxicity/88> .
+
+<http://toxin.vub.be/resource/dossier/1%2C2%2C4-trihydroxybenzene%20>
+        a             ont:Report ;
+        rdfs:label    "1,2,4-trihydroxybenzene " ;
+        rdfs:seeAlso  <https://ec.europa.eu/health/sites/health/files/scientific_committees/consumer_safety/docs/sccs_o_113.pdf> ;
+        ont:contains  <http://toxin.vub.be/resource/test/repeatedtoxicity/35> , <http://toxin.vub.be/resource/test/repeatedtoxicity/30> .
+
+<http://toxin.vub.be/resource/dossier/toluene-2%2C5-diamine%20and%20its%20sulfate>
+        a             ont:Report ;
+        rdfs:label    "toluene-2,5-diamine and its sulfate" ;
+        rdfs:seeAlso  <https://ec.europa.eu/health/scientific_committees/consumer_safety/docs/sccs_o_052.pdf> ;
+        ont:contains  <http://toxin.vub.be/resource/test/repeatedtoxicity/76> , <http://toxin.vub.be/resource/test/repeatedtoxicity/75> , <http://toxin.vub.be/resource/test/repeatedtoxicity/74> , <http://toxin.vub.be/resource/test/repeatedtoxicity/73> , <http://toxin.vub.be/resource/test/repeatedtoxicity/72> .
+
+<http://toxin.vub.be/resource/dossier/n-methyl-2-pyrrolidone%20%28NMP%29>
+        a             ont:Report ;
+        rdfs:label    "n-methyl-2-pyrrolidone (NMP)" ;
+        rdfs:seeAlso  <https://ec.europa.eu/health/scientific_committees/consumer_safety/docs/sccs_o_050.pdf> ;
+        ont:contains  <http://toxin.vub.be/resource/test/repeatedtoxicity/17> , <http://toxin.vub.be/resource/test/repeatedtoxicity/18> , <http://toxin.vub.be/resource/test/repeatedtoxicity/11> , <http://toxin.vub.be/resource/test/repeatedtoxicity/13> , <http://toxin.vub.be/resource/test/repeatedtoxicity/12> , <http://toxin.vub.be/resource/test/repeatedtoxicity/14> , <http://toxin.vub.be/resource/test/repeatedtoxicity/15> , <http://toxin.vub.be/resource/test/repeatedtoxicity/16> .
+
+<http://toxin.vub.be/resource/dossier/4-nitrophenyl%20aminoethylurea>
+        a             ont:Report ;
+        rdfs:label    "4-nitrophenyl aminoethylurea" ;
+        rdfs:seeAlso  <https://ec.europa.eu/health/scientific_committees/consumer_safety/docs/sccs_o_036.pdf> ;
+        ont:contains  <http://toxin.vub.be/resource/test/repeatedtoxicity/182> , <http://toxin.vub.be/resource/test/repeatedtoxicity/181> .
+
+<http://toxin.vub.be/resource/dossier/4-amino-2-nitrodiphenylamine-2%27-carboxylic%20acid>
+        a             ont:Report ;
+        rdfs:label    "4-amino-2-nitrodiphenylamine-2'-carboxylic acid" ;
+        rdfs:seeAlso  <https://ec.europa.eu/health/scientific_committees/consumer_safety/docs/sccs_o_058.pdf> ;
+        ont:contains  <http://toxin.vub.be/resource/test/repeatedtoxicity/173> , <http://toxin.vub.be/resource/test/repeatedtoxicity/172> , <http://toxin.vub.be/resource/test/repeatedtoxicity/171> .
+
+<http://toxin.vub.be/resource/dossier/o-phenylphenol%2C%20sodium%20o-phenylphenate%20and%20potassium%20o-phenylphenate>
+        a             ont:Report ;
+        rdfs:label    "o-phenylphenol, sodium o-phenylphenate and potassium o-phenylphenate" ;
+        rdfs:seeAlso  <https://ec.europa.eu/health/scientific_committees/consumer_safety/docs/sccs_o_177.pdf> ;
+        ont:contains  <http://toxin.vub.be/resource/test/repeatedtoxicity/122> , <http://toxin.vub.be/resource/test/repeatedtoxicity/117> , <http://toxin.vub.be/resource/test/repeatedtoxicity/120> , <http://toxin.vub.be/resource/test/repeatedtoxicity/124> , <http://toxin.vub.be/resource/test/repeatedtoxicity/123> , <http://toxin.vub.be/resource/test/repeatedtoxicity/125> , <http://toxin.vub.be/resource/test/repeatedtoxicity/114> , <http://toxin.vub.be/resource/test/repeatedtoxicity/115> , <http://toxin.vub.be/resource/test/repeatedtoxicity/118> , <http://toxin.vub.be/resource/test/repeatedtoxicity/119> , <http://toxin.vub.be/resource/test/repeatedtoxicity/121> , <http://toxin.vub.be/resource/test/repeatedtoxicity/116> .
+
+<http://toxin.vub.be/resource/dossier/2%2C4-diaminophenoxyethanol%20dihydrochloride%20and%20sulfate>
+        a             ont:Report ;
+        rdfs:label    "2,4-diaminophenoxyethanol dihydrochloride and sulfate" ;
+        rdfs:seeAlso  <https://ec.europa.eu/health/scientific_committees/consumer_safety/docs/sccs_o_035.pdf> ;
+        ont:contains  <http://toxin.vub.be/resource/test/repeatedtoxicity/8> , <http://toxin.vub.be/resource/test/repeatedtoxicity/7> , <http://toxin.vub.be/resource/test/repeatedtoxicity/6> .
+
+<http://toxin.vub.be/resource/dossier/2%2C5%2C6-triamino-4-pyrimidinol%20sulfate>
+        a             ont:Report ;
+        rdfs:label    "2,5,6-triamino-4-pyrimidinol sulfate" ;
+        rdfs:seeAlso  <https://ec.europa.eu/health/scientific_committees/consumer_safety/docs/sccs_o_185.pdf> ;
+        ont:contains  <http://toxin.vub.be/resource/test/repeatedtoxicity/10> , <http://toxin.vub.be/resource/test/repeatedtoxicity/9> .
+
+<http://toxin.vub.be/resource/dossier/hydroxyethyl-3%2C4-methylenedioxyaniline%20HCl>
+        a             ont:Report ;
+        rdfs:label    "hydroxyethyl-3,4-methylenedioxyaniline HCl" ;
+        rdfs:seeAlso  <https://ec.europa.eu/health/scientific_committees/consumer_safety/docs/sccs_o_006.pdf> ;
+        ont:contains  <http://toxin.vub.be/resource/test/repeatedtoxicity/22> , <http://toxin.vub.be/resource/test/repeatedtoxicity/21> .
+
+<http://toxin.vub.be/resource/dossier/acid%20black%201>
+        a             ont:Report ;
+        rdfs:label    "acid black 1" ;
+        rdfs:seeAlso  <https://ec.europa.eu/health/scientific_committees/consumer_safety/docs/sccs_o_018.pdf> ;
+        ont:contains  <http://toxin.vub.be/resource/test/repeatedtoxicity/186> , <http://toxin.vub.be/resource/test/repeatedtoxicity/185> .
+
+<http://toxin.vub.be/resource/dossier/4-chlororesorcinol>
+        a             ont:Report ;
+        rdfs:label    "4-chlororesorcinol" ;
+        rdfs:seeAlso  <https://ec.europa.eu/health/scientific_committees/consumer_safety/docs/sccs_o_016.pdf> ;
+        ont:contains  <http://toxin.vub.be/resource/test/repeatedtoxicity/180> , <http://toxin.vub.be/resource/test/repeatedtoxicity/179> .
+
+<http://toxin.vub.be/resource/dossier/n%2Cn’-bis-%282-hydroxyethyl%29-2-nitro-p-phenylenediamine>
+        a             ont:Report ;
+        rdfs:label    "n,n’-bis-(2-hydroxyethyl)-2-nitro-p-phenylenediamine" ;
+        rdfs:seeAlso  <https://ec.europa.eu/health/sites/health/files/scientific_committees/consumer_safety/docs/sccs_o_196.pdf> ;
+        ont:contains  <http://toxin.vub.be/resource/test/repeatedtoxicity/130> , <http://toxin.vub.be/resource/test/repeatedtoxicity/129> .
+
+<http://toxin.vub.be/resource/dossier/hc%20red%20n°%203>
+        a             ont:Report ;
+        rdfs:label    "hc red n° 3" ;
+        rdfs:seeAlso  <https://ec.europa.eu/health/scientific_committees/consumer_safety/docs/sccs_o_043.pdf> ;
+        ont:contains  <http://toxin.vub.be/resource/test/repeatedtoxicity/200> , <http://toxin.vub.be/resource/test/repeatedtoxicity/199> , <http://toxin.vub.be/resource/test/repeatedtoxicity/198> , <http://toxin.vub.be/resource/test/repeatedtoxicity/197> , <http://toxin.vub.be/resource/test/repeatedtoxicity/196> .
+
+<http://toxin.vub.be/resource/dossier/zinc%20pyrithione>
+        a             ont:Report ;
+        rdfs:label    "zinc pyrithione" ;
+        rdfs:seeAlso  <https://ec.europa.eu/health/scientific_committees/consumer_safety/docs/sccs_o_133.pdf> ;
+        ont:contains  <http://toxin.vub.be/resource/test/repeatedtoxicity/49> , <http://toxin.vub.be/resource/test/repeatedtoxicity/53> , <http://toxin.vub.be/resource/test/repeatedtoxicity/57> , <http://toxin.vub.be/resource/test/repeatedtoxicity/54> , <http://toxin.vub.be/resource/test/repeatedtoxicity/55> , <http://toxin.vub.be/resource/test/repeatedtoxicity/56> , <http://toxin.vub.be/resource/test/repeatedtoxicity/50> , <http://toxin.vub.be/resource/test/repeatedtoxicity/51> , <http://toxin.vub.be/resource/test/repeatedtoxicity/48> , <http://toxin.vub.be/resource/test/repeatedtoxicity/52> .
