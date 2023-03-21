@@ -31,18 +31,14 @@
 			else if (smilesMatch) sparqlQueryArg = { smiles: trimmed };
 			else sparqlQueryArg = { inci: trimmed };
 
-			const q = constructQuery({ endpoint: CHEMICAL_IDENTITY, ...sparqlQueryArg });
-			console.log('q', q);
-			promise = fetch(q)
-				.then((res) => res.json())
-				.then((res) => {
-					console.log('res', res);
-					return {
-						...res,
-						imgSrc: e,
-						type: 'compound'
-					};
-				});
+			promise = constructQuery({ endpoint: CHEMICAL_IDENTITY, ...sparqlQueryArg }).then((res) => {
+				console.log('res', res);
+				return {
+					...res,
+					imgSrc: e,
+					type: 'compound'
+				};
+			});
 		}}
 	>
 		<div class="text-lg ">

@@ -49,7 +49,8 @@ function getAttrs(guide, obj) {
     if (guide === 'non OECD') {
         const retObj = {}
         nonOECD.forEach(o => { retObj[o] = obj[o] })
-        return { ...obj, ...retObj, }
+        // return { ...obj, ...retObj, }
+        return obj;
     }
     return obj
 }

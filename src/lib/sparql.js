@@ -94,7 +94,7 @@ const sparqlGetSynonyms = (label) => `
 		}
 `
 
-const sparqlQuery = (filters, val) => ` 
+const sparqlQuery = (filters) => ` 
 	PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> 
 	PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#> 
 	PREFIX ont: <http://ontologies.vub.be/oecd#>
@@ -112,16 +112,11 @@ const sparqlQuery = (filters, val) => `
 
 // ${filters.filter(Boolean).reduce(acc, d)=> `${acc}`}
 
-export const getSparqlQueryString = ({ endpoint, smiles = null, cas = null, inci = null, filters = [], val = null }) => {
+export const getSparqlQueryString = ({ endpoint, smiles = null, cas = null, inci = null, filters = [] }) => {
 	if (endpoint === CHEMICAL_IDENTITY)
 		return chemicalIdentityQuery({ smiles, cas, inci })
 
-	// if (endpoint === REPEATED_DOSE_TOXICITY)
-	// 	return sparqlRepeatedDoseQuery()
-
-	// console.log('repeatedDose', repeatedDoseToxicityFilters)
-
-	return sparqlQuery(filters, val)
+	return sparqlQuery(filters)
 
 }
 
@@ -130,7 +125,7 @@ export const endpointMaker = (n) => `https://wise.vub.ac.be/fuseki/${n}/sparql`;
 export const constructQuery = ({ endpoint, cas = null, inci = null, smiles = null, filters }) => {
 	console.log('filters', filters)
 
-	const selFilter = filters.find(d => !!d.value)
+	const selFilter = filters?.find(d => !!d.value)
 
 	console.log('selFilter', selFilter)
 

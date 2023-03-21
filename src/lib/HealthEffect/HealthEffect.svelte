@@ -180,7 +180,7 @@
 	}
 
 	.crop-text {
-		max-height: 2rem;
+		/* max-height: 2rem; */
 		overflow: hidden;
 		text-overflow: ellipsis;
 		max-lines: 1;

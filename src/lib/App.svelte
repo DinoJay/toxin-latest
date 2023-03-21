@@ -2,7 +2,6 @@
 	import HealthEffectFilter from '$lib/HealthEffect/HealthEffect.svelte';
 	import ChemicalCompoundFilter from '$lib/CompoundInfo/ChemicalCompound.svelte';
 	import CompoundList from '$lib/HealthEffect/CompoundList.svelte';
-	import SafetyAssessment from '$lib/HealthEffect/SafetyAssessment.svelte';
 	import CompoundInfoWrapper from '$lib/CompoundInfo/CompoundInfoWrapper.svelte';
 
 	let promise = null;
@@ -49,9 +48,9 @@
 							<CompoundList {...$$props} {...res} />
 						</div>
 
-						<div class="mt-6">
+						<!-- <div class="mt-6">
 							<SafetyAssessment {...res} />
-						</div>
+						</div> -->
 					</div>
 				{/if}
 			{:catch error}

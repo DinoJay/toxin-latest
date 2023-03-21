@@ -89,12 +89,6 @@
 	$: reportSelected = selected === 'report';
 	$: compoundSelected = selected === 'compound';
 
-	const testTypeDict = {
-		invivo: ['Test_Repeated_Toxicity_in_vivo_Non_OECD'],
-		invitro: [],
-		insilico: [],
-		inchemico: []
-	};
 	console.log('data', reportData);
 	// 	numPages = Math.ceil(grData.length / offset);
 	// 	curPage = 0;

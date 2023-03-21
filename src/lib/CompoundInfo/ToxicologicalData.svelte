@@ -1,9 +1,6 @@
 <script>
 	import ElementList from '$lib/element-list/index.svelte';
-	import Expandable from '$lib/Expandable.svelte';
 	import { constructQuery } from '$lib/sparql';
-	import transformObject from '$lib/transformObject';
-	import getParentCategories from '$lib/getTestParentCategories';
 	import {
 		REPEATED_DOSE_TOXICITY,
 		ACUTE_TOXICITY,
@@ -28,27 +25,19 @@
 		const { reportData } = transformBindings(bindings, null);
 		return reportData.filter((d) => d.compoundLabel === label);
 	};
-	let acuteToxicityPromise = fetch(constructQuery({ endpoint: ACUTE_TOXICITY }))
-		.then((res) => res.json())
-		.then(transformResponse);
+	let acuteToxicityPromise = constructQuery({ endpoint: ACUTE_TOXICITY }).then(transformResponse);
 
-	let skinSensitisationUnmergedPromise = fetch(
-		constructQuery({ endpoint: SKIN_SENSITISATION_UNMERGED })
-	)
-		.then((res) => res.json())
-		.then(transformResponse);
+	let skinSensitisationUnmergedPromise = constructQuery({
+		endpoint: SKIN_SENSITISATION_UNMERGED
+	}).then(transformResponse);
 
-	let repeatedDoseToxicityPromise = fetch(constructQuery({ endpoint: REPEATED_DOSE_TOXICITY }))
-		.then((res) => res.json())
-		.then(transformResponse);
+	let repeatedDoseToxicityPromise = constructQuery({ endpoint: REPEATED_DOSE_TOXICITY }).then(
+		transformResponse
+	);
 
-	let mutagenicityPromise = fetch(constructQuery({ endpoint: MUTAGENICITY }))
-		.then((res) => res.json())
-		.then(transformResponse);
+	let mutagenicityPromise = constructQuery({ endpoint: MUTAGENICITY }).then(transformResponse);
 
-	let carcinogenicityPromise = fetch(constructQuery({ endpoint: CARCINOGENICIY }))
-		.then((res) => res.json())
-		.then(transformResponse);
+	let carcinogenicityPromise = constructQuery({ endpoint: CARCINOGENICIY }).then(transformResponse);
 </script>
 
 <div>

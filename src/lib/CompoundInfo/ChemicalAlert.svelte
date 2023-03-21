@@ -9,10 +9,7 @@
 
 	export let cas;
 
-	$: {
-		console.log('cas', cas);
-	}
-	const host = 'https://847d-134-184-212-153.eu.ngrok.io';
+	const host = 'https://ad35-134-184-212-153.eu.ngrok.io';
 
 	const q = `/api/v6/Search/cas/${cas}/true`;
 
