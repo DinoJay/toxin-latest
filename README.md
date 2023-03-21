@@ -10,8 +10,8 @@ If you're seeing this, you've probably already done this step. Congrats!
 # create a new project in the current directory
 npm create svelte@latest
 
-# create a new project in my-app
-npm create svelte@latest my-app
+# create a new project in toxin-latest
+npm create svelte@latest toxin-latest
 ```
 
 ## Developing
