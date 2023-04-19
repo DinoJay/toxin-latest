@@ -80,8 +80,13 @@
         ] ;
     ] ;
 
+    rr:predicateObjectMap [
+        rr:predicate ont:compoundLabel ;
+        rr:objectMap [ rr:column "DOSSIER" ; ] ;
+    ] ;
+
     rr:subjectMap [
-        rr:template "http://toxin.vub.be/resource/test/repeated-dose-toxicity/{ID}" ;
+        rr:template "http://toxin.vub.be/resource/test/repeated-dose-toxicity/oecd_410/{ID}" ;
         rr:class ont:Test ;
     ] ;
 

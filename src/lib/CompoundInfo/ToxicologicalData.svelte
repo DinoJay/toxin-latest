@@ -23,6 +23,7 @@
 	const transformResponse = (e) => {
 		const { bindings } = e.results;
 		const { reportData } = transformBindings(bindings, null);
+		console.log('reportData', reportData);
 		return reportData.filter((d) => d.compoundLabel === label);
 	};
 	let acuteToxicityPromise = constructQuery({ endpoint: ACUTE_TOXICITY }).then(transformResponse);

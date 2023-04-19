@@ -34,7 +34,6 @@
 			d.values.forEach((e) => {
 				const attr = e.pred.substring(e.pred.lastIndexOf('#') + 1);
 				obj[attr] = e.value;
-				obj.compoundLabel = e.compoundLabel;
 			});
 			obj.id = d.key;
 			// obj.test = d.key;
@@ -66,7 +65,23 @@
 			}
 		});
 
-	console.log('preresults', preresults);
+	console.log(
+		'preresults',
+		groups(preData, (d) => d.test)
+			.map(([key, values]) => ({ key, values }))
+			.map((d) => {
+				const obj = {};
+				d.values.forEach((e) => {
+					const attr = e.pred.substring(e.pred.lastIndexOf('#') + 1);
+					obj[attr] = e.value;
+				});
+				obj.id = d.key;
+				// obj.test = d.key;
+				// d.key = undefined;
+				d.values = undefined;
+				return obj;
+			})
+	);
 
 	const reportData = uniqBy(
 		preresults.map((d) => ({ ...d, categories: getParentCategories(endpoint)(d) })),

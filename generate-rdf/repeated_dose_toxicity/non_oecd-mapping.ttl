@@ -119,7 +119,7 @@
         ] ; 
 
     rr:subjectMap [
-        rr:template "http://toxin.vub.be/resource/test/repeated-dose-toxicity/{ID}" ;
+        rr:template "http://toxin.vub.be/resource/test/repeated-dose-toxicity/non_oecd/{ID}" ;
         rr:class ont:Test ;
     ] ;
 
@@ -137,6 +137,10 @@
     ] ;
     ### END LINK WITH COMPOUND
 
+    rr:predicateObjectMap [
+        rr:predicate ont:compoundLabel ;
+        rr:objectMap [ rr:column "DOSSIER" ; ] ;
+    ] ;
 
    rr:predicateObjectMap [
         rr:predicate ont:clinical_observations ;

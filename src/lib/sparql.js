@@ -65,27 +65,6 @@ const chemicalIdentityQuery = ({ smiles, cas, inci }) => {
 // ont:vehicle                 "dmso" ;
 // ont:year                    "2005" .
 
-const sparqlRepeatedDoseQuery = () => `
-		PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
-		PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
-		PREFIX ont: <http://ontologies.vub.be/oecd#>
-		PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
-
-
-		SELECT DISTINCT *
-		WHERE {
-			?test a ont:Test .
-			?test ont:compound ?compound .
-			?compound rdfs:label ?compoundLabel .
-			?test ont:guideline ?guideline .
-			?test rdf:type ?type .
-			# ?test ?pred ?value.
-
-			?fn skos:prefLabel ?label .
-			GRAPH ?guideline  { ?fn skos:altLabel ?searchVar }
-		}
-`
-
 const sparqlGetSynonyms = (label) => `
 		PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
 		SELECT DISTINCT * WHERE {
@@ -104,7 +83,6 @@ const sparqlQuery = (filters) => `
 		?test a ont:Test .
 		?test ont:compound ?compound .
 		?compound rdfs:label ?compoundLabel .
-		?test rdf:type ?type .
 		?test ?pred ?value.
 		${filters.map(pred => (`OPTIONAL { ?test ont:${pred} ?${pred} .}\n`)).reduce((acc, d) => `${acc}${d}`, '')}
 	}

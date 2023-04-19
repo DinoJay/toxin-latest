@@ -13,19 +13,13 @@
         a              ont:Report ;
         rdfs:label     "decamethylcyclopentasiloxane" ;
         rdfs:seeAlso   <https://ec.europa.eu/health/scientific_committees/consumer_safety/docs/sccs_o_174.pdf> ;
-        ont:contains   <http://toxin.vub.be/resource/test/repeated-dose-toxicity/2> ;
+        ont:contains   <http://toxin.vub.be/resource/test/repeated-dose-toxicity/oecd_412/2> ;
         ont:guideline  <http://toxin.vub.be/resource/guideline/OECD%20412> .
 
-<http://toxin.vub.be/resource/dossier/phenoxyethanol>
-        a              ont:Report ;
-        rdfs:label     "phenoxyethanol" ;
-        rdfs:seeAlso   <https://ec.europa.eu/health/scientific_committees/consumer_safety/docs/sccs_o_195.pdf> ;
-        ont:contains   <http://toxin.vub.be/resource/test/repeated-dose-toxicity/1> ;
-        ont:guideline  <http://toxin.vub.be/resource/guideline/OECD%20412> .
-
-<http://toxin.vub.be/resource/test/repeated-dose-toxicity/1>
+<http://toxin.vub.be/resource/test/repeated-dose-toxicity/oecd_412/1>
         a                            ont:Test ;
         ont:compound                 <http://toxin.vub.be/resource/compound/phenoxyethanol> ;
+        ont:compoundLabel            "phenoxyethanol" ;
         ont:convulsions              "nasal cavity, larynx and lung " ;
         ont:diarrhea                 "no" ;
         ont:guideline                <http://toxin.vub.be/resource/guideline/OECD%20412> ;
@@ -39,17 +33,25 @@
         ont:tremors                  "noaec  mg/m3/day" ;
         ont:type                     "in vivo" .
 
+<http://toxin.vub.be/resource/dossier/phenoxyethanol>
+        a              ont:Report ;
+        rdfs:label     "phenoxyethanol" ;
+        rdfs:seeAlso   <https://ec.europa.eu/health/scientific_committees/consumer_safety/docs/sccs_o_195.pdf> ;
+        ont:contains   <http://toxin.vub.be/resource/test/repeated-dose-toxicity/oecd_412/1> ;
+        ont:guideline  <http://toxin.vub.be/resource/guideline/OECD%20412> .
+
 <http://toxin.vub.be/resource/compound/decamethylcyclopentasiloxane>
         a               ont:Compound ;
         rdfs:label      "decamethylcyclopentasiloxane" ;
         ont:compoundOf  <http://toxin.vub.be/resource/dossier/decamethylcyclopentasiloxane> .
 
-<http://toxin.vub.be/resource/test/repeated-dose-toxicity/2>
+<http://toxin.vub.be/resource/test/repeated-dose-toxicity/oecd_412/2>
         a                          ont:Test ;
         ont:changes_skin_fur_eyes_mucous_membranes
                 "no behavioural abnormalities or mortalities were seen during the study. no effects were seen on mortality, body weight or body weight gain, food intake, or clinical signs. urinalysis and biochemistry data indicated no changes of toxicological significance at termination of the treatment. however, a few minor changes with statistical significance were recorded in rats exposed to 1.5 and 2.29 mg/L (96 and 151/197 ppm). an increase (>10%) in absolute and relative liver weight with slight hepatocellular hypertrophy (females only), increased incidence of goblet cell proliferation in the nasal cavity (males and females), and minimal to slight interstitial inflammation in the lungs (males and females) were observed at the highest exposure concentration of 2.29/3.71 mg d5/L. i.e. 151/197 ppm. " ;
         ont:clinical_observation   "no behavioural abnormalities or mortalities were seen during the study. no effects were seen on mortality, body weight or body weight gain, food intake, or clinical signs. urinalysis and biochemistry data indicated no changes of toxicological significance at termination of the treatment. however, a few minor changes with statistical significance were recorded in rats exposed to 1.5 and 2.29 mg/L (96 and 151/197 ppm). an increase (>10%) in absolute and relative liver weight with slight hepatocellular hypertrophy (females only), increased incidence of goblet cell proliferation in the nasal cavity (males and females), and minimal to slight interstitial inflammation in the lungs (males and females) were observed at the highest exposure concentration of 2.29/3.71 mg d5/L. i.e. 151/197 ppm. " ;
         ont:compound               <http://toxin.vub.be/resource/compound/decamethylcyclopentasiloxane> ;
+        ont:compoundLabel          "decamethylcyclopentasiloxane" ;
         ont:gross_pathology_liver  "an increase (>10%) in absolute and relative liver weight with slight hepatocellular hypertrophy (females only) were observed at the highest exposure concentration of 2.29/3.71 mg d5/L. i.e. 151/197 ppm." ;
         ont:guideline              <http://toxin.vub.be/resource/guideline/OECD%20412> ;
         ont:guidelineLabel         "OECD 412" ;

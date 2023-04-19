@@ -84,7 +84,7 @@
     ] ;
 
     rr:subjectMap [
-        rr:template "http://toxin.vub.be/resource/test/repeated-dose-toxicity/{ID}" ;
+        rr:template "http://toxin.vub.be/resource/test/repeated-dose-toxicity/oecd_412/{ID}" ;
         rr:class ont:Test ;
     ] ;
 
@@ -107,6 +107,10 @@
         rr:objectMap [ rr:column "changes in skin, fur, eyes, mucous membranes" ; ] ;
     ] ; 
 
+    rr:predicateObjectMap [
+            rr:predicate ont:compoundLabel ;
+            rr:objectMap [ rr:column "DOSSIER" ; ] ;
+    ] ;
 
    rr:predicateObjectMap [
         rr:predicate ont:clinical_chemistry_other ;

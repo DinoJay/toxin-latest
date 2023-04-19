@@ -156,7 +156,7 @@
 						(res) => {
 							return {
 								...res,
-								compoundLabel: decodeURI(res.compoundLabel),
+								compoundLabel: res.compoundLabel,
 								oecd,
 								nonOecd,
 								invivo,

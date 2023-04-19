@@ -30,5 +30,8 @@
 		"uuid": "^8.3.2",
 		"vite": "^4.2.0"
 	},
-	"type": "module"
+	"type": "module",
+	"dependencies": {
+		"google-login-svelte": "^0.0.1"
+	}
 }

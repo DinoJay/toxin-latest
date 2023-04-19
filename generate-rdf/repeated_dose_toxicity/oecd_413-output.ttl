@@ -5,9 +5,22 @@
 @prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
 @prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
 
-<http://toxin.vub.be/resource/test/repeated-dose-toxicity/2>
+<http://toxin.vub.be/resource/dossier/decamethylcyclopentasiloxane>
+        a              ont:Report ;
+        rdfs:label     "decamethylcyclopentasiloxane" ;
+        rdfs:seeAlso   <https://ec.europa.eu/health/scientific_committees/consumer_safety/docs/sccs_o_174.pdf> ;
+        ont:contains   <http://toxin.vub.be/resource/test/repeated-dose-toxicity/oecd_413/2> , <http://toxin.vub.be/resource/test/repeated-dose-toxicity/oecd_413/1> ;
+        ont:guideline  <http://toxin.vub.be/resource/guideline/OECD%20413> .
+
+<http://toxin.vub.be/resource/compound/decamethylcyclopentasiloxane>
+        a               ont:Compound ;
+        rdfs:label      "decamethylcyclopentasiloxane" ;
+        ont:compoundOf  <http://toxin.vub.be/resource/dossier/decamethylcyclopentasiloxane> .
+
+<http://toxin.vub.be/resource/test/repeated-dose-toxicity/oecd_413/2>
         a                            ont:Test ;
         ont:compound                 <http://toxin.vub.be/resource/compound/decamethylcyclopentasiloxane> ;
+        ont:compoundLabel            "decamethylcyclopentasiloxane" ;
         ont:gamma_glutamyl_transpeptidase
                 "the most apparent clinical biochemistry findings included a dose-related increase in gamma-glutamyltransferase activity in males of group 5 and in females of groups 3, 4 and 5 and " ;
         ont:guideline                <http://toxin.vub.be/resource/guideline/OECD%20413> ;
@@ -19,23 +32,12 @@
         ont:observation_respiratory  "no mortality was observed in any of the treated or control groups and no clinical signs of toxicity were noted which were considered treatment-related." ;
         ont:type                     "in vivo" .
 
-<http://toxin.vub.be/resource/dossier/decamethylcyclopentasiloxane>
-        a              ont:Report ;
-        rdfs:label     "decamethylcyclopentasiloxane" ;
-        rdfs:seeAlso   <https://ec.europa.eu/health/scientific_committees/consumer_safety/docs/sccs_o_174.pdf> ;
-        ont:contains   <http://toxin.vub.be/resource/test/repeated-dose-toxicity/2> , <http://toxin.vub.be/resource/test/repeated-dose-toxicity/1> ;
-        ont:guideline  <http://toxin.vub.be/resource/guideline/OECD%20413> .
-
-<http://toxin.vub.be/resource/test/repeated-dose-toxicity/1>
+<http://toxin.vub.be/resource/test/repeated-dose-toxicity/oecd_413/1>
         a                   ont:Test ;
         ont:compound        <http://toxin.vub.be/resource/compound/decamethylcyclopentasiloxane> ;
+        ont:compoundLabel   "decamethylcyclopentasiloxane" ;
         ont:guideline       <http://toxin.vub.be/resource/guideline/OECD%20413> ;
         ont:guidelineLabel  "OECD 413" ;
         ont:observation_organ_weight_organ_body_weight
                 "increase relative liver weight when compared to controls. It turned normal in females after the recovery period" ;
         ont:type            "in vivo" .
-
-<http://toxin.vub.be/resource/compound/decamethylcyclopentasiloxane>
-        a               ont:Compound ;
-        rdfs:label      "decamethylcyclopentasiloxane" ;
-        ont:compoundOf  <http://toxin.vub.be/resource/dossier/decamethylcyclopentasiloxane> .

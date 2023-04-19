@@ -9,7 +9,7 @@
 
 	export let cas;
 
-	const host = 'https://ad35-134-184-212-153.eu.ngrok.io';
+	const host = 'https://ecbe3fb71972.ngrok.app';
 
 	const q = `/api/v6/Search/cas/${cas}/true`;
 
@@ -22,6 +22,7 @@
 			return res.length > 0 ? res[0].ChemId : null;
 		})
 		.then((chemId) => {
+			console.log('chemId', chemId);
 			const profilingQ = `/api/v6/Profiling/all/${chemId}`;
 			const promiseProfiling = fetch(`${host}${profilingQ}`)
 				.then((res) => res.json())

@@ -6,26 +6,28 @@
 
 	let selectedData = [];
 
-	const containsData = (id) => !!selectedData.find((d) => d.Family === id);
+	const containsData = (id) => !!selectedData.find((d) => d.Endpoint === id);
 	const onChange = (d) => {
-		if (containsData(d.Family)) {
-			selectedData = selectedData.filter((e) => e.Family !== d.Family);
+		if (containsData(d.Endpoint)) {
+			selectedData = selectedData.filter((e) => e.Endpoint !== d.Endpoint);
 		} else {
 			selectedData = [d, ...selectedData];
 		}
 	};
+
+	console.log('data', data);
 </script>
 
 <div class="mb-3">
 	<DropDown>
 		<span class="text-lg" slot="title">Select Data</span>
-		{#each uniqBy(data, (d) => d.Family) as d, i}
+		{#each uniqBy(data, (d) => d.Endpoint) as d, i}
 			<li class=" mb-3 flex items-center">
-				<div class="flex-grow">{d.Family}</div>
+				<div class="flex-grow">{d.Endpoint}</div>
 				<input
 					class="ml-3"
 					type="checkbox"
-					checked={containsData(d.Family)}
+					checked={containsData(d.Endpoint)}
 					on:change={() => onChange(d)}
 				/>
 			</li>
@@ -36,7 +38,7 @@
 		{#each selectedData as d, i}
 			<li class="mb-3 ">
 				<div class="flex items-center">
-					<div class="font-bold">{d.Family}</div>
+					<div class="font-bold">{d.Endpoint}</div>
 
 					<input
 						class="ml-auto"
