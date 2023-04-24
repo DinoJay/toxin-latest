@@ -57,7 +57,11 @@
 		})
 		.filter((d) => {
 			if (!!varFilters && !!selFilter.value) {
-				const found = varFilters?.find((f) => d[f]?.includes(selFilter.value.toLowerCase().trim()));
+				const found = varFilters?.find(
+					(f) =>
+						d[f]?.includes(selFilter.value.toLowerCase().trim()) &&
+						d[f]?.includes(selFilter.name.toLowerCase().trim())
+				);
 				return found;
 				// return true;
 			} else {
