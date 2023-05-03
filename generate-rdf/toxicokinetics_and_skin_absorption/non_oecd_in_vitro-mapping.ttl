@@ -1,0 +1,470 @@
+@prefix rr: <http://www.w3.org/ns/r2rml#> .
+@prefix ont: <http://ontologies.vub.be/oecd#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+
+
+<#PDFlinkTriplesFirstMap>
+    rr:logicalTable [ rr:sqlQuery """
+                WITH RECURSIVE PDFLINKFIRST (ID, PDFLINKFIRST, REST) AS
+                            (
+                                    SELECT
+                        ID,
+                        NULL,
+                        PDFLINKFIRST || ','
+                    FROM (  SELECT
+                                ROWNUM() AS ID,
+                                \"PDF link\" AS PDFLINKFIRST
+                            FROM NON_OECD_IN_VITRO WHERE \"PDF link\" IS NOT NULL
+                    )
+                                    UNION ALL
+                                    SELECT
+                        ID,
+                        TRIM(SUBSTR(REST, 0, INSTR(REST, ',') - 1)),
+                        SUBSTR(REST, INSTR(REST, ',') + 1)
+                    FROM PDFLINKFIRST WHERE REST <> ''
+                            ) SELECT DISTINCT * FROM PDFLINKFIRST
+        """ ] ;
+
+            rr:subjectMap [
+        rr:template "http://toxin.vub.be/resource/pdfLink/{PDFLINKFIRST}" ;
+    ] ;
+.
+
+<#DossierTriplesMap>
+    rr:logicalTable [ rr:sqlQuery "SELECT ROWNUM() AS ID, * FROM non_oecd_in_vitro" ] ;
+
+    rr:subjectMap [
+        rr:template "http://toxin.vub.be/resource/dossier/{DOSSIER}" ;
+        rr:class ont:Report ;
+    ] ;
+
+    rr:predicateObjectMap [
+        rr:predicate ont:contains ;
+        rr:objectMap [ 
+            rr:parentTriplesMap <#TestTriplesMap> ; 
+            rr:joinCondition [ rr:child "ID" ; rr:parent "ID" ; ] ;
+        ] ;
+    ] ;
+
+    rr:predicateObjectMap [
+        rr:predicate rdfs:label ;
+        rr:objectMap [ rr:column "DOSSIER" ; ] ;
+    ] ;
+
+     rr:predicateObjectMap [
+        rr:predicate ont:guideline ;
+
+        rr:objectMap [ 
+            # rr:column "GUIDELINE" ; 
+            #TODO: everywhere
+            rr:template "http://toxin.vub.be/resource/guideline/{GUIDELINE}" ; 
+        ] ;
+    ] ; 
+
+
+    # rr:predicateObjectMap [
+    #     rr:predicate rdfs:seeAlso ;
+    #     rr:objectMap [ rr:column "\"PDF link\"" ; rr:termType rr:IRI ; ] ;
+    # ] ;
+    rr:predicateObjectMap [
+        rr:predicate ont:seeAlso;
+        rr:objectMap [
+            rr:parentTriplesMap <#PDFlinkTriplesFirstMap> ;
+            rr:joinCondition [ rr:child "ID" ; rr:parent "ID" ; ] ;
+        ] ;
+    ] ;
+.
+
+<#CompoundTriplesMap>
+    rr:logicalTable [ rr:sqlQuery "SELECT ROWNUM() AS ID, * FROM non_oecd_in_vitro" ] ;
+
+    rr:subjectMap [
+        rr:template "http://toxin.vub.be/resource/compound/{DOSSIER}" ;
+        rr:class ont:Compound ;
+    ] ;
+
+    rr:predicateObjectMap [
+        rr:predicate rdfs:label ;
+        rr:objectMap [ rr:column "DOSSIER" ; ] ;
+    ] ;
+
+    rr:predicateObjectMap [
+        rr:predicate ont:compoundOf ;
+        rr:objectMap [ 
+            rr:parentTriplesMap <#DossierTriplesMap> ; 
+            rr:joinCondition [ rr:child "ID" ; rr:parent "ID" ; ] ;
+        ] ;
+    ] ;
+.
+
+
+<#TestTriplesMap>
+
+    rr:logicalTable [ rr:sqlQuery "SELECT ROWNUM() AS ID, * FROM non_oecd_in_vitro" ] ;
+  
+     rr:predicateObjectMap [
+        rr:predicate ont:guidelineLabel ;
+        rr:objectMap [ rr:column "\"GUIDELINE\"" ; ] ;
+    ] ; 
+    rr:predicateObjectMap [
+            rr:predicate ont:guideline ;
+
+            rr:objectMap [ 
+                # rr:column "GUIDELINE" ; 
+                #TODO: everywhere
+                rr:template "http://toxin.vub.be/resource/guideline/{GUIDELINE}" ; 
+            ] ;
+        ] ; 
+
+    rr:subjectMap [
+        rr:template "http://toxin.vub.be/resource/test/toxicokinetics_skin_absorption/non_oecd/{ID}" ;
+        rr:class ont:Test ;
+    ] ;
+
+     rr:predicateObjectMap [
+        rr:predicate ont:type ;
+        rr:objectMap [ rr:column "type of study" ; ] ;
+    ] ; 
+    ### BEGIN LINK WITH COMPOUND
+    rr:predicateObjectMap [
+        rr:predicate ont:compound ;
+        rr:objectMap [ 
+            rr:parentTriplesMap <#CompoundTriplesMap> ; 
+            rr:joinCondition [ rr:child "ID" ; rr:parent "ID" ; ] ;
+        ] ;
+    ] ;
+    ### END LINK WITH COMPOUND
+
+    rr:predicateObjectMap [
+        rr:predicate ont:compoundLabel ;
+        rr:objectMap [ rr:column "DOSSIER" ; ] ;
+    ] ;
+
+   rr:predicateObjectMap [
+        rr:predicate ont:absorption_profile ;
+        rr:objectMap [ rr:column "absorption profile" ; ] ;
+    ] ; 
+
+
+   rr:predicateObjectMap [
+        rr:predicate ont:total_recovery ;
+        rr:objectMap [ rr:column "total recovery" ; ] ;
+    ] ; 
+
+   rr:predicateObjectMap [
+        rr:predicate ont:skin_washing ;
+        rr:objectMap [ rr:column "skin washing" ; ] ;
+    ] ; 
+
+   rr:predicateObjectMap [
+        rr:predicate ont:skin ;
+        rr:objectMap [ rr:column "SKIN" ; ] ;
+    ] ; 
+
+   rr:predicateObjectMap [
+        rr:predicate ont:receptor_fluid ;
+        rr:objectMap [ rr:column "receptor fluid" ; ] ;
+    ] ; 
+    
+   rr:predicateObjectMap [
+        rr:predicate ont:call_washing ;
+        rr:objectMap [ rr:column "call washing" ; ] ;
+    ] ; 
+
+   rr:predicateObjectMap [
+        rr:predicate ont:radioactivity_distribution_demonstration ;
+        rr:objectMap [ rr:column "radioactivity distribution demonstration" ; ] ;
+    ] ; 
+
+   rr:predicateObjectMap [
+        rr:predicate ont:tabulated_data ;
+        rr:objectMap [ rr:column "tabulated data" ; ] ;
+    ] ; 
+
+   rr:predicateObjectMap [
+        rr:predicate ont:discussion_and_result ;
+        rr:objectMap [ rr:column "discussion and result" ; ] ;
+    ] ; 
+
+   rr:predicateObjectMap [
+        rr:predicate ont:conclusion ;
+        rr:objectMap [ rr:column "CONCLUSION" ; ] ;
+    ] ; 
+
+   rr:predicateObjectMap [
+        rr:predicate ont:source_and_site_of_skin ;
+        rr:objectMap [ rr:column "source and site of skin" ; ] ;
+    ] ; 
+
+   rr:predicateObjectMap [
+        rr:predicate ont:method_of_preparation ;
+        rr:objectMap [ rr:column "method of preparation (epidermal membranes (enzymatically, heat or chemically separated); split thickness skin (typically 200-400µm thick); full thickness skin )" ; ] ;
+    ] ; 
+
+   rr:predicateObjectMap [
+        rr:predicate ont:storage_conditions_prior_to_use ;
+        rr:objectMap [ rr:column "storage conditions prior to use" ; ] ;
+    ] ; 
+
+   rr:predicateObjectMap [
+        rr:predicate ont:pre_treatment ;
+        rr:objectMap [ rr:column "pre-treatment ( cleaning, antibiotic treatments, etc.)" ; ] ;
+    ] ; 
+
+   rr:predicateObjectMap [
+        rr:predicate ont:skin_integratity_and_barrier_function ;
+        rr:objectMap [ rr:column "skin integratity and barrier function" ; ] ;
+    ] ; 
+
+   rr:predicateObjectMap [
+        rr:predicate ont:homogeneity_stability  ;
+        rr:objectMap [ rr:column "homogeneity and stability" ; ] ;
+    ] ; 
+
+   rr:predicateObjectMap [
+        rr:predicate ont:replicates  ;
+        rr:objectMap [ rr:column "REPLICATES" ; ] ;
+    ] ; 
+
+   rr:predicateObjectMap [
+        rr:predicate ont:other_test_system  ;
+        rr:objectMap [ rr:column "other test system" ; ] ;
+    ] ; 
+
+   rr:predicateObjectMap [
+        rr:predicate ont:composition  ;
+        rr:objectMap [ rr:column "COMPOSITION" ; ] ;
+    ] ; 
+
+   rr:predicateObjectMap [
+        rr:predicate ont:solubility_of_the_test_substance ;
+        rr:objectMap [ rr:column "solubility of the test substance" ; ] ;
+    ] ; 
+
+   rr:predicateObjectMap [
+        rr:predicate ont:flow_rate ;
+        rr:objectMap [ rr:column "flow rate" ; ] ;
+    ] ; 
+
+   rr:predicateObjectMap [
+        rr:predicate ont:static;
+        rr:objectMap [ rr:column "STATIC" ; ] ;
+    ] ; 
+
+   rr:predicateObjectMap [
+        rr:predicate ont:flow_through;
+        rr:objectMap [ rr:column "flow-through" ; ] ;
+    ] ; 
+
+   rr:predicateObjectMap [
+        rr:predicate ont:donor_chamber_occluded_non_occluded;
+        rr:objectMap [ rr:column "donor chamber (occluded, non-occluded)" ; ] ;
+    ] ; 
+
+   rr:predicateObjectMap [
+        rr:predicate ont:ph;
+        rr:objectMap [ rr:column "PH" ; ] ;
+    ] ; 
+
+   rr:predicateObjectMap [
+        rr:predicate ont:solid;
+        rr:objectMap [ rr:column "SOLID" ; ] ;
+    ] ; 
+
+   rr:predicateObjectMap [
+        rr:predicate ont:liquid;
+        rr:objectMap [ rr:column "LIQUID" ; ] ;
+    ] ; 
+
+   rr:predicateObjectMap [
+        rr:predicate ont:test_substance_concentration;
+        rr:objectMap [ rr:column "test substance concentration (%)" ; ] ;
+    ] ; 
+
+   rr:predicateObjectMap [
+        rr:predicate ont:vehicle;
+        rr:objectMap [ rr:column "VEHICLE" ; ] ;
+    ] ; 
+
+   rr:predicateObjectMap [
+        rr:predicate ont:purity;
+        rr:objectMap [ rr:column "purity (%)" ; ] ;
+    ] ; 
+
+   rr:predicateObjectMap [
+        rr:predicate ont:chemical_batch_nr;
+        rr:objectMap [ rr:column "chemical batch nr" ; ] ;
+    ] ; 
+
+   rr:predicateObjectMap [
+        rr:predicate ont:additional_info;
+        rr:objectMap [ rr:column "additional info" ; ] ;
+    ] ; 
+
+   rr:predicateObjectMap [
+        rr:predicate ont:vehicle;
+        rr:objectMap [ rr:column "PURITY" ; ] ;
+    ] ; 
+
+   rr:predicateObjectMap [
+        rr:predicate ont:batch_number;
+        rr:objectMap [ rr:column "batch number" ; ] ;
+    ] ; 
+    
+   rr:predicateObjectMap [
+        rr:predicate ont:specific_activity;
+        rr:objectMap [ rr:column "specific activity" ; ] ;
+    ] ; 
+
+   rr:predicateObjectMap [
+        rr:predicate ont:solubility_in_receptor_fluid;
+        rr:objectMap [ rr:column "solubility in receptor fluid" ; ] ;
+    ] ; 
+
+   rr:predicateObjectMap [
+        rr:predicate ont:homogeneity_and_stability;
+        rr:objectMap [ rr:column "homogeneity and stability" ; ] ;
+    ] ; 
+
+   rr:predicateObjectMap [
+        rr:predicate ont:formulation;
+        rr:objectMap [ rr:column "FORMULATION" ; ] ;
+    ] ; 
+
+   rr:predicateObjectMap [
+        rr:predicate ont:dose_levels;
+        rr:objectMap [ rr:column "dose levels" ; ] ;
+    ] ; 
+
+   rr:predicateObjectMap [
+        rr:predicate ont:dose_level_unit;
+        rr:objectMap [ rr:column "dose level unit" ; ] ;
+    ] ; 
+
+   rr:predicateObjectMap [
+        rr:predicate ont:administration_scheme;
+        rr:objectMap [ rr:column "administration scheme" ; ] ;
+    ] ; 
+
+   rr:predicateObjectMap [
+        rr:predicate ont:volume;
+        rr:objectMap [ rr:column "VOLUME" ; ] ;
+    ] ; 
+
+   rr:predicateObjectMap [
+        rr:predicate ont:exposed_area;
+        rr:objectMap [ rr:column "exposed area" ; ] ;
+    ] ; 
+
+   rr:predicateObjectMap [
+        rr:predicate ont:duration_of_exposure;
+        rr:objectMap [ rr:column "duration of exposure" ; ] ;
+    ] ; 
+
+   rr:predicateObjectMap [
+        rr:predicate ont:sampling;
+        rr:objectMap [ rr:column "SAMPLING" ; ] ;
+    ] ; 
+
+   rr:predicateObjectMap [
+        rr:predicate ont:assay_method;
+        rr:objectMap [ rr:column "assay method" ; ] ;
+    ] ; 
+
+   rr:predicateObjectMap [
+        rr:predicate ont:extraction_technique;
+        rr:objectMap [ rr:column "extraction technique" ; ] ;
+    ] ; 
+
+   rr:predicateObjectMap [
+        rr:predicate ont:limits_of_detection;
+        rr:objectMap [ rr:column "limits of detection" ; ] ;
+    ] ; 
+
+   rr:predicateObjectMap [
+        rr:predicate ont:analytical_method_validation;
+        rr:objectMap [ rr:column "analytical method validation" ; ] ;
+    ] ; 
+
+   rr:predicateObjectMap [
+        rr:predicate ont:details_of_removal_and_washing;
+        rr:objectMap [ rr:column "details of removal and washing" ; ] ;
+    ] ; 
+
+   rr:predicateObjectMap [
+        rr:predicate ont:scss_comment_to_test;
+        rr:objectMap [ rr:column "SCCS comment to test" ; ] ;
+    ] ; 
+
+   rr:predicateObjectMap [
+        rr:predicate ont:year;
+        rr:objectMap [ rr:column "YEAR" ; ] ;
+    ] ; 
+
+   rr:predicateObjectMap [
+        rr:predicate ont:glp;
+        rr:objectMap [ rr:column "GLP" ; ] ;
+    ] ; 
+
+   rr:predicateObjectMap [
+        rr:predicate ont:klimisch_score;
+        rr:objectMap [ rr:column "klimisch score" ; ] ;
+    ] ; 
+
+   rr:predicateObjectMap [
+        rr:predicate ont:ref_in_dossier;
+        rr:objectMap [ rr:column "Ref. in dossier" ; ] ;
+    ] ; 
+
+   rr:predicateObjectMap [
+        rr:predicate ont:ref_in_dossier;
+        rr:objectMap [ rr:column "additional info" ; ] ;
+    ] ; 
+
+   rr:predicateObjectMap [
+        rr:predicate ont:own_comment;
+        rr:objectMap [ rr:column "own comment" ; ] ;
+    ] ; 
+
+# <#SPECIESTriplesMap>
+#     # todo: \"type of study ( in vivo, in vitro, in silico, in chemico\" -> camelcase
+#     rr:logicalTable [ rr:sqlQuery """
+#             WITH RECURSIVE SPECIES (ID, SPECIES, REST) AS 
+# 			( 
+# 				SELECT 
+#                     ID, 
+#                     NULL, 
+#                     SPECIES || ',' 
+#                 FROM (  SELECT 
+#                             ROWNUM() AS ID, 
+#                             \"species/strain\" AS SPECIES 
+#                         FROM REPEATEDTOXICITY WHERE \"species/strain\" IS NOT NULL
+#                 ) 
+# 				UNION ALL 
+# 				SELECT 
+#                     ID, 
+#                     TRIM(SUBSTR(REST, 0, INSTR(REST, ',') - 1)), 
+#                     SUBSTR(REST, INSTR(REST, ',') + 1) 
+#                 FROM SPECIES WHERE REST <> '' 
+# 			) SELECT DISTINCT * FROM SPECIES
+#     """ ] ;
+
+#     rr:subjectMap [
+#         rr:template "http://toxin.vub.be/resource/species/{SPECIES}" ;
+#         rr:class ont:Species ;
+#     ] ;
+
+#     # rr:predicateObjectMap [
+#     #     # CLEANUP ONTOLOGY, NORMALIZE WITH IRIS
+#     #     rr:predicate ont:species_strain ;
+#     #     rr:objectMap [ rr:column "\"species/strain\"" ; ] ;
+#     # ] ; 
+
+#     rr:predicateObjectMap [
+#         rr:predicate rdfs:label ;
+#         rr:objectMap [ rr:column "SPECIES" ; ] ;
+#     ] ; 
+
+# .

@@ -1,0 +1,98 @@
+@prefix rr:    <http://www.w3.org/ns/r2rml#> .
+@prefix ont:   <http://ontologies.vub.be/oecd#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+
+<http://toxin.vub.be/resource/test/toxicokinetics_skin_absorption/oecd_427/1>
+        a                          ont:Test ;
+        ont:absorption             "the average dermal absorption was very low, 2.65% or 0.005 mg/cm2. the possibility remains that the quantity retained at the skin application site could become systemically available. therefore, the dose was calculated on the absorbed fraction and the potentially systemically absorbed fraction to yield the \"total potentially absorbed fraction\". this was 3.10% of the applied dose or 0.006 mg/cm2." ;
+        ont:additional_info        "test substance: 14C-labelled hc blue n° 15 (wr18403); hc blue n° 15 (wr18403)" ;
+        ont:batch_number           "labelled cfq13944 batch 1" ;
+        ont:chemical_batch_nr      "bb77-020420" ;
+        ont:compound               <http://toxin.vub.be/resource/compound/hc%20blue%20n°%2015> ;
+        ont:compoundLabel          "hc blue n° 15" ;
+        ont:distribution           "concentration in the liver was also higher than in other tissues or blood" ;
+        ont:dose_level_unit        "mg/ml ( ~5.57 mg/kg bw and 0.167 mg/cm2)" ;
+        ont:dose_levels            "16.7" ;
+        ont:excretion              "faecal excretion was the most important route of 14hc blue n° 15 (wr 18043) in all treated groups (2% after dermal dosing). this suggests that when absorbed, that biliary excretion of hc blue n° 15 (wr 18043) is important. urinary excretion was less important (0.06% after dermal application). in the dermal group the rate of urinary excretion was very slow and the amount excreted was similar over each time interval." ;
+        ont:glp                    "yes" ;
+        ont:material_purity        "98" ;
+        ont:metabolism             "four potential metabolite peaks of hc blue n° 15 (wr 18043) were detected in faeces extracts and urine samples. it seemed that these were the result of hydroxylation, carboxylation and/or reduction by phase I metabolic enzymes. hydroxylation was the most important. no parent compound was detected in the faeces. " ;
+        ont:n_subject__group       "4" ;
+        ont:name                   "dimethylsulfoxide (dmso)" ;
+        ont:overall_recoveries     "the average total recovery of radioactivity in the adme groups was between 98% and 105%." ;
+        ont:own_comment            "the dermal exposure for this type of study is either 6 or 24h by the OECD guideline. this study has 30minutes exposure time." ;
+        ont:period_of_exposure     "dermal exposure for 30 minutes" ;
+        ont:quantity_in_the_excreta_and_expired_air
+                "dermal penetration of 14C_hc blue n° 15 (wr 18043) was very low. 14C_hc blue n° 15 (wr 18043) administered orally was moderately absorbed. the absorbed hc blue n° 15 (wr 18043) was metabolized in the liver, with excretion via bile into faeces the main route, with slower elimination after dermal application. no parent compound was found in the faecal extracts. four potential metabolite peaks of hc blue n° 15 (wr 18043) were detected. hydroxylation, carboxylation and/or reduction by phase I metabolic enzymes occurred. " ;
+        ont:quantity_inon_skin_that_cannot_be_washed_from_the_skin
+                "in the dermal group the highest concentration of hc blue n° 15 (wr 18043) equivalents was observed in the treated skin, 2.03 mg/kg on average, or 0.5% of the administered dose. " ;
+        ont:ref_in_dossier         "25" ;
+        ont:samples                "urine and faeces continued to be collected from 96-120, 120 –144 and 144-168 h (adme study)" ;
+        ont:species_strain         "rats / wistar crl: (wi) br (outbred)" ;
+        ont:statistical_variation  "no toxicokinetic evaluation could be performed for the dermal group, since the concentrations were below the limit of quantification. " ;
+        ont:test_substance_purity  "38.5" ;
+        ont:timing_of_the_studysampling
+                "168h" ;
+        ont:year                   "2005" .
+
+<http://toxin.vub.be/resource/compound/hc%20blue%2018>
+        a               ont:Compound ;
+        rdfs:label      "hc blue 18" ;
+        ont:compoundOf  <http://toxin.vub.be/resource/dossier/hc%20blue%2018> .
+
+<http://toxin.vub.be/resource/compound/hc%20blue%20n°%2015>
+        a               ont:Compound ;
+        rdfs:label      "hc blue n° 15" ;
+        ont:compoundOf  <http://toxin.vub.be/resource/dossier/hc%20blue%20n°%2015> .
+
+<http://toxin.vub.be/resource/dossier/hc%20blue%20n°%2015>
+        a             ont:Report ;
+        rdfs:label    "hc blue n° 15" ;
+        ont:contains  <http://toxin.vub.be/resource/test/toxicokinetics_skin_absorption/oecd_427/1> ;
+        ont:seeAlso   <http://toxin.vub.be/resource/pdfLink/https%3A%2F%2Fec.europa.eu%2Fhealth%2Fscientific_committees%2Fconsumer_safety%2Fdocs%2Fsccs_o_089.pdf> .
+
+<http://toxin.vub.be/resource/test/toxicokinetics_skin_absorption/oecd_427/2>
+        a                           ont:Test ;
+        ont:absorption              "absorption, dermal route: in normal skin male rats receiving 14C-FPK-145 at a single percutaneous dose of 25 mg/kg, the radioactivity concentration in plasma excluding those of 2 and 6 hours postdose was not detected. the radioactivity concentrations at 2 and 6 hours postdose were 3.059 +/- 3.537 ng eq. of FPK-145/mL and 2.549 +/- 2.945 ng eq. of FPK-145/mL respectively. in damaged-skin male rats receiving 14C-FPK-145 at a single percutaneous dose of 25 mg/kg, the radioactivity concentration in plasma reached the Cmax of 204.8 +/- 169.1 ng eq. of fpk-145/mL at 3.0 +/- 1.2 hours postdose (Tmax) and then decreased gradually, and at 72 hours postdose corresponded to about 3.9% of the Cmax. thereafter, the radioactivity concentration in plasma increased to about 4.2% of the Cmax at 120 hours postdose. at 168 hours postdose, the radioactivity concentration in plasma decreased to about 2.4% of the Cmax. the T1/2 calculated with the concentration measured between 4 and 12 hours post dose was 6.6 +/- 1.8 hours. the AUC0-t was 3892 +/- 3027 ng eq. h/mL. " ;
+        ont:additional_info         "test substance: FPK-145" ;
+        ont:administration_scheme   "single dose" ;
+        ont:administration_surface  "10 cm2 dorsal region, fitted with an animal jacket on intakt and damage skin " ;
+        ont:chemical_batch_nr       "CFQ41226" ;
+        ont:compound                <http://toxin.vub.be/resource/compound/hc%20blue%2018> ;
+        ont:compoundLabel           "hc blue 18" ;
+        ont:concentration           "4% w/v" ;
+        ont:conclusion              "The TK study showed that the oral bioavailability of HC Blue 18 after oral gavage is expected to be 65%." ;
+        ont:detection               "LSC" ;
+        ont:distribution            "distribution in tissue, dermal route: in normal skin male rats receiving 14C-fpk-145 at a single percutaneous dose of 25 mg/kg, the radioactivity concentration reached the cmax at 0.5 or 4 hours post dose in most tissues. as for the cerebrum, cerebellum, pituitary, eyeball, thyroid, heart, lung, adrenal, spleen, pancreas, testis, skeletal muscle, and white adipose tissue, the radioactivity concentrations were not detected. the tissues showing concentrations higher than that in the plasma (except for the applied skin) were the kidney (at 0.5 hours postdose), bone (at 24 hours postdose), small intestine (at 4 hours postdose), and large intestine (at 4 and 24 hours postdose), and the cmax of these tissues were 10.78 +/- 9.26, 6.67 +/- 4.98, 19.52 +/-25.06 and 33.31 +/- 64.28 ng eq. of fpk-145/g respectively. the radioactivity concentrations in other tissues were lower than that in the plasma. " ;
+        ont:dose_level_unit         "mg/kg" ;
+        ont:dose_levels             "25" ;
+        ont:excretion               "excretion in urine and faeces: these results expressed in percentages of dose indicated that the dose was always completely excreted by 168 hours post dose: dosing route: p.c 25 mg/kg: time (h): 0-24: urine: 0,07 +/-0,04, feces: 0,18 +/-0,31, total excreted dose: 0,47 +/-0,58, total recovery: 101,52 +/-1,55, residue in carcass: 0,37+/-0,31. dosing route: p.c 25 mg/kg: time (h): 168: urine: 0,3 +/-0,3, feces: 0,6 +/-0,95, total excreted dose: 1,53 +/-2,15, total recovery: 101,52 +/-1,55, residue in carcass: 0,37+/-0,31. " ;
+        ont:exposure_auc            "normal: N.C., damaged: 3892 ± 3027 ng eq h/ml " ;
+        ont:exposure_c_max          "normal skin: 4.532 ± 3.039 ng eq. Excluding: 2h: 3.059 ± 3.537 ng eq., 6h: 2.549 ± 2.945 ng eq. Damaged skin: 204.8 ±169.1 ng eq. " ;
+        ont:exposure_t_max          "normal skin: 1.3 ± 1.0 h, damaged skin: 3.0 ± 1.2 h " ;
+        ont:glp                     "yes" ;
+        ont:halftime_absorption     "normal : N.C., damaged: 6.6 ± 1.8 h" ;
+        ont:interpretation_discussion_and_result
+                "radioactivity in plasma: normal skin*: 5% fpk-145 (25mg)/0,5 ml, number of animals evaluated: 4; radioactivity in plasma: damaged skin**: 5% fpk-145 (25mg)/0,5 ml, number of animals evaluated: 4. radioactivity in urine and feces (normal skin): 5% fpk-145 (25mg)/0,5 ml, number of animals evaluated: 4. radioactivity in tissues (normal skin): 5% fpk-145 (25mg)/0,5 ml, sampling time point: 0,5h, number of animals evaluated: 4; radioactivity in tissues (normal skin): 5% fpk-145 (25mg)/0,5 ml, sampling time point: 0,5h, number of animals evaluated: 4; radioactivity in tissues (normal skin): 5% fpk-145 (25mg)/0,5 ml, sampling time point: 24h, number of animals evaluated: 4; radioactivity in tissues (normal skin): 5% fpk-145 (25mg)/0,5 ml, sampling time point: 168h, number of animals evaluated: 4. *shaved hairless skin areas, **shaved hairless skin areas were tape-stripped alternately 10 times from the left or right." ;
+        ont:metabolism              "metabolic profile. plasma: since the radioactivity concentration in the plasma at a single dermal dose of 25 mg/kg bw/day was extremely low, the structure of radioactive peaks was not elucidated. urine: RUM8 is the characteristic metabolite found in the urine after percutaneous administration, only. however, the amount rUM-8 detected was extremely low (0.02% of dose). faeces: based on the result of the bilary excretion study, most of the radioactivity excreted into faeces after oral administration was considered to have been excreted directly into faeces via the digestive tract without being absorbed. therefore, excreted radioactive substances are considered not to be metabolites, but decomposition products of unchanged fpk- 145 generated while passing the digestive tract. they represent less than 0.2% after dermal exposure." ;
+        ont:n_subject__group        "4" ;
+        ont:name                    "monoethanolamine/ethanol (50/50) solution" ;
+        ont:period_of_exposure      "24h" ;
+        ont:ref_in_dossier          "10" ;
+        ont:samples                 "blood, urine and feces, tissues" ;
+        ont:sccs_comment_to_test    "For orally exposed groups, radioactivity concentrations in plasma were measured for all dose groups but in urine, tissues and faeces, only for the 2.5 mg/kg bw dose group, at 0- 24h and 24-48h after administration. Based on the results of this study, the no-observed-adverse-effect level (NOAEL) of HC Blue 18 of 25 mg/kg bw/day was corrected and set at 16 mg/kg bw/day." ;
+        ont:species_strain          "rat/sprague dawley (crl:cd (sd))" ;
+        ont:tape_stripping          "the test substance was wiped 8 times repeatedly either with wet cotton soaked in warm water or for the last two washes with dry cotton." ;
+        ont:test_substance_purity   "99.6" ;
+        ont:timing_of_the_studysampling
+                "blood samples: 0.5, 1, 2, 4, 6, 8, 12, 48, 72 and 169 hours postdose, urine/faeces: 0-24, 24-48, 48-72, 72-96, 96-120, 120- 144, and 144-168 hours post dose. 0,5h, 4h, 24h, 168h, tissue: 0,5h, 4h, 24h, 168h." ;
+        ont:volume                  "10 mL/kg" ;
+        ont:year                    "2012" .
+
+<http://toxin.vub.be/resource/dossier/hc%20blue%2018>
+        a             ont:Report ;
+        rdfs:label    "hc blue 18" ;
+        ont:contains  <http://toxin.vub.be/resource/test/toxicokinetics_skin_absorption/oecd_427/2> ;
+        ont:seeAlso   <http://toxin.vub.be/resource/pdfLink/https%3A%2F%2Fec.europa.eu%2Fhealth%2Fscientific_committees%2Fconsumer_safety%2Fdocs%2Fsccs_o_180.pdf> .

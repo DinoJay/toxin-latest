@@ -1,0 +1,933 @@
+@prefix rr:    <http://www.w3.org/ns/r2rml#> .
+@prefix ont:   <http://ontologies.vub.be/oecd#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+
+<http://toxin.vub.be/resource/test/toxicokinetics_skin_absorption/non_oecd/3>
+        a                            ont:Test ;
+        ont:compound                 <http://toxin.vub.be/resource/compound/triclosan> ;
+        ont:compoundLabel            "triclosan" ;
+        ont:duration_of_exposure     "24h" ;
+        ont:exposed_area             "0.64cm2" ;
+        ont:glp                      "no" ;
+        ont:guideline                <http://toxin.vub.be/resource/guideline/non%20OECD> ;
+        ont:guidelineLabel           "non OECD" ;
+        ont:liquid                   "tritiated triclosan solution" ;
+        ont:radioactivity_distribution_demonstration
+                "of the radioactivity in the receptor fluid at 24 hours, 0.8% of the applied dose waspresent as triclosan, 3.5% as triclosan glucuronide, and 0.2% as triclosan sulfate. of the radioactivity inthe skin at 24 hours, 12% of the dose was recoveredas triclosan, 3% as triclosan glucuronide, and 3% as triclosan sulfate" ;
+        ont:receptor_fluid           "6.3%" ;
+        ont:ref_in_dossier           "21" ;
+        ont:scss_comment_to_test     "An in vitro diffusion skin cell model was used to assess the ability of the skin (rat and human) to metabolise triclosan applied using an ethanol:water (9:1) vehicle [Moss et al., 2000 (21)]. Glucuronidation and sulfation of triclosan were demonstrated to occur in this model (i.e., the conjugates were found in the collecting reservoir following absorption through the skin), with the glucuronide being the primary metabolite at levels up to 1.4%. 3 H-labelled triclosan has been used to examine percutaneous absorption in a number of in vitro studies. Percutaneous penetration of 30.3% of the total applied dose of triclosan in an ethanol/water solution was measured 24 hours after application of the dose to human skin samples in a diffusion cell system [Moss et al., 2000 (21)]. Results from studies using skin samples in diffusion cells showed limited percutaneous absorption following application of triclosan to the skin surface in any of the formulations used. The amount of triclosan tested in most of these studies (0.2%) is within the range of anticipated concentrations in consumer products (from 0.15 to 0.3%). The low concentration in the soap solution study (0.02%) was intended to simulate actual-use conditions (i.e., a soap solution of 0.2% triclosan would be diluted with water when applied to the skin). Appropriate rinse steps were included in the rinse-off product studies. As recommended by SCCP guidelines (SCCP, 2006), calculations of dermal absorption included the amounts of triclosan recovered in the dermis and epidermis layers (i.e., the “remaining sample of skin” after removing the stratum corneum, represented by tape strips 1 to 20 in these studies) and the amount recovered in the receptor fluid. Table 37 presents a summary of the values from the in vitro studies conducted in human skin samples. The results from the autoradiography study [Black et al., 1975 (27)] indicated no significant differences in the low levels of percutaneous absorption between different soap vehicles or between single versus multiple applications [Black et al., 1975 (27)]. Overall, the dermal absorption of triclosan was shown in these in vitro studies to be lower in human skin than in rat (7.2 to 30.3% versus 41.2% in studies in rats, including the data from the study using ethanol/water formulation)]. " ;
+        ont:skin                     "epidermis: 46%, dermis: 24%, stratum corneum: 22%" ;
+        ont:source_and_site_of_skin  "human breast of abdominal skin" ;
+        ont:type                     "in vitro" ;
+        ont:year                     "2000" .
+
+<http://toxin.vub.be/resource/test/toxicokinetics_skin_absorption/non_oecd/10>
+        a                            ont:Test ;
+        ont:absorption_profile       "the bioavailable portion (chamber fluid, stripped skin) in hairless rat skin is significantly higher when compared to the skin of mini pigs." ;
+        ont:additional_info          "test substance: bmhca" ;
+        ont:administration_scheme    "single dermal" ;
+        ont:compound                 <http://toxin.vub.be/resource/compound/butylphenyl%20methylpropional%20%28p-bmhca%29> ;
+        ont:compoundLabel            "butylphenyl methylpropional (p-bmhca)" ;
+        ont:conclusion               "Based on the dermal absorption studies in vitro, it becomes obvious that skin penetration depends on time and species, but less on the kind of formulation." ;
+        ont:dose_level_unit          "µl/cm2" ;
+        ont:dose_levels              "12" ;
+        ont:duration_of_exposure     "30 sec" ;
+        ont:exposed_area             "5" ;
+        ont:formulation              "dissolved in txo vehicles reaching 120µg/cm2" ;
+        ont:guideline                <http://toxin.vub.be/resource/guideline/non%20OECD> ;
+        ont:guidelineLabel           "non OECD" ;
+        ont:liquid                   "yes" ;
+        ont:receptor_fluid           "6 hrs after exposure to BMHCA in methylcarbitol: 0% in the chamber fluid / 16 hrs after exposure to BMHCA in ethanol: 0.8% (0.93 μg/cm2) in the chamber fluid." ;
+        ont:ref_in_dossier           "test substance: bmhca" , "Roche 1982d, RIFM#56763" ;
+        ont:sampling                 "1, 6, 16 and 24h" ;
+        ont:scss_comment_to_test     "sccs conclusion on dermal/percutaneous absorption: dermal absorption studies in vitro demonstrated species-specific effects. the bioavailable portion was found much higher in rats (66.1 and 50.8%) when compared to mini pigs (0.8% and 4.9%), thereby depending on the solvent used (methylcarbitol or ethanol). in a second study, applying two real cream formulations (that contained 0.6% bmhca), rat skin again allowed a much higher penetration (45.2% and 78.4%) than mini pig skin (23.6% and 25.7%). nevertheless, the fraction of bioavailable bmhca was found strongly increased in the mini pig experiment when moving from dissolved bmhca to real cream formulations (4.9% vs. 25.7%). concurrently, administration of bmhca onto the skin of experimental animals and humans demonstrated permeation and systemic availability of this compound. percutaneous absorption of bmhca in humans was lower when compared with rats (1.4 vs. 19%). upon dermal application of [14c]-bmhca (11.37 mg test substance in 70% ethanol on 10 cm2 back skin) on 3 human volunteers for 6 hours, a mean of 1.4% (range 0.8 – 2.4%) of the applied dose was excreted in urine within 24 hours, whereas radioactivity was below the detection limit in urine samples of later time points and in all faeces and blood plasma samples. the overall mean total recovery of topical application of [14c]-bmhca was 71 ± 10%. in comparison to the in vitro observations, the absorption rate found in humans for ethanolic solutions of bmhca was comparable to what has been found in excised mini pig skin. given that the absorption of bmhca in mini pig skin was much higher when this compound was applied via real cream formulations, it is reasonable to conclude that bmhca might also better penetrate human skin when it is applied in cream formulations. since there is no further experimental data on this subject, the sccs concludes that the maximum fraction of bmhca being absorbed by human skin might be in the range of 25% rather than at 2.4%. in consideration of the comparability of pig skin with human skin, the dermal bioavailability of ethanolic (dissolved) bmhca to be used in the calculation of the systemic exposure dose (sed) and margin of safety (mos) will be set at 5% (worst case scenario based on 1% bmhca in etoh applied at 120 μg substance/cm2 onto 5 cm2 excised mini pig skin; result: total of 5.87 μg substance/cm2 found in stripped skin and chamber fluid after 16 hrs of exposure). on the other hand, the penetration rate of bmhca applied onto the skin as ingredient of creamy formulations will be set at 25% (worst case scenario based on 36 μg substance/cm2 applied onto 5 cm2 excised mini pig skin; mean out of two experiments: total of 8.88 μg substance/cm2 found in stripped skin and chamber fluid after 16 hrs of exposure). the sccs is aware of the issue that the exact identity of the cream formulations applied in the latter study remains obscure. the results obtained from the part of the study with 1% ethanolic bmhca can further be used to assess the sed for hydroalcoholic products to be applied on a defined surface area of shaved or unshaved skin once daily (1 x 305 cm2/day). here, an absorption of about 6 μg substance/cm2 can be assumed for unshaved skin (stratum corneum intact). for shaved skin (stratum corneum compromised), however, the total absorption would be 11 μg substance/cm2 (with the addition of the portion of 4.66 μg/cm2 that was found sticking in the stratum corneum in the respective experiment; cf. above). " ;
+        ont:skin                     "6 hrs after exposure to BMHCA in methylcarbitol: 1.9% (2.22 μg/cm2) in the stratum corneum, 0.8% (0.91 μg/cm2 ) in the stripped skin / 16 hrs after exposure to BMHCA in ethanol: 3.9% (4.66 μg/cm2) in the stratum corneum, 4.1% (4.94 μg/cm2) in the stripped skin," ;
+        ont:source_and_site_of_skin  "mini pig excised skin" ;
+        ont:test_substance_concentration
+                "1" ;
+        ont:type                     "in vitro" ;
+        ont:vehicle                  "methylcarbito / ethanol" .
+
+<http://toxin.vub.be/resource/compound/Vitamin%20A%20%28Retinol%2C%20Retinyl%20Acetate%20and%20Retinyl%20Palmitate%29>
+        a               ont:Compound ;
+        rdfs:label      "Vitamin A (Retinol, Retinyl Acetate and Retinyl Palmitate)" ;
+        ont:compoundOf  <http://toxin.vub.be/resource/dossier/Vitamin%20A%20%28Retinol%2C%20Retinyl%20Acetate%20and%20Retinyl%20Palmitate%29> .
+
+<http://toxin.vub.be/resource/test/toxicokinetics_skin_absorption/non_oecd/23>
+        a                            ont:Test ;
+        ont:absorption_profile       "the cumulative penetration was calculated based on the amount of radioactivity in the receptor fluid over the 24-hour sampling period. the total absorbed (% radioactivity in the skin and receptor fluid) was 1.08% and 1.54% in males and females respectively." ;
+        ont:additional_info          "test substance: 14C-D5" ;
+        ont:assay_method             "liquid scintillation counting (radioactivity)" ;
+        ont:composition              "6% polyoxyethylene-20oleyl ether and 1% penicillin/streptomycin in saline solution" ;
+        ont:compound                 <http://toxin.vub.be/resource/compound/decamethylcyclopentasiloxane> ;
+        ont:compoundLabel            "decamethylcyclopentasiloxane" ;
+        ont:conclusion               "according to the applicant, these data need to be evaluated cautiously due to unrecognized technical problems associated with working with this material at the time this study was conducted. " ;
+        ont:details_of_removal_and_washing
+                "1% soap solution-moistened gauze 3 times, followed by 3 washes with gauze moistened with 70% ethanol. " ;
+        ont:dose_level_unit          "mg/cm2" ;
+        ont:dose_levels              "6.4" ;
+        ont:duration_of_exposure     "24h" ;
+        ont:guideline                <http://toxin.vub.be/resource/guideline/non%20OECD> ;
+        ont:guidelineLabel           "non OECD" ;
+        ont:method_of_preparation    "excised split-thickness skin 381-629µM" ;
+        ont:ref_in_dossier           "34" , "test substance: 14C-D5" ;
+        ont:sampling                 "measurements were made of the 14C-labelled material that could be washed from the skin, were associated with skin, or penetrated through the skin into the receptor fluid over a 24-hour period. the skin was solubilised in 40% tetraethylammonium hydroxide. " ;
+        ont:skin                     "the percentage of radioactivity found in the skin was 0.67% and 1.19% in males and females respectively." ;
+        ont:skin_integratity_and_barrier_function
+                "an initial screening to check barrier integrity of the skin was accomplished by applying 970 μl of 3 H2O (0.77 μCi) to the surface of the skin for 20 minutes. following administration of the 3 H2O, the unabsorbed material was removed from the skin; the receptor fluid was sampled and analysed for 3H at 60 minutes. once the 3Η2O had been removed, 14C-D5 was applied to each skin sample. " ;
+        ont:source_and_site_of_skin  "rat young adult sprague-dawley" ;
+        ont:static                   "static franz diffusion cells" ;
+        ont:type                     "in vitro" .
+
+<http://toxin.vub.be/resource/compound/HC%20Blue%20n°%2014>
+        a               ont:Compound ;
+        rdfs:label      "HC Blue n° 14" ;
+        ont:compoundOf  <http://toxin.vub.be/resource/dossier/HC%20Blue%20n°%2014> .
+
+<http://toxin.vub.be/resource/compound/dihydroxyacetone>
+        a               ont:Compound ;
+        rdfs:label      "dihydroxyacetone" ;
+        ont:compoundOf  <http://toxin.vub.be/resource/dossier/dihydroxyacetone> .
+
+<http://toxin.vub.be/resource/test/toxicokinetics_skin_absorption/non_oecd/30>
+        a                            ont:Test ;
+        ont:absorption_profile       "a level of dermal absorption of 0.1% or less, even in severely damaged skin" ;
+        ont:additional_info          "test substance, silver from impregnated nanosilver dressings. " ;
+        ont:compound                 <http://toxin.vub.be/resource/compound/EcoG%2B> ;
+        ont:compoundLabel            "EcoG+" ;
+        ont:conclusion               "The authors indicate that this level of absorption is orders of magnitude higher than that measured in intact skin." ;
+        ont:guideline                <http://toxin.vub.be/resource/guideline/non%20OECD> ;
+        ont:guidelineLabel           "non OECD" ;
+        ont:ref_in_dossier           "US EPA assessment of data reported by Moiemen et al., 2011; US EPA slides 19 and 20" , "test substance, silver from impregnated nanosilver dressings. " ;
+        ont:scss_comment_to_test     "The level of 0.1% dermal absorption is considered to be relevant to ‘EcoG+’ and is used for calculations of systemic exposure to silver resulting from the use of this product as cosmetic packaging material." ;
+        ont:source_and_site_of_skin  "human/ burnt person" ;
+        ont:type                     "in vitro" ;
+        ont:year                     "2011" .
+
+<http://toxin.vub.be/resource/dossier/acid%20orange%207>
+        a              ont:Report ;
+        rdfs:label     "acid orange 7" ;
+        ont:contains   <http://toxin.vub.be/resource/test/toxicokinetics_skin_absorption/non_oecd/6> ;
+        ont:guideline  <http://toxin.vub.be/resource/guideline/non%20OECD> ;
+        ont:seeAlso    <http://toxin.vub.be/resource/pdfLink/https%3A%2F%2Fec.europa.eu%2Fhealth%2Fscientific_committees%2Fconsumer_safety%2Fdocs%2Fsccs_o_089.pdf> .
+
+<http://toxin.vub.be/resource/dossier/disperse%20violet%201>
+        a              ont:Report ;
+        rdfs:label     "disperse violet 1" ;
+        ont:contains   <http://toxin.vub.be/resource/test/toxicokinetics_skin_absorption/non_oecd/9> ;
+        ont:guideline  <http://toxin.vub.be/resource/guideline/non%20OECD> ;
+        ont:seeAlso    <http://toxin.vub.be/resource/pdfLink/https%3A%2F%2Fec.europa.eu%2Fhealth%2Fscientific_committees%2Fconsumer_safety%2Fdocs%2Fsccs_o_189.pdf> .
+
+<http://toxin.vub.be/resource/test/toxicokinetics_skin_absorption/non_oecd/8>
+        a                            ont:Test ;
+        ont:absorption_profile       "for basic violet 2 a P app of 2.8 x 10-6 cm/sec (2.9 and 2.6 x 10-6 cm/sec) was determined and thus the test substance was classified to be of medium permeability, indicating a substantial absorption from the gastrointestinal tract." ;
+        ont:additional_info          "test substance: basic violet 2" ;
+        ont:analytical_method_validation
+                "propranolol, atenolol, vinblastine and ranitidine were analysed concurrently to demonstrate the validity of the test system. according to the laboratory’s classification system, a low permeability is considered for test items revealing a P app < 2 x 10-6 cm/sec. a P app of 2 - 20 x 10-6 cm/sec and a P app ≥ 20 x 10-6 cm/sec classify a substance to have a moderate and a high permeability, respectively. as recommended by fda, ranitidine (50 % absorption in humans) was used as the low permeability reference compound and propranolol (90 % absorption in humans) was used as the high permeability reference compound. the permeability figures for the reference substances propranolol (P app = 50.6 and 52.7 x 10-6 cm/sec), a high permeability reference compound with 90% absorption in humans, and ranitidine (P app = 0.3 and 0.3 x 10-6 cm/sec), known to be absorbed at about 50 % in humans, were within acceptance range of 20 - 60 x 10-6 cm/sec and 0 - 2 x 10-6 cm/sec, respectively and demonstrated the validity of the assay. " ;
+        ont:assay_method             "hplc-ms/ms" ;
+        ont:chemical_batch_nr        "gst063-0i/41-o6" ;
+        ont:compound                 <http://toxin.vub.be/resource/compound/basic%20violet%202> ;
+        ont:compoundLabel            "basic violet 2" ;
+        ont:conclusion               "a mean permeability in human intestinal epithelial (tc-7) cells of 2.8 x 10-6 cm/sec was obtained with basic violet 2 which classifies the test item to be of medium permeability. as the absorption across the intestinal epithelium is considered to be the limiting factor of the uptake through the gastro-intestinal tract, the medium permeability observed in this assay indicates a substantial but not complete absorption of basic violet 2 after oral administration" ;
+        ont:dose_level_unit          "µM" ;
+        ont:dose_levels              "50" ;
+        ont:duration_of_exposure     "60mins" ;
+        ont:formulation              "test substance in hbss buffer containng 1%dmso" ;
+        ont:guideline                <http://toxin.vub.be/resource/guideline/non%20OECD> ;
+        ont:guidelineLabel           "non OECD" ;
+        ont:other_test_system        "the permeability of the test substance from the apical (A, pH 6.5) to the basolateral (B, pH 7.4) side was investigated at 37 °C in 96-well transwell plates with shaking for a 60 min contact time" ;
+        ont:purity                   "93.8" ;
+        ont:ref_in_dossier           "25" , "test substance: basic violet 2" ;
+        ont:scss_comment_to_test     "the study was not performed under glp conditions, but a statement of the quality assurance unit of the test facility is included. there is no official guideline for this assay. however, the study was performed according to ecvam recommendations. the generated data is considered to provide an estimation of the bioavailability of basic violet 2 after oral administration. the substance is expected to be only partially absorbed after oral dosing, which should be considered in the calculation of the margin of safety." ;
+        ont:skin_integratity_and_barrier_function
+                "14C-mannitol (about 4 µM) was used to demonstrate the integrity of the cell monolayer. only monolayers revealing a permeability of < 2.5 x 10-6 cm/sec were used" ;
+        ont:source_and_site_of_skin  "human intestinal epithelial cell line TC-7" ;
+        ont:total_recovery           "the total recovery for the reference substances and basic violet 2 ranged from 82 to 118 % (mean of 2 values)." ;
+        ont:type                     "in vitro" ;
+        ont:year                     "2005" .
+
+<http://toxin.vub.be/resource/test/toxicokinetics_skin_absorption/non_oecd/15>
+        a                       ont:Test ;
+        ont:absorption_profile  "0.03% of the applied dose or 0.17 μg/cm2." ;
+        ont:additional_info     "test substance: 1,2,4- trihydroxybenzene " ;
+        ont:compound            <http://toxin.vub.be/resource/compound/1%2C2%2C4-trihydroxybenzene%20> ;
+        ont:compoundLabel       "1,2,4-trihydroxybenzene " ;
+        ont:conclusion          "From Submission V:  The dose was slightly below that requested for use (3%)  and stability in the receptor was not quantified. Therefore, the amount considered as being absorbed is the mean + 2SD. This is 0.03% of the applied dose or 0.17 μg/cm2. " ;
+        ont:formulation         "direct dye formulation" ;
+        ont:guideline           <http://toxin.vub.be/resource/guideline/non%20OECD> ;
+        ont:guidelineLabel      "non OECD" ;
+        ont:ref_in_dossier      "test substance: 1,2,4- trihydroxybenzene " ;
+        ont:test_substance_concentration
+                "2.78" ;
+        ont:type                "in vitro" .
+
+<http://toxin.vub.be/resource/test/toxicokinetics_skin_absorption/non_oecd/28>
+        a                            ont:Test ;
+        ont:absorption_profile       "mean relative absorption of DHA into the receptor fluid over 24 hours was 0.4%, 0.5% and 0.5% of the applied dose for 2.5% DHA in water, 5% DHA in water and 5% DHA in o/w emulsion, respectively. " ;
+        ont:additional_info          "test substance: [14C]-DHA at 2.5% and 5.0% in water, [14C]-DHA at 5.0% in o/w emulsion (composition stated in report)" ;
+        ont:assay_method             "liquid scintillation counting" ;
+        ont:chemical_batch_nr        "980709" ;
+        ont:composition              "hepes-buffered hanks’ balanced salt solution (hhbss)" ;
+        ont:compound                 <http://toxin.vub.be/resource/compound/dihydroxyacetone> ;
+        ont:compoundLabel            "dihydroxyacetone" ;
+        ont:conclusion               "Total absorption, defined as the sum of the amounts found in the receptor fluid, the receptor compartment wash and skin membrane (epidermis and dermis, excluding tape strips) showed to amount to 10 to 13% of the applied dose. The type of formulation does not appear to significantly influence the dermal absorption. Most of the absorbed DHA was found within the dermis/epidermis compartment. The fact that DHA does not appear to covalently bind to skin proteins is quite surprising, as the brown staining of the skin does not disappear for hours after application. Therefore the study authors conclude that DHA probably binds to and/or interacts with skin constituents in a manner that consists of a combination of covalent and other intermediate chemical bond forms." ;
+        ont:details_of_removal_and_washing
+                "yes, skin samples were washed after the exposure time and 0 tape stripping" ;
+        ont:discussion_and_result    "The residual amount in dermis/epidermis and other parts of the skin (stratum corneum) suggests that considerable amounts of the test material might actually be bound to residual parts of the stratum corneum that could not be removed by the 10 tape strips performed. however, covalent binding analysis of the residual skin homogenates (after tape stripping) showed that the majority of radioactivity was washed out with the two first washes, indicating that the material was not covalently bound. finally, no metabolism of dha into the skin was evidenced as indicated by the presence of a single hplc chromatogram peak for dha in skin homogenates." ;
+        ont:dose_level_unit          "mg of aqueous solution/cm²,  mg of O/W emulsion/cm²" ;
+        ont:dose_levels              "15, 3" ;
+        ont:duration_of_exposure     "24h" ;
+        ont:flow_through             "flow-through diffusion cell" ;
+        ont:formulation              "2.5% or a 5% DHA in aqueous solution, or an oil-in-water emulsion containing 5% DHA" ;
+        ont:glp                      "no" ;
+        ont:guideline                <http://toxin.vub.be/resource/guideline/non%20OECD> ;
+        ont:guidelineLabel           "non OECD" ;
+        ont:method_of_preparation    "excised,dermatomed 200-300 µm thickness" ;
+        ont:purity                   "99" ;
+        ont:receptor_fluid           "% of applied dha in: receptor fluid (24h): 2.5% dha in water: 0.4 ± 0.2, 5.0% dha in water: 0.5 ± 0.2, 5.0% dha in o/w emulsion: 0.5 ± 0.1; % of applied dha in: stratum corneum 1 (tape strips 1-5): 2.5% dha in water: 6.5 ± 1.3, 5.0% dha in water: 5.5 ± 1.3, 5.0% dha in o/w emulsion: 3.9 ± 0.9; % of applied dha in: stratum corneum 2 (tape strips 6-10): 2.5% dha in water: 4.5 ± 1.6, 5.0% dha in water: 4.8 ± 1.8, 5.0% dha in o/w emulsion: 5.2 ± 0.7; % of applied dha in: epidermis + dermis: 2.5% dha in water: 12.4 ± 8.1, 5.0% dha in water: 9.7 ± 6.0, 5.0% dha in o/w emulsion: 12.8 ± 7.0; % of applied dha in: skin wash: 2.5% dha in water: 60.5 ± 8.9, 5.0% dha in water: 66.4 ± 8.2, 5.0% dha in o/w emulsion: 65.9 ± 2.1; % of applied dha in: total recovery: 2.5% dha in water: 84.3 ± 2.4, 5.0% dha in water: 88.1 ± 2.8, 5.0% dha in o/w emulsion: 88.3 ± 4.3; % of applied dha in: total absorption*: 2.5% dha in water: 23.9 ± 10.6, 5.0% dha in water: 21.7 ± 9.9, 5.0% dha in o/w emulsion: 22.3 ± 5.7. * the amount retrieved in the stratum corneum is considered dermally absorbed by the authors of this study." ;
+        ont:ref_in_dossier           "19" , "test substance: [14C]-DHA at 2.5% and 5.0% in water, [14C]-DHA at 5.0% in o/w emulsion (composition stated in report)" ;
+        ont:replicates               "3 samples (n° of donors not stated) per tested formulation & concentration" ;
+        ont:sampling                 "6-hour intervals over a period of 24 hours" ;
+        ont:skin                     "DHA contents in the epidermis/dermis amounted to 10% (5% DHA in water) and 13% of the applied dose (5% DHA in o/w emulsion). total relative absorption, defined as the summed amounts of DHA in the receptor fluid and skin membranes (epidermis and dermis, excluding tape strips), amounted to 10.2% (5% DHA in water) and 13.3% of the applied dose (5% DHA in o/w emulsion). Most of the amounts of DHA considered to be absorbed were actually found within the epidermis/dermis (95% to 97%). " ;
+        ont:skin_integratity_and_barrier_function
+                "the barrier integrity of the skin was verified by using the 20 min 3 H-water test." ;
+        ont:source_and_site_of_skin  "human" ;
+        ont:test_substance_concentration
+                "2.5 & 5%" ;
+        ont:type                     "in vitro" ;
+        ont:year                     "1999" .
+
+<http://toxin.vub.be/resource/test/toxicokinetics_skin_absorption/non_oecd/2>
+        a                       ont:Test ;
+        ont:absorption_profile  "an equilibrium dialysis method was used and the ratio of the bound to the unbound fractions was constant over the tested concentrations (i.e., no saturation of binding was observed during testing). the plasma protein binding was determined to be 98.4 to 99.2, 98.1 to 98.7, and 98.7 to 99% in humans, mice, and hamsters, respectively." ;
+        ont:additional_info     "test substance:  irgasan dp300" ;
+        ont:compound            <http://toxin.vub.be/resource/compound/triclosan> ;
+        ont:compoundLabel       "triclosan" ;
+        ont:conclusion          "triclosan is highly bound in the plasma, with no species differences observed." ;
+        ont:dose_level_unit     "µg/ml" ;
+        ont:dose_levels         "3.2, 6.4, 16" ;
+        ont:glp                 "no" ;
+        ont:guideline           <http://toxin.vub.be/resource/guideline/non%20OECD> ;
+        ont:guidelineLabel      "non OECD" ;
+        ont:other_test_system   "plasma of human & mouse & hamster" ;
+        ont:ref_in_dossier      "99" , "test substance:  irgasan dp300" ;
+        ont:type                "in vitro" ;
+        ont:year                "1995" .
+
+<http://toxin.vub.be/resource/dossier/hc%20red%20n°%2013>
+        a              ont:Report ;
+        rdfs:label     "hc red n° 13" ;
+        ont:contains   <http://toxin.vub.be/resource/test/toxicokinetics_skin_absorption/non_oecd/24> ;
+        ont:guideline  <http://toxin.vub.be/resource/guideline/non%20OECD> ;
+        ont:seeAlso    <http://toxin.vub.be/resource/pdfLink/https%3A%2F%2Fec.europa.eu%2Fhealth%2Fscientific_committees%2Fconsumer_safety%2Fdocs%2Fsccs_o_198.pdf> .
+
+<http://toxin.vub.be/resource/compound/disperse%20violet%201>
+        a               ont:Compound ;
+        rdfs:label      "disperse violet 1" ;
+        ont:compoundOf  <http://toxin.vub.be/resource/dossier/disperse%20violet%201> .
+
+<http://toxin.vub.be/resource/test/toxicokinetics_skin_absorption/non_oecd/22>
+        a                            ont:Test ;
+        ont:absorption_profile       "the percent dose absorbed was determined as the amount of radioactivity in the receptor fluid and the amount left in the skin after washing and tape stripping. at the end of the assay, only 0.04% ± 0.007% of the applied dose of neat D5 was absorbed which was not significantly different from that seen with formulated D5 (0.022% ± 0.005% of the applied dose). the percent of applied dose recovered from all analysed samples for neat D5 was 91.45% ± 1.60% and for d5 formulated in generic antiperspirant formulation was 98.05% ± 1.17%. the majority of the dose was evaporated from the dosing site and was collected from the charcoal baskets. " ;
+        ont:additional_info          "test substance: experiment 1: D5 neat (skin samples from each of 3 donors). D5 in generic antiperspirant formulation (54.59%) from each other 3 donors" ;
+        ont:assay_method             "radioactivity" ;
+        ont:batch_number             "990316A" ;
+        ont:chemical_batch_nr        "99.44" ;
+        ont:composition              "hank’s balanced salt solution" ;
+        ont:compound                 <http://toxin.vub.be/resource/compound/decamethylcyclopentasiloxane> ;
+        ont:compoundLabel            "decamethylcyclopentasiloxane" ;
+        ont:discussion_and_result    "no significant differences in absorption between neat d5 and antiperspirant formulated D5 were found, and no significant vehicle related effect on either the percent of applied dose in the charcoal basket or the total percent of applied dose recovered was found. the cumulative penetration over 24 hours for neat D5 was 0.1µg/cm2 and formulated D5 was 0.3µg/cm2 . Steady state flux for neat and formulated D5 was between 6 and 21 h (0.004 µg/cm2 /h) and 6-24h (0.009 µg/cm2 /h), respectively." ;
+        ont:donor_chamber_occluded_non_occluded
+                "semi-occluded" ;
+        ont:dose_level_unit          "mg/cm2" ;
+        ont:dose_levels              "3.28--> 12.97" ;
+        ont:duration_of_exposure     "24h" ;
+        ont:exposed_area             "0.64 cm2" ;
+        ont:flow_through             "flow-through diffusion cells" ;
+        ont:formulation              "target dose level: D5 neat: 6.2 mg/cm2; antiperspirant formulation: 7.7 mg/cm2; actual doses of D5 ranged from 3.28- 12.97 mg/cm2 and radioactivity ranged from 2.24-8.97 µci per piece of skin." ;
+        ont:glp                      "yes" ;
+        ont:guideline                <http://toxin.vub.be/resource/guideline/non%20OECD> ;
+        ont:guidelineLabel           "non OECD" ;
+        ont:method_of_preparation    "dermatomed, human epidermis was prepared from intact abdominal skin. the epidermis was separated from the dermis using a padgett® dermatome. " ;
+        ont:purity                   " (radiochemical purity of 14C-D5, specific activity 25.08 mci/mmol diluted with unlabelled D5 lot  purity% )" ;
+        ont:ref_in_dossier           "test substance: experiment 1: D5 neat (skin samples from each of 3 donors). D5 in generic antiperspirant formulation (54.59%) from each other 3 donors" , "32, 32a, 33" ;
+        ont:replicates               "duplicate experiments were performed using skin from all donors" ;
+        ont:sampling                 "immediately after dosing, charcoal baskets were placed above the skin to capture any volatilized material. skin samples were evaluated on two separate days. in experiment 1, skin samples from each of 3 donors were dosed with neat D5 and the remaining 3 were dosed with a generic antiperspirant formulation containing D5. in experiment 2, a second set of skin samples from the same 6 donors were dosed with the other test article (i.e. antiperspirant or neat D5), and immediately after dosing, charcoal baskets were placed above the skin and secured into a custom designed cap to capture any volatilized material. at the end of 24 hours, the charcoal baskets were removed and extracted, skin was washed and solubilised, and the receptor fluid was collected." ;
+        ont:skin_integratity_and_barrier_function
+                "Assessed using tritiated water before dosing. The barrier integrity of each piece of skin was evaluated prior to dosing using 3H2O." ;
+        ont:source_and_site_of_skin  "human cadaver intact skin abdominal epidermis from 4 males 40-66 years and 2 females 46-74 years" ;
+        ont:specific_activity        "25.08 mci/mmol" ;
+        ont:test_substance_concentration
+                "100 & 54.59" ;
+        ont:total_recovery           "91.45 (neat D5) & 98.05% (D5 in generic antiperspirant)" ;
+        ont:type                     "in vitro" ;
+        ont:vehicle                  "99.23" , "LL014002" ;
+        ont:year                     "1999" .
+
+<http://toxin.vub.be/resource/dossier/Vitamin%20A%20%28Retinol%2C%20Retinyl%20Acetate%20and%20Retinyl%20Palmitate%29>
+        a              ont:Report ;
+        rdfs:label     "Vitamin A (Retinol, Retinyl Acetate and Retinyl Palmitate)" ;
+        ont:contains   <http://toxin.vub.be/resource/test/toxicokinetics_skin_absorption/non_oecd/16> ;
+        ont:guideline  <http://toxin.vub.be/resource/guideline/non%20OECD> ;
+        ont:seeAlso    <http://toxin.vub.be/resource/pdfLink/https%3A%2F%2Fec.europa.eu%2Fhealth%2Fscientific_committees%2Fconsumer_safety%2Fdocs%2Fsccs_o_027.pdf> .
+
+<http://toxin.vub.be/resource/dossier/Boron%20compounds>
+        a              ont:Report ;
+        rdfs:label     "Boron compounds" ;
+        ont:contains   <http://toxin.vub.be/resource/test/toxicokinetics_skin_absorption/non_oecd/21> ;
+        ont:guideline  <http://toxin.vub.be/resource/guideline/non%20OECD> ;
+        ont:seeAlso    <http://toxin.vub.be/resource/pdfLink/https%3A%2F%2Fec.europa.eu%2Fhealth%2Fscientific_committees%2Fconsumer_safety%2Fdocs%2Fsccs_o_064.pdf> .
+
+<http://toxin.vub.be/resource/test/toxicokinetics_skin_absorption/non_oecd/7>
+        a                            ont:Test ;
+        ont:absorption_profile       "most of the wr802178 applied on the skin surface was removed with the washing procedure. the total percutaneous absorption value (receptor fluid, epidermis and upper dermis) was 0.798 ± 0.480 μg/cm2 (0.048± 0.029 % of the applied dose). " ;
+        ont:additional_info          "test substance: wr802178" ;
+        ont:assay_method             "hplc (detection at 606 nm)" ;
+        ont:composition              "0.14 M NaCl, 2mM K2HPO4, 0.4 mM KH2PO4,100 IU penicillin/ml and 97 μg streptomycin/ml" ;
+        ont:compound                 <http://toxin.vub.be/resource/compound/hc%20blue%20n°%2015> ;
+        ont:compoundLabel            "hc blue n° 15" ;
+        ont:conclusion               "application of 1.67 mg of wr802178 in 100 mg of oxidative formulation per 1cm2 of skin: (skin no) / integrity-test 3H2O permeation (4 hours cumulative) [% dose] / 1) receptor fluid (72 hours cumulative) [ng/cm2] - [% dose] / 2) epidermis (72 hours cumulative) [ng/cm2] - [% dose] / 3) upper dermis (72 hours cumulative) [ng/cm2] - [% dose] / 4) rinsing solution (after 30 minutes) [ng/cm2] - [% dose] / 1) + 2) + 3) + 4) total: (2) 0.73 / <122* - <0.007* / 306 - 0.018 / 81 - 0.005 / 1’898’656 - 113.919 / 1’899’166 - 113.950; (4) 0.92 / <122* - <0.007* / 425 – 0.025 / 88 – 0.005 / 1’868’304 - 112.098 / 1’868’940 - 112.136; (6) 0.82 / 309 – 0.019 / 1’204 – 0.072 / 241 – 0.014 / 1’831’633 - 109.898 / 1’833’387 - 110.003; (8) 0.85 / 129 – 0.008 / 403 – 0.024 / 38 – 0.002 / 1’801’745 - 108.105 / 1’802’314 - 108.139; (10) 0.91 / <122* - <0.007* / 359 – 0.022 / 43 – 0.003 / 1’745’510 - 104.731 / 1’746’034 - 104.762; control skin ** (12) 0.82 / blank – blank / blank – blank / blank – blank / blank – blank / blank – blank. mean; +/- s.d.; (n): integrity-test 3H2O permeation (4 hours cumulative) [% dose] / 1) receptor fluid (72 hours cumulative) [ng/cm2] - [% dose] / 2) epidermis (72 hours cumulative) [ng/cm2] - [% dose] / 3) upper dermis (72 hours cumulative) [ng/cm2] - [% dose] / 4) rinsing solution (after 30 minutes) [ng/cm2] - [% dose] / 1) + 2) + 3) + 4) total: 0.84; 0.07; (6) / <161 - <0.010; 83 – 0.005; (5) – (5) / 539 – 0.032; 374 – 0.022; (5) – (5) / 98 – 0.006; 83 – 0.005; (5) – (5) / 1’829’170 - 109.750; 59’408 – 3.564; (5) – (5) / 1’829’968 - 109.798; 59’432 – 3.566; (5) – (5). * = limit of quantification; ** oxidative formulation w/o wr802178." ;
+        ont:details_of_removal_and_washing
+                "with shampoo and water and left unoccluded for a 72 hour exposure period" ;
+        ont:dose_level_unit          "mg/cm2 of oxidative formulation (); 1.67mg/ cm2 of the dye active principle (=1.67%)." ;
+        ont:dose_levels              "100" ;
+        ont:duration_of_exposure     "0.5h" ;
+        ont:exposed_area             "4cm2" ;
+        ont:flow_through             "flow through diffusion cells" ;
+        ont:formulation              "base batch 6746 11.06.2002 (oxidative formulation)" ;
+        ont:glp                      "yes" ;
+        ont:guideline                <http://toxin.vub.be/resource/guideline/non%20OECD> ;
+        ont:guidelineLabel           "non OECD" ;
+        ont:limits_of_detection      "limit of quantification <122 ng/cm2" ;
+        ont:method_of_preparation    "1000 µm thickness" ;
+        ont:pre_treatment            "/" ;
+        ont:receptor_fluid           "the content of wr802178 in the receptor fluid was below the limit of quantification in 3 samples (122 ng/cm2); the amount considered as being present in the receptor was 0.161 ± 0.083 μg/cm2 (0.010± 0.005% of the applied dose)" ;
+        ont:ref_in_dossier           "24" , "test substance: wr802178" ;
+        ont:replicates               "5  (and 1 control)" ;
+        ont:sampling                 "at 16, 24, 40, 48, 64, and 72 hours, the dye content was analysed by hplc as well as after 72 hours in the skin compartments (epidermis and upper dermis separated) " ;
+        ont:scss_comment_to_test     "the experiment did not conform to guidelines. 100mg/cm2 of formulation was applied. too few chambers were used (5) and the number of donors is not stated. the purity of WR802178 is not given. the membrane thickness was inappropriate. in view of the above, and as penetration of WR802178 is low, the amount considered as being absorbed from an oxidative hair dye formulation containing 1.67% wr802178 is considered as (mean +2SD) 1.76 μg/cm2 (0.11%). this may be used in calculating the MOS. " ;
+        ont:skin                     "the amounts of wr802178 detected in the separated skin layers were: 0.539 ± 0.374 μg/cm2 (0.032± 0.022% of the applied dose) in the epidermis, and 0.098 ± 0.083 μg/cm2 (0.006± 0.005% of the applied dose) in the upper dermis." ;
+        ont:skin_integratity_and_barrier_function
+                "tritiated water" ;
+        ont:solubility_of_the_test_substance
+                "1.94 mg/ml" ;
+        ont:source_and_site_of_skin  "pig skin (male)" ;
+        ont:tabulated_data           "available in the opinion" ;
+        ont:test_substance_concentration
+                "1.67" ;
+        ont:total_recovery           "the total recovery of the dye was 109.8 ± 3.6%." ;
+        ont:type                     "in vitro" ;
+        ont:year                     "2002" .
+
+<http://toxin.vub.be/resource/test/toxicokinetics_skin_absorption/non_oecd/14>
+        a                            ont:Test ;
+        ont:additional_info          "test substance: [14C]-BMHCA, Note: The highest concentration is equal to plasma levels occurring after orally applied BMHCA doses that were shown to induce testicular toxicity." ;
+        ont:assay_method             "HPLC & LC/MS" ;
+        ont:compound                 <http://toxin.vub.be/resource/compound/butylphenyl%20methylpropional%20%28p-bmhca%29> ;
+        ont:compoundLabel            "butylphenyl methylpropional (p-bmhca)" ;
+        ont:discussion_and_result    "[14C]-BMHCA was intensively converted into 9 main metabolites by microsomes (8 by hepatocytes). All metabolites separated by HPLC were more hydrophilic than the parent compound. Metabolism can be summarised as follows (according to CLH report, BASF 2013): In liver microsomes, oxidation or reduction of BMHCA to the corresponding acid (lysmerylic acid, M7) or alcohol (lysmersol, M9), the latter being further oxidised at its tert-butyl group (to yield M3), was observed. In hepatocytes, as dehydrogenation follow-up product of M7 (E)-3-(4-t-butyl-phenyl)-2-methyl-acrylic acid (M16) was observed. Further, p-t-butylbenzoic acid (TBBA, M15) and its glycine conjugate (p-t-butyl-hippuric acid; TBHA, M12) occurred in rodents. In addition to these metabolites, glucuronic acid conjugates of M3, M7, M9 and M16 were detected. Lysmerylic acid (M7) was the main metabolite in hepatocytes of all species. Significant species differences in metabolic profiles were noted for TBHA (M12; 4.9 – 27.1% in mice, 3.5 – 3.6% in rats, not in rabbits or humans) and TBBA (M15). Among the species tested, rat hepatocytes formed the highest amounts of TBBA (M15; 8.3 – 29.3% in rats, 1.9 – 7.5% in humans, ≤0.5% in mice, ≤2.0% in rabbits)." ;
+        ont:dose_level_unit          "µM" ;
+        ont:dose_levels              "10, 50, 100 " ;
+        ont:glp                      "yes" ;
+        ont:guideline                <http://toxin.vub.be/resource/guideline/non%20OECD> ;
+        ont:guidelineLabel           "non OECD" ;
+        ont:method_of_preparation    "only male" ;
+        ont:ref_in_dossier           "BASF SE 2010" , "test substance: [14C]-BMHCA, Note: The highest concentration is equal to plasma levels occurring after orally applied BMHCA doses that were shown to induce testicular toxicity." ;
+        ont:scss_comment_to_test     "Quantitative data on the toxicokinetics of BMHCA are available from rat, mouse, rabbit, guinea pig, dog and rhesus monkey and human studies. Given its physicochemical properties, BMHCA is likely to have high bioavailability via the oral route. After oral and dermal administration to experimental animals and humans (cf. section 3.3.4.2.), there is clear evidence of systemic absorption of BMHCA. However, in humans compared to rats, only limited percutaneous absorption of BMHCA (in EtOH) could be observed in vivo (1.4% vs. 19%). Species-specific differences in the metabolism of BMHCA have been identified both in vitro and in vivo. Lysmerylic acid was the main hepatic metabolite in all species tested. Quantitative evaluation of metabolic profiles for different species in an in vitro metabolism study demonstrated much higher levels of TBBA formation by rat hepatocytes when compared to other species. In particular, TBBA levels observed in human hepatocytes were about 4-fold lower compared to rat hepatocytes at corresponding concentrations. Comparative assessment of the urinary metabolites in different animal species again uncovered differences in the urinary excretion of TBBA (and TBHA), with rats being the species that predominantly forms TBBA. However, the differences observed between rats and monkeys did not mirror the 4-fold difference in TBBA formation as seen with rat and human liver microsomes in vitro." ;
+        ont:source_and_site_of_skin  "Liver microsomes and hepatocytes from rat / Han-Wistar; mouse / CD-1; rabbit/ New Zealand white; human" ;
+        ont:type                     "in vitro" ;
+        ont:year                     "2010" .
+
+<http://toxin.vub.be/resource/test/toxicokinetics_skin_absorption/non_oecd/27>
+        a                            ont:Test ;
+        ont:additional_info          "Test substance: Non-labelled: Transcutol HP (DEGEE), ethylene glycol mono ethyl ether (EGEE) Labelled: [14C]-Diethylene glycol monoethyl ether ([14C]-DEGEE), [14C]-Ethylene glycol monoethyl ether ([14C]-EGEE)" ;
+        ont:analytical_method_validation
+                "Control incubations without hepatocytes were included with the first experiment using 1500 µM [14C]-DEGEE or 150 µM [14C]-EGEE." ;
+        ont:assay_method             "Reverse phase HPLC" ;
+        ont:batch_number             "[14C]-DEGEE: 209-201-053, 14C]-EGEE: 209-209-053" ;
+        ont:chemical_batch_nr        "DEGEE: 0025005, EGEE: 049H1248" ;
+        ont:compound                 <http://toxin.vub.be/resource/compound/diethylene%20glycol%20monoethyl%20ether%20%28DEGEE%29> ;
+        ont:compoundLabel            "diethylene glycol monoethyl ether (DEGEE)" ;
+        ont:conclusion               "The authors concluded that EGEE was readily metabolized by both rat and human hepatocytes to ethoxy acetic acid (EAA) and ethylene glycol (EG), and the rat liver cells metabolized EGEE at a higher rate than human liver cells, in agreement with published in vitro metabolism data. In contrast, DEGEE was slowly metabolized by rat hepatocytes to several different unidentified metabolite peaks that accounted for approximately 1-17% of the total radioactivity. Human hepatocytes did not metabolize DEGEE significantly." ;
+        ont:dose_level_unit          "µM DEGEE; EGEE" ;
+        ont:dose_levels              "0, 15, 150, 1500; 150" ;
+        ont:guideline                <http://toxin.vub.be/resource/guideline/non%20OECD> ;
+        ont:guidelineLabel           "non OECD" ;
+        ont:ref_in_dossier           "Test substance: Non-labelled: Transcutol HP (DEGEE), ethylene glycol mono ethyl ether (EGEE) Labelled: [14C]-Diethylene glycol monoethyl ether ([14C]-DEGEE), [14C]-Ethylene glycol monoethyl ether ([14C]-EGEE)" , "21" ;
+        ont:sampling                 "Incubation medium aliquots were removed at 0, 1, and 4 h after the addition of [14C]-DEGEE or [14C]-EGEE." ;
+        ont:source_and_site_of_skin  "human & rat hepatocyte - each from 2donors called H1, H2 and R1, R2 respectively" ;
+        ont:tabulated_data           "Total ECOD activity for the rat hepatocytes was 17630 and 21549 pmol 7- hydroxycoumarin/mg protein/hr, for R1 and R2, respectively. The total ECOD activity of the human hepatocyte preparations was 5384 and 5528 7-hydroxycoumarin/mg protein/h, for H1 and H2, respectively. At the end of the 4 h incubation period, over 88% of the radioactivity was associated with DEGEE in rat hepatocyte incubations with 150 and 1500 µM [14C]-DEGEE and 70% of the radioactivity was [14C]-DEGEE in cells incubated with the lowest concentration (15 µM [14C]-DEGEE). The rest of the radioactivity was associated with several peaks that were not identified. Rat hepatocyte incubations with [14C]-EGEE (150 µM) for 4 h contained 9.65% of the radioactivity as Unknown 1 (ethylene glycol; EG), 52.18% as EAA, and 38.18% of the radioactivity as EGEE. EGEE was metabolized by rat hepatocytes in the current study similarly to previous studies. Approximately 98 to 99% of the radioactivity remained as [14C]-DEGEE in the H1 and H2 hepatocyte preparations. When H1 hepatocytes were incubated for 4 h with 150 µM [14C]-EGEE, 25.37% of the radioactivity identified as Unknown 1 (EG), 69.50% was identified as EAA, and 5.14% was EGEE. H2 hepatocytes were less active in the metabolism of EGEE than the H1 preparation and the metabolite profile included 7.66% of the radioactivity as EG, 17.57% as EAA, and 74.77% as EGEE. The results obtained with H2 were comparable to those reported in an earlier study." ;
+        ont:type                     "in vitro" ;
+        ont:vehicle                  "Labelled: [14C]-DEGEE: radiochemical purity: 100%, [14C]-EGEE: radiochemical purity: 97%, both supplied by Moravek Biochemicals Inc., USA)" ;
+        ont:year                     "2001" .
+
+<http://toxin.vub.be/resource/compound/triclosan>
+        a               ont:Compound ;
+        rdfs:label      "triclosan" ;
+        ont:compoundOf  <http://toxin.vub.be/resource/dossier/triclosan> .
+
+<http://toxin.vub.be/resource/test/toxicokinetics_skin_absorption/non_oecd/1>
+        a                            ont:Test ;
+        ont:absorption_profile       "it can be considered that 41.2% of the applied dose was absorbed percutaneously within 24 hours (penetration through the stratum corneum into deeper layers of the skin is considered to represent absorption)" ;
+        ont:compound                 <http://toxin.vub.be/resource/compound/triclosan> ;
+        ont:compoundLabel            "triclosan" ;
+        ont:conclusion               "the data show that triclosan is metabolised in the skin" ;
+        ont:discussion_and_result    "triclosan was primarily absorbed through the skin as the parent compound, with some glucuronide and sulphate conjugates being detected in the receptor fluid. glucuronidation was the primary route of metabolism of triclosan in rat skin. these findings were supported by in vivo studies with rats in which 0.4 and 1.5% of the parent glucuronide were reported to occur in the urine and skin, respectively, following the dermal application of triclosan [moss et al., 2000 (21)]." ;
+        ont:exposed_area             "0.64cm2" ;
+        ont:formulation              "radiolabelled triclosan in an ethanol-water (9:1, v/v) solution" ;
+        ont:glp                      "no" ;
+        ont:guideline                <http://toxin.vub.be/resource/guideline/non%20OECD> ;
+        ont:guidelineLabel           "non OECD" ;
+        ont:radioactivity_distribution_demonstration
+                "glucuronidation and sulfation of triclosan were demonstrated to occur in this model (i.e., the conjugates were found in the collecting reservoir following absorption through the skin), with the glucuronide being the primary metabolite at levels up to 1.4%. " ;
+        ont:receptor_fluid           "41.2% of applied dose (23% in receptor fluid + 18.2% dermis and epidermis). of the radioactivity in the receptor fluid at 24 hours, 17.3% of the applied dose was present as triclosan, 4.1% as triclosan glucuronide, and 0.9% as triclosan sulfate." ;
+        ont:ref_in_dossier           "21" ;
+        ont:sampling                 "24h" ;
+        ont:scss_comment_to_test     "Glucuronidation and sulphation were demonstrated to occur in an in vitro diffusion skin model used to assess the ability of skin to metabolise triclosan [Moss et al., 2000 (21)]. Of the radioactivity in the receptor fluid (i.e., following absorption through the skin) at 24 hours, 3.5% of the applied dose was present as triclosan glucuronide and 0.2% was present as triclosan sulfate." ;
+        ont:skin                     "58% of applied dose(33% skin surface + 25% stratum corneum). of the radioactivity in the skin at 24 hours, 13% of the dose was recovered as triclosan, 1.4% as triclosan glucuronide, and 1.6% as triclosan sulfate." ;
+        ont:source_and_site_of_skin  "rat dorsal skin" ;
+        ont:specific_activity        "0.48 Mbq" ;
+        ont:test_substance_concentration
+                "64.5 mM" ;
+        ont:type                     "in vitro" ;
+        ont:vehicle                  "ethanol-water (9:1 v/v)" ;
+        ont:volume                   "7µl" ;
+        ont:year                     "2000" .
+
+<http://toxin.vub.be/resource/test/toxicokinetics_skin_absorption/non_oecd/21>
+        a                         ont:Test ;
+        ont:absorption_profile    "0.41%; 0.19% absorbed" ;
+        ont:additional_info       "test substance: borax; DOT(disodium octaborate tetrahydrate)" ;
+        ont:compound              <http://toxin.vub.be/resource/compound/Boron%20compounds> ;
+        ont:compoundLabel         "Boron compounds" ;
+        ont:dose_level_unit       "%" ;
+        ont:dose_levels           "5, 10" ;
+        ont:glp                   "no" ;
+        ont:guideline             <http://toxin.vub.be/resource/guideline/non%20OECD> ;
+        ont:guidelineLabel        "non OECD" ;
+        ont:ref_in_dossier        "Wester et al." , "test substance: borax; DOT(disodium octaborate tetrahydrate)" ;
+        ont:scss_comment_to_test  "No dermal absorption studies have been performed according to modern guidelines. During Meetings of the Commission Working Group on the Classification and Labelling of Dangerous Substances it has been stated several times that human skin absorption is less than 0.3%, but may be higher in damaged skin. In the SCCNFP Opinion concerning boric acid, borates and tetraborates adopted 23 September 1998 (SCCNFP/0024/98) the percutaneous absorption was considered to be about 0.2%. The SCCS considers that the available measurements of dermal absorption have a significant degree of uncertainty. Therefore an absorption of 0.5% will be used in the safety evaluation for the boric compounds discussed in this Opinion (representing the absorption of boric acid + 2 x SD [0.23 + 2 x 0.13%] from the study of Wester et al., 1998). This is in agreement with other recent risk assessment of borates in EU (EU, 2009a, ECHA, 2010). It should be noted that skin absorption is probably higher in case of damaged skin. The dermal absorption of disodium octaborate tetrahydrate was slightly lower than that for the other boron compounds, however the octaborate was applied at a higher concentration, and the percentage of absorption would probably be higher if lower concentrations had been used. Absorption for oral and inhalation routes are assumed to be 100% (ECHA, 2010)" ;
+        ont:type                  "in vitro" ;
+        ont:volume                "1.0 mL" ;
+        ont:year                  "1998" .
+
+<http://toxin.vub.be/resource/test/toxicokinetics_skin_absorption/non_oecd/19>
+        a                   ont:Test ;
+        ont:glp             "yes" ;
+        ont:guideline       <http://toxin.vub.be/resource/guideline/non%20OECD> ;
+        ont:guidelineLabel  "non OECD" ;
+        ont:klimisch_score  "the number of samples and study duration are not in accordance with the SCCS notes of guidance. membrane integrity of the human skin was not checked. no effect of lipase was observed.the stratum corneum was not separated from the viable epidermis by tape stripping. the bioavailable amount reported is considered to be an underestimation as the portion present in the viable epidermis was not taken into account." ;
+        ont:ref_in_dossier  "97, 102" ;
+        ont:type            "in vitro" ;
+        ont:year            "1996" .
+
+<http://toxin.vub.be/resource/compound/hc%20red%20n°%2013>
+        a               ont:Compound ;
+        rdfs:label      "hc red n° 13" ;
+        ont:compoundOf  <http://toxin.vub.be/resource/dossier/hc%20red%20n°%2013> .
+
+<http://toxin.vub.be/resource/test/toxicokinetics_skin_absorption/non_oecd/6>
+        a                            ont:Test ;
+        ont:additional_info          "test substance: d&c orange 4 in several formulations" ;
+        ont:assay_method             "hplc" ;
+        ont:composition              "saline" ;
+        ont:compound                 <http://toxin.vub.be/resource/compound/acid%20orange%207> ;
+        ont:compoundLabel            "acid orange 7" ;
+        ont:details_of_removal_and_washing
+                "washed with a shampoo" ;
+        ont:discussion_and_result    "according to the applicant, the content of orange 4 found in every single fraction of the receptor fluid was low, despite the late depot often measured on the skin surface or in upper layers of the stratum corneum. taken together, these findings indicate that the part of orange 4 which remains on or in the horny layer after the washing steps remains mainly on or in this layer, and that there is poor delivery into the receptor fluid over the observation period ranging from 24 to 88 hours in different experiments. therefore the amounts found in the epidermis (skin surface) will not be considered for the calculation of the biologically available amount. in the case of the foam formulation, the worst case assumption considers a maximal amount of 12.9 ng/cm² as biologically available, while the same considerations for the other experiments lead to amounts of 557 ng/cm² and 1813 ng/cm² respectively as biologically available. for the risk assessment approach, a worst case assumption of 1813 ng/cm2 is justified." ;
+        ont:dose_level_unit          "mg/cm2" ;
+        ont:dose_levels              "100" ;
+        ont:duration_of_exposure     "0.5h" ;
+        ont:exposed_area             "4 & 9.1 cm2" ;
+        ont:flow_rate                "2.5-5 ml/h" ;
+        ont:flow_through             "flow through system" ;
+        ont:formulation              "gel & foam" ;
+        ont:glp                      "no" ;
+        ont:guideline                <http://toxin.vub.be/resource/guideline/non%20OECD> ;
+        ont:guidelineLabel           "non OECD" ;
+        ont:method_of_preparation    "split thickness 1000µm ((stratum corneum, stratum germinativum and part of the dermis containing blood vessels)." ;
+        ont:ref_in_dossier           "test substance: d&c orange 4 in several formulations" , "27" ;
+        ont:sampling                 "16, 24, 72, 88h" ;
+        ont:scss_comment_to_test     "this report is a compilation of two studies. the original reports with the complete experimental data are not in the documentation. because of the lack of information, this report is considered inadequate for the evaluation of the dermal absorption of d&c orange 4." ;
+        ont:skin_integratity_and_barrier_function
+                "skin integrity checked by triated water" ;
+        ont:solubility_of_the_test_substance
+                "> 1mg/ml" ;
+        ont:source_and_site_of_skin  "pig male animal (schweizer edelschwein) skin full back and flank" ;
+        ont:test_substance_concentration
+                "0.5 & 0.13" ;
+        ont:type                     "in vitro" .
+
+<http://toxin.vub.be/resource/test/toxicokinetics_skin_absorption/non_oecd/13>
+        a                            ont:Test ;
+        ont:absorption_profile       "the penetration rates using the mini pig skin samples were lower than the naked rat skin. the fraction that might become bioavailable was 23.6 and 25.7%, respectively in creame A and cream B (mean for both kinds of cream formulations: 25%). " ;
+        ont:additional_info          "test substance: bmhca" ;
+        ont:compound                 <http://toxin.vub.be/resource/compound/butylphenyl%20methylpropional%20%28p-bmhca%29> ;
+        ont:compoundLabel            "butylphenyl methylpropional (p-bmhca)" ;
+        ont:conclusion               "Based on the dermal absorption studies in vitro, it becomes obvious that skin penetration depends on time and species, but less on the kind of formulation." ;
+        ont:dose_level_unit          "mg/cm2 (36 μg/cm2 active substance)" ;
+        ont:dose_levels              "6" ;
+        ont:exposed_area             "5" ;
+        ont:formulation              "\"cream 02_TD2=A”, and “cream 04_TD1=B” with “bases” that may have been used include: vaseline, hydrated wool-wax-alcohol ointment, hydrated hydrophilic ointment, polyethylene glycol ointment, and other “suitable” vehicles" ;
+        ont:guideline                <http://toxin.vub.be/resource/guideline/non%20OECD> ;
+        ont:guidelineLabel           "non OECD" ;
+        ont:receptor_fluid           "16 hrs after exposure to BMHCA in cream A/cream B: 23.6/38.9% (8.49/14.01 μg/cm2) in the chamber fluid." ;
+        ont:ref_in_dossier           "test substance: bmhca" , "Roche 1986c, RIFM#56764" ;
+        ont:scss_comment_to_test     "sccs conclusion on dermal/percutaneous absorption: dermal absorption studies in vitro demonstrated species-specific effects. the bioavailable portion was found much higher in rats (66.1 and 50.8%) when compared to mini pigs (0.8% and 4.9%), thereby depending on the solvent used (methylcarbitol or ethanol). in a second study, applying two real cream formulations (that contained 0.6% bmhca), rat skin again allowed a much higher penetration (45.2% and 78.4%) than mini pig skin (23.6% and 25.7%). nevertheless, the fraction of bioavailable bmhca was found strongly increased in the mini pig experiment when moving from dissolved bmhca to real cream formulations (4.9% vs. 25.7%). concurrently, administration of bmhca onto the skin of experimental animals and humans demonstrated permeation and systemic availability of this compound. percutaneous absorption of bmhca in humans was lower when compared with rats (1.4 vs. 19%). upon dermal application of [14c]-bmhca (11.37 mg test substance in 70% ethanol on 10 cm2 back skin) on 3 human volunteers for 6 hours, a mean of 1.4% (range 0.8 – 2.4%) of the applied dose was excreted in urine within 24 hours, whereas radioactivity was below the detection limit in urine samples of later time points and in all faeces and blood plasma samples. the overall mean total recovery of topical application of [14c]-bmhca was 71 ± 10%. in comparison to the in vitro observations, the absorption rate found in humans for ethanolic solutions of bmhca was comparable to what has been found in excised mini pig skin. given that the absorption of bmhca in mini pig skin was much higher when this compound was applied via real cream formulations, it is reasonable to conclude that bmhca might also better penetrate human skin when it is applied in cream formulations. since there is no further experimental data on this subject, the sccs concludes that the maximum fraction of bmhca being absorbed by human skin might be in the range of 25% rather than at 2.4%. in consideration of the comparability of pig skin with human skin, the dermal bioavailability of ethanolic (dissolved) bmhca to be used in the calculation of the systemic exposure dose (sed) and margin of safety (mos) will be set at 5% (worst case scenario based on 1% bmhca in etoh applied at 120 μg substance/cm2 onto 5 cm2 excised mini pig skin; result: total of 5.87 μg substance/cm2 found in stripped skin and chamber fluid after 16 hrs of exposure). on the other hand, the penetration rate of bmhca applied onto the skin as ingredient of creamy formulations will be set at 25% (worst case scenario based on 36 μg substance/cm2 applied onto 5 cm2 excised mini pig skin; mean out of two experiments: total of 8.88 μg substance/cm2 found in stripped skin and chamber fluid after 16 hrs of exposure). the sccs is aware of the issue that the exact identity of the cream formulations applied in the latter study remains obscure. the results obtained from the part of the study with 1% ethanolic bmhca can further be used to assess the sed for hydroalcoholic products to be applied on a defined surface area of shaved or unshaved skin once daily (1 x 305 cm2/day). here, an absorption of about 6 μg substance/cm2 can be assumed for unshaved skin (stratum corneum intact). for shaved skin (stratum corneum compromised), however, the total absorption would be 11 μg substance/cm2 (with the addition of the portion of 4.66 μg/cm2 that was found sticking in the stratum corneum in the respective experiment; cf. above). " ;
+        ont:skin                     "16 hrs after exposure to BMHCA in cream A/cream B: 2.6/2.1% (0.93/0.74 μg/cm2 ) in the stratum corneum, 21.6/39.5% (7.79/14.22 μg/cm2 ) in the remaining skin" ;
+        ont:source_and_site_of_skin  "rat naked excised skin" ;
+        ont:tabulated_data           "detailed data of skin surface, horny layer, remaining skin and chamber fluid at 1h, 6h and 16 in both cream A and cream B in both species" ;
+        ont:test_substance_concentration
+                "0.6" ;
+        ont:type                     "in vitro" .
+
+<http://toxin.vub.be/resource/dossier/triclosan>
+        a              ont:Report ;
+        rdfs:label     "triclosan" ;
+        ont:contains   <http://toxin.vub.be/resource/test/toxicokinetics_skin_absorption/non_oecd/3> , <http://toxin.vub.be/resource/test/toxicokinetics_skin_absorption/non_oecd/5> , <http://toxin.vub.be/resource/test/toxicokinetics_skin_absorption/non_oecd/1> , <http://toxin.vub.be/resource/test/toxicokinetics_skin_absorption/non_oecd/4> , <http://toxin.vub.be/resource/test/toxicokinetics_skin_absorption/non_oecd/2> ;
+        ont:guideline  <http://toxin.vub.be/resource/guideline/non%20OECD> ;
+        ont:seeAlso    <http://toxin.vub.be/resource/pdfLink/https%3A%2F%2Fec.europa.eu%2Fhealth%2Fph_risk%2Fcommittees%2F04_sccp%2Fdocs%2Fsccp_o_166.pdf> , <http://toxin.vub.be/resource/pdfLink/https%3A%2F%2Fec.europa.eu%2Fhealth%2Fscientific_committees%2Fconsumer_safety%2Fdocs%2Fsccs_o_158.pdf> .
+
+<http://toxin.vub.be/resource/dossier/EcoG%2B>
+        a              ont:Report ;
+        rdfs:label     "EcoG+" ;
+        ont:contains   <http://toxin.vub.be/resource/test/toxicokinetics_skin_absorption/non_oecd/31> , <http://toxin.vub.be/resource/test/toxicokinetics_skin_absorption/non_oecd/30> , <http://toxin.vub.be/resource/test/toxicokinetics_skin_absorption/non_oecd/29> ;
+        ont:guideline  <http://toxin.vub.be/resource/guideline/non%20OECD> .
+
+<http://toxin.vub.be/resource/dossier/hc%20red%20n°%2010%20%2B%20hc%20red%20n°%2011>
+        a              ont:Report ;
+        rdfs:label     "hc red n° 10 + hc red n° 11" ;
+        ont:contains   <http://toxin.vub.be/resource/test/toxicokinetics_skin_absorption/non_oecd/26> ;
+        ont:guideline  <http://toxin.vub.be/resource/guideline/non%20OECD> ;
+        ont:seeAlso    <http://toxin.vub.be/resource/pdfLink/https%3A%2F%2Fec.europa.eu%2Fhealth%2Fscientific_committees%2Fconsumer_safety%2Fdocs%2Fsccs_o_198.pdf> .
+
+<http://toxin.vub.be/resource/test/toxicokinetics_skin_absorption/non_oecd/26>
+        a                            ont:Test ;
+        ont:absorption_profile       "the permeability figures for the reference substances propranolol (papp = 25.9 x 10-6 cm/sec), a high permeability reference compound with about 100 % absorption in humans, and ranitidine (papp = 0.20 x 10-6 cm/sec) revealing an absorption of about 50 % in humans, were well within the typical range of 20 – 60 x 10-6 cm/sec and < 2 x 10-6 cm/sec, respectively. hc red n° 10 and hc red n° 11 revealed papp of 55.5 and 0.30 x 10-6 cm/sec, respectively. thus hc red n° 10 was classified to be of high permeability, indicating a nearly 100 % absorption from the gastro-intestinal tract whereas hc red n° 11 was classified to be of low permeability. " ;
+        ont:additional_info          "test substance: hc red n° 10 + hc red n° 11; wr 23532" ;
+        ont:analytical_method_validation
+                "propranolol and ranitidine were used to validate the experimental conditions. according to the laboratory’s classification system, a low permeability is considered for test items revealing a papp <2x10-6 cm/sec.a papp of2-20x10-6 cm/sec and a papp ≥20x10- 6 cm/sec classify a substance to have a medium or a high permeability, respectively. ranitidine, which has a 50 % absorption in humans, was used as low permeability reference compound, as recommended by fda" ;
+        ont:assay_method             "hplc-ms/ms" ;
+        ont:chemical_batch_nr        "9375 (fa. osl)" ;
+        ont:compound                 <http://toxin.vub.be/resource/compound/hc%20red%20n°%2010%20%2B%20hc%20red%20n°%2011> ;
+        ont:compoundLabel            "hc red n° 10 + hc red n° 11" ;
+        ont:conclusion               "as the absorption from the gastro-intestinal tract is likely to be permeability limited, the high permeability observed with hc red n° 10 in this assay indicates a good absorption after oral administration whereas the oral bioavailability of hc red n° 11 may be limited" ;
+        ont:duration_of_exposure     "60 mins" ;
+        ont:glp                      "no" ;
+        ont:guideline                <http://toxin.vub.be/resource/guideline/non%20OECD> ;
+        ont:guidelineLabel           "non OECD" ;
+        ont:purity                   "54.8 +  29.9; 0.22 %" ;
+        ont:ref_in_dossier           "28" , "test substance: hc red n° 10 + hc red n° 11; wr 23532" ;
+        ont:scss_comment_to_test     " the method used in this study, is a non validated method" ;
+        ont:skin_integratity_and_barrier_function
+                "14c-mannitol (4 μm) was used to demonstrate the integrity of the cell monolayer. only monolayers with a mannitol permeability of < 2.5 x 10-6 cm/sec were used." ;
+        ont:source_and_site_of_skin  "human intestinal epithelial cell line tc-7,  a sub-clone of the caco-2 cell line" ;
+        ont:test_substance_concentration
+                "50 μM" ;
+        ont:total_recovery           "the mean recovery of the reference compounds were 72% (propanolol) and 91% (ranitidine), for hc red n° 10 and hc red n° 11 the figures were 81% and 98%" ;
+        ont:type                     "in vitro" ;
+        ont:vehicle                  "test substancein hbss buffer containing 1 % dmso" ;
+        ont:year                     "2004" .
+
+<http://toxin.vub.be/resource/compound/hc%20blue%20n°%2015>
+        a               ont:Compound ;
+        rdfs:label      "hc blue n° 15" ;
+        ont:compoundOf  <http://toxin.vub.be/resource/dossier/hc%20blue%20n°%2015> .
+
+<http://toxin.vub.be/resource/dossier/HC%20Blue%20n°%2014>
+        a              ont:Report ;
+        rdfs:label     "HC Blue n° 14" ;
+        ont:contains   <http://toxin.vub.be/resource/test/toxicokinetics_skin_absorption/non_oecd/32> ;
+        ont:guideline  <http://toxin.vub.be/resource/guideline/non%20OECD> .
+
+<http://toxin.vub.be/resource/dossier/decamethylcyclopentasiloxane>
+        a              ont:Report ;
+        rdfs:label     "decamethylcyclopentasiloxane" ;
+        ont:contains   <http://toxin.vub.be/resource/test/toxicokinetics_skin_absorption/non_oecd/23> , <http://toxin.vub.be/resource/test/toxicokinetics_skin_absorption/non_oecd/22> ;
+        ont:guideline  <http://toxin.vub.be/resource/guideline/non%20OECD> ;
+        ont:seeAlso    <http://toxin.vub.be/resource/pdfLink/https%3A%2F%2Fec.europa.eu%2Fhealth%2Fscientific_committees%2Fconsumer_safety%2Fdocs%2Fsccs_o_048.pdf> , <http://toxin.vub.be/resource/pdfLink/https%3A%2F%2Fec.europa.eu%2Fhealth%2Fscientific_committees%2Fconsumer_safety%2Fdocs%2Fsccs_o_039.pdf> .
+
+<http://toxin.vub.be/resource/test/toxicokinetics_skin_absorption/non_oecd/20>
+        a                   ont:Test ;
+        ont:glp             "no" ;
+        ont:guideline       <http://toxin.vub.be/resource/guideline/non%20OECD> ;
+        ont:guidelineLabel  "non OECD" ;
+        ont:klimisch_score  "the number of donors and replicates used in this study is not known. the exposure time (6 and 16 hours) is not in accordance with the SCCS notes of guidance. membrane integrity of the rat and porcine skin were not checked prior to the experiment. the composition of the tested cream formulations was not provided to the SCCS. only mean values were presented, no standard deviations. retinyl palmitate does not dissolve in the receptor fluid used and therefore the results of this study are not considered valid. a further study which did not meet current testing and assessment requirements predominantly due to an insufficient recovery rate was carried out with retinyl palmitate in vitro on porcine skin, using an O/W preparation with content of 0.7% retinyl palmitate. the influence of different vehicles was additionally investigated. freshly dermatomed porcine skin was put on the glass diffusion cells. a total amount of 20 mg/5 cm² (4 mg/cm²) cream was applied corresponding to a retinyl palmitate concentration of 140 μg/5 cm² or 35 μg/cm². the application areas were covered to avoid impairment from light. after an exposure time of 24 hours, the remaining test preparations were removed from the skin surface. the receptor fluid was taken of the cell and the SC was removed by 15–20 tape strippings. the epidermis was separated from the dermis after heating. analysis was performed by HPLC. the total recovery ranged between about 70 – 80% irrespectively of the vehicle used. however, the usage of aqueous vehicles led to about twice the rate of absorption than oily vehicles. the authors assumed that the observed loss may be due to oxidative metabolism or due to influence of light during further processing of the skin samples. the topical application for 24 hours showed that 96-100% of the retinyl palmitate that was absorbed (10-20%) was limited to the SC and in this skin compartment, it could only be detected in the upper 6–8 strips of the horny layer. minor amounts <1% were found in the epidermis. penetration into the receptor fluid was not observed. SCCS agrees with the applicant that this study cannot be used in safety assessments. " ;
+        ont:ref_in_dossier  "127, 21" ;
+        ont:type            "in vitro" ;
+        ont:year            "1989" .
+
+<http://toxin.vub.be/resource/dossier/dihydroxyacetone>
+        a              ont:Report ;
+        rdfs:label     "dihydroxyacetone" ;
+        ont:contains   <http://toxin.vub.be/resource/test/toxicokinetics_skin_absorption/non_oecd/28> ;
+        ont:guideline  <http://toxin.vub.be/resource/guideline/non%20OECD> .
+
+<http://toxin.vub.be/resource/test/toxicokinetics_skin_absorption/non_oecd/18>
+        a                   ont:Test ;
+        ont:glp             "yes" ;
+        ont:guideline       <http://toxin.vub.be/resource/guideline/non%20OECD> ;
+        ont:guidelineLabel  "non OECD" ;
+        ont:klimisch_score  "the number of donors and study duration were not in accordance to the SCCS notes of guidance. membrane integrity of the human skin was not checked prior to the experiment. the composition of the nanocapsules was not provided to the SCCS. only mean values were\r\npresented for the systemically available amount. standard errors were reported instead of standard deviations. no effect of the nanocapsules was observed. " ;
+        ont:ref_in_dossier  "98" ;
+        ont:type            "in vitro" ;
+        ont:year            "1997" .
+
+<http://toxin.vub.be/resource/dossier/HC%20Yellow%20n°13>
+        a              ont:Report ;
+        rdfs:label     "HC Yellow n°13" ;
+        ont:contains   <http://toxin.vub.be/resource/test/toxicokinetics_skin_absorption/non_oecd/25> ;
+        ont:guideline  <http://toxin.vub.be/resource/guideline/non%20OECD> ;
+        ont:seeAlso    <http://toxin.vub.be/resource/pdfLink/https%3A%2F%2Fec.europa.eu%2Fhealth%2Fscientific_committees%2Fconsumer_safety%2Fdocs%2Fsccs_o_198.pdf> .
+
+<http://toxin.vub.be/resource/test/toxicokinetics_skin_absorption/non_oecd/5>
+        a                         ont:Test ;
+        ont:compound              <http://toxin.vub.be/resource/compound/triclosan> ;
+        ont:compoundLabel         "triclosan" ;
+        ont:glp                   "no" ;
+        ont:guideline             <http://toxin.vub.be/resource/guideline/non%20OECD> ;
+        ont:guidelineLabel        "non OECD" ;
+        ont:ref_in_dossier        "141" ;
+        ont:scss_comment_to_test  "Plasma Protein Binding: An in vitro study was conducted with serum derived from a healthy donor’s blood to estimate the binding of 14C-labelled GP 41353 to serum proteins (specifically albumin) using equilibrium dialysis. At concentrations ranging from 0.36 to 7.9 µg/mL, 99.8% of the drug was bound to serum proteins. There was no indication of saturation of binding sites, and the ratio of the unbound fraction to the bound fraction remained constant with increasing concentrations. At concentrations ranging from 0.095 to 9.1 µg/mL, 98.9% of the drug was bound to albumin, with no indication of saturation of binding sites. It was therefore concluded that, in plasma, the majority of the drug binds to albumin. Equilibrium dialysis showed that dialysis time is 60 minutes and that GP 41353 is bound to protein more firmly than it adheres to the membrane [Wagner, 1973 (141)]" ;
+        ont:type                  "in vitro" ;
+        ont:year                  "1973" .
+
+<http://toxin.vub.be/resource/test/toxicokinetics_skin_absorption/non_oecd/12>
+        a                            ont:Test ;
+        ont:absorption_profile       "the penetration rates using the mini pig skin samples were lower than the naked rat skin" ;
+        ont:additional_info          "test substance: bmhca" ;
+        ont:compound                 <http://toxin.vub.be/resource/compound/butylphenyl%20methylpropional%20%28p-bmhca%29> ;
+        ont:compoundLabel            "butylphenyl methylpropional (p-bmhca)" ;
+        ont:conclusion               "Based on the dermal absorption studies in vitro, it becomes obvious that skin penetration depends on time and species, but less on the kind of formulation." ;
+        ont:dose_level_unit          "mg/cm2 (36 μg/cm2 active substance)" ;
+        ont:dose_levels              "6" ;
+        ont:exposed_area             "5" ;
+        ont:formulation              "\"cream 02_TD2=A”, and “cream 04_TD1=B” with “bases” that may have been used include: vaseline, hydrated wool-wax-alcohol ointment, hydrated hydrophilic ointment, polyethylene glycol ointment, and other “suitable” vehicles" ;
+        ont:guideline                <http://toxin.vub.be/resource/guideline/non%20OECD> ;
+        ont:guidelineLabel           "non OECD" ;
+        ont:receptor_fluid           "16 hours: 6.1/6.6% (2.19/2.38 μg/cm2 ) in the chamber fluid" ;
+        ont:ref_in_dossier           "Roche 1986c, RIFM#56764" , "test substance: bmhca" ;
+        ont:scss_comment_to_test     "sccs conclusion on dermal/percutaneous absorption: dermal absorption studies in vitro demonstrated species-specific effects. the bioavailable portion was found much higher in rats (66.1 and 50.8%) when compared to mini pigs (0.8% and 4.9%), thereby depending on the solvent used (methylcarbitol or ethanol). in a second study, applying two real cream formulations (that contained 0.6% bmhca), rat skin again allowed a much higher penetration (45.2% and 78.4%) than mini pig skin (23.6% and 25.7%). nevertheless, the fraction of bioavailable bmhca was found strongly increased in the mini pig experiment when moving from dissolved bmhca to real cream formulations (4.9% vs. 25.7%). concurrently, administration of bmhca onto the skin of experimental animals and humans demonstrated permeation and systemic availability of this compound. percutaneous absorption of bmhca in humans was lower when compared with rats (1.4 vs. 19%). upon dermal application of [14c]-bmhca (11.37 mg test substance in 70% ethanol on 10 cm2 back skin) on 3 human volunteers for 6 hours, a mean of 1.4% (range 0.8 – 2.4%) of the applied dose was excreted in urine within 24 hours, whereas radioactivity was below the detection limit in urine samples of later time points and in all faeces and blood plasma samples. the overall mean total recovery of topical application of [14c]-bmhca was 71 ± 10%. in comparison to the in vitro observations, the absorption rate found in humans for ethanolic solutions of bmhca was comparable to what has been found in excised mini pig skin. given that the absorption of bmhca in mini pig skin was much higher when this compound was applied via real cream formulations, it is reasonable to conclude that bmhca might also better penetrate human skin when it is applied in cream formulations. since there is no further experimental data on this subject, the sccs concludes that the maximum fraction of bmhca being absorbed by human skin might be in the range of 25% rather than at 2.4%. in consideration of the comparability of pig skin with human skin, the dermal bioavailability of ethanolic (dissolved) bmhca to be used in the calculation of the systemic exposure dose (sed) and margin of safety (mos) will be set at 5% (worst case scenario based on 1% bmhca in etoh applied at 120 μg substance/cm2 onto 5 cm2 excised mini pig skin; result: total of 5.87 μg substance/cm2 found in stripped skin and chamber fluid after 16 hrs of exposure). on the other hand, the penetration rate of bmhca applied onto the skin as ingredient of creamy formulations will be set at 25% (worst case scenario based on 36 μg substance/cm2 applied onto 5 cm2 excised mini pig skin; mean out of two experiments: total of 8.88 μg substance/cm2 found in stripped skin and chamber fluid after 16 hrs of exposure). the sccs is aware of the issue that the exact identity of the cream formulations applied in the latter study remains obscure. the results obtained from the part of the study with 1% ethanolic bmhca can further be used to assess the sed for hydroalcoholic products to be applied on a defined surface area of shaved or unshaved skin once daily (1 x 305 cm2/day). here, an absorption of about 6 μg substance/cm2 can be assumed for unshaved skin (stratum corneum intact). for shaved skin (stratum corneum compromised), however, the total absorption would be 11 μg substance/cm2 (with the addition of the portion of 4.66 μg/cm2 that was found sticking in the stratum corneum in the respective experiment; cf. above). " ;
+        ont:skin                     "16 hours: 17.5/19.1% (6.30/6.89 μg/cm2 ) in the remaining skin" ;
+        ont:source_and_site_of_skin  "mini pig excised skin" ;
+        ont:tabulated_data           "detailed data of skin surface, horny layer, remaining skin and chamber fluid at 1h, 6h and 16 in both cream A and cream B in both species" ;
+        ont:test_substance_concentration
+                "0.6" ;
+        ont:type                     "in vitro" .
+
+<http://toxin.vub.be/resource/test/toxicokinetics_skin_absorption/non_oecd/25>
+        a                            ont:Test ;
+        ont:additional_info          "Test substance: HC Yellow n° 13" ;
+        ont:analytical_method_validation
+                "Propranolol, atenolol, vinblastine and ranitidine were analysed concurrently to demonstrate the validity of the test system. According to the laboratory’s classification system, a low permeability is considered for test items revealing a Papp < 2 x 10-6 cm/sec. A Papp of 2 - 20 x 10-6 cm/sec and a Papp ≥ 20 x 10-6 cm/sec classify a substance to have a moderate and a high permeability, respectively. As recommended by FDA, ranitidine (50 % absorption in humans) was used as the low permeability reference compound and propranolol (90 % absorption in humans) was used as the high permeability reference compound. The permeability figures for the reference substances propranolol (Papp = 58.2 and 48.0 x 10-6 cm/sec), a high permeability reference compound with 90 % absorption in humans, and ranitidine (Papp = 0.2 and <0.1 x 10-6 cm/sec), known to be absorbed at about 50 % in humans, were within acceptance range of 20 - 60 x 10-6 cm/sec and 0.0 - 2 x 10-6 cm/sec, respectively and demonstrated the validity of the assay." ;
+        ont:assay_method             "HLPC-MS/MS" ;
+        ont:chemical_batch_nr        "97/92/1094" ;
+        ont:compound                 <http://toxin.vub.be/resource/compound/HC%20Yellow%20n°13> ;
+        ont:compoundLabel            "HC Yellow n°13" ;
+        ont:conclusion               "A mean permeability in human intestinal epithelial (TC-7) cells of 82.6 x 10-6 cm/sec was obtained with HC Yellow n° 13 which classifies the test item to be of high permeability. As the absorption across the intestinal epithelium is considered to be the limiting factor of the uptake through the gastro-intestinal tract, the high permeability observed in this assay indicates a good absorption of HC Yellow n° 13 after oral administration." ;
+        ont:discussion_and_result    "For HC Yellow n° 13 a Papp of 82.6 x 10-6 cm/sec (86.7 and 78.5 x 10-6 cm/sec) was determined and thus the test substance was classified to be of high permeability, indicating a good absorption from the gastrointestinal tract." ;
+        ont:duration_of_exposure     "60min" ;
+        ont:glp                      "no" ;
+        ont:guideline                <http://toxin.vub.be/resource/guideline/non%20OECD> ;
+        ont:guidelineLabel           "non OECD" ;
+        ont:purity                   "99.9 a" ;
+        ont:ref_in_dossier           "Test substance: HC Yellow n° 13" , "30" ;
+        ont:scss_comment_to_test     "The study was not performed under GLP conditions, but a statement of the quality assurance unit of the test facility is included. There is no official guideline for this assay. However, the study was performed according to ECVAM recommendations. The generated data is considered to provide an estimation of the bioavailability of HC Yellow n° 13 after oral administration." ;
+        ont:skin_integratity_and_barrier_function
+                "14C-mannitol (about 4 µM) was used to demonstrate the integrity of the cell monolayer. Only monolayers revealing a permeability of < 2.5 x 10-6 cm/sec were used." ;
+        ont:source_and_site_of_skin  "Human intestinal epithelial cell line TC-7" ;
+        ont:test_substance_concentration
+                "10 µM" ;
+        ont:total_recovery           "73 to 162 %" ;
+        ont:type                     "in vitro" ;
+        ont:vehicle                  "HBSS buffer containing 1 % DMSO" .
+
+<http://toxin.vub.be/resource/dossier/butylphenyl%20methylpropional%20%28p-bmhca%29>
+        a              ont:Report ;
+        rdfs:label     "butylphenyl methylpropional (p-bmhca)" ;
+        ont:contains   <http://toxin.vub.be/resource/test/toxicokinetics_skin_absorption/non_oecd/13> , <http://toxin.vub.be/resource/test/toxicokinetics_skin_absorption/non_oecd/11> , <http://toxin.vub.be/resource/test/toxicokinetics_skin_absorption/non_oecd/12> , <http://toxin.vub.be/resource/test/toxicokinetics_skin_absorption/non_oecd/10> , <http://toxin.vub.be/resource/test/toxicokinetics_skin_absorption/non_oecd/14> ;
+        ont:guideline  <http://toxin.vub.be/resource/guideline/non%20OECD> ;
+        ont:seeAlso    <http://toxin.vub.be/resource/pdfLink/https%3A%2F%2Fec.europa.eu%2Fhealth%2Fsites%2Fhealth%2Ffiles%2Fscientific_committees%2Fconsumer_safety%2Fdocs%2Fsccs_o_222.pdf> , <http://toxin.vub.be/resource/pdfLink/https%3A%2F%2Fec.europa.eu%2Fhealth%2Fscientific_committees%2Fconsumer_safety%2Fdocs%2Fsccs_o_189.pdf> .
+
+<http://toxin.vub.be/resource/dossier/diethylene%20glycol%20monoethyl%20ether%20%28DEGEE%29>
+        a              ont:Report ;
+        rdfs:label     "diethylene glycol monoethyl ether (DEGEE)" ;
+        ont:contains   <http://toxin.vub.be/resource/test/toxicokinetics_skin_absorption/non_oecd/27> ;
+        ont:guideline  <http://toxin.vub.be/resource/guideline/non%20OECD> ;
+        ont:seeAlso    <http://toxin.vub.be/resource/pdfLink/https%3A%2F%2Fec.europa.eu%2Fhealth%2Fscientific_committees%2Fconsumer_safety%2Fdocs%2Fsccs_o_062.pdf> .
+
+<http://toxin.vub.be/resource/dossier/1%2C2%2C4-trihydroxybenzene%20>
+        a              ont:Report ;
+        rdfs:label     "1,2,4-trihydroxybenzene " ;
+        ont:contains   <http://toxin.vub.be/resource/test/toxicokinetics_skin_absorption/non_oecd/15> ;
+        ont:guideline  <http://toxin.vub.be/resource/guideline/non%20OECD> ;
+        ont:seeAlso    <http://toxin.vub.be/resource/pdfLink/https%3A%2F%2Fec.europa.eu%2Fhealth%2Fscientific_committees%2Fconsumer_safety%2Fdocs%2Fsccs_o_199.pdf> .
+
+<http://toxin.vub.be/resource/compound/diethylene%20glycol%20monoethyl%20ether%20%28DEGEE%29>
+        a               ont:Compound ;
+        rdfs:label      "diethylene glycol monoethyl ether (DEGEE)" ;
+        ont:compoundOf  <http://toxin.vub.be/resource/dossier/diethylene%20glycol%20monoethyl%20ether%20%28DEGEE%29> .
+
+<http://toxin.vub.be/resource/dossier/basic%20violet%202>
+        a              ont:Report ;
+        rdfs:label     "basic violet 2" ;
+        ont:contains   <http://toxin.vub.be/resource/test/toxicokinetics_skin_absorption/non_oecd/8> ;
+        ont:guideline  <http://toxin.vub.be/resource/guideline/non%20OECD> ;
+        ont:seeAlso    <http://toxin.vub.be/resource/pdfLink/https%3A%2F%2Fec.europa.eu%2Fhealth%2Fscientific_committees%2Fconsumer_safety%2Fdocs%2Fsccs_o_028.pdf> .
+
+<http://toxin.vub.be/resource/test/toxicokinetics_skin_absorption/non_oecd/32>
+        a                              ont:Test ;
+        ont:absorption_profile         "presence of hair : 0.035 ± 0.026% of the applied dose, i.e. 25.03 ± 19.87 ng/cm²; absence of hair: 0.015 ± 0.008% of the applied dose, i.e. 10.53 ± 5.82 ng/cm²" ;
+        ont:additional_info            "test substance: imexine bj, 1,4-bis-(2,3-dihydroxy-propylamino)-anthraquinone. the test substance was prepared at a concentration of 0.3% (97.3% of active material in the dye) in a “commercial type” formulation." ;
+        ont:assay_method               "HPLC – UV detection" ;
+        ont:chemical_batch_nr          "Pil 1" ;
+        ont:composition                "phosphate buffer (DUBELCCO)" ;
+        ont:compound                   <http://toxin.vub.be/resource/compound/HC%20Blue%20n°%2014> ;
+        ont:compoundLabel              "HC Blue n° 14" ;
+        ont:conclusion                 "the quantity of Imexine BJ (cumulated amount) penetrating after a contact of 30 minutes through the epidermis to the receptor fluid during the 24 hours of the test, was higher in presence of hair (0.035 ± 0.026% of the applied dose, i.e. 25.03 ± 19.87 ng/cm²) than in absence of hair (0.015 ± 0.008% of the applied dose, i.e. 10.53 ± 5.82 ng/cm²)." ;
+        ont:details_of_removal_and_washing
+                "washing with water and with a sls (2%) aqueous solution, then the skin was dried with a cotton swab. " ;
+        ont:dose_level_unit            "mg/cm² (concentration tested 0.3%, application 40 mg of formulation over 2 cm² )" ;
+        ont:dose_levels                "20" ;
+        ont:duration_of_exposure       "0.5" ;
+        ont:exposed_area               "2 cm²" ;
+        ont:formulation                "standard commercial type formulation" ;
+        ont:glp                        "yes" ;
+        ont:guideline                  <http://toxin.vub.be/resource/guideline/non%20OECD> ;
+        ont:guidelineLabel             "non OECD" ;
+        ont:homogeneity_and_stability  "Stability: no information. The test substance was prepared at a concentration of 0.3% (97.3% of active material in the dye) in a “commercial type” formulation." ;
+        ont:homogeneity_stability      "Stability: no information. The test substance was prepared at a concentration of 0.3% (97.3% of active material in the dye) in a “commercial type” formulation." ;
+        ont:limits_of_detection        "1 ng/ml" ;
+        ont:method_of_preparation      "isolated epidermis separated from dermis by heat." ;
+        ont:purity                     "94.6 (hplc)" ;
+        ont:ref_in_dossier             "test substance: imexine bj, 1,4-bis-(2,3-dihydroxy-propylamino)-anthraquinone. the test substance was prepared at a concentration of 0.3% (97.3% of active material in the dye) in a “commercial type” formulation." , "11 (subm. I)" ;
+        ont:replicates                 "5 (two diffusion cells per skin donor for each condition of application (9 cells without hair, 11 cells with hair, - diffusion cells treated with a placebo)." ;
+        ont:sampling                   "4.5 hours and 24 hours" ;
+        ont:scss_comment_to_test       "because (i) this study did not include determination of the recovery of the test substance, (ii) the amount of material present in the skin at the end of the test is unknown, it is considered inadequate." ;
+        ont:skin_integratity_and_barrier_function
+                "visual evaluation using a microscope before the test. at the end of the test, application of chinese ink to verify the absence of leakage. conditions: application on the epidermis and on the epidermis covered by human hair (10 mg of finely cut bleached hair over 2 cm²). imexine bj was not assayed in the washing fluids or in the epidermis at the end of the test. the mass balance of the experiment was not calculated." ;
+        ont:source_and_site_of_skin    "human skin from 5 donors (absorption across isolated epidermis)" ;
+        ont:static                     "in vitro static diffusion cell" ;
+        ont:type                       "in vitro" .
+
+<http://toxin.vub.be/resource/test/toxicokinetics_skin_absorption/non_oecd/17>
+        a                   ont:Test ;
+        ont:glp             "no" ;
+        ont:guideline       <http://toxin.vub.be/resource/guideline/non%20OECD> ;
+        ont:guidelineLabel  "non OECD" ;
+        ont:klimisch_score  "the number of donors used in this study is not in accordance with the SCCS  notes of guidance. as this study concerns a scientific paper, not all raw data is available to SCCS. only mean values are presented for the systemically-available amount. standard errors are reported instead of standard deviations." ;
+        ont:ref_in_dossier  "168" ;
+        ont:type            "in vitro" .
+
+<http://toxin.vub.be/resource/compound/butylphenyl%20methylpropional%20%28p-bmhca%29>
+        a               ont:Compound ;
+        rdfs:label      "butylphenyl methylpropional (p-bmhca)" ;
+        ont:compoundOf  <http://toxin.vub.be/resource/dossier/butylphenyl%20methylpropional%20%28p-bmhca%29> .
+
+<http://toxin.vub.be/resource/compound/decamethylcyclopentasiloxane>
+        a               ont:Compound ;
+        rdfs:label      "decamethylcyclopentasiloxane" ;
+        ont:compoundOf  <http://toxin.vub.be/resource/dossier/decamethylcyclopentasiloxane> .
+
+<http://toxin.vub.be/resource/test/toxicokinetics_skin_absorption/non_oecd/4>
+        a                              ont:Test ;
+        ont:absorption_profile         "Autoradiography of skin at 10 minutes after a single application of the various [3H]DP300 soap suspensions showed very low silver grain densities on the stratum corneum and in the epidermis, low or very low densities in the upper dermis, and very low or nil densities in the lower dermis. No grains were seen in the follicles or sebaceous glands. At 48 h after the single application, no silver grains were seen, except in the corneum after application of the fresh soap preparation. " ;
+        ont:additional_info            "test substance: DP300" ;
+        ont:administration_scheme      "single versus 6 applications in 3 days" ;
+        ont:assay_method               "liquid scintillation counting" ;
+        ont:compound                   <http://toxin.vub.be/resource/compound/triclosan> ;
+        ont:compoundLabel              "triclosan" ;
+        ont:conclusion                 "Scintillation counting showed no significant differences between the soap vehicles or in the single vs. repeated applications." ;
+        ont:duration_of_exposure       "2m" ;
+        ont:exposed_area               "20cm2" ;
+        ont:formulation                "0.25 mL of an 8% (w/v) conventional soap (freshly prepared or equilibrated over 1 week) or non-soap detergent suspension (freshly prepared) each containing 0.08% (w/v) [3H]DP300" ;
+        ont:glp                        "no" ;
+        ont:guideline                  <http://toxin.vub.be/resource/guideline/non%20OECD> ;
+        ont:guidelineLabel             "non OECD" ;
+        ont:homogeneity_and_stability  "both suspension prepared freshly" ;
+        ont:homogeneity_stability      "both suspension prepared freshly" ;
+        ont:ref_in_dossier             "test substance: DP300" , "27" ;
+        ont:scss_comment_to_test       "The results from this autoradiography study indicated no significant differences in the low levels of percutaneous absorption between different soap vehicles or between single versus multiple applications. Overall, the dermal absorption of triclosan was shown in these in vitro studies to be lower in human skin than in rat (7.2 to 30.3% versus 41.2% in studies in rats, including the data from the study using ethanol/water formulation)]. " ;
+        ont:source_and_site_of_skin    "human lower back skin" ;
+        ont:test_substance_concentration
+                "0.08" ;
+        ont:type                       "in vitro" ;
+        ont:volume                     "0.25 mL" ;
+        ont:year                       "1975" .
+
+<http://toxin.vub.be/resource/compound/acid%20orange%207>
+        a               ont:Compound ;
+        rdfs:label      "acid orange 7" ;
+        ont:compoundOf  <http://toxin.vub.be/resource/dossier/acid%20orange%207> .
+
+<http://toxin.vub.be/resource/test/toxicokinetics_skin_absorption/non_oecd/11>
+        a                            ont:Test ;
+        ont:absorption_profile       "the bioavailable portion (chamber fluid, stripped skin) in hairless rat skin is significantly higher when compared to the skin of mini pigs." ;
+        ont:additional_info          "test substance: bmhca" ;
+        ont:administration_scheme    "single dermal" ;
+        ont:compound                 <http://toxin.vub.be/resource/compound/butylphenyl%20methylpropional%20%28p-bmhca%29> ;
+        ont:compoundLabel            "butylphenyl methylpropional (p-bmhca)" ;
+        ont:conclusion               "Based on the dermal absorption studies in vitro, it becomes obvious that skin penetration depends on time and species, but less on the kind of formulation." ;
+        ont:dose_level_unit          "µl/cm2" ;
+        ont:dose_levels              "12" ;
+        ont:duration_of_exposure     "30 sec" ;
+        ont:exposed_area             "5" ;
+        ont:formulation              "dissolved in txo vehicles reaching 120µg/cm2" ;
+        ont:guideline                <http://toxin.vub.be/resource/guideline/non%20OECD> ;
+        ont:guidelineLabel           "non OECD" ;
+        ont:liquid                   "yes" ;
+        ont:receptor_fluid           "24 hrs after exposure to BMHCA in methylcarbitol: 5.1% (6.14 μg/cm2) in the chamber fluid / 16 hrs after exposure to BMHCA in ethanol: 20.8% (24.93 μg/cm2) in the chamber fluid." ;
+        ont:ref_in_dossier           "Roche 1982d, RIFM#56763" , "test substance: bmhca" ;
+        ont:sampling                 "1, 6, 16 and 24h" ;
+        ont:scss_comment_to_test     "sccs conclusion on dermal/percutaneous absorption: dermal absorption studies in vitro demonstrated species-specific effects. the bioavailable portion was found much higher in rats (66.1 and 50.8%) when compared to mini pigs (0.8% and 4.9%), thereby depending on the solvent used (methylcarbitol or ethanol). in a second study, applying two real cream formulations (that contained 0.6% bmhca), rat skin again allowed a much higher penetration (45.2% and 78.4%) than mini pig skin (23.6% and 25.7%). nevertheless, the fraction of bioavailable bmhca was found strongly increased in the mini pig experiment when moving from dissolved bmhca to real cream formulations (4.9% vs. 25.7%). concurrently, administration of bmhca onto the skin of experimental animals and humans demonstrated permeation and systemic availability of this compound. percutaneous absorption of bmhca in humans was lower when compared with rats (1.4 vs. 19%). upon dermal application of [14c]-bmhca (11.37 mg test substance in 70% ethanol on 10 cm2 back skin) on 3 human volunteers for 6 hours, a mean of 1.4% (range 0.8 – 2.4%) of the applied dose was excreted in urine within 24 hours, whereas radioactivity was below the detection limit in urine samples of later time points and in all faeces and blood plasma samples. the overall mean total recovery of topical application of [14c]-bmhca was 71 ± 10%. in comparison to the in vitro observations, the absorption rate found in humans for ethanolic solutions of bmhca was comparable to what has been found in excised mini pig skin. given that the absorption of bmhca in mini pig skin was much higher when this compound was applied via real cream formulations, it is reasonable to conclude that bmhca might also better penetrate human skin when it is applied in cream formulations. since there is no further experimental data on this subject, the sccs concludes that the maximum fraction of bmhca being absorbed by human skin might be in the range of 25% rather than at 2.4%. in consideration of the comparability of pig skin with human skin, the dermal bioavailability of ethanolic (dissolved) bmhca to be used in the calculation of the systemic exposure dose (sed) and margin of safety (mos) will be set at 5% (worst case scenario based on 1% bmhca in etoh applied at 120 μg substance/cm2 onto 5 cm2 excised mini pig skin; result: total of 5.87 μg substance/cm2 found in stripped skin and chamber fluid after 16 hrs of exposure). on the other hand, the penetration rate of bmhca applied onto the skin as ingredient of creamy formulations will be set at 25% (worst case scenario based on 36 μg substance/cm2 applied onto 5 cm2 excised mini pig skin; mean out of two experiments: total of 8.88 μg substance/cm2 found in stripped skin and chamber fluid after 16 hrs of exposure). the sccs is aware of the issue that the exact identity of the cream formulations applied in the latter study remains obscure. the results obtained from the part of the study with 1% ethanolic bmhca can further be used to assess the sed for hydroalcoholic products to be applied on a defined surface area of shaved or unshaved skin once daily (1 x 305 cm2/day). here, an absorption of about 6 μg substance/cm2 can be assumed for unshaved skin (stratum corneum intact). for shaved skin (stratum corneum compromised), however, the total absorption would be 11 μg substance/cm2 (with the addition of the portion of 4.66 μg/cm2 that was found sticking in the stratum corneum in the respective experiment; cf. above). " ;
+        ont:skin                     "24 hrs after exposure to BMHCA in methylcarbitol: 7.0% (8.35 μg/cm2 ) in the stratum corneum, 61% (73.23 μg/cm2 ) in the stripped skin / 16 hrs after exposure to BMHCA in ethanol: 4.8% (5.81 μg/cm2) in the stratum corneum, 30% (36.05 μg/cm2) in the stripped skin" ;
+        ont:source_and_site_of_skin  "rat naked excised skin" ;
+        ont:test_substance_concentration
+                "1" ;
+        ont:type                     "in vitro" ;
+        ont:vehicle                  "methylcarbito / ethanol" .
+
+<http://toxin.vub.be/resource/compound/hc%20red%20n°%2010%20%2B%20hc%20red%20n°%2011>
+        a               ont:Compound ;
+        rdfs:label      "hc red n° 10 + hc red n° 11" ;
+        ont:compoundOf  <http://toxin.vub.be/resource/dossier/hc%20red%20n°%2010%20%2B%20hc%20red%20n°%2011> .
+
+<http://toxin.vub.be/resource/test/toxicokinetics_skin_absorption/non_oecd/24>
+        a                            ont:Test ;
+        ont:additional_info          "test substance: HC Red n°13" ;
+        ont:analytical_method_validation
+                "Propranolol, vinblastine and ranitidine were analysed concurrently to demonstrate the validity of the test system. According to the laboratory’s classification system, a low permeability was considered for test items revealing a Papp < 2 x 10-6 cm/sec. A Papp of 2 - 20 x 10-6 cm/sec and a Papp ≥ 20 x 10-6 cm/sec classify a substance to have a moderate and a high permeability, respectively. As recommended by FDA, ranitidine (50 % absorption in humans) was used as the low permeability reference compound and propanolol (90% absorption in humans) was used as the high permeability reference compound. The figures for the reference substances propranolol (Papp = 25.9 x 10-6 cm/sec) and ranitidine (Papp = 0.2 x 10 –6 sec) were well within the acceptable range for these compounds of 20 – 45 x 10-6 cm/sec and 0.2 – 2 x 10-6 cm/sec, respectively, and demonstrated the validity of the assay." ;
+        ont:assay_method             "HLPC-MS/MS" ;
+        ont:chemical_batch_nr        "4/5/6-1 Fass 3" ;
+        ont:compound                 <http://toxin.vub.be/resource/compound/hc%20red%20n°%2013> ;
+        ont:compoundLabel            "hc red n° 13" ;
+        ont:conclusion               "HC Red n° 13 revealed a Papp of 37.1 x 10-6 cm/sec and thus was classified to be of high permeability. The observed value indicates a good absorption from the gastro-intestinal tract." ;
+        ont:duration_of_exposure     "60min" ;
+        ont:glp                      "no" ;
+        ont:guideline                <http://toxin.vub.be/resource/guideline/non%20OECD> ;
+        ont:guidelineLabel           "non OECD" ;
+        ont:purity                   "98.4" ;
+        ont:ref_in_dossier           "34" , "test substance: HC Red n°13" ;
+        ont:skin_integratity_and_barrier_function
+                "14C-mannitol (about 4 μM) was used to demonstrate the integrity of the cell monolayer. Only monolayer revealing a permeability of < 2.5 x 10-6 cm/sec were used." ;
+        ont:source_and_site_of_skin  "Human intestinal epithelial cell line TC-7" ;
+        ont:test_substance_concentration
+                "≤ 50 μM" ;
+        ont:total_recovery           "59 to 97 %" ;
+        ont:type                     "in vitro" ;
+        ont:vehicle                  "HBSS buffer containing 1 % DMSO" .
+
+<http://toxin.vub.be/resource/compound/HC%20Yellow%20n°13>
+        a               ont:Compound ;
+        rdfs:label      "HC Yellow n°13" ;
+        ont:compoundOf  <http://toxin.vub.be/resource/dossier/HC%20Yellow%20n°13> .
+
+<http://toxin.vub.be/resource/test/toxicokinetics_skin_absorption/non_oecd/31>
+        a                            ont:Test ;
+        ont:additional_info          "test substance: silver nanoparticles (AgNP) 25nm in size coated with polyvinylpyrrolidone dispersed in ethanol an d diluted in synthetic sweat" ;
+        ont:compound                 <http://toxin.vub.be/resource/compound/EcoG%2B> ;
+        ont:compoundLabel            "EcoG+" ;
+        ont:conclusion               "Low, but detectable, AgNP absorption through intact skin was seen, with 0.0057% passing within one day (according to Bachler et al. 2013). Penetration through damaged skin was five times greater than that through intact skin. Using transmission electron microscopy, AgNP could be detected (in the stratum corneum and upper layers of the epidermis (Larese et al., 2009)." ;
+        ont:duration_of_exposure     "24h" ;
+        ont:guideline                <http://toxin.vub.be/resource/guideline/non%20OECD> ;
+        ont:guidelineLabel           "non OECD" ;
+        ont:method_of_preparation    "full thickness intact and abraded skin" ;
+        ont:ref_in_dossier           "Larese et al." , "test substance: silver nanoparticles (AgNP) 25nm in size coated with polyvinylpyrrolidone dispersed in ethanol an d diluted in synthetic sweat" ;
+        ont:scss_comment_to_test     "The level of 0.1% dermal absorption is considered to be relevant to ‘EcoG+’ and is used for calculations of systemic exposure to silver resulting from the use of this product as cosmetic packaging material." ;
+        ont:source_and_site_of_skin  "human abdominal skin" ;
+        ont:type                     "in vitro" ;
+        ont:year                     "2009" .
+
+<http://toxin.vub.be/resource/test/toxicokinetics_skin_absorption/non_oecd/9>
+        a                            ont:Test ;
+        ont:absorption_profile       "for disperse violet 1 a Papp of 33.3 x 10-6 cm/sec (30.62 and 36.05 x 10-6 cm/sec) was determined and thus the test substance was classified to be of high permeability, indicating a good absorption from the gastrointestinal tract." ;
+        ont:additional_info          "test substance: disperse violet 1.purity:  98.9 area% (hplc, 254 nm), 99.2 area% (hplc, 548 nm) " ;
+        ont:analytical_method_validation
+                "propranolol, atenolol, vinblastine and ranitidine were analysed concurrently to demonstrate the validity of the test system. according to the laboratory’s classification system, a low permeability is considered for test itemsrevealing a P app <2x10-6 cm/sec. a P app of2-20x10-6 cm/sec and a P app ≥ 20x10-6 cm/sec classify a substance to have a moderate and a high permeability, respectively. as recommended by fda, ranitidine (50 % absorption in humans) was used as the low permeability reference compound and propranolol (90 % absorption in humans) was used as the high permeability reference compound. the permeability figures for the reference substances propranolol (two experiments with mean Papp = 58.2 and 48.0 x 10-6 cm/sec), a high permeability reference compound with 90 % absorption in humans, and ranitidine (two experiments with mean Papp = 0.2 and <0.1 x 10-6 cm/sec), known to be absorbed at about 50 % in humans, were within the acceptance range of 20 - 60 x 10-6 cm/sec and 0 - 2 x 10-6 cm/sec, respectively and demonstrated the validity of the assay." ;
+        ont:assay_method             "hplc-ms/ms" ;
+        ont:chemical_batch_nr        "mb002" ;
+        ont:compound                 <http://toxin.vub.be/resource/compound/disperse%20violet%201> ;
+        ont:compoundLabel            "disperse violet 1" ;
+        ont:conclusion               "a mean permeability in human intestinal epithelial (TC-7) cells of 33.3 x 10-6 cm/sec was obtained with disperse violet 1 which classifies the test item to be of high permeability. as the absorption across the intestinal epithelium is considered to be the limiting factor of the uptake through the gastro-intestinal tract, the high permeability observed in this assay indicates a good absorption of disperse violet 1 after oral administration. " ;
+        ont:dose_level_unit          "µM" ;
+        ont:dose_levels              "10" ;
+        ont:duration_of_exposure     "60mins" ;
+        ont:formulation              "test substance in hbss buffer containng 1%dmso" ;
+        ont:glp                      "no" ;
+        ont:guideline                <http://toxin.vub.be/resource/guideline/non%20OECD> ;
+        ont:guidelineLabel           "non OECD" ;
+        ont:other_test_system        "the permeability from the apical (A, pH 6.5) to the basolateral (B, pH 7.4) side was investigated at 37 °C in 96-well transwell plates with shaking for a 60 min contact time." ;
+        ont:purity                   "98.9" ;
+        ont:ref_in_dossier           "30 (subm. 2)" , "test substance: disperse violet 1.purity:  98.9 area% (hplc, 254 nm), 99.2 area% (hplc, 548 nm) " ;
+        ont:replicates               "two independent experiments" ;
+        ont:scss_comment_to_test     "the study was not performed under glp conditions, but a statement of the quality assurance unit of the test facility is included. there is no official guideline for this assay. however, the study was performed according to ecvam recommendations. due to the low recovery of disperse violet 1 the generated data is considered of questionable value for the estimation of the bioavailability after oral administration." ;
+        ont:skin_integratity_and_barrier_function
+                "14C-mannitol (about 4 μM) was used to demonstrate the integrity of the cell monolayer. only monolayers revealing a permeability of < 2.5 x 10-6 cm/sec were used." ;
+        ont:source_and_site_of_skin  "human intestinal epithelial cell line TC-7" ;
+        ont:specific_activity        "the study was not performed under glp conditions, but a statement of the quality assurance unit of the test facility is included. there is no official guideline for this assay. however, the study was performed according to ecvam recommendations. due to the low recovery of disperse violet 1 the generated data is considered of questionable value for the estimation of the bioavailability after oral administration. " ;
+        ont:total_recovery           "the total recovery for the reference substances ranged from 73 to 162 % (mean of 2 values) while for disperse violet 1 the recovery was only 10 % ." ;
+        ont:type                     "in vitro" ;
+        ont:year                     "2005" .
+
+<http://toxin.vub.be/resource/compound/1%2C2%2C4-trihydroxybenzene%20>
+        a               ont:Compound ;
+        rdfs:label      "1,2,4-trihydroxybenzene " ;
+        ont:compoundOf  <http://toxin.vub.be/resource/dossier/1%2C2%2C4-trihydroxybenzene%20> .
+
+<http://toxin.vub.be/resource/test/toxicokinetics_skin_absorption/non_oecd/16>
+        a                            ont:Test ;
+        ont:additional_info          "test substance: retinol" ;
+        ont:compound                 <http://toxin.vub.be/resource/compound/Vitamin%20A%20%28Retinol%2C%20Retinyl%20Acetate%20and%20Retinyl%20Palmitate%29> ;
+        ont:compoundLabel            "Vitamin A (Retinol, Retinyl Acetate and Retinyl Palmitate)" ;
+        ont:flow_through             "flow-through diffusion cells" ;
+        ont:glp                      "no" ;
+        ont:guideline                <http://toxin.vub.be/resource/guideline/non%20OECD> ;
+        ont:guidelineLabel           "non OECD" ;
+        ont:klimisch_score           "the number of donors used in this study is not in accordance with the SCCS notes of guidance. membrane integrity of the rat skin has not been checked prior to the experiment. as this study concerns a scientific paper, not all raw data is available to SCCS. only mean values are presented for the systemically available amount. standard errors are reported instead of standard deviations. " ;
+        ont:method_of_preparation    "Freshly biopsied human skin from abdominal surgery (split thickness skin layer: 200–320 μm)" ;
+        ont:purity                   ">99" ;
+        ont:ref_in_dossier           "168" , "test substance: retinol" ;
+        ont:replicates               "3" ;
+        ont:source_and_site_of_skin  "human, abdominal skin from 2donors" ;
+        ont:type                     "in vitro" .
+
+<http://toxin.vub.be/resource/test/toxicokinetics_skin_absorption/non_oecd/29>
+        a                            ont:Test ;
+        ont:additional_info          "test substance: silver nitrate" ;
+        ont:compound                 <http://toxin.vub.be/resource/compound/EcoG%2B> ;
+        ont:compoundLabel            "EcoG+" ;
+        ont:conclusion               "The dermal absorption of silver nitrate through intact guinea pig skin to be less than 1% after 5 hours of exposure (based on the limits of detection)," ;
+        ont:duration_of_exposure     "5h" ;
+        ont:guideline                <http://toxin.vub.be/resource/guideline/non%20OECD> ;
+        ont:guidelineLabel           "non OECD" ;
+        ont:ref_in_dossier           "test substance: silver nitrate" , "Wahlberg" ;
+        ont:scss_comment_to_test     "The level of 0.1% dermal absorption is considered to be relevant to ‘EcoG+’ and is used for calculations of systemic exposure to silver resulting from the use of this product as cosmetic packaging material." ;
+        ont:source_and_site_of_skin  "guinea pig/intact skin" ;
+        ont:type                     "in vitro" ;
+        ont:year                     "1964" .
+
+<http://toxin.vub.be/resource/compound/EcoG%2B>
+        a               ont:Compound ;
+        rdfs:label      "EcoG+" ;
+        ont:compoundOf  <http://toxin.vub.be/resource/dossier/EcoG%2B> .
+
+<http://toxin.vub.be/resource/compound/basic%20violet%202>
+        a               ont:Compound ;
+        rdfs:label      "basic violet 2" ;
+        ont:compoundOf  <http://toxin.vub.be/resource/dossier/basic%20violet%202> .
+
+<http://toxin.vub.be/resource/dossier/hc%20blue%20n°%2015>
+        a              ont:Report ;
+        rdfs:label     "hc blue n° 15" ;
+        ont:contains   <http://toxin.vub.be/resource/test/toxicokinetics_skin_absorption/non_oecd/7> ;
+        ont:guideline  <http://toxin.vub.be/resource/guideline/non%20OECD> ;
+        ont:seeAlso    <http://toxin.vub.be/resource/pdfLink/https%3A%2F%2Fec.europa.eu%2Fhealth%2Fscientific_committees%2Fconsumer_safety%2Fdocs%2Fsccs_o_066.pdf> .
+
+<http://toxin.vub.be/resource/compound/Boron%20compounds>
+        a               ont:Compound ;
+        rdfs:label      "Boron compounds" ;
+        ont:compoundOf  <http://toxin.vub.be/resource/dossier/Boron%20compounds> .

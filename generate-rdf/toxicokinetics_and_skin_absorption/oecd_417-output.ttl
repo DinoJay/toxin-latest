@@ -1,0 +1,613 @@
+@prefix rr:    <http://www.w3.org/ns/r2rml#> .
+@prefix ont:   <http://ontologies.vub.be/oecd#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+
+<http://toxin.vub.be/resource/test/toxicokinetics_skin_absorption/oecd_417/4>
+        a                            ont:Test ;
+        ont:additional_info          "test substance: 14C-labelled hc blue n° 15 (wr18403); hc blue n° 15 (wr18403)" ;
+        ont:amount_and_rate_of_absorption
+                "oral absorption was calculated in 2 ways - from the urinary data and the plasma data. with the urinary data, the fractional absorption was calculated by dividing the percentage of radioactivity recovered in the urine after oral administration by the percentage of radioactivity recovered in the urine after intravenous administration. for the plasma data absorption was calculated by dividing the dose-normalized area under the curve (auc) after oral administration by the auc after intravenous administration. calculation of the fractional oral absorption from the urine data assumed that the ratio of excreted urinary radioactivity to systemically available radioactivity is constant for both oral and intravenous routes. for the high oral dose group. an average oral absorption of 34% was seen when calculated from the urine data and 33% when calculated from the plasma data, showing comparability between both oral and intravenous routes. for the low oral dose group, an average oral absorption of 62% was observed when calculated from the urine data and 35% when calculated with the plasma data. since urinary excretion tends to be low, calculations based on plasma data were assumed to be more precise." ;
+        ont:batch_number             "labelled cfq13944 batch 1" ;
+        ont:chemical_batch_nr        "bb77-020420" ;
+        ont:compound                 <http://toxin.vub.be/resource/compound/hc%20blue%20n°%2015> ;
+        ont:compoundLabel            "hc blue n° 15" ;
+        ont:conclusion               "dermal penetration of 14C_hc blue n° 15 (wr 18043) was very low. 14C_hc blue n° 15 (wr 18043) administered orally was moderately absorbed. the absorbed hc blue n° 15 (wr 18043) was metabolized in the liver, with excretion via bile into faeces the main route, with slower elimination after dermal application. no parent compound was found in the faecal extracts. four potential metabolite peaks of hc blue n° 15 (wr 18043) were detected. hydroxylation, carboxylation and/or reduction by phase I metabolic enzymes occurred. " ;
+        ont:dose_level_unit          "intravenous mg/kg bw, oral mg/kg bw, oral mg/kg bw" ;
+        ont:dose_levels              "4, 4, 40" ;
+        ont:exposure_other           "plasma concentration versus time curves of hc blue n° 15 (wr 18043) equivalents after oral dosing were similar, with similar Tmax values and dose-normalised Cmax and auc of similar order of magnitude, suggesting linear kinetics over the dose range investigated" ;
+        ont:faeces                   "94% after intravenous dosing, 102% after low oral dosing, 95% after high oral dosing)." ;
+        ont:feeding_and_housing      "yes" ;
+        ont:gavage                   "yes" ;
+        ont:glp                      "yes" ;
+        ont:guideline                <http://toxin.vub.be/resource/guideline/OECD%20417> ;
+        ont:guidelineLabel           "OECD 417" ;
+        ont:halflife_time_depletion  "apparent terminal half-lives were also similar, 29 and 20 h respectively in the low and high oral dose groups and after intravenous administration (17 hours)." ;
+        ont:identified_metabolites   "four potential metabolite peaks of hc blue n° 15 (wr 18043) were detected in faeces extracts and urine samples. it seemed that these were the result of hydroxylation, carboxylation and/or reduction by phase I metabolic enzymes. hydroxylation was the most important. no parent compound was detected in the faeces. " ;
+        ont:intraveneous             "yes" ;
+        ont:labeled_purity           "98" ;
+        ont:n_subject_group          "6" ;
+        ont:own_comment              "the number animal per group is mentioned 6 but the given information indicates only 4 animals" ;
+        ont:purity                   "38.5" ;
+        ont:ref_in_dossier           "25" ;
+        ont:samples                  "urine and faeces were collected over 0-8, 8-24, 24-48. 48-72 and 72· 96 h and the animals were killed 96 hours postdosing (adme study). blood sampled from selected rats at 0.25, 0.5, 1, 2. 4. 6, 8, 24. 48 and 72 hour post-dosing (toxicokinetics)" ;
+        ont:species_strain           "rats / wistar crl: (wi) br (outbred)" ;
+        ont:t_max                    "6-8h (the plasma data indicated that oral absorption was moderately slow with Tmax values of 6-8 hours.)" ;
+        ont:technic                  "dermal exposure for 30 minutes" ;
+        ont:the_pattern_and_the_rates_of_metabolism
+                "the relative high levels in kidney and liver reflect the extensive metabolism and excretion of the test substance." ;
+        ont:the_pattern_of_distibution_among_tissues_organs_and_fluid_compartments
+                "by the end of the study, the average total remaining radioactivity in carcass and tissues was between 0.7 and 3% of the administered dose in all intravenous and oral groups, indicating no major accumulation of radioactivity after 96 hours. however, in some tissues, abdominal fat, adrenals, liver and kidney, the residual concentrations of hc blue n° 15 (wr 18043) equivalents were much higher than the concentrations observed in blood or carcass. " ;
+        ont:the_rates_of_excretion   "faecal excretion was the most important route of 14hc blue n° 15 (wr 18043) in all treated groups. it suggests that when absorbed, that biliary excretion of hc blue n° 15 (wr 18043) is important. urinary excretion was less important. the rate of urinary excretion was similar for the intravenous and oral groups with the bulk of radioactivity excreted during the first 48h" ;
+        ont:timing_of_the_studysampling
+                "oral and intravenous 72h, dermal 168h" ;
+        ont:type                     "in vivo" ;
+        ont:urine                    "1.9% after intravenous dosing, 1.2% after low oral dosing. 0.6% after high oral dosing. " ;
+        ont:vehicle_name             "oral: 5.8% w/w propylene glycol, 4.7% w/w plantaren 2000 up (cognis trade name =50%aqueous decyl glucoside), 89.5% w/w milli-U water; intravenous: 0.05M phosphate buffer, ph 7.6; propylene glycol; ethanol 80:10:10(w/w/w)" ;
+        ont:year                     "2005" .
+
+<http://toxin.vub.be/resource/dossier/basic%20orange%2031>
+        a              ont:Report ;
+        rdfs:label     "basic orange 31" ;
+        ont:contains   <http://toxin.vub.be/resource/test/toxicokinetics_skin_absorption/oecd_417/6> , <http://toxin.vub.be/resource/test/toxicokinetics_skin_absorption/oecd_417/5> ;
+        ont:guideline  <http://toxin.vub.be/resource/guideline/OECD%20417> ;
+        ont:seeAlso    <http://toxin.vub.be/resource/pdfLink/https%3A%2F%2Fec.europa.eu%2Fhealth%2Fscientific_committees%2Fconsumer_safety%2Fdocs%2Fsccs_o_082.pdf> .
+
+<http://toxin.vub.be/resource/test/toxicokinetics_skin_absorption/oecd_417/10>
+        a                          ont:Test ;
+        ont:additional_info        "Test substance: [14C]-BMHCA" ;
+        ont:administration_scheme  "single" ;
+        ont:auc                    "122, 937 µg x h/mL after 25 and 100mg/kg bw" ;
+        ont:batch_number           "19154-162-40" ;
+        ont:c_max                  "14.3, 52µg/ml" ;
+        ont:chemical_batch_nr      "6252-91" ;
+        ont:compound               <http://toxin.vub.be/resource/compound/butylphenyl%20methylpropional%20%28p-bmhca%29> ;
+        ont:compoundLabel          "butylphenyl methylpropional (p-bmhca)" ;
+        ont:conclusion             "Following administration of 25 and 100 mg/kg bw, mean Cmax were 14.3 and 52 μg/mL at mean Tmax of about 3.5 and 1.8 hours, respectively. Thus, cmax was linearly related to oral dose levels. Thus, oral administration of [14C]-BMHCA led to rapid absorption for both doses applied and proportionate plasma maximum concentration levels (cmax). By contrast, the AUC was found to increase disproportionately to the dose applied (AUC0-48 values of 122 and 937 µg x h/mL after 25 and 100 mg/kg bw). The latter finding was interpreted to be due to a saturation of renal clearance." ;
+        ont:dose_level_unit        "mg/kg bw" ;
+        ont:dose_levels            "25, 100" ;
+        ont:gavage                 "yes" ;
+        ont:glp                    "yes" ;
+        ont:guideline              <http://toxin.vub.be/resource/guideline/OECD%20417> ;
+        ont:guidelineLabel         "OECD 417" ;
+        ont:labeled_purity         ">98%)" ;
+        ont:n_subject_group        "8" ;
+        ont:purity                 "no data" ;
+        ont:ref_in_dossier         "huntingdon research center, 1995, rifm #23697. Guideline: Comparable to OECD TG 417 and 427. Comparative oral and dermal absorption study according to an approved study protocol following SOPs. Method: Plasma was collected and counted at 0, 0.5, 1, 2, 4, 6, 8, 24 and 48 hours after BMHCA application. The samples were processed and radioactivity was measured using an LKB 1410 liquid scintillation counter. " ;
+        ont:samples                "plasma" ;
+        ont:sccs_comment_to_test   "Quantitative data on the toxicokinetics of BMHCA are available from rat, mouse, rabbit, guinea pig, dog and rhesus monkey and human studies. Given its physicochemical properties, BMHCA is likely to have high bioavailability via the oral route. After oral and dermal administration to experimental animals and humans (cf. section 3.3.4.2.), there is clear evidence of systemic absorption of BMHCA. However, in humans compared to rats, only limited percutaneous absorption of BMHCA (in EtOH) could be observed in vivo (1.4% vs. 19%). Species-specific differences in the metabolism of BMHCA have been identified both in vitro and in vivo. Lysmerylic acid was the main hepatic metabolite in all species tested. Quantitative evaluation of metabolic profiles for different species in an in vitro metabolism study demonstrated much higher levels of TBBA formation by rat hepatocytes when compared to other species. In particular, TBBA levels observed in human hepatocytes were about 4-fold lower compared to rat hepatocytes at corresponding concentrations. Comparative assessment of the urinary metabolites in different animal species again uncovered differences in the urinary excretion of TBBA (and TBHA), with rats being the species that predominantly forms TBBA. However, the differences observed between rats and monkeys did not mirror the 4-fold difference in TBBA formation as seen with rat and human liver microsomes in vitro." ;
+        ont:sex                    "m" ;
+        ont:species_strain         "rat/ SPF RORO" ;
+        ont:specific_activity      "215.7 μCi/mg" ;
+        ont:t_max                  "3.5, 1.8h" ;
+        ont:timing_of_the_studysampling
+                "0, 0.5, 1, 2, 4, 6, 8, 24 and 48 hours after BMHCA application." ;
+        ont:type                   "in vivo" ;
+        ont:vehicle_name           "rape oil" ;
+        ont:volume                 "2mL/rat" ;
+        ont:year                   "1995" .
+
+<http://toxin.vub.be/resource/test/toxicokinetics_skin_absorption/oecd_417/3>
+        a                           ont:Test ;
+        ont:administration_scheme   "single" ;
+        ont:amount_and_rate_of_absorption
+                "after 30 min dermal exposure to [14C] red (mip 2985), only 1.29% of the applied dose was systemically absorbed; " ;
+        ont:batch_number            "3501-069 ( 2072 MBq/mmol; 56 mCi/mmol)" ;
+        ont:chemical_batch_nr       "21187fc3" ;
+        ont:compound                <http://toxin.vub.be/resource/compound/basic%20red%2051> ;
+        ont:compoundLabel           "basic red 51" ;
+        ont:dose_level_unit         "mg/cm²" ;
+        ont:dose_levels             "0.2" ;
+        ont:faeces                  "0.14%" ;
+        ont:glp                     "yes" ;
+        ont:guideline               <http://toxin.vub.be/resource/guideline/OECD%20417> ;
+        ont:guidelineLabel          "OECD 417" ;
+        ont:labeled_purity          "98.15%" ;
+        ont:n_subject_group         "8" ;
+        ont:ph                      "7.7" ;
+        ont:purity                  "95.9%" ;
+        ont:ref_in_dossier          "5, submission 2" ;
+        ont:samples                 "tape stripped skin(stratum corneum), skin wash, urine, faeces" ;
+        ont:sex                     "f" ;
+        ont:solid                   "yes, the highest achievable water solubility of the test material used as the applied dose" ;
+        ont:species_strain          "rat, wistar HanBrl:WIST (SPF): outbred" ;
+        ont:specific_activity       "241 kBq/mg (6.52 µCi/mg)" ;
+        ont:surface                 "yes" ;
+        ont:technic                 "30 minutes exposure followed by washing and tape tripping" ;
+        ont:the_pattern_of_distibution_among_tissues_organs_and_fluid_compartments
+                "93-94% of the dose could be dislodged from the application site. after the skin washing, 2% of the dose remained in/on the treated skin area. the remaining radioactivity in/on the application site was found in the stratum corneum. less than 0.01% of the dose was determined in the dermis and subcutis. the quantity of test substance in the stratum corneum was virtually constant throughout the 96 h study period, indicating low penetration into deeper skin layers. " ;
+        ont:the_rates_of_excretion  "the systemically absorbed test substance was rapidly excreted with the urine (1.08 %) and the faeces (0.14%)." ;
+        ont:timing_of_the_studysampling
+                "24 and 96h" ;
+        ont:type                    "in vivo" ;
+        ont:urine                   "1.08%" ;
+        ont:vehicle_name            "water" ;
+        ont:year                    "2005" .
+
+<http://toxin.vub.be/resource/test/toxicokinetics_skin_absorption/oecd_417/9>
+        a                           ont:Test ;
+        ont:administration_scheme   "single topical dermal application for 6h" ;
+        ont:batch_number            "19154-162-40" ;
+        ont:bile                    "[14c]-bmhca" ;
+        ont:c_max                   "15.6 μg/g" ;
+        ont:chemical_batch_nr       "6252-91" ;
+        ont:compound                <http://toxin.vub.be/resource/compound/butylphenyl%20methylpropional%20%28p-bmhca%29> ;
+        ont:compoundLabel           "butylphenyl methylpropional (p-bmhca)" ;
+        ont:conclusion              "up to 120 hours after application of bmhca, a mean cumulative total of 14.6% of the dose was excreted in urine, 0.8% was recovered in cage washings and 2.0% was excreted via faeces, whereas levels in expired air traps were not detectable. the remaining radioactivity in all tissues investigated was 1.2% of the initial dose (site of application site). the maximum urinary excretion rate was observed 6 - 12 hours after dermal application. the highest concentration of 14c was recovered in the liver (cmax = 15.6 μg/g tissue representing 0.826% of given dose/g tissue). overall, a relation of cmax and the blood perfusion rate of a respective tissue is indicated based on the findings for highly perfused tissues (i.e. lungs, heart) and poorly perfused tissues (i.e. skin, fat). the mean total proportion of dose in excreta and tissues was about 19%. " ;
+        ont:dose_level_unit         "mg/kg bw" ;
+        ont:dose_levels             "6.75" ;
+        ont:faeces                  "2.0% was excreted via faeces" ;
+        ont:glp                     "yes" ;
+        ont:guideline               <http://toxin.vub.be/resource/guideline/OECD%20417> ;
+        ont:guidelineLabel          "OECD 417" ;
+        ont:labeled_purity          ">98%" ;
+        ont:n_subject_group         "18" ;
+        ont:other                   "0.8% was recovered in cage washings" ;
+        ont:own_comment             "since comrabale to OECD417 and OECD427, the study is filled in under OECD417" ;
+        ont:samples                 "sacrifice at 0.5, 1, 3, 6, 12, 24, 48, 72 and 120 hours after application; tape strippings, numerous organs and tissues; urine samples, blood samples until 120 hrs after application" ;
+        ont:sccs_comment_to_test    "sccs conclusion on dermal/percutaneous absorption: dermal absorption studies in vitro demonstrated species-specific effects. the bioavailable portion was found much higher in rats (66.1 and 50.8%) when compared to mini pigs (0.8% and 4.9%), thereby depending on the solvent used (methylcarbitol or ethanol). in a second study, applying two real cream formulations (that contained 0.6% bmhca), rat skin again allowed a much higher penetration (45.2% and 78.4%) than mini pig skin (23.6% and 25.7%). nevertheless, the fraction of bioavailable bmhca was found strongly increased in the mini pig experiment when moving from dissolved bmhca to real cream formulations (4.9% vs. 25.7%). concurrently, administration of bmhca onto the skin of experimental animals and humans demonstrated permeation and systemic availability of this compound. percutaneous absorption of bmhca in humans was lower when compared with rats (1.4 vs. 19%). upon dermal application of [14c]-bmhca (11.37 mg test substance in 70% ethanol on 10 cm2 back skin) on 3 human volunteers for 6 hours, a mean of 1.4% (range 0.8 – 2.4%) of the applied dose was excreted in urine within 24 hours, whereas radioactivity was below the detection limit in urine samples of later time points and in all faeces and blood plasma samples. the overall mean total recovery of topical application of [14c]-bmhca was 71 ± 10%. in comparison to the in vitro observations, the absorption rate found in humans for ethanolic solutions of bmhca was comparable to what has been found in excised mini pig skin. given that the absorption of bmhca in mini pig skin was much higher when this compound was applied via real cream formulations, it is reasonable to conclude that bmhca might also better penetrate human skin when it is applied in cream formulations. since there is no further experimental data on this subject, the sccs concludes that the maximum fraction of bmhca being absorbed by human skin might be in the range of 25% rather than at 2.4%. in consideration of the comparability of pig skin with human skin, the dermal bioavailability of ethanolic (dissolved) bmhca to be used in the calculation of the systemic exposure dose (sed) and margin of safety (mos) will be set at 5% (worst case scenario based on 1% bmhca in etoh applied at 120 μg substance/cm2 onto 5 cm2 excised mini pig skin; result: total of 5.87 μg substance/cm2 found in stripped skin and chamber fluid after 16 hrs of exposure). on the other hand, the penetration rate of bmhca applied onto the skin as ingredient of creamy formulations will be set at 25% (worst case scenario based on 36 μg substance/cm2 applied onto 5 cm2 excised mini pig skin; mean out of two experiments: total of 8.88 μg substance/cm2 found in stripped skin and chamber fluid after 16 hrs of exposure). the sccs is aware of the issue that the exact identity of the cream formulations applied in the latter study remains obscure. the results obtained from the part of the study with 1% ethanolic bmhca can further be used to assess the sed for hydroalcoholic products to be applied on a defined surface area of shaved or unshaved skin once daily (1 x 305 cm2/day). here, an absorption of about 6 μg substance/cm2 can be assumed for unshaved skin (stratum corneum intact). for shaved skin (stratum corneum compromised), however, the total absorption would be 11 μg substance/cm2 (with the addition of the portion of 4.66 μg/cm2 that was found sticking in the stratum corneum in the respective experiment; cf. above). " ;
+        ont:sex                     "m" ;
+        ont:species_strain          "rat / lister-hooded" ;
+        ont:specific_activity       "215.7 μCi/mg" ;
+        ont:surface                 "9cm2 on the back" ;
+        ont:technic                 "occlusive" ;
+        ont:the_pattern_of_distibution_among_tissues_organs_and_fluid_compartments
+                "the remaining radioactivity in all tissues investigated was 1.2% of the initial dose (site of application site). the highest concentration of 14c was recovered in the liver (cmax = 15.6 μg/g tissue representing 0.826% of given dose/g tissue)" ;
+        ont:the_rates_of_excretion  "19%." ;
+        ont:type                    "in vivo" ;
+        ont:urine                   "a mean cumulative total of 14.6% of the dose was excreted in urine, the maximum urinary excretion rate was observed 6 - 12 hours after dermal application." ;
+        ont:vehicle_name            "70% etoh in water" ;
+        ont:volume                  "0.2 ml" .
+
+<http://toxin.vub.be/resource/compound/basic%20yellow%2087>
+        a               ont:Compound ;
+        rdfs:label      "basic yellow 87" ;
+        ont:compoundOf  <http://toxin.vub.be/resource/dossier/basic%20yellow%2087> .
+
+<http://toxin.vub.be/resource/dossier/basic%20red%2051>
+        a              ont:Report ;
+        rdfs:label     "basic red 51" ;
+        ont:contains   <http://toxin.vub.be/resource/test/toxicokinetics_skin_absorption/oecd_417/3> , <http://toxin.vub.be/resource/test/toxicokinetics_skin_absorption/oecd_417/2> , <http://toxin.vub.be/resource/test/toxicokinetics_skin_absorption/oecd_417/1> ;
+        ont:guideline  <http://toxin.vub.be/resource/guideline/OECD%20417> ;
+        ont:seeAlso    <http://toxin.vub.be/resource/pdfLink/https%3A%2F%2Fec.europa.eu%2Fhealth%2Fscientific_committees%2Fconsumer_safety%2Fdocs%2Fsccs_o_067.pdf> .
+
+<http://toxin.vub.be/resource/test/toxicokinetics_skin_absorption/oecd_417/2>
+        a                             ont:Test ;
+        ont:administration_scheme     "single dose" ;
+        ont:amount_and_rate_of_absorption
+                "red (mip 2985) was rapidly and almost completely absorbed from the gastrointestinal tract. the apparent extent of absorption, based essentially on the amount renally excreted, was calculated to at least 62 % of the dose. there appeared to be some bilary recirculation. rapidly and almost completely absorbed after oral dosing. the systemically absorbed test substance was metabolized and eliminated with urine and faeces" ;
+        ont:batch_number              "3501-069 (2072 MBq/mmol; 56 mCi/mmol)" ;
+        ont:c_max                     "c max blood:3.933 ppm, c max plasma:  4.785 ppm" ;
+        ont:chemical_batch_nr         "21187fc3" ;
+        ont:compound                  <http://toxin.vub.be/resource/compound/basic%20red%2051> ;
+        ont:compoundLabel             "basic red 51" ;
+        ont:dose_level_unit           "mg/kg bw" ;
+        ont:dose_levels               "50" ;
+        ont:faeces                    "unchanged red (mip 2985) (1.5 % of the dose) was found in the faeces." ;
+        ont:gavage                    "yes" ;
+        ont:glp                       "yes" ;
+        ont:guideline                 <http://toxin.vub.be/resource/guideline/OECD%20417> ;
+        ont:guidelineLabel            "OECD 417" ;
+        ont:halflife_time_absorption  "first t1/2 absoprtion:11-17h, second t1/2 absorption: 29-56h" ;
+        ont:halflife_time_depletion   "first depltion t1/2 blood:15h, first depletion t1/2 plasma:9h, second depletion t1/2 blood:206h, second depletion t1/2 plasma:40h" ;
+        ont:identified_metabolites    "1,3-dimethyl-imidazole-2-amine; 1,4- diacetoaminobenzene" ;
+        ont:labeled_purity            "98.15%" ;
+        ont:n_subject_group           "9" ;
+        ont:purity                    "95.9%" ;
+        ont:ref_in_dossier            "5, submission 2" ;
+        ont:samples                   "blood, urine, faeces and cagewash" ;
+        ont:sex                       "f" ;
+        ont:species_strain            "rat/wistar hanbrl:wist (spf): outbred" ;
+        ont:specific_activity         "[14C] labelled red (mip 2985) with a final specific radioactivity of 204 kBq/mg (5.5 µCi/mg)" ;
+        ont:t_max                     "t max: 1h, second t max: 6h" ;
+        ont:the_pattern_and_the_rates_of_metabolism
+                "two major metabolites, 1,3-dimethyl-imidazole-2-amine (about 50 % of the dose) and 1,4- diacetoaminobenzene (about 20% of the dose) and 6 minor metabolites were seen in urine and faeces. due to the structure of the identified metabolites, the metabolic pathway suggested that the 1,3- dimethyl-imidazole-2-amine was a cleavage product of red (mip 2985) and that the 1,4- diacetoaminobenzene was the di-acetylation product of red (mip 2985) after demethylation of the (4-dimethylamino)phenyl site and cleavage of the azo bond" ;
+        ont:the_pattern_of_distibution_among_tissues_organs_and_fluid_compartments
+                "the maximum concentration (c max) in blood and plasma was reached within 1 hour after administration accounting to 3.933 ppm and 4.785 ppm red (mip 2985 equivalents), respectively. a second lower maximum in blood and plasma was observed 6 hours postdosing. after reaching the second maximum, blood and plasma showed a biphasic depletion half-life of 15 and 9 h for the initial phase and 206 and 40 h for the second slower phase, respectively. the oral dose was rapidly eliminated. the highest residue levels in tissues and organs were observed 24 hours post-dosing in the kidney (5.3643 ppm) and liver (4.0287 ppm), with low levels in fat (0.3267 ppm). the depletion kinetics in tissues and organs was similar to that seen in blood and plasma. the initial half-life was calculated to be in the range of 11-17 hours followed by a second slower phase with half life of 29-56 hours." ;
+        ont:the_rates_of_excretion    "within 24 hours, 74 % of the dose was totally excreted, (53 % in urine, 17 % in the faeces and 4 % collected in the cage wash). by 96 days post-dosing, 93 % of the dose was eliminated. only 0.5 % of the dose is still remaining in tissues and carcass" ;
+        ont:timing_of_the_studysampling
+                "0.5, 1, 2 4, 6, 8h (blood); 24, 48 and 96h (terminal blood); 0-24, 24-48, 48–72, and 72-96 h (urine and faeces)." ;
+        ont:type                      "in vivo" ;
+        ont:vehicle_name              "water" ;
+        ont:year                      "2005" .
+
+<http://toxin.vub.be/resource/test/toxicokinetics_skin_absorption/oecd_417/8>
+        a                             ont:Test ;
+        ont:additional_info           "test substance: yellow (mip 2982) containing about 8% inorganic salts, organic impurities < 0.1%" ;
+        ont:amount_and_rate_of_absorption
+                "the results show that after oral administration at the dose of 10 mg/kg bw, 6% of the administered test item was absorbed from the gastrointestinal tract into the systemic circulation. the oral absorption was fast with a maximum concentration in blood and plasma reached 1 hour after administration and accounting for 0.143 ppm and 0.283 ppm. then a two phase decrease of the concentration was observed with an initial half life of 7.5 and 5.6 hours in blood and plasma respectively and a second half life of 48 hours (blood) and 45 hours (plasma). within 96 hours after exposure, almost all B117 was removed from blood and plasma and the concentration decreased to values below or very closed to LOQ, i.e. 0.004 ppm (B117 equivalent).  the results show that after dermal administration at the dose of 0.2 mg/cm2 on the dorsal area of female rats (10 cm2) during 30 min followed by a skin washing, a very low fraction of the applied dose was absorbed from the skin into the systemic circulation, around 0.3 % after 30 min of exposure and remained constant within 96 hours. the concentrations of radioactivity for all blood sampling time point were below the limit of quantification. the amount of radioactivity determined in the stratum corneum was almost constant during the experimental period of 5 days, accounting for 2.56 and 2.79% of the dose. " ;
+        ont:auc                       "1.72 µg.h/g +/- 0.13 for bloodd,  2.10 +/- 0.24 for plasma" ;
+        ont:batch_number              "3415121" ;
+        ont:c_max                     "0.143 ppmin blood; 0.283 ppm in plasma" ;
+        ont:chemical_batch_nr         "04143CL2" ;
+        ont:compound                  <http://toxin.vub.be/resource/compound/basic%20yellow%2087> ;
+        ont:compoundLabel             "basic yellow 87" ;
+        ont:conclusion                "the high extent of faecal excretion, mainly as unchanged B117 confirms the low extent of absorption after oral exposure. after dermal exposure, B117 was also poorly absorbed. " ;
+        ont:dose_level_unit           "mg/kg bw/d oral exposure; mg/cm2 dermal exposure" ;
+        ont:dose_levels               "10; 0.2" ;
+        ont:faeces                    "89%" ;
+        ont:gavage                    "yes" ;
+        ont:glp                       "yes" ;
+        ont:guideline                 <http://toxin.vub.be/resource/guideline/OECD%20417> ;
+        ont:guidelineLabel            "OECD 417" ;
+        ont:halflife_time_absorption  "7.5 in blood, 5.6 in plasma" ;
+        ont:halflife_time_depletion   "48 in blood, 45 in plasma" ;
+        ont:labeled_purity            "> 99" ;
+        ont:n_subject_group           "17" ;
+        ont:purity                    "91.6" ;
+        ont:ref_in_dossier            "6, submission ii" ;
+        ont:samples                   "urine, faeces, blood, plasma and organs/tissues at different time points after administration + skin wash and skin stripping" ;
+        ont:sccs_comment_to_test      "due to the low absorption of B117 after oral exposure, the NOAEL of 10 mg/kg bw/d derived from the 13 week oral study in rats should be adjusted by a factor of 10 to be used in the MOS calculation. species difference between mouse and rats was noted. consequence to be further elaborated. " ;
+        ont:sex                       "f" ;
+        ont:specific_activity         "2109 MBq/mmol; 57 mCi/mmol)" ;
+        ont:surface                   "yes, 10cm2" ;
+        ont:t_max                     "1" ;
+        ont:the_pattern_and_the_rates_of_metabolism
+                "metabolites were examined by hplc analysis of urine and faeces extracts and revealed a simple metabolite pattern. the metabolite pattern in urine revealed 1 major and 10 minor metabolites fractions. the major fraction represented more than 50% of the radioactivity in urine or 2.5% of the dose and was shown to contain a glucuronic acid conjugate of B 117 formed after hydroxylation of the phenyl moiety and its structural isomer." ;
+        ont:the_pattern_of_distibution_among_tissues_organs_and_fluid_compartments
+                "the AUC0-24h for blood was 1.72 μg.h/g +/- 0.13 and 2.10 +/- 0.24 for plasma. only 0.1% of the dose was still remaining in tissue and carcass after 96 hours. the highest residue levels were found at 24 hours after oral administration in liver and kidney but due to the very low absorption were very low." ;
+        ont:the_rates_of_excretion    "the excretion data show that the orally administered B117 was rapidly excreted predominately with faeces (89% of the dose was excreted in faeces after 96 hours versus 5.3% in urine)." ;
+        ont:timing_of_the_studysampling
+                "after 30 minutes dermal application, a skin wash and a skin stripping were performed to remove the remaining test item and stratum corneum from the application site. skin wash and skin strips were sampled for determining the amount of test item remaining. 3 female rats were sacrificed at 24, 48 and 96 hours after oral administration and 4 female rats at 24 and 96 hours after dermal administration." ;
+        ont:type                      "in vivo" ;
+        ont:urine                     "5.3%" ;
+        ont:vehicle_name              "water" ;
+        ont:year                      "2004" .
+
+<http://toxin.vub.be/resource/test/toxicokinetics_skin_absorption/oecd_417/14>
+        a                             ont:Test ;
+        ont:additional_info           "test substance: FPK-145" ;
+        ont:administration_scheme     "single" ;
+        ont:amount_and_rate_of_absorption
+                "absorption, oral route: in non-fasting rats receiving a single oral dose of 2.5, 25 and 250 mg/kg bw/day 14C fpk-145 showed a dose dependency between Cmax and dose (R2=0.9947) and AUC0-t and dose (R2=0.9997). this shows that absorption did not saturate with the dose in the oral administration. the radioactive concentration in plasma after oral administration showed clear tendency to re-ascension on after 72 hours postdose. radioactive plasma concentration at 168 hours accounted to 0.002% to 0.004% of dose in each dose group (0.7% to 1.5% of cmax). this shows that fpk-145 did not accumulate in the body.  " ;
+        ont:auc                       "2.5 mg/kg: 5335 ± 652 ng eq h/ml, 25 mg/kg : 60900 ±6380 ng eq h/ml, 250 mg/kg: 754400 ± 51100 ng eq h/ml " ;
+        ont:c_max                     "at 2.5 mg/kg : 814.9 ± 85.0 ng eq., 25 mg/kg: 9590 ± 2719 ng eq. , 250 mg/kg: 53770 ± 7000 ng eq." ;
+        ont:chemical_batch_nr         "CFQ41226" ;
+        ont:compound                  <http://toxin.vub.be/resource/compound/hc%20blue%2018> ;
+        ont:compoundLabel             "hc blue 18" ;
+        ont:conclusion                "the study showed that the oral bioavailability of hc blue 18 after oral gavage is expected to be 65%." ;
+        ont:dose_level_unit           "mg/kg" ;
+        ont:dose_levels               "0, 2.5, 25, 250 " ;
+        ont:gavage                    "yes" ;
+        ont:glp                       "yes" ;
+        ont:guideline                 <http://toxin.vub.be/resource/guideline/OECD%20417> ;
+        ont:guidelineLabel            "OECD 417" ;
+        ont:halflife_time_absorption  "2.5 mg/kg : 7.0 ± 0.2h, 25 mg/kg: 7.9 ± 0.6h, 250 mg/kg : 6.6 ± 1.2h" ;
+        ont:n_subject_group           "4" ;
+        ont:purity                    "99.6" ;
+        ont:ref_in_dossier            "13" ;
+        ont:samples                   "blood, urine and feces, bile, tissues" ;
+        ont:sccs_comment_to_test      "radioactivity concentrations in plasma were measured for all dose groups but in urine, tissues and faeces, only for the 2.5 mg/kg bw dose group, at 0- 24h and 24-48h after administration. based on the results of this study, the no-observed-adverse-effect level (noael) of hc blue 18 of 25 mg/kg bw/day was corrected and set at 16 mg/kg bw/day." ;
+        ont:sex                       "m" ;
+        ont:species_strain            "rat/sprague dawley (crl:cd (sd))" ;
+        ont:t_max                     "2.5 mg/kg : 0.9 ± 0.8 h, 25 mg/kg: 0.5 ±  0.0h, 250 mg/kg : 1.0 ± 0.0 h" ;
+        ont:the_pattern_and_the_rates_of_metabolism
+                "metabolic profile. plasma: after oral application of 25 mg/kg bw/day, five radioactive peaks were detected 0.5 hours and 4 hours post dose. the peak corresponding to unchanged form was not detected. urine: after oral application of 2.5 mg/kg bw/day twelve radioactive peaks were detected postdose. the major metabolites rUM6 and rUM-2 represent 28.5% and 10.2% of the dose respectively. faeces: based on the result of the bilary excretion study, most of the radioactivity excreted into faeces after oral administration was considered to have been excreted directly into faeces via the digestive tract without being absorbed. therefore, excreted radioactive substances are considered not to be metabolites, but decomposition products of unchanged fpk- 145 generated while passing the digestive tract. they represent around 27% of the dose after oral exposure." ;
+        ont:the_pattern_of_distibution_among_tissues_organs_and_fluid_compartments
+                "distribution in tissue, oral route: in male rats receiving 14C-fpk-145 at a single oral dose of 2.5 mg/kg, the radioactivity concentration in tissues except the large intestine reached the Cmax at 0.5 hours postdose. the tissues showing the concentration higher than that in the plasma were the blood (at 24 hours post dose), the kidney (at 0.5, 4 and 24 hours postdose), prostate (at 24 hours postdose), and large intestine (at 4 and 24 hours postdose), and the Cmax of these tissues were 303.1 +/- 56, 1054 +/- 525, 147.8 +/-134.1, 3899 +/- 679, 2574 +/- 1214 and 641.4 +/- 335.6 ng eq. of fpk-145/mL or g respectively. the radioactivity concentrations in other tissues were lower than that in the plasma." ;
+        ont:the_rates_of_excretion    "excretion in urine and faeces: these results expressed in percentages of dose indicated that the dose was always completely excreted by 168 hours post dose: dosing route: p.o 2.5 mg/kg: time (h): 0-24: urine: 64,83 +/-4,18, feces: 29,64 +/-3,81, total excreted dose: 96,51 +/-0,43, total recovery: 99,21 +/-3,35, residue in carcass: 0,07+/-0,02. dosing route: p.o 2.5 mg/kg: time (h): 168: urine: 65,66 +/-4,30, feces: 31,24 +/-3,58, total excreted dose: 99,14 +/-3,34, total recovery: 99,21 +/-3,35, residue in carcass: 0,07+/-0,02. excretion in bile, urine and faeces: in bile-duct cannulated rats 14C-fpk-145 at a single oral dose of 2.5 mg/kg bw/day, the excretion of radioactivity (% of the dose) was as follows after 48 hours: bile: 9,28 +/- 0,79; urine: 55,36 +/-5,67; feces: 29,63 +/-6,38; cage wash: 2,07 +/-1,04; total: 96,33 +/-0,52; residues in carcass total: 0,24 +/-0,23; total recovery: 96,57 +/- 0,34. since animals with bile cannulation showed faecal excretion of radioactivity of 29.63 ± 6.38% of dose equivalent to those without cannulation 31.24 ± 3.58% of dose, the amount excreted into faeces after oral administration in animals without cannulation was considered to be excreted directly into the faeces and therefore, not being absorbed by the digestive tract. " ;
+        ont:timing_of_the_studysampling
+                "blood samples: 0.5, 1, 2, 4, 6, 8, 12, 48, 72 and 169 hours postdose, urine/faeces: 0-24, 24-48, 48-72, 72-96, 96-120, 120- 144, and 144-168 hours post dose.bile: 0-2, 2-4, 4-8, 8-24, and 24-48 hours post dose, urine: 0-24 and 24-49 hours post dose, faeces: 0-24 and 24-48 hours post dose. tissue: 0,5h, 4h, 24h, 168h." ;
+        ont:type                      "in vivo" ;
+        ont:vehicle_concentration     "0.5% w/v" ;
+        ont:vehicle_name              "methylcellulose solution" ;
+        ont:volume                    "10 mL/kg" ;
+        ont:year                      "2012" .
+
+<http://toxin.vub.be/resource/test/toxicokinetics_skin_absorption/oecd_417/1>
+        a                            ont:Test ;
+        ont:additional_info          "test substance: vibracolor red (mip 2985), " ;
+        ont:administration_scheme    "single dose" ;
+        ont:amount_and_rate_of_absorption
+                "the test item was rapidly absorbed from the gastrointestinal tract. the auc was 14.12 µg h/g. in the femur, the highest concentration of radioactivity 4.23 ppm (µg red (mip 2985) equivalents/g) was found 1 h after dosing. by 24 h post-dosing the concentration in femur decreased to 0.228 ppm. the depletion kinetics in the femur was similar to that seen in the plasma, with an initial half-life of 1.3 h and a depletion half-life of 10 h. it was assumed that the bone marrow of the femur was the main site of radioactivity" ;
+        ont:auc                      "14.12 µg h/g" ;
+        ont:batch_number             "3501-069 (2072 MBq/mmol, 56 mCi/mmol)" ;
+        ont:c_max                    "2.016 ppm" ;
+        ont:chemical_batch_nr        "21187fc3" ;
+        ont:composition              "containing 4% inorganic salts" ;
+        ont:compound                 <http://toxin.vub.be/resource/compound/basic%20red%2051> ;
+        ont:compoundLabel            "basic red 51" ;
+        ont:dose_level_unit          "mg/kg bw, based on a target volume of 0.5 ml per 100 g body weight." ;
+        ont:dose_levels              "33" ;
+        ont:gavage                   "yes" ;
+        ont:glp                      "yes" ;
+        ont:guideline                <http://toxin.vub.be/resource/guideline/OECD%20417> ;
+        ont:guidelineLabel           "OECD 417" ;
+        ont:halflife_time_depletion  "first t1/2 : 3h, second t1/2 : 8h" ;
+        ont:labeled_purity           "98.15%" ;
+        ont:n_subject_group          "15" ;
+        ont:purity                   "95.9%" ;
+        ont:ref_in_dossier           "4, submission 2" ;
+        ont:samples                  "blood and femurs" ;
+        ont:sex                      "f" ;
+        ont:species_strain           "mouse/ hybrid, nmri, spf-quality" ;
+        ont:specific_activity        "radiolabelled vibracolor® red (mip 2985) final specific radioactivity of 846 kBq/mg (22.86 µCi/mg)," ;
+        ont:statistical_variation    "c 24h: 0.117ppm" ;
+        ont:t_max                    "0.5h" ;
+        ont:the_pattern_of_distibution_among_tissues_organs_and_fluid_compartments
+                "in plasma, the highest concentration of radioactivity 2.016 ppm (µg red (mip 2985) equivalents/g) was found 0.5 h after dosing. after reaching the maximum, the concentration in plasma decreased rapidly with an initial half-life of 1.3 h (initial phase, 1-2 h). between 4 and 24 h after dosing, a second, slower depletion phase (2-24 h) was seen with a depletion half-life of 8 hours. by 24 hours, the plasma concentration had decreased to 0.117 ppm. the auc was 14.12 µg h/g" ;
+        ont:timing_of_the_studysampling
+                "0.5, 1, 2, 4, and 24h" ;
+        ont:type                     "in vivo" ;
+        ont:vehicle_name             "water (milliq)" ;
+        ont:year                     "2004" .
+
+<http://toxin.vub.be/resource/compound/butylphenyl%20methylpropional%20%28p-bmhca%29>
+        a               ont:Compound ;
+        rdfs:label      "butylphenyl methylpropional (p-bmhca)" ;
+        ont:compoundOf  <http://toxin.vub.be/resource/dossier/butylphenyl%20methylpropional%20%28p-bmhca%29> .
+
+<http://toxin.vub.be/resource/compound/basic%20red%2051>
+        a               ont:Compound ;
+        rdfs:label      "basic red 51" ;
+        ont:compoundOf  <http://toxin.vub.be/resource/dossier/basic%20red%2051> .
+
+<http://toxin.vub.be/resource/compound/hc%20blue%20n°%2015>
+        a               ont:Compound ;
+        rdfs:label      "hc blue n° 15" ;
+        ont:compoundOf  <http://toxin.vub.be/resource/dossier/hc%20blue%20n°%2015> .
+
+<http://toxin.vub.be/resource/test/toxicokinetics_skin_absorption/oecd_417/7>
+        a                             ont:Test ;
+        ont:additional_info           "test substance: yellow (mip 2982) containing about 8% inorganic salts, organic impurities < 0.1%" ;
+        ont:amount_and_rate_of_absorption
+                "b117 was rapidly absorbed from the gastro intestinal tract and the maximum concentration in plasma was observed 0.5 hours after exposure and corresponded to 4.823 ppm (μg B117 equivalents/g). then a two phase decrease of the plasmatic concentration was observed with an initial half life of 1.2 hours and a second half life of 6 hours. within 24 hours after exposure, almost all B117 was removed from plasma and the concentration in plasma decreased to 0.071 ppm." ;
+        ont:auc                       "14.25 μg.h/g +/- 3.48" ;
+        ont:batch_number              "3415121" ;
+        ont:c_max                     "4.823 ppm (µg B117 equivalents/g)" ;
+        ont:chemical_batch_nr         "04143CL2" ;
+        ont:comparison_of_biological_response
+                "single administration" ;
+        ont:compound                  <http://toxin.vub.be/resource/compound/basic%20yellow%2087> ;
+        ont:compoundLabel             "basic yellow 87" ;
+        ont:conclusion                "the authors concluded that B117 orally administered to mice results in a rapid and direct exposure of the bone marrow and the associated cellular components to the tested compound." ;
+        ont:dose_level_unit           "mg/kg bw/d" ;
+        ont:dose_levels               "40" ;
+        ont:gavage                    "yes" ;
+        ont:glp                       "yes" ;
+        ont:guideline                 <http://toxin.vub.be/resource/guideline/OECD%20417> ;
+        ont:guidelineLabel            "OECD 417" ;
+        ont:halflife_time_absorption  "1.2" ;
+        ont:halflife_time_depletion   "6" ;
+        ont:labeled_purity            "> 99" ;
+        ont:n_subject_group           "15" ;
+        ont:purity                    "91.6" ;
+        ont:ref_in_dossier            "5, submission ii" ;
+        ont:samples                   "plasma and femur." ;
+        ont:sccs_comment_to_test      "this study gives evidence that B117 orally administered at the dose of 40 mg/kg bw reached the bone marrow and the target cells investigated in the micronucleus test." ;
+        ont:sex                       "f" ;
+        ont:species_strain            "mouse / hybrid nmri, spf-quality" ;
+        ont:specific_activity         "2109 MBq/mmol; 57 mCi/mmol)" ;
+        ont:statistical_variation     "40 mg/kg bw" ;
+        ont:t_max                     "0.5" ;
+        ont:the_pattern_of_distibution_among_tissues_organs_and_fluid_compartments
+                "the AUC0-24h for plasma was 14.25 μg.h/g +/- 3.48. the maximum concentration in femur was observed at 0.5h accounting for 1.273 ppm equivalents/g. the depletion kinetics in femur was similar that observed in plasma, but a little bit slower with a initial half life of 3.3 hours and a terminal half life of 13 hours. within 24 hours after administration, the concentration in femur decreased to 0.203 ppm. it is assumed by the authors that the radioactivity determined in femur is predominately located in bone marrow and that it is correlated to the unchanged test item or its metabolites. " ;
+        ont:timing_of_the_studysampling
+                "0.5, 1, 2, 4 and 24 hours after administration, 3 mice were sacrificed after anaesthesia with carbon dioxide and the concentration of the tested compound was determined in plasma and femur." ;
+        ont:type                      "in vivo" ;
+        ont:vehicle_name              "water (milliq)" ;
+        ont:year                      "2004" .
+
+<http://toxin.vub.be/resource/dossier/diethylene%20glycol%20monoethyl%20ether%20%28DEGEE%29>
+        a              ont:Report ;
+        rdfs:label     "diethylene glycol monoethyl ether (DEGEE)" ;
+        ont:contains   <http://toxin.vub.be/resource/test/toxicokinetics_skin_absorption/oecd_417/13> , <http://toxin.vub.be/resource/test/toxicokinetics_skin_absorption/oecd_417/12> , <http://toxin.vub.be/resource/test/toxicokinetics_skin_absorption/oecd_417/11> ;
+        ont:guideline  <http://toxin.vub.be/resource/guideline/OECD%20417> ;
+        ont:seeAlso    <http://toxin.vub.be/resource/pdfLink/https%3A%2F%2Fec.europa.eu%2Fhealth%2Fscientific_committees%2Fconsumer_safety%2Fdocs%2Fsccs_o_039.pdf> .
+
+<http://toxin.vub.be/resource/test/toxicokinetics_skin_absorption/oecd_417/13>
+        a                          ont:Test ;
+        ont:additional_info        "Test substance: Transcutol HP (DEGEE)" ;
+        ont:administration_scheme  "single" ;
+        ont:chemical_batch_nr      "D 4089" ;
+        ont:compound               <http://toxin.vub.be/resource/compound/diethylene%20glycol%20monoethyl%20ether%20%28DEGEE%29> ;
+        ont:compoundLabel          "diethylene glycol monoethyl ether (DEGEE)" ;
+        ont:conclusion             "As no satisfactory result was observed for the recovery of ethoxyethoxy acetic acid in plasma after precipitation of protein, it was not possible to conclude about the presence or not of this metabolite. In urine, a discrepancy was observed between these results and radioactivity study mentioned above (N Ref.: 27)" ;
+        ont:dose_level_unit        "mg/kg bw" ;
+        ont:dose_levels            "20, 100" ;
+        ont:gavage                 "yes" ;
+        ont:glp                    "yes" ;
+        ont:guideline              <http://toxin.vub.be/resource/guideline/OECD%20417> ;
+        ont:guidelineLabel         "OECD 417" ;
+        ont:n_subject_group        "15" ;
+        ont:ref_in_dossier         "28" ;
+        ont:samples                "blood and urinary samples" ;
+        ont:sex                    "m" ;
+        ont:species_strain         "rat/Sprague-Dawley" ;
+        ont:the_pattern_and_the_rates_of_metabolism
+                "The results obtained confirmed the presence of unchanged DEGEE and ethoxyethoxy acetic acid as major metabolites for the 0.5 hour plasma sampling times. However after 3 hours the difference observed between the total radioactivity (N Ref.: 27) and the specific analysis show a difference probably due to others metabolites." ;
+        ont:timing_of_the_studysampling
+                "Blood: 0.5, 1, 3, 6, 24 h, Urine: pre-dose, 0 – 8 h, 8 – 24 h" ;
+        ont:type                   "in vivo" ;
+        ont:urine                  "In urine, the amount recovered by the analysis of ethoxyethoxyacetic acid was low: about 17% of the administrated dose for the rats treated with 20 mg/kg of DEGEE and about 40% of the administrated dose for the rats treated with 100 mg/kg of DEGEE." ;
+        ont:vehicle_name           "water for injection" ;
+        ont:volume                 "5ml/kg bw/d" ;
+        ont:year                   "2003" .
+
+<http://toxin.vub.be/resource/dossier/hc%20blue%2018>
+        a              ont:Report ;
+        rdfs:label     "hc blue 18" ;
+        ont:contains   <http://toxin.vub.be/resource/test/toxicokinetics_skin_absorption/oecd_417/14> ;
+        ont:guideline  <http://toxin.vub.be/resource/guideline/OECD%20417> ;
+        ont:seeAlso    <http://toxin.vub.be/resource/pdfLink/https%3A%2F%2Fec.europa.eu%2Fhealth%2Fscientific_committees%2Fconsumer_safety%2Fdocs%2Fsccs_o_180.pdf> .
+
+<http://toxin.vub.be/resource/compound/basic%20orange%2031>
+        a               ont:Compound ;
+        rdfs:label      "basic orange 31" ;
+        ont:compoundOf  <http://toxin.vub.be/resource/dossier/basic%20orange%2031> .
+
+<http://toxin.vub.be/resource/test/toxicokinetics_skin_absorption/oecd_417/6>
+        a                            ont:Test ;
+        ont:additional_info          "test substance: orange (mip 3100)" ;
+        ont:amount_and_rate_of_absorption
+                "dermal exposure: systemic absorption was 0.11% and dislodged dose was 91.69%." ;
+        ont:auc                      "oral exposure in plasma: 27.2 µg*h/ml" ;
+        ont:batch_number             "3496175" ;
+        ont:c_max                    "oral exposure in plasma: 3.104µg eq/g. dermal exposure: 0.014µg eq/g" ;
+        ont:chemical_batch_nr        "028407a2" ;
+        ont:compound                 <http://toxin.vub.be/resource/compound/basic%20orange%2031> ;
+        ont:compoundLabel            "basic orange 31" ;
+        ont:conclusion               "in conclusion, 96 hours after a single oral dose of 14c-orange (mip 3100), excretion of radioactivity was almost complete. approximately 2/3 of the orally administered radioactivity was excreted via urine. Residual radioactivity in organs/tissues was very low." ;
+        ont:dose_level_unit          "dermal exposure mg/cm2, oral exposure mg/kg bw" ;
+        ont:dose_levels              "0.2, 20" ;
+        ont:faeces                   "oral exposure: 32.73%" ;
+        ont:gavage                   "yes" ;
+        ont:glp                      "yes" ;
+        ont:guideline                <http://toxin.vub.be/resource/guideline/OECD%20417> ;
+        ont:guidelineLabel           "OECD 417" ;
+        ont:halflife_time_depletion  "oral exposure in plasma: 6.9h, in blood: 10.6h longer than in plasma suggesting that binding of the test substance and/or its metabolites to whole blood components occurs." ;
+        ont:identified_metabolites   "oral exposure: 1,4- diacetoaminobenzene (DAAB) and 1,3-dimethyl-imidazole-2- amine (DMIA)," ;
+        ont:labeled_purity           ">97" ;
+        ont:n_subject_group          "17" ;
+        ont:purity                   "94.6" ;
+        ont:ref_in_dossier           "4, subm. 2" ;
+        ont:sex                      "f" ;
+        ont:species_strain           "rat / hanbrl:wist (spf): wistar, outbred, spf-quality" ;
+        ont:specific_activity        "1295 MBq/mmol; 35 mCi/mmol" ;
+        ont:surface                  "yes" ;
+        ont:t_max                    "oral exposure in plasma: 1h. dermal exposure in plasma: 6h" ;
+        ont:technic                  "30minutes exposure" ;
+        ont:the_pattern_and_the_rates_of_metabolism
+                "oral exposure: urine and faeces were collected up to 24h and from 24 - 48h. in urine collected up to 24h, in addition to low levels of the parent substance (0.31%), major metabolites were 1,4- diacetoaminobenzene (daab) and 1,3-dimethyl-imidazole-2- amine (dmia), occurring in amounts of 15.07% and 22.70%, respectively. seven other radioactive fractions were detected ranging from 0.21% to 0.97%. in urine collected from 24 - 48h, no parent compound was detected, major metabolites were 1,4-diacetoaminobenzene (daab) and 1,3-dimethyl-imidazole-2- amine (dmia), respectively occurring in amounts of 0.63% and 2.33%. seven other radioactive fractions were detected ranging from 0.07% to 0.53%. in faeces, collected up to 24h, in addition to low levels of the parent substance (1.59%), 13 radioactive fractions were found. the main metabolite was 1,3-dimethyl-imidazole-2-amine, (10.03% of the radioactivity administered). all other radioactive fractions were detected in low amounts ranging from 0.11-2.11% of the radioactivity administered. from the 24-48 h faeces, the radioactivity detected had decreased, the parent substance to 0.17%, the main metabolite, 1,3-dimethyl-imidazole-2-amine, to 1.65% and all other radioactive fractions to 0.03-0.53%." ;
+        ont:the_pattern_of_distibution_among_tissues_organs_and_fluid_compartments
+                "oral exposure: residual radioactivity in total organs/tissues at 96 hours post-dosing was 0.45%. By 96 hours after the oral dose, radioactivity in organs/tissues was low. the highest levels were in the liver (0.240 μg eq/g) and kidney (0.147 μg eqlg). all other values were below 0.1 μg eq/g. dermal exposure: residual radioactivity in total organs/tissues after 96 hours was 0.06%. very low levels of radioactivity were measured in blood and plasma. at 96 hours after dermal administration radioactivity levels in organs/tissues were very low. organs/tissues with the highest amounts were treated skin (0.055 μg eq/g), untreated skin (0.069 μg eq/g) and fat (0.014 μg eq/g)" ;
+        ont:the_rates_of_excretion   "oral exposure: the radioactivity excreted over 96 hours in urine and faeces represented 55.60% and 32.73%, respectively, of the radioactive dose. when the cage wash (1.07%) was included, the total excreted was 90.40%. the total recovery of radioactivity was ~ 90.85%. dermal exposure: radioactivity excretion, over 96 hours via urine and faeces, represented on average 0.03% each. on average, the total recovery of radioactivity amounted to 94.92%. total radioactivity in residual carcass amounted to 0.063 μg eq/g." ;
+        ont:type                     "in vivo" ;
+        ont:urine                    "oral exspoure: 55.60%" ;
+        ont:vehicle_name             "purified water" ;
+        ont:year                     "2004" .
+
+<http://toxin.vub.be/resource/dossier/basic%20yellow%2087>
+        a              ont:Report ;
+        rdfs:label     "basic yellow 87" ;
+        ont:contains   <http://toxin.vub.be/resource/test/toxicokinetics_skin_absorption/oecd_417/8> , <http://toxin.vub.be/resource/test/toxicokinetics_skin_absorption/oecd_417/7> ;
+        ont:guideline  <http://toxin.vub.be/resource/guideline/OECD%20417> ;
+        ont:seeAlso    <http://toxin.vub.be/resource/pdfLink/https%3A%2F%2Fec.europa.eu%2Fhealth%2Fscientific_committees%2Fconsumer_safety%2Fdocs%2Fsccs_o_081.pdf> .
+
+<http://toxin.vub.be/resource/test/toxicokinetics_skin_absorption/oecd_417/12>
+        a                           ont:Test ;
+        ont:additional_info         "Test substance: Non-labelled: Transcutol® HP (DEGEE), Labelled: [14C]-Diethylene glycol monoethyl ether ([14C DEGEE) " ;
+        ont:administration_scheme   "single" ;
+        ont:batch_number            "104-272-053 supplied by Moravek Biochemicals Inc., USA" ;
+        ont:chemical_batch_nr       "25005" ;
+        ont:compound                <http://toxin.vub.be/resource/compound/diethylene%20glycol%20monoethyl%20ether%20%28DEGEE%29> ;
+        ont:compoundLabel           "diethylene glycol monoethyl ether (DEGEE)" ;
+        ont:dose_level_unit         "mg/kg bw including 1.85MBq (50µCi) of  [14C]-DEGEE" ;
+        ont:dose_levels             "1000" ;
+        ont:gavage                  "yes" ;
+        ont:glp                     "no" ;
+        ont:guideline               <http://toxin.vub.be/resource/guideline/OECD%20417> ;
+        ont:guidelineLabel          "OECD 417" ;
+        ont:identified_metabolites  "The two major urinary metabolites were identified as Ethoxyethoxyacetic acid and Diethylene glycol, which represented 83% and 5.4% of the excreted urinary radioactivity, respectively." ;
+        ont:labeled_purity          "100" ;
+        ont:n_subject_group         "2" ;
+        ont:other                   "In plasma, only Ethoxyethoxyacetic acid and unchanged [14C]-DEGEE were detected, which was consistent with urinary results." ;
+        ont:ref_in_dossier          "27" ;
+        ont:samples                 "plasma, urine and faeces samples" ;
+        ont:sex                     "m" ;
+        ont:species_strain          "rat/Sprague-Dawley" ;
+        ont:the_pattern_and_the_rates_of_metabolism
+                "[14C]-DEGEE was intensively metabolised, only 3% of the urinary excreted radioactivity correspond to unchanged compound." ;
+        ont:timing_of_the_studysampling
+                "Blood: 0.75 and 24 h; Urine: pre-dose, 0 – 8 h, 8 – 24 h; Feces: pre-dose, 0 – 24 h" ;
+        ont:type                    "in vivo" ;
+        ont:urine                   "After administration of [14C]-DEGEE, 90% of the administrated radioactivity was excreted in the urine within the first 24 hours." ;
+        ont:vehicle_name            "water for injection" ;
+        ont:volume                  "5ml/kg bw" ;
+        ont:year                    "2003" .
+
+<http://toxin.vub.be/resource/test/toxicokinetics_skin_absorption/oecd_417/5>
+        a                            ont:Test ;
+        ont:additional_info          "test substance: orange (mip 3100)" ;
+        ont:administration_scheme    "single" ;
+        ont:amount_and_rate_of_absorption
+                "the test substance was rapidly absorbed from the gastro- intestinal tract into the systemic circulation." ;
+        ont:auc                      "55.7 μg x h/g" ;
+        ont:batch_number             "3496175" ;
+        ont:c_max                    "15.113µg eq/g" ;
+        ont:chemical_batch_nr        "028407a2" ;
+        ont:compound                 <http://toxin.vub.be/resource/compound/basic%20orange%2031> ;
+        ont:compoundLabel            "basic orange 31" ;
+        ont:conclusion               "the study authors assumed that the radioactivity in femur was found mainly in bone marrow. the kinetics was similar between plasma and the femur but there was a slower elimination rate in the femur, calculated to be an elimination half-life of 8.9 hours." ;
+        ont:dose_level_unit          "mg/kh bw" ;
+        ont:dose_levels              "100" ;
+        ont:exposure_other           "the plasma concentration decreased rapidly and by 4 hours post-dosing was 2.463 μg eq/g. within 24 hours post-dosing, the plasma concentration was 0.199 μg eq/g. in femur, the maximum concentration was 7.667 μg eq/g after 0.5 hours post-dosing. the concentration in femur decreased rapidly to 3.084 μg eq/g by 4 hours and 0.809 μg eq/g at 24 hours post-dosing." ;
+        ont:gavage                   "yes" ;
+        ont:glp                      "yes" ;
+        ont:guideline                <http://toxin.vub.be/resource/guideline/OECD%20417> ;
+        ont:guidelineLabel           "OECD 417" ;
+        ont:halflife_time_depletion  "4.9h" ;
+        ont:labeled_purity           ">97" ;
+        ont:n_subject_group          "15" ;
+        ont:purity                   "94.6" ;
+        ont:ref_in_dossier           "3, subm. 2" ;
+        ont:sex                      "f" ;
+        ont:species_strain           "mouse/ hybrid, nmri, spf-quality" ;
+        ont:specific_activity        "1295 MBq/mmol; 35 mCi/mmol" ;
+        ont:t_max                    "0.5h" ;
+        ont:timing_of_the_studysampling
+                "at post-dosing intervals of 0.5, 1, 2, 4, and 24 hours, three animals were killed and the concentration of radioactivity in plasma and femur determined." ;
+        ont:type                     "in vivo" ;
+        ont:vehicle_name             "purified water" ;
+        ont:year                     "2004" .
+
+<http://toxin.vub.be/resource/compound/diethylene%20glycol%20monoethyl%20ether%20%28DEGEE%29>
+        a               ont:Compound ;
+        rdfs:label      "diethylene glycol monoethyl ether (DEGEE)" ;
+        ont:compoundOf  <http://toxin.vub.be/resource/dossier/diethylene%20glycol%20monoethyl%20ether%20%28DEGEE%29> .
+
+<http://toxin.vub.be/resource/dossier/hc%20blue%20n°%2015>
+        a              ont:Report ;
+        rdfs:label     "hc blue n° 15" ;
+        ont:contains   <http://toxin.vub.be/resource/test/toxicokinetics_skin_absorption/oecd_417/4> ;
+        ont:guideline  <http://toxin.vub.be/resource/guideline/OECD%20417> ;
+        ont:seeAlso    <http://toxin.vub.be/resource/pdfLink/https%3A%2F%2Fec.europa.eu%2Fhealth%2Fscientific_committees%2Fconsumer_safety%2Fdocs%2Fsccs_o_089.pdf> .
+
+<http://toxin.vub.be/resource/compound/hc%20blue%2018>
+        a               ont:Compound ;
+        rdfs:label      "hc blue 18" ;
+        ont:compoundOf  <http://toxin.vub.be/resource/dossier/hc%20blue%2018> .
+
+<http://toxin.vub.be/resource/test/toxicokinetics_skin_absorption/oecd_417/11>
+        a                             ont:Test ;
+        ont:additional_info           "Test substance: Non-labelled: Transcutol® HP (DEGEE), Labelled: [14C]-Diethylene glycol monoethyl ether ([14C DEGEE) " ;
+        ont:administration_scheme     "single" ;
+        ont:amount_and_rate_of_absorption
+                "The absolute bioavailability of the radioactivity is very high (79 — 95 %)." ;
+        ont:batch_number              "104-272-053 supplied by Moravek Biochemicals Inc., USA" ;
+        ont:c_max                     "i.v.: 32-35mg eq/kg, oral: 23-27 mg eq/kg" ;
+        ont:chemical_batch_nr         "25005" ;
+        ont:compound                  <http://toxin.vub.be/resource/compound/diethylene%20glycol%20monoethyl%20ether%20%28DEGEE%29> ;
+        ont:compoundLabel             "diethylene glycol monoethyl ether (DEGEE)" ;
+        ont:dose_level_unit           "mg/kg bw (50 µCi/kg bw)" ;
+        ont:dose_levels               "20" ;
+        ont:gavage                    "yes" ;
+        ont:glp                       "yes" ;
+        ont:guideline                 <http://toxin.vub.be/resource/guideline/OECD%20417> ;
+        ont:guidelineLabel            "OECD 417" ;
+        ont:halflife_time_absorption  "37 to 84h" ;
+        ont:halflife_time_depletion   "168h" ;
+        ont:intraveneous              "yes" ;
+        ont:labeled_purity            "100" ;
+        ont:n_subject_group           "6" ;
+        ont:ref_in_dossier            "25" ;
+        ont:sex                       "f & m" ;
+        ont:species_strain            "Rat/Sprague-Dawley and BDIX" ;
+        ont:t_max                     "i.v.: 0.25h, oral:0.25-0.50h post dose" ;
+        ont:the_pattern_of_distibution_among_tissues_organs_and_fluid_compartments
+                "The tissue distribution of the radioactivity was characterised by high concentrations observed in pituitary, thyroid, adrenals and bone marrow with regards to the concentrations observed in blood / plasma (100 to 1000 times less) at the same sampling time. The radioactivity measured in tissues was significantly decreased at 48 hours. No biologically relevant difference has been observed with BDIX rats." ;
+        ont:timing_of_the_studysampling
+                "Sprague-Dawley rats: 0.25 up to 168 hours after oral or intravenous application. BDIX rats: 0.25 up to 6 hours after oral or intravenous application" ;
+        ont:type                      "in vivo" ;
+        ont:urine                     "After administration of 20 mg/kg of [14C]-Diethylene glycol monoethyl ether in male and female Sprague Dawley rats, the radioactivity was rapidly excreted in urine, irrespectively on sex and route of administration (85 % to 90 % within 24 hours post dose)." ;
+        ont:vehicle_name              "oral:water for injection, intravenous: Physiological saline solution (0.9% NaCl) " ;
+        ont:volume                    "oral: 5, intravenous: 2 ml/kg bw" ;
+        ont:year                      "2002" .
+
+<http://toxin.vub.be/resource/dossier/butylphenyl%20methylpropional%20%28p-bmhca%29>
+        a              ont:Report ;
+        rdfs:label     "butylphenyl methylpropional (p-bmhca)" ;
+        ont:contains   <http://toxin.vub.be/resource/test/toxicokinetics_skin_absorption/oecd_417/10> , <http://toxin.vub.be/resource/test/toxicokinetics_skin_absorption/oecd_417/9> ;
+        ont:guideline  <http://toxin.vub.be/resource/guideline/OECD%20417> ;
+        ont:seeAlso    <http://toxin.vub.be/resource/pdfLink/https%3A%2F%2Fec.europa.eu%2Fhealth%2Fscientific_committees%2Fconsumer_safety%2Fdocs%2Fsccs_o_189.pdf> .

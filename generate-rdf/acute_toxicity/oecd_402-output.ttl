@@ -36,6 +36,11 @@
         ont:sex                     "f & m" ;
         ont:type                    "in vivo" .
 
+<http://toxin.vub.be/resource/compound/HC%20Blue%20n°%2014>
+        a               ont:Compound ;
+        rdfs:label      "HC Blue n° 14" ;
+        ont:compoundOf  <http://toxin.vub.be/resource/dossier/HC%20Blue%20n°%2014> .
+
 <http://toxin.vub.be/resource/test/acute-toxicity/6>
         a                               ont:Test ;
         ont:SCCS_comment_to_test        "no justification in relation to the maximum technically feasible dose of  3 ml/kg . according to OECD TG 402 a dose level of 2000 mg/kg is the cut-off for the limit test." ;
@@ -149,6 +154,29 @@
         ont:type                    "in vivo" ;
         ont:year                    "1992" .
 
+<http://toxin.vub.be/resource/test/acute-toxicity/24>
+        a                               ont:Test ;
+        ont:additional_info             "test substance: Imexine BJ" ;
+        ont:additional_information      "test substance: Imexine BJ" ;
+        ont:chemical_batch_nr           "Pil 1" ;
+        ont:clinical_examiniation       "there were no toxic effects. a slight blue colouration of the treatment site was observed up to day 10 in all animals. body weight gain was not affected by compound administration." ;
+        ont:compound                    <http://toxin.vub.be/resource/compound/HC%20Blue%20n°%2014> ;
+        ont:conclusion                  "the maximum non-lethal dose of HC blue n° 14 following single dermal application to rats was higher than 2000 mg/kg bw." ;
+        ont:dose_levels_unity           "mg/kg bw" ;
+        ont:dose_levels_value           "2000" ;
+        ont:glp                         "yes" ;
+        ont:gross_pathology_in_females  "no macroscopic abnormalities were observed at necropsy." ;
+        ont:guideline                   "OECD 402" ;
+        ont:klimisch_score              "3" ;
+        ont:n_animals_group             "10" ;
+        ont:observation_period          "14" ;
+        ont:patching_technique          "semi-occlusive" ;
+        ont:purity                      "94.6" ;
+        ont:ref_in_dossier              "2" ;
+        ont:rodent_strain               "rat/sprague-dawley  ico/ofa-sd (iops caw)" ;
+        ont:sex                         "f & m" ;
+        ont:type                        "in vivo" .
+
 <http://toxin.vub.be/resource/dossier/basic%20red%2051>
         a             ont:Report ;
         rdfs:label    "basic red 51" ;
@@ -190,12 +218,6 @@
         rdfs:label      "β-arbutin" ;
         ont:compoundOf  <http://toxin.vub.be/resource/dossier/β-arbutin> .
 
-<http://toxin.vub.be/resource/dossier/basic%20orange%2031>
-        a             ont:Report ;
-        rdfs:label    "basic orange 31" ;
-        rdfs:seeAlso  <https://ec.europa.eu/health/scientific_committees/consumer_safety/docs/sccs_o_082.pdf> ;
-        ont:contains  <http://toxin.vub.be/resource/test/acute-toxicity/4> , <http://toxin.vub.be/resource/test/acute-toxicity/3> .
-
 <http://toxin.vub.be/resource/test/acute-toxicity/16>
         a                               ont:Test ;
         ont:additional_info             "test substance: da 100491" ;
@@ -220,6 +242,12 @@
         ont:sex                         "f & m" ;
         ont:type                        "in vivo" ;
         ont:year                        "1996" .
+
+<http://toxin.vub.be/resource/dossier/basic%20orange%2031>
+        a             ont:Report ;
+        rdfs:label    "basic orange 31" ;
+        rdfs:seeAlso  <https://ec.europa.eu/health/scientific_committees/consumer_safety/docs/sccs_o_082.pdf> ;
+        ont:contains  <http://toxin.vub.be/resource/test/acute-toxicity/4> , <http://toxin.vub.be/resource/test/acute-toxicity/3> .
 
 <http://toxin.vub.be/resource/dossier/hc%20yellow%20n°%2013>
         a             ont:Report ;
@@ -263,8 +291,31 @@
         ont:year                   "1990" .
 
 <http://toxin.vub.be/resource/test/acute-toxicity/23>
-        a         ont:Test ;
-        ont:year  "1988" .
+        a                               ont:Test ;
+        ont:SCCS_comment_to_test        "overall SCCS comment to acute toxicity studies: the studies on acute oral, dermal and inhalation toxicity described above and performed according to currently accepted test guidelines are the studies included in the company submission but not in submission ii. submission ii includes several studies of older date and generally not performed according to currently accepted test guidelines; these studies have not been evaluated in this opinion as the more recent studies performed according to currently accepted test guidelines are considered to be more reliable." ;
+        ont:additional_info             "test substance: cetylpyridinium chloride" ;
+        ont:additional_information      "test substance: cetylpyridinium chloride" ;
+        ont:chemical_batch_nr           "Lot #00217966" ;
+        ont:clinical_examiniation       "all animals gained body weight during the study. Following application, two females exhibited irregular respiration, but recovered by day 2 and appeared active and healthy for the remainder of the 14-day observation period. Dermal irritation (erythema, oedema, hyperkeratosis, and eschar) was noted at the dose site of all animals throughout the study." ;
+        ont:composition                 "The test substance was moistened with distilled water to achieve a dry paste by preparing a 65% w/w mixture" ;
+        ont:compound                    <http://toxin.vub.be/resource/compound/cetylpyridinium%20chloride> ;
+        ont:concentration               "65" ;
+        ont:conclusion                  "under the conditions of this study, the single dose acute dermal LD50 value of cetylpyridinium chloride was greater than 5000 mg/kg bw in male and female rats." ;
+        ont:dose_levels_unity           "mg/kg bw" ;
+        ont:dose_levels_value           "5000" ;
+        ont:glp                         "yes" ;
+        ont:gross_pathology_in_females  "no gross abnormalities were noted for any of the animals when necropsied at the conclusion of the 14-day observation period." ;
+        ont:guideline                   "OECD 402" ;
+        ont:ld50                        "> 5000" ;
+        ont:n_animals_group             "10" ;
+        ont:observation_period          "14" ;
+        ont:purity                      "100" ;
+        ont:ref_in_dossier              "18" ;
+        ont:rodent_strain               "rat /sprague-dawley derived, albino" ;
+        ont:sex                         "f & m" ;
+        ont:type                        "in vivo" ;
+        ont:vehicle_name                "distilled water" ;
+        ont:year                        "2005" .
 
 <http://toxin.vub.be/resource/compound/bis%28butylbenzoate%29%20diaminotriazine%20aminopropyltrisiloxane>
         a               ont:Compound ;
@@ -342,6 +393,18 @@
         rdfs:seeAlso  <https://ec.europa.eu/health/scientific_committees/consumer_safety/docs/sccs_o_065.pdf> ;
         ont:contains  <http://toxin.vub.be/resource/test/acute-toxicity/16> .
 
+<http://toxin.vub.be/resource/dossier/HC%20Blue%20n°%2014>
+        a             ont:Report ;
+        rdfs:label    "HC Blue n° 14" ;
+        rdfs:seeAlso  <https://ec.europa.eu/health/scientific_committees/consumer_safety/docs/sccs_o_062.pdf> ;
+        ont:contains  <http://toxin.vub.be/resource/test/acute-toxicity/24> .
+
+<http://toxin.vub.be/resource/dossier/cetylpyridinium%20chloride>
+        a             ont:Report ;
+        rdfs:label    "cetylpyridinium chloride" ;
+        rdfs:seeAlso  <https://ec.europa.eu/health/scientific_committees/consumer_safety/docs/sccs_o_171.pdf> ;
+        ont:contains  <http://toxin.vub.be/resource/test/acute-toxicity/23> .
+
 <http://toxin.vub.be/resource/test/acute-toxicity/9>
         a                           ont:Test ;
         ont:SCCS_comment_to_test    "the acute toxicity of wp30 can be considered as very low. in the acute dermal toxicity study in rats, no relevant systemic effects were noted and there was no sign of skin irritation. the dermal ld50 in rats was > 2000 mg/kg bw. " ;
@@ -351,7 +414,7 @@
         ont:clinical_examiniation   "no abnormal clinical signs were observed. body weight: for males, body weight evolution was not affected by the treatment. for females, the treatment induced a slight body weight loss (-2 grams in average) observed in all females between d1 and d3 but weight increase was restored thereafter. this transient observation on body weight evolution was most probably related to the nonocclusive tape. skin reaction: neither erythema nor edema was observed so that the individual irritation index was equal to 0 for all animals. consequently, the primary irritation index of the group was also equal to 0. desquamation was present on d5 (72 h reading time) in one female and on d8 in 2 females." ;
         ont:composition             "test substance moistened with purified water" ;
         ont:compound                <http://toxin.vub.be/resource/compound/phenylene%20bis-diphenyltriazine> ;
-        ont:conclusion              "within the experimental conditions of the study, the potential acute dermal toxicity of wp30\nwas evaluated after a single topical application on wistar rat skin. 5 males and 5 females\nwere treated at 2000 mg/kg bw in a limit test for a 24-hour exposure period. no mortality\nwas observed and the ld50 by dermal application was estimated to be higher than 2000\nmg/kg bw. furthermore, wp30 was not irritating to the skin of rats. " ;
+        ont:conclusion              "within the experimental conditions of the study, the potential acute dermal toxicity of wp30\r\nwas evaluated after a single topical application on wistar rat skin. 5 males and 5 females\r\nwere treated at 2000 mg/kg bw in a limit test for a 24-hour exposure period. no mortality\r\nwas observed and the ld50 by dermal application was estimated to be higher than 2000\r\nmg/kg bw. furthermore, wp30 was not irritating to the skin of rats. " ;
         ont:dose_levels_value       "2000" ;
         ont:dose_volume             "10" ;
         ont:guideline               "OECD 402" ;
@@ -396,6 +459,11 @@
         rdfs:label    "hydroxypropyl bis(n-hydroxyethyl-p-phenylenediamine) HCl" ;
         rdfs:seeAlso  <https://ec.europa.eu/health/scientific_committees/consumer_safety/docs/sccs_o_011.pdf> ;
         ont:contains  <http://toxin.vub.be/resource/test/acute-toxicity/12> .
+
+<http://toxin.vub.be/resource/compound/cetylpyridinium%20chloride>
+        a               ont:Compound ;
+        rdfs:label      "cetylpyridinium chloride" ;
+        ont:compoundOf  <http://toxin.vub.be/resource/dossier/cetylpyridinium%20chloride> .
 
 <http://toxin.vub.be/resource/compound/1%2C3%2C5-triazine%2C%202%2C4%2C6-tris%281%2C1%27-biphenyl%29-4-yl->
         a               ont:Compound ;
@@ -485,21 +553,16 @@
         ont:sex                    "f & m" ;
         ont:type                   "in vivo" .
 
-<http://toxin.vub.be/resource/dossier/bis%28butylbenzoate%29%20diaminotriazine%20aminopropyltrisiloxane>
-        a             ont:Report ;
-        rdfs:label    "bis(butylbenzoate) diaminotriazine aminopropyltrisiloxane" ;
-        rdfs:seeAlso  <https://ec.europa.eu/health/scientific_committees/consumer_safety/docs/sccs_o_055.pdf> ;
-        ont:contains  <http://toxin.vub.be/resource/test/acute-toxicity/21> .
-
 <http://toxin.vub.be/resource/compound/4-nitrophenyl%20aminoethylurea>
         a               ont:Compound ;
         rdfs:label      "4-nitrophenyl aminoethylurea" ;
         ont:compoundOf  <http://toxin.vub.be/resource/dossier/4-nitrophenyl%20aminoethylurea> .
 
-<http://toxin.vub.be/resource/compound/basic%20red%2051>
-        a               ont:Compound ;
-        rdfs:label      "basic red 51" ;
-        ont:compoundOf  <http://toxin.vub.be/resource/dossier/basic%20red%2051> .
+<http://toxin.vub.be/resource/dossier/bis%28butylbenzoate%29%20diaminotriazine%20aminopropyltrisiloxane>
+        a             ont:Report ;
+        rdfs:label    "bis(butylbenzoate) diaminotriazine aminopropyltrisiloxane" ;
+        rdfs:seeAlso  <https://ec.europa.eu/health/scientific_committees/consumer_safety/docs/sccs_o_055.pdf> ;
+        ont:contains  <http://toxin.vub.be/resource/test/acute-toxicity/21> .
 
 <http://toxin.vub.be/resource/test/acute-toxicity/21>
         a                           ont:Test ;
@@ -528,6 +591,11 @@
         ont:sex                     "f & m" ;
         ont:type                    "in vivo" ;
         ont:year                    "2009" .
+
+<http://toxin.vub.be/resource/compound/basic%20red%2051>
+        a               ont:Compound ;
+        rdfs:label      "basic red 51" ;
+        ont:compoundOf  <http://toxin.vub.be/resource/dossier/basic%20red%2051> .
 
 <http://toxin.vub.be/resource/dossier/4-nitrophenyl%20aminoethylurea>
         a             ont:Report ;
@@ -558,12 +626,6 @@
         ont:type                    "in vivo" ;
         ont:vehicle_name            "double distilled water" .
 
-<http://toxin.vub.be/resource/dossier/4-amino-2-nitrodiphenylamine-2%27-carboxylic%20acid>
-        a             ont:Report ;
-        rdfs:label    "4-amino-2-nitrodiphenylamine-2'-carboxylic acid" ;
-        rdfs:seeAlso  <https://ec.europa.eu/health/scientific_committees/consumer_safety/docs/sccs_o_058.pdf> ;
-        ont:contains  <http://toxin.vub.be/resource/test/acute-toxicity/17> .
-
 <http://toxin.vub.be/resource/test/acute-toxicity/19>
         a                           ont:Test ;
         ont:additional_info         "test substance: mip 2982" ;
@@ -584,6 +646,12 @@
         ont:sex                     "f & m" ;
         ont:type                    "in vivo" .
 
+<http://toxin.vub.be/resource/dossier/4-amino-2-nitrodiphenylamine-2%27-carboxylic%20acid>
+        a             ont:Report ;
+        rdfs:label    "4-amino-2-nitrodiphenylamine-2'-carboxylic acid" ;
+        rdfs:seeAlso  <https://ec.europa.eu/health/scientific_committees/consumer_safety/docs/sccs_o_058.pdf> ;
+        ont:contains  <http://toxin.vub.be/resource/test/acute-toxicity/17> .
+
 <http://toxin.vub.be/resource/compound/quinolinium%2C%204-formyl-1-methyl-%2C%20salt%20with%204-methylbenzene%20sulfonic%20acid%20%281%3A1%29>
         a               ont:Compound ;
         rdfs:label      "quinolinium, 4-formyl-1-methyl-, salt with 4-methylbenzene sulfonic acid (1:1)" ;
@@ -593,11 +661,6 @@
         a               ont:Compound ;
         rdfs:label      "hc red n° 10 + hc red n° 11" ;
         ont:compoundOf  <http://toxin.vub.be/resource/dossier/hc%20red%20n°%2010%20%2B%20hc%20red%20n°%2011> .
-
-<http://toxin.vub.be/resource/compound/basic%20orange%2031>
-        a               ont:Compound ;
-        rdfs:label      "basic orange 31" ;
-        ont:compoundOf  <http://toxin.vub.be/resource/dossier/basic%20orange%2031> .
 
 <http://toxin.vub.be/resource/test/acute-toxicity/13>
         a                               ont:Test ;
@@ -622,6 +685,11 @@
         ont:rodent_strain               "rat/ crl:cd (sd)igs br" ;
         ont:sex                         "f & m" ;
         ont:type                        "in vivo" .
+
+<http://toxin.vub.be/resource/compound/basic%20orange%2031>
+        a               ont:Compound ;
+        rdfs:label      "basic orange 31" ;
+        ont:compoundOf  <http://toxin.vub.be/resource/dossier/basic%20orange%2031> .
 
 <http://toxin.vub.be/resource/dossier/2%2C5%2C6-triamino-4-pyrimidinol%20sulfate>
         a             ont:Report ;
