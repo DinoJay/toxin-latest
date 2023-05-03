@@ -126,6 +126,7 @@ export const constructQuery = ({ endpoint, cas = null, inci = null, smiles = nul
 	}
 
 
+	console.log(`${endpointMaker(endpoint)}?query=${encodeURIComponent(getSparqlQueryString({ endpoint, cas, inci, smiles }))}&format=json`)
 	return fetch(`${endpointMaker(endpoint)}?query=${encodeURIComponent(getSparqlQueryString({ endpoint, cas, inci, smiles }))}&format=json`)
 		.then((res) => res.json())
 }

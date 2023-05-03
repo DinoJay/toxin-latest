@@ -5,7 +5,8 @@
 		CARCINOGENICIY,
 		MUTAGENICITY,
 		REPEATED_DOSE_TOXICITY,
-		SKIN_SENSITISATION_UNMERGED
+		SKIN_SENSITISATION_UNMERGED,
+		TOXICOKINETICS_AND_SKIN_ABSORPTION
 	} from '$lib/endpoint_constants';
 
 	import Expandable from '$lib/Expandable.svelte';
@@ -15,32 +16,36 @@
 	export let onClick;
 
 	const repeatedDoseExtFilterNames = [
-		'gross necropsy: liver',
-		'histopathology: liver',
-		'alanine aminotransferase',
-		'aspartate aminotransferase',
-		'alkaline phosphatase',
-		'gamma glutamyl transpeptidase',
-		'sorbitol dehydrogenase',
-		'total bilirubin',
-		'total cholesterol',
-		'fasting triglycerides',
-		'high-density lipoprotein (hdl)',
-		'low-density lipoprotein (ldl)',
-		'total protein',
-		'albumin'
+		{ id: 'gross necropsy: liver', synonyms: [] },
+		{ id: 'histopathology: liver', synonyms: [] },
+		{ id: 'alanine aminotransferase', synonyms: ['ALT', 'ALAT'] },
+		{ id: 'aspartate aminotransferase', synonyms: [] },
+		{ id: 'alkaline phosphatase', synonyms: [] },
+		{ id: 'gamma glutamyl transpeptidase', synonyms: [] },
+		{ id: 'sorbitol dehydrogenase', synonyms: [] },
+		{ id: 'total bilirubin', synonyms: [] },
+		{ id: 'total cholesterol', synonyms: [] },
+		{ id: 'fasting triglycerides', synonyms: [] },
+		{ id: 'high-density lipoprotein (hdl)', synonyms: [] },
+		{ id: 'low-density lipoprotein (ldl)', synonyms: [] },
+		{ id: 'total protein', synonyms: [] },
+		{ id: 'albumin', synonyms: [] }
 	];
 
 	const data = [
 		{ label: 'Acute Toxicity', endpoint: ACUTE_TOXICITY },
-		{ label: 'Skin sensitisation', endpoint: SKIN_SENSITISATION_UNMERGED },
+		// { label: 'Skin sensitisation', endpoint: SKIN_SENSITISATION_UNMERGED },
 		{
 			label: 'Repeated dose toxicity',
 			endpoint: REPEATED_DOSE_TOXICITY,
 			filters: repeatedDoseExtFilterNames
 		},
-		{ label: 'Mutagenicity', endpoint: MUTAGENICITY },
-		{ label: 'Carcinogenicity', endpoint: CARCINOGENICIY }
+		{
+			label: 'Toxicokinetics and Skin absorption',
+			endpoint: TOXICOKINETICS_AND_SKIN_ABSORPTION
+		}
+		// { label: 'Mutagenicity', endpoint: MUTAGENICITY },
+		// { label: 'Carcinogenicity', endpoint: CARCINOGENICIY }
 	];
 	// { label: 'Photo-induced toxicity' },
 	// { label: 'Human data' },
@@ -66,7 +71,8 @@
 	// $: console.log('endpoint', repeatedDoseExtFilterVals);
 
 	$: repeatedDoseToxicityFilters = repeatedDoseExtFilterNames.map((d, i) => ({
-		name: d,
+		...d,
+		name: d.id,
 		value: repeatedDoseExtFilterVals[i]
 	}));
 
@@ -134,7 +140,7 @@
 				<div class="h-32 overflow-y-auto">
 					{#each repeatedDoseExtFilterNames as filter, i}
 						<div class="flex mb-3">
-							<label class="crop-text" for="non-oecd">{filter}</label>
+							<label class="crop-text" for="non-oecd">{filter.id}</label>
 							<input
 								bind:value={repeatedDoseExtFilterVals[i]}
 								placeholder="Enter search string"

@@ -57,11 +57,15 @@
 		})
 		.filter((d) => {
 			if (!!varFilters && !!selFilter.value) {
-				const found = varFilters?.find(
-					(f) =>
-						d[f]?.includes(selFilter.value.toLowerCase().trim()) &&
-						d[f]?.includes(selFilter.name.toLowerCase().trim())
-				);
+				const found = varFilters?.find((f) => {
+					const str = d[f]?.toLowerCase().trim();
+
+					return (
+						str?.includes(selFilter.value.toLowerCase().trim()) &&
+						(str?.includes(selFilter.name.toLowerCase().trim()) ||
+							selFilter.synonyms.find((s) => str?.includes(s.toLowerCase().trim())))
+					);
+				});
 				return found;
 				// return true;
 			} else {
