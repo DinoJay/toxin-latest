@@ -57,6 +57,16 @@
 		})
 		.filter((d) => {
 			if (!!varFilters && !!selFilter.value) {
+				// console.log('d', d);
+				if (d.compoundLabel.toLowerCase().includes('disperse blue')) {
+					console.log('yeah');
+					console.log('varFilters', varFilters);
+					console.log(
+						'd',
+						varFilters.map((f) => d[f])
+					);
+					console.log('d', d);
+				}
 				const found = varFilters?.find((f) => {
 					const str = d[f]?.toLowerCase().trim();
 
