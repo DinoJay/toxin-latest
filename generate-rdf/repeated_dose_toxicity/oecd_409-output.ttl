@@ -5,151 +5,344 @@
 @prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
 
 <http://toxin.vub.be/resource/test/repeated-dose-toxicity/oecd_409/1>
-        a                           ont:Test ;
-        ont:compound                <http://toxin.vub.be/resource/compound/triclosan> ;
-        ont:compoundLabel           "triclosan" ;
-        ont:guideline               <http://toxin.vub.be/resource/guideline/OECD%20409> ;
-        ont:guidelineLabel          "OECD 409" ;
-        ont:histopathology_all_gross_lesions
-                "histopathology examination found no differences in high-dose animals compared to control animals" ;
-        ont:histopathology_kidneys  "incidental microscopic changes noted in high-dose animals included nephrosis in 1 high-dose female" ;
-        ont:histopathology_lungs    "incidental microscopic changes noted in high-dose animals included granulomatous infiltrations in lungs in 1 female and 2 males" ;
-        ont:observation_organ_weight_organ_body_weight
+        a                               ont:Test ;
+        rdfs:seeAlso                    <https://ec.europa.eu/health/ph_risk/committees/04_sccp/docs/sccp_o_166.pdf> ;
+        ont:additional_information      "Leuschner et al. Conducted prior to oecd guidelines, but considered similar in design. " ;
+        ont:compound                    <http://toxin.vub.be/resource/compound/Triclosan> ;
+        ont:compoundLabel               "Triclosan" ;
+        ont:endpoints_conclusion        "Triclosan was reported to be well-tolerated, with no treatment-related effects up to the dose level of 125 mg/kg bw/day" ;
+        ont:endpoints_observations_clinical_observation_organ_weight_and_organbody_weight
                 "terminal examination revealed no organ weight changes or gross pathology findings" ;
-        ont:type                    "in vivo" .
+        ont:endpoints_pathology_gross_necropsy_all_gross_lesions
+                "histopathology examination found no differences in high-dose animals compared to control animals" ;
+        ont:endpoints_pathology_histopathology_kidneys
+                "incidental microscopic changes noted in high-dose animals included nephrosis in 1 high-dose female" ;
+        ont:endpoints_pathology_histopathology_lungs
+                "incidental microscopic changes noted in high-dose animals included granulomatous infiltrations in lungs in 1 female and 2 males" ;
+        ont:guideline                   <http://toxin.vub.be/resource/guideline/OECD%20409> ;
+        ont:guidelineLabel              "OECD 409" ;
+        ont:reliability_glp             "no" ;
+        ont:reliability_ref_in_dossier  "36" ;
+        ont:reliability_sccs_comment_to_test
+                "the results of 2 studies in rabbits were inconsistent;" ;
+        ont:reliability_year            "1970" ;
+        ont:test_method_test_condition_dose_level_unit
+                "mg/kg bw/d" ;
+        ont:test_method_test_condition_dose_levels
+                "0, 12.5, 25, 62.5, 125" ;
+        ont:test_method_test_condition_duration_of_exposure
+                "90" ;
+        ont:test_method_test_condition_oral_administration_diet
+                "yes" ;
+        ont:test_method_test_condition_test_animal_speciesstrain
+                "rabbit/new zealand white" ;
+        ont:type                        "in vivo" .
 
 <http://toxin.vub.be/resource/test/repeated-dose-toxicity/oecd_409/6>
         a                               ont:Test ;
+        rdfs:seeAlso                    <https://ec.europa.eu/health/ph_risk/committees/04_sccp/docs/sccp_o_166.pdf> ;
+        ont:additional_information      "Ciba-geigy. Conducted prior to oecd guidelines, but considered similar in design (but limited in number of parameters evaluated). Combined chronic toxicity /carcinogenicity. OECD 453. 1 year dosing. 56 animals in total, 4/dose interim, 6 months. " ;
         ont:aspartate_aminotransferase  "slight changes, both increases and decreases in sgot (aspartate aminotransferase),  however, not considered treatment-related." ;
-        ont:compound                    <http://toxin.vub.be/resource/compound/triclosan> ;
-        ont:compoundLabel               "triclosan" ;
-        ont:erythrocyte_count           "females showed slight decreases in erythroid parameters at all time points for high dose group, but only significant up to 26 weeks" ;
-        ont:food_water_consumption      "an increased incidence of low food intake in high dose animals" ;
+        ont:compound                    <http://toxin.vub.be/resource/compound/Triclosan> ;
+        ont:compoundLabel               "Triclosan" ;
+        ont:endpoints_clinical_biochemistry_potassium
+                "incidental changes in potassium" ;
+        ont:endpoints_clinical_biochemistry_sodium
+                "incidental changes in sodium" ;
+        ont:endpoints_clinical_biochemistry_urinalysis
+                "no differences were found in urinalysis" ;
+        ont:endpoints_conclusion        "NOEL is estimated to be 30 mg/kg bw/d based on the absence of any effect, including diarrhoea, in baboons at the low dose level in this study. " ;
+        ont:endpoints_description_of_pod_noael
+                "NOEL mg/kg bw/d" ;
+        ont:endpoints_observations_clinical_examination_clinical_examination_haematology_erythrocyte_count
+                "females showed slight decreases in erythroid parameters at all time points for high dose group, but only significant up to 26 weeks" ;
+        ont:endpoints_observations_clinical_examination_clinical_examination_haematology_total_and_differential_leucocyte_count
+                "no significant effects in males were observed except at 39 and 52 weeks, when decreased wbc noted in mid dose and high dose groups. decreased wbc was observed in high dose females at 52 weeks (not significant)" ;
+        ont:endpoints_observations_clinical_observation_foodwater_consumption
+                "an increased incidence of low food iNTAke in high dose animals" ;
+        ont:endpoints_observations_clinical_observation_organ_weight_and_organbody_weight
+                "necropsies were scheduled at 6 months, 12 months, and 13 months (28 days post-treatment). decrease in absolute brain weight and increases in kidney and liver weights (relative to bw) in high dose animals were significant when male and female data combined (data at termination)." ;
+        ont:endpoints_observations_clinical_observation_other_signs_of_toxicity
+                "vomiting was observed in some mid and high dose animals. deterioration of condition and abdominal pain was observed in high dose animals. incidence of diarrhoea was increased in mid dose animals and greatly increased in high dose animals." ;
+        ont:endpoints_pathology_gross_necropsy_all_gross_lesions
+                "histopathologic examination found similar histology in both treated and control animals." ;
+        ont:endpoints_point_of_departure
+                "30" ;
         ont:guideline                   <http://toxin.vub.be/resource/guideline/OECD%20409> ;
         ont:guidelineLabel              "OECD 409" ;
-        ont:histopathology_all_gross_lesions
-                "histopathologic examination found similar histology in both treated and control animals." ;
-        ont:observation_organ_weight_organ_body_weight
-                "necropsies were scheduled at 6 months, 12 months, and 13 months (28 days post-treatment). decrease in absolute brain weight and increases in kidney and liver weights (relative to bw) in high dose animals were significant when male and female data combined (data at termination)." ;
-        ont:observation_other_signs_of_toxicity
-                "vomiting was observed in some mid and high dose animals. deterioration of condition and abdominal pain was observed in high dose animals. incidence of diarrhoea was increased in mid dose animals and greatly increased in high dose animals." ;
         ont:other_enzymes_and_biomarker
                 "slight changes, both increases and decreases in ap (alkaline phosphatase)were observed; however, not considered treatment-related." ;
-        ont:potassium                   "incidental changes in potassium" ;
-        ont:sodium                      "incidental changes in sodium" ;
-        ont:total_differential_leucocyte
-                "no significant effects in males were observed except at 39 and 52 weeks, when decreased wbc noted in mid dose and high dose groups. decreased wbc was observed in high dose females at 52 weeks (not significant)" ;
+        ont:reliability_control_group   "the control group received 1 capsue coNTAining 600mg lactose + 0.5% magnesium stearate per day" ;
+        ont:reliability_glp             "no" ;
+        ont:reliability_ref_in_dossier  "41" ;
+        ont:reliability_sccs_comment_to_test
+                "in baboon studies conducted at doses up to 300 mg/kg bw/d, both 4/13-week and 1-year investigations showed time-dependent haematology findings. incidental clinical chemistry changes were observed; however, there was no evidence of hepatic or renal injury accompanying these findings [ref. 40; 41]. clinical signs observed in the longer-term study were not observed in the 4/13-week study. significant differences in study design as well as quality of investigation likely contributed to discrepancies between these studies. " ;
+        ont:reliability_year            "1975" ;
+        ont:test_method_test_condition_dose_level_unit
+                "mg/kg bw/d" ;
+        ont:test_method_test_condition_dose_levels
+                "0, 30, 100, 300" ;
+        ont:test_method_test_condition_duration_of_exposure
+                "90" ;
+        ont:test_method_test_condition_oral_administration_capsule
+                "yes" ;
+        ont:test_method_test_condition_recovery_period
+                "28" ;
+        ont:test_method_test_condition_repeated_administration_scheme
+                "7 days/week once daily" ;
+        ont:test_method_test_condition_test_animal_n_animals__group
+                "6" ;
+        ont:test_method_test_condition_test_animal_number_satellite_group
+                "4/dose in recovery group" ;
+        ont:test_method_test_condition_test_animal_sex
+                "f & m" ;
+        ont:test_method_test_condition_test_animal_speciesstrain
+                "baboon /papio" ;
         ont:type                        "in vivo" .
 
 <http://toxin.vub.be/resource/test/repeated-dose-toxicity/oecd_409/4>
-        a                   ont:Test ;
-        ont:compound        <http://toxin.vub.be/resource/compound/triclosan> ;
-        ont:compoundLabel   "triclosan" ;
-        ont:gross_necropsy_external_surface_body
-                "macroscopic evaluations found no gross pathology for any organ" ;
-        ont:guideline       <http://toxin.vub.be/resource/guideline/OECD%20409> ;
-        ont:guidelineLabel  "OECD 409" ;
-        ont:haematocrit     "haematology was limited to high-dose group animals." ;
-        ont:histopathology_all_gross_lesions
-                "histopathologic evaluation of all major organs from all animals showed no difference among treated and control animals." ;
-        ont:observation_organ_weight_organ_body_weight
+        a                               ont:Test ;
+        rdfs:seeAlso                    <https://ec.europa.eu/health/ph_risk/committees/04_sccp/docs/sccp_o_166.pdf> ;
+        ont:additional_information      "Leuschner et al. Conducted prior to oecd guidelines, but considered similar in design." ;
+        ont:compound                    <http://toxin.vub.be/resource/compound/Triclosan> ;
+        ont:compoundLabel               "Triclosan" ;
+        ont:endpoints_clinical_biochemistry_urinalysis
+                "urinalysis evaluations was limited to high-dose group animals." ;
+        ont:endpoints_conclusion        "there were no treatment-related findings at any dose, even though the highest dose tested in the second study was the same as the lowest dose tested in the first study." ;
+        ont:endpoints_observations_clinical_examination_clinical_examination_haematology_haematocrit
+                "haematology was limited to high-dose group animals." ;
+        ont:endpoints_observations_clinical_observation_organ_weight_and_organbody_weight
                 "organ weight measurements showed no changes in relative or absolute weights." ;
-        ont:observation_other_signs_of_toxicity
+        ont:endpoints_observations_clinical_observation_other_signs_of_toxicity
                 "occasional pasty to thin faeces were noted in all groups." ;
+        ont:endpoints_pathology_gross_necropsy_all_gross_lesions
+                "histopathologic evaluation of all major organs from all animals showed no difference among treated and control animals." ;
+        ont:endpoints_pathology_gross_necropsy_external_surface_of_body
+                "macroscopic evaluations found no gross pathology for any organ" ;
+        ont:guideline                   <http://toxin.vub.be/resource/guideline/OECD%20409> ;
+        ont:guidelineLabel              "OECD 409" ;
         ont:other_enzymes_and_biomarker
                 "clinical chemistry evaluations was limited to high-dose group animals." ;
-        ont:type            "in vivo" .
+        ont:reliability_glp             "no" ;
+        ont:reliability_ref_in_dossier  "39" ;
+        ont:reliability_year            "1970" ;
+        ont:test_method_test_condition_dose_level_unit
+                "mg/kg bw/d" ;
+        ont:test_method_test_condition_dose_levels
+                "0, 5, 12.5, 25" ;
+        ont:test_method_test_condition_duration_of_exposure
+                "90" ;
+        ont:test_method_test_condition_oral_administration_diet
+                "yes" ;
+        ont:test_method_test_condition_test_animal_speciesstrain
+                "dog/beagle" ;
+        ont:type                        "in vivo" .
 
-<http://toxin.vub.be/resource/test/repeated-dose-toxicity/oecd_409/2>
-        a                           ont:Test ;
-        ont:compound                <http://toxin.vub.be/resource/compound/triclosan> ;
-        ont:compoundLabel           "triclosan" ;
-        ont:gross_necropsy_kidneys  "perirenal abscess in 1 rabbit was observed at 30 mg/kg bw/d" ;
-        ont:gross_necropsy_thoracic_cavity
-                "pulmonary infection was observed in 3/6 rabbits at 30 mg/kg bw/d and 3/6 rabbits from 150 mg/kg bw/d." ;
-        ont:guideline               <http://toxin.vub.be/resource/guideline/OECD%20409> ;
-        ont:guidelineLabel          "OECD 409" ;
-        ont:histopathology_lungs    "gross macroscopic findings in the lung corresponded with histopathologic lung lesions, oedema in 30 and 150 mg/kg bw/d treated animals and lung necrosis in 2 high-dose animals. no such histomorphology changes were noted in control or 3 mg/kg bw/d animals." ;
-        ont:observation_organ_weight_organ_body_weight
-                "limited organ weight determinations showed no treatment-related findings." ;
-        ont:total_differential_leucocyte
-                "at doses of 30 and 150 mg/kg bw/d, neutrophilia and lymphopenia were observed on various observation days but were not consistent throughout the study." ;
-        ont:type                    "in vivo" .
-
-<http://toxin.vub.be/resource/test/repeated-dose-toxicity/oecd_409/7>
-        a                   ont:Test ;
-        ont:compound        <http://toxin.vub.be/resource/compound/butylphenyl%20methylpropional%20%28p-bmhca%29> ;
-        ont:compoundLabel   "butylphenyl methylpropional (p-bmhca)" ;
-        ont:guideline       <http://toxin.vub.be/resource/guideline/OECD%20409> ;
-        ont:guidelineLabel  "OECD 409" ;
-        ont:type            "in vivo" .
-
-<http://toxin.vub.be/resource/dossier/triclosan>
+<http://toxin.vub.be/resource/dossier/Triclosan>
         a              ont:Report ;
-        rdfs:label     "triclosan" ;
+        rdfs:label     "Triclosan" ;
         rdfs:seeAlso   <https://ec.europa.eu/health/ph_risk/committees/04_sccp/docs/sccp_o_166.pdf> ;
-        ont:contains   <http://toxin.vub.be/resource/test/repeated-dose-toxicity/oecd_409/6> , <http://toxin.vub.be/resource/test/repeated-dose-toxicity/oecd_409/1> , <http://toxin.vub.be/resource/test/repeated-dose-toxicity/oecd_409/3> , <http://toxin.vub.be/resource/test/repeated-dose-toxicity/oecd_409/5> , <http://toxin.vub.be/resource/test/repeated-dose-toxicity/oecd_409/2> , <http://toxin.vub.be/resource/test/repeated-dose-toxicity/oecd_409/4> ;
+        ont:contains   <http://toxin.vub.be/resource/test/repeated-dose-toxicity/oecd_409/5> , <http://toxin.vub.be/resource/test/repeated-dose-toxicity/oecd_409/2> , <http://toxin.vub.be/resource/test/repeated-dose-toxicity/oecd_409/4> , <http://toxin.vub.be/resource/test/repeated-dose-toxicity/oecd_409/6> , <http://toxin.vub.be/resource/test/repeated-dose-toxicity/oecd_409/1> , <http://toxin.vub.be/resource/test/repeated-dose-toxicity/oecd_409/3> ;
         ont:guideline  <http://toxin.vub.be/resource/guideline/OECD%20409> .
 
-<http://toxin.vub.be/resource/compound/butylphenyl%20methylpropional%20%28p-bmhca%29>
-        a               ont:Compound ;
-        rdfs:label      "butylphenyl methylpropional (p-bmhca)" ;
-        ont:compoundOf  <http://toxin.vub.be/resource/dossier/butylphenyl%20methylpropional%20%28p-bmhca%29> .
+<http://toxin.vub.be/resource/test/repeated-dose-toxicity/oecd_409/2>
+        a                               ont:Test ;
+        rdfs:seeAlso                    <https://ec.europa.eu/health/ph_risk/committees/04_sccp/docs/sccp_o_166.pdf> ;
+        ont:additional_information      "Paterson. Conducted prior to oecd guidelines, but considered similar in design. Study 1" ;
+        ont:compound                    <http://toxin.vub.be/resource/compound/Triclosan> ;
+        ont:compoundLabel               "Triclosan" ;
+        ont:endpoints_description_of_pod_noael
+                "NOAEL mg/kg bw/d" ;
+        ont:endpoints_discussion_and_results
+                "based on findings of neutrophilia and lymphopenia at 30 mg/kg bw/d and absence of histomorphologic alterations, 3 mg/kg bw/d was determined to be the NOAEL. however, the study authors stated that the relationship of the lung lesions, infection, oedema and sometimes necrosis observed at the 2 highest doses to test article administration is unclear. dosing accidents or regurgitation with resultant pulmonary infection was suggested. animals given doses of 30 or 150 mg/kg bw/d showed pulmonary infections. however, it should be noted be noted that study investigators stated that the relationship of the lung findings to Triclosan was unclear.  " ;
+        ont:endpoints_moribund_or_dead_animals_prior_to_study_termination
+                "yes" ;
+        ont:endpoints_mortality_rate    "dose-related mortality was observed at 30 and 150 mg/kg bw/d." ;
+        ont:endpoints_observations_clinical_examination_clinical_examination_haematology_total_and_differential_leucocyte_count
+                "at doses of 30 and 150 mg/kg bw/d, neutrophilia and lymphopenia were observed on various observation days but were not consistent throughout the study." ;
+        ont:endpoints_observations_clinical_observation_organ_weight_and_organbody_weight
+                "limited organ weight determinations showed no treatment-related findings." ;
+        ont:endpoints_pathology_gross_necropsy_kidneys
+                "perirenal abscess in 1 rabbit was observed at 30 mg/kg bw/d" ;
+        ont:endpoints_pathology_gross_necropsy_thoracic_cavity
+                "pulmonary infection was observed in 3/6 rabbits at 30 mg/kg bw/d and 3/6 rabbits from 150 mg/kg bw/d." ;
+        ont:endpoints_pathology_histopathology_lungs
+                "gross macroscopic findings in the lung corresponded with histopathologic lung lesions, oedema in 30 and 150 mg/kg bw/d treated animals and lung necrosis in 2 high-dose animals. no such histomorphology changes were noted in control or 3 mg/kg bw/d animals." ;
+        ont:endpoints_point_of_departure
+                "3" ;
+        ont:endpoints_target_organ      "lung  associated with macroscopic and microscopic changes" ;
+        ont:guideline                   <http://toxin.vub.be/resource/guideline/OECD%20409> ;
+        ont:guidelineLabel              "OECD 409" ;
+        ont:reliability_glp             "no" ;
+        ont:reliability_ref_in_dossier  "37" ;
+        ont:reliability_sccs_comment_to_test
+                "the results of 2 studies in rabbits were inconsistent;" ;
+        ont:reliability_year            "1969" ;
+        ont:test_method_test_condition_dose_level_unit
+                "mg/kg bw/d" ;
+        ont:test_method_test_condition_dose_levels
+                "0, 3, 30, 150" ;
+        ont:test_method_test_condition_duration_of_exposure
+                "90" ;
+        ont:test_method_test_condition_oral_administration_gavage
+                "yes" ;
+        ont:test_method_test_condition_test_animal_speciesstrain
+                "rabbit/albino" ;
+        ont:type                        "in vivo" .
 
-<http://toxin.vub.be/resource/test/repeated-dose-toxicity/oecd_409/5>
-        a                             ont:Test ;
-        ont:alanine_aminotransferase  "increased sgpt in individual male baboons at 1 mg/kg bw/d and 3 mg/kg bw/d." ;
-        ont:compound                  <http://toxin.vub.be/resource/compound/triclosan> ;
-        ont:compoundLabel             "triclosan" ;
-        ont:food_water_consumption    " no treatment-related changes were found in ophthalmoscopic examinations and in water consumption, haematology and body weight." ;
-        ont:guideline                 <http://toxin.vub.be/resource/guideline/OECD%20409> ;
-        ont:guidelineLabel            "OECD 409" ;
-        ont:haematocrit               "blood chemistry revealed no haematology changes." ;
-        ont:histopathology_ileum      "after 4 weeks of treatment, minor changes such as dark nodules in the large intestine wall at ≥10 mg/kg bw/d. adhesion in lung surface and rib cage, slight thickening of capsule of the liver in 10 mg/kg bw/d female and 1 mg/kg bw/d male, and control male and female were observed. " ;
-        ont:histopathology_liver      "after 4 weeks of treatment, minor changes such as slight thickening of capsule of the liver in 10 mg/kg bw/d female and 1 mg/kg bw/d male, and control male and female were observed. " ;
-        ont:histopathology_lungs      "after 4 weeks of treatment, minor changes such as adhesion in lung surface and rib cage  in 10 mg/kg bw/d female and 1 mg/kg bw/d male, and control male and female were observed. " ;
-        ont:observation_behaviour_pattern
-                "symptoms such as agitation, anger and aggression were observed in the one female receiving 100 mg/kg." ;
-        ont:observation_ophtalmological_examination
-                " no treatment-related changes were found in ophthalmoscopic examinations and in water consumption, haematology and body weight." ;
-        ont:observation_organ_weight_organ_body_weight
-                " no treatment-related changes were found in ophthalmoscopic examinations and in water consumption, haematology and body weight." ;
-        ont:other_enzymes_and_biomarker
-                "high plasma urea levels in 2 animals at 30 mg/kg bw/d, 2 animals at 3 mg/kg bw/d, 1 control baboon" ;
-        ont:type                      "in vivo" .
+<http://toxin.vub.be/resource/test/repeated-dose-toxicity/oecd_409/7>
+        a                               ont:Test ;
+        rdfs:seeAlso                    <https://ec.europa.eu/health/scientific_committees/consumer_safety/docs/SCCS_o_189.pdf> ;
+        ont:additional_information      "guideline/method: subchronic study according to oecd 409. method: body weights, clinical signs and mortality were recorded. haematology and clinical chemistry assessments were performed at weeks 3, 6 and 13. urine samples were collected for urinalysis at weeks 5 and 11. necropsy and macroscopic and histopathological examination were conducted at the end of the study. " ;
+        ont:compound                    <http://toxin.vub.be/resource/compound/Butylphenyl%20methylpropional%20%28BMHCA%29> ;
+        ont:compoundLabel               "Butylphenyl methylpropional (BMHCA)" ;
+        ont:endpoints_discussion_and_results
+                "no significant differences in body weight gains, in urinalysis, haematological and clinical chemistry parameters were observed. gross pathology and histopathology revealed no specific substance-related findings, especially, no alterations on reproductive organs were observed in males or females. a subsequent study by the same authors (givaudan, 1990d, rifm#12147; 3 female beagle dogs treated with 200 mg/kg body weight/day orally by gelatine capsules for 90 consecutive days) again did not find treatment-related effects, and no alterations of clinical chemistry parameters or cholinesterase activity. " ;
+        ont:guideline                   <http://toxin.vub.be/resource/guideline/OECD%20409> ;
+        ont:guidelineLabel              "OECD 409" ;
+        ont:reliability_glp             "yes" ;
+        ont:reliability_ref_in_dossier  "givaudan, 1990g, rifm#12140" ;
+        ont:reliability_sccs_comment_to_test
+                "The toxicity of BMHC A after repeated application was investigated in several species. Decreases in body weights and food consumption and/or clinical signs of toxicity were observed after subacute oral administration of BMHC A at doses of ≥50 mg/kg bw/day (rats) and ≥200 mg/kg bw/day (dogs). Irrespective of the length of treatment period, in oral studies rats were found more sensitive than dogs to this compound. Clinical chemistry and histopathological examinations repeatedly revealed adverse effects on the liver and male reproductive system (testicular toxicity; cf. 3.3.8.). Decreases in plasma cholinesterase activity levels in both sexes of rats were observed after oral exposure to ≥25 mg/kg bw/day for 90 days. In addition, effects on adrenal glands in females were also observed at the same dose levels. From this most meaningful oral study, with respect to the doses administered, a NOAEL of 5 mg/kg bw/day can be derived for systemic effects. On the other hand, dermal administration in rats for 5 days led to adverse effects (including testicular toxicity) only at excessive dose levels (2000 mg/kg bw/day). No 90-day studies on dermal or inhalative administration were available." ;
+        ont:test_method_test_condition_dose_level_unit
+                "mg/kg bw/day (one capsule per day)" ;
+        ont:test_method_test_condition_dose_levels
+                "0, 4.4, 22.3, 44.6" ;
+        ont:test_method_test_condition_duration_of_exposure
+                "90" ;
+        ont:test_method_test_condition_oral_administration_capsule
+                "yes" ;
+        ont:test_method_test_condition_repeated_administration_scheme
+                "7 days / week" ;
+        ont:test_method_test_condition_test_animal_n_animals__group
+                "6" ;
+        ont:test_method_test_condition_test_animal_sex
+                "f & m" ;
+        ont:test_method_test_condition_test_animal_speciesstrain
+                "dogs (beagle)" ;
+        ont:test_method_test_substance_composition
+                "BMHC A" ;
+        ont:test_method_test_substance_purity
+                "97.6" ;
+        ont:type                        "in vivo" .
 
-<http://toxin.vub.be/resource/dossier/butylphenyl%20methylpropional%20%28p-bmhca%29>
+<http://toxin.vub.be/resource/dossier/Butylphenyl%20methylpropional%20%28BMHCA%29>
         a              ont:Report ;
-        rdfs:label     "butylphenyl methylpropional (p-bmhca)" ;
-        rdfs:seeAlso   <https://ec.europa.eu/health/scientific_committees/consumer_safety/docs/sccs_o_189.pdf> ;
+        rdfs:label     "Butylphenyl methylpropional (BMHCA)" ;
+        rdfs:seeAlso   <https://ec.europa.eu/health/scientific_committees/consumer_safety/docs/SCCS_o_189.pdf> ;
         ont:contains   <http://toxin.vub.be/resource/test/repeated-dose-toxicity/oecd_409/7> ;
         ont:guideline  <http://toxin.vub.be/resource/guideline/OECD%20409> .
 
-<http://toxin.vub.be/resource/test/repeated-dose-toxicity/oecd_409/3>
+<http://toxin.vub.be/resource/test/repeated-dose-toxicity/oecd_409/5>
         a                               ont:Test ;
-        ont:alanine_aminotransferase    "high sgpt was noted in all animals at doses of ≥50 mg/kg bw/d." ;
-        ont:aspartate_aminotransferase  "high sgot was noted in all animals at doses of ≥50 mg/kg bw/d." ;
-        ont:compound                    <http://toxin.vub.be/resource/compound/triclosan> ;
-        ont:compoundLabel               "triclosan" ;
-        ont:erythrocyte_count           "haematology evaluations revealed decreased red blood cells and increased esr and reticulocytes in dogs at ≥50 mg/kg bw/d as well as during interim evaluation in moribund dogs." ;
+        rdfs:seeAlso                    <https://ec.europa.eu/health/ph_risk/committees/04_sccp/docs/sccp_o_166.pdf> ;
+        ont:additional_information      "NOEL et al. Conducted prior to oecd guidelines, but considered comparable in design (but limited in number of parameters evaluated). 6 aimals 3mg/kg bw/d" ;
+        ont:alanine_aminotransferase    "increased sgpt in individual male baboons at 1 mg/kg bw/d and 3 mg/kg bw/d." ;
+        ont:compound                    <http://toxin.vub.be/resource/compound/Triclosan> ;
+        ont:compoundLabel               "Triclosan" ;
+        ont:endpoints_clinical_biochemistry_blood_urea_nitrogen
+                "clinical chemistry changes included high plasma urea levels in 2 animals at 30 mg/kg bw/d, in 2 animals at 3 mg/kg bw/d, 1 control baboon" ;
+        ont:endpoints_clinical_biochemistry_urinalysis
+                "urinalysis showed no changes." ;
+        ont:endpoints_conclusion        "a NOAEL was not determined for this study. limited conclusions can be derived from this study due to insufficient number of animals evaluated" ;
+        ont:endpoints_discussion_and_results
+                "findings were similar among terminal histopathological examination of treated groups from 4 weeks and 13 weeks of treatment. evidence of chronic interstitial pneumonitis was seen throughout all animals. lymphocytic infiltration was seen in the liver and large intestines. these findings were not different among control and treated animals." ;
+        ont:endpoints_observations_clinical_examination_clinical_examination_haematology_haematocrit
+                "blood chemistry revealed no haematology changes." ;
+        ont:endpoints_observations_clinical_examination_ophtalmological_examination
+                " no treatment-related changes were found in ophthalmoscopic examinations and in water consumption, haematology and body weight." ;
+        ont:endpoints_observations_clinical_observation_behaviour_pattern
+                "symptoms such as agitation, anger and aggression were observed in the one female receiving 100 mg/kg." ;
+        ont:endpoints_observations_clinical_observation_foodwater_consumption
+                " no treatment-related changes were found in ophthalmoscopic examinations and in water consumption, haematology and body weight." ;
+        ont:endpoints_observations_clinical_observation_organ_weight_and_organbody_weight
+                " no treatment-related changes were found in ophthalmoscopic examinations and in water consumption, haematology and body weight." ;
+        ont:endpoints_pathology_histopathology_ileum
+                "after 4 weeks of treatment, minor changes such as dark nodules in the large intestine wall at ≥10 mg/kg bw/d. adhesion in lung surface and rib cage, slight thickening of capsule of the liver in 10 mg/kg bw/d female and 1 mg/kg bw/d male, and control male and female were observed. " ;
+        ont:endpoints_pathology_histopathology_lungs
+                "after 4 weeks of treatment, minor changes such as adhesion in lung surface and rib cage  in 10 mg/kg bw/d female and 1 mg/kg bw/d male, and control male and female were observed. " ;
         ont:guideline                   <http://toxin.vub.be/resource/guideline/OECD%20409> ;
         ont:guidelineLabel              "OECD 409" ;
-        ont:haematocrit                 "haematology evaluations revealed decreased  pcv in dogs at ≥50 mg/kg bw/d as well as during interim evaluation in moribund dogs." ;
-        ont:haemoglobin_concentration   "haematology evaluations revealed decreased haemoglobin in dogs at ≥50 mg/kg bw/d as well as during interim evaluation in moribund dogs." ;
-        ont:histopathology_bone_marrow  "in animals which showed severe liver damage, the bone marrow was hyperplastic." ;
-        ont:histopathology_kidneys      "in 2 dogs given 200 mg/kg bw/d and one dog at 100 mg/kg bw/d, focal interstitial nephritis was observed. convoluted epithelium of the kidney was observed in 2 dogs given 25 mg/kg bw/d but not observed at any other dose." ;
-        ont:histopathology_liver        " bile retention, necrosis, pathological fat and unusual kupffer cell activation were observed histopathologically in the liver." ;
-        ont:observation_organ_weight_organ_body_weight
-                "terminal organ weight determinations revealed increased liver, pancreas and adrenal weights for 100 and 200 mg/kg bw/d animals." ;
-        ont:observation_other_signs_of_toxicity
-                "severity of diarrhoea was dose-related." ;
+        ont:histopathology_liver        "after 4 weeks of treatment, minor changes such as slight thickening of capsule of the liver in 10 mg/kg bw/d female and 1 mg/kg bw/d male, and control male and female were observed. " ;
         ont:other_enzymes_and_biomarker
-                "increased alkaline phosphatase in all animals at doses of ≥50 mg/kg bw/d. bile salts was observed in dogs at ≥25 mg/kg bw/d." ;
-        ont:total_differential_leucocyte
-                "polymorphonuclear leukocytes was observed in dogs at ≥25 mg/kg bw/d" ;
+                "high plasma urea levels in 2 animals at 30 mg/kg bw/d, 2 animals at 3 mg/kg bw/d, 1 control baboon" ;
+        ont:reliability_glp             "no" ;
+        ont:reliability_ref_in_dossier  "40" ;
+        ont:reliability_sccs_comment_to_test
+                "in baboon studies conducted at doses up to 300 mg/kg bw/d, both 4/13-week and 1-year investigations showed time-dependent haematology findings. incidental clinical chemistry changes were observed; however, there was no evidence of hepatic or renal injury accompanying these findings [ref. 40; 41]. clinical signs observed in the longer-term study were not observed in the 4/13-week study. significant differences in study design as well as quality of investigation likely contributed to discrepancies between these studies. " ;
+        ont:reliability_year            "1969" ;
+        ont:test_method_test_condition_dose_level_unit
+                "mg/kg bw/d  in 4-weeks exposure & in 13-weeks" ;
+        ont:test_method_test_condition_dose_levels
+                "0, 1, 3, 10, 30, 100 & 0, 3 " ;
+        ont:test_method_test_condition_duration_of_exposure
+                "90" ;
+        ont:test_method_test_condition_oral_administration_capsule
+                "yes" ;
+        ont:test_method_test_condition_test_animal_n_animals__group
+                "2-20" ;
+        ont:test_method_test_condition_test_animal_sex
+                "f &m" ;
+        ont:test_method_test_condition_test_animal_speciesstrain
+                "baboon/papio cynocephalus and anubis" ;
         ont:type                        "in vivo" .
 
-<http://toxin.vub.be/resource/compound/triclosan>
+<http://toxin.vub.be/resource/compound/Butylphenyl%20methylpropional%20%28BMHCA%29>
         a               ont:Compound ;
-        rdfs:label      "triclosan" ;
-        ont:compoundOf  <http://toxin.vub.be/resource/dossier/triclosan> .
+        rdfs:label      "Butylphenyl methylpropional (BMHCA)" ;
+        ont:compoundOf  <http://toxin.vub.be/resource/dossier/Butylphenyl%20methylpropional%20%28BMHCA%29> .
+
+<http://toxin.vub.be/resource/compound/Triclosan>
+        a               ont:Compound ;
+        rdfs:label      "Triclosan" ;
+        ont:compoundOf  <http://toxin.vub.be/resource/dossier/Triclosan> .
+
+<http://toxin.vub.be/resource/test/repeated-dose-toxicity/oecd_409/3>
+        a                               ont:Test ;
+        rdfs:seeAlso                    <https://ec.europa.eu/health/ph_risk/committees/04_sccp/docs/sccp_o_166.pdf> ;
+        ont:additional_information      "Paterson. Conducted prior to oecd guidelines, but considered similar in design, with the exception that clinical pathology evaluations were limited. Study 2" ;
+        ont:alanine_aminotransferase    "high sgpt was noted in all animals at doses of ≥50 mg/kg bw/d." ;
+        ont:aspartate_aminotransferase  "high sgot was noted in all animals at doses of ≥50 mg/kg bw/d." ;
+        ont:compound                    <http://toxin.vub.be/resource/compound/Triclosan> ;
+        ont:compoundLabel               "Triclosan" ;
+        ont:endpoints_conclusion        "no NOAEL was determined for the study" ;
+        ont:endpoints_discussion_and_results
+                "it showed haematology, clinical chemistry, macroscopic and microscopic findings at all doses tested, including some effects at the lowest dose tested of 25 mg/kg bw/day." ;
+        ont:endpoints_moribund_or_dead_animals_prior_to_study_termination
+                "yes" ;
+        ont:endpoints_mortality_rate    "seven unscheduled deaths (1-25 mg/kg bw/d, 2-100 mg/kg bw/d and 4-200 mg/kg bw/d)" ;
+        ont:endpoints_observations_clinical_examination_clinical_examination_haematology_erythrocyte_count
+                "haematology evaluations revealed decreased red blood cells and increased esr and reticulocytes in dogs at ≥50 mg/kg bw/d as well as during interim evaluation in moribund dogs." ;
+        ont:endpoints_observations_clinical_examination_clinical_examination_haematology_haematocrit
+                "haematology evaluations revealed decreased  pcv in dogs at ≥50 mg/kg bw/d as well as during interim evaluation in moribund dogs." ;
+        ont:endpoints_observations_clinical_examination_clinical_examination_haematology_haemoglobin_concentration
+                "haematology evaluations revealed decreased haemoglobin in dogs at ≥50 mg/kg bw/d as well as during interim evaluation in moribund dogs." ;
+        ont:endpoints_observations_clinical_examination_clinical_examination_haematology_total_and_differential_leucocyte_count
+                "polymorphonuclear leukocytes was observed in dogs at ≥25 mg/kg bw/d" ;
+        ont:endpoints_observations_clinical_observation_organ_weight_and_organbody_weight
+                "terminal organ weight determinations revealed increased liver, pancreas and adrenal weights for 100 and 200 mg/kg bw/d animals." ;
+        ont:endpoints_observations_clinical_observation_other_signs_of_toxicity
+                "severity of diarrhoea was dose-related." ;
+        ont:endpoints_pathology_histopathology_bone_marrow
+                "in animals which showed severe liver damage, the bone marrow was hyperplastic." ;
+        ont:endpoints_pathology_histopathology_kidneys
+                "in 2 dogs given 200 mg/kg bw/d and one dog at 100 mg/kg bw/d, focal interstitial nephritis was observed. convoluted epithelium of the kidney was observed in 2 dogs given 25 mg/kg bw/d but not observed at any other dose." ;
+        ont:guideline                   <http://toxin.vub.be/resource/guideline/OECD%20409> ;
+        ont:guidelineLabel              "OECD 409" ;
+        ont:histopathology_liver        " bile retention, necrosis, pathological fat and unusual kupffer cell activation were observed histopathologically in the liver." ;
+        ont:other_enzymes_and_biomarker
+                "increased alkaline phosphatase in all animals at doses of ≥50 mg/kg bw/d. bile salts was observed in dogs at ≥25 mg/kg bw/d." ;
+        ont:reliability_glp             "no" ;
+        ont:reliability_ref_in_dossier  "38" ;
+        ont:reliability_year            "1967" ;
+        ont:test_method_test_condition_dose_level_unit
+                "mg/kg bw/d" ;
+        ont:test_method_test_condition_dose_levels
+                "0, 25, 50, 100, 200" ;
+        ont:test_method_test_condition_duration_of_exposure
+                "90" ;
+        ont:test_method_test_condition_oral_administration_capsule
+                "yes" ;
+        ont:test_method_test_condition_test_animal_speciesstrain
+                "dog/beagle" ;
+        ont:type                        "in vivo" .

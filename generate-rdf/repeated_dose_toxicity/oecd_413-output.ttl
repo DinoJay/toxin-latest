@@ -5,39 +5,154 @@
 @prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
 @prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
 
-<http://toxin.vub.be/resource/dossier/decamethylcyclopentasiloxane>
+<http://toxin.vub.be/resource/test/repeated-dose-toxicity/oecd_413/4>
+        a       ont:Test .
+
+<http://toxin.vub.be/resource/test/repeated-dose-toxicity/oecd_413/2>
+        a                               ont:Test ;
+        ont:additional_information      "SCCS conclusion on general toxicity: the SCCS has identified the liver as a potential target organ following repeated-dose oral exposure and liver, lungs and uterus as potential target organs following repeated-dose inhalation exposure. the effects observed on the liver were mainly an increase in liver weight. in the subchronic oral study (ref 45), this increase in liver weight was not accompanied by histopathological lesions and no biologically relevant alterations in enzymatic activities were observed. no liver effects were reported in the chronic inhalation toxicity/carcinogenicity study. therefore, the SCCS followed the hed guidance document on how to interpret hepatocellular hypertrophy (2002) and concluded that these liver effects are not adverse. therefore the oral dose of 100 mg/kg bw may be considered as a NOAEL. concerning exposure to d5 by inhalation, the inhaled concentration of 49 ppm was considered as a NOAEC." ;
+        ont:compound                    <http://toxin.vub.be/resource/compound/Decamethylcyclopentasiloxane%20%28cyclopentasiloxane%2C%20D5%29> ;
+        ont:compoundLabel               "Decamethylcyclopentasiloxane (cyclopentasiloxane, D5)" ;
+        ont:dossier                     "Decamethylcyclopentasiloxane (cyclopentasiloxane, D5)" ;
+        ont:endpoints_clinical_pathology_clinical_chemistry_calcium
+                "a slightly decreased calcium concentration in females of groups 4 and 5." ;
+        ont:endpoints_conclusion        "Based on the local toxicity of D5 on the lungs at the two highest doses, the SCCS considered that the dose corresponding to exposure of the animals for 6 hours/day 5 days/week for 3 months at a concentration of 0.75 mg/1 (49.2 ppm) air constitutes the NOAEC. " ;
+        ont:endpoints_critical_effect   "local toxicity" ;
+        ont:endpoints_description_of_pod
+                "NOAEC mg/L (49.2 ppm)" ;
+        ont:endpoints_gross_pathology_lungs
+                "lung weights remained elevated in the 233-ppm group (female) after the recovery phase." ;
+        ont:endpoints_gross_pathology_ovaries
+                "reductions in ovary organ weights were observed after the recovery phase in the high exposure (233 ppm) group only." ;
+        ont:endpoints_gross_pathology_testes
+                "reductions in testis weights were observed after the recovery phase in the high exposure (233 ppm) group only." ;
+        ont:endpoints_gross_pathology_thymus
+                "reductions in thymus weights were observed after the recovery phase in the high exposure (233 ppm) group only." ;
+        ont:endpoints_histopathology_all_gross_lesion_and_masses
+                "in the nasal cavity, minimal to slight goblet cell hyperplasia of the respiratory mucosa was noted in males and females from the highest dose group. slight, not statistically significant decreases in ovaries and testes weight were also observed. " ;
+        ont:endpoints_histopathology_lungs
+                "histopathological examinations showed an increase incidence of subacute/chronic multifocal alveolitis reported at the two highest doses in males and females. following the 1-month recovery period, the incidence of alveolitis was still evident at the highest dose. a statistically significant increase in the incidence and severity of focal interstitial inflammation in the lungs was reported in the highest dosed group and also after recovery." ;
+        ont:endpoints_histopathology_ovaries
+                "other possible treatment-related histopathological findings included an increased incidence of ovarian interstitial gland hyperplasia and vaginal mucosal mucification and atrophy in the female rats exposed to 233 ppm." ;
+        ont:endpoints_moribund_or_dead_animals_prior_to_study_termination
+                "no" ;
+        ont:endpoints_observations_body_weight
+                "following the recovery phase, initial differences in body weight gains between 233 ppm and the control group diminished. the perceNTAges in absolute body weight increase was 6%, 15%, 8% and 16% in females and 2%, 7%, 4% and 6% in males comparing to control rats." ;
+        ont:endpoints_observations_clinical_observation_changes_in_the_respiratory_system
+                "no mortality was observed in any of the treated or control groups and no clinical signs of toxicity were noted which were considered treatment-related." ;
+        ont:endpoints_observations_organ_weight_and_organbody_weight
+                "analysis of organ weight data indicated slight but statistically significant increases in liver weight (relative and absolute) for the 49.2 and 87.7 ppm (female) and 233 ppm (female/male) groups after treatment." ;
+        ont:endpoints_point_of_departure_noael
+                "0.75" ;
+        ont:gamma_glutamyl_transpeptidase
+                "the most apparent clinical biochemistry findings included a dose-related increase in gamma-glutamyltransferase activity in males of group 5 and in females of groups 3, 4 and 5 and " ;
+        ont:guideline                   "OECD 413" ;
+        ont:guideline                   <http://toxin.vub.be/resource/guideline/OECD%20413> ;
+        ont:guidelineLabel              "OECD 413" ;
+        ont:pdf_link                    "https://ec.europa.eu/health/scientific_committees/consumer_safety/docs/SCCS_o_174.pdf" ;
+        ont:reliability_control_group   "Each exposure concentration group had 20 male and female rats except for the control and highest exposure concentration groups, which coNTAined 30 males and females each. Ten of the control and high exposure concentration male and female rats were used for a treatment-free recovery period of 4 weeks. " ;
+        ont:reliability_glp             "yes" ;
+        ont:reliability_ref_in_dossier  "47, 48, 49" ;
+        ont:reliability_sccs_comment_to_test
+                "the achieved levels of D5 were slightly higher than some target exposure levels (0, 26, 46, 89 and 224 ppm) which have been quoted in previous assessments of d5 (refs. ar12, ar13). at the highest dose, d5 is probably a mixture of vapour and aerosol. histopathological changes observed both in the lung and the nasal cavity of rats exposed to the high concentrations of d5 may be due to the localised irritation from aerosol deposition and were not considered as systemic toxicity of the test substance. the effects observed on the liver were mainly a dose-related increase in liver weight and an increase in gamma-glutamyltransferase activity. these effects were not accompanied by histopathological lesions and no alterations in other enzymatic activities were observed. the SCCS followed the hed guidance document (prepared by the health effects division (hed) toxicology science advisory council, health effects division, office of pesticide programs, 2002) on how to interpret hepatocellular hypertrophy (2002) and concluded that these liver effects are not adverse. based on the local toxicity of d5 on the lungs at the two highest doses, the SCCS considered that the dose corresponding to exposure of the animals for 6 hours/day 5 days/week for 3 months at a concentration of 0.75 mg/1 (49.2 ppm) air constitutes the NOAEC." ;
+        ont:reliability_year            "1995" ;
+        ont:test_method__test_condition_dose_level_unit
+                "ppm (0.44, 0.75, 1.33, or 3.53 mg/l)" ;
+        ont:test_method__test_condition_exposure_period_day
+                "90" ;
+        ont:test_method__test_condition_inhalation_exposure_inhalation_chamber_noseonly
+                "nose-only" ;
+        ont:test_method__test_condition_nominal_concentrations
+                "0, 28.6, 49.2, 87.7, 233  " ;
+        ont:test_method__test_condition_recovery_period
+                "28" ;
+        ont:test_method__test_condition_repeated_administration_scheme
+                "6 hours/day; 5 days/week" ;
+        ont:test_method__test_condition_test_animal__speciesstrain
+                "rat/fischer 344" ;
+        ont:test_method__test_condition_test_animal_n_animals__group
+                "40" ;
+        ont:test_method__test_condition_test_animal_number_of_satellite_group
+                "10" ;
+        ont:test_method__test_condition_test_animal_sex
+                "f & m" ;
+        ont:test_method_test_substance_additional_characterisation
+                "LL0 14002" ;
+        ont:test_method_test_substance_additional_info
+                "test substance: D5" ;
+        ont:test_method_test_substance_purity
+                ">99" ;
+        ont:type                        "in vivo" ;
+        ont:type_of_study               "in vivo" .
+
+<http://toxin.vub.be/resource/dossier/Decamethylcyclopentasiloxane%20%28cyclopentasiloxane%2C%20D5%29>
         a              ont:Report ;
-        rdfs:label     "decamethylcyclopentasiloxane" ;
-        rdfs:seeAlso   <https://ec.europa.eu/health/scientific_committees/consumer_safety/docs/sccs_o_174.pdf> ;
+        rdfs:label     "Decamethylcyclopentasiloxane (cyclopentasiloxane, D5)" ;
+        rdfs:seeAlso   <https://ec.europa.eu/health/scientific_committees/consumer_safety/docs/SCCS_o_174.pdf> ;
         ont:contains   <http://toxin.vub.be/resource/test/repeated-dose-toxicity/oecd_413/2> , <http://toxin.vub.be/resource/test/repeated-dose-toxicity/oecd_413/1> ;
         ont:guideline  <http://toxin.vub.be/resource/guideline/OECD%20413> .
 
-<http://toxin.vub.be/resource/compound/decamethylcyclopentasiloxane>
-        a               ont:Compound ;
-        rdfs:label      "decamethylcyclopentasiloxane" ;
-        ont:compoundOf  <http://toxin.vub.be/resource/dossier/decamethylcyclopentasiloxane> .
+<http://toxin.vub.be/resource/test/repeated-dose-toxicity/oecd_413/5>
+        a       ont:Test .
 
-<http://toxin.vub.be/resource/test/repeated-dose-toxicity/oecd_413/2>
-        a                            ont:Test ;
-        ont:compound                 <http://toxin.vub.be/resource/compound/decamethylcyclopentasiloxane> ;
-        ont:compoundLabel            "decamethylcyclopentasiloxane" ;
-        ont:gamma_glutamyl_transpeptidase
-                "the most apparent clinical biochemistry findings included a dose-related increase in gamma-glutamyltransferase activity in males of group 5 and in females of groups 3, 4 and 5 and " ;
-        ont:guideline                <http://toxin.vub.be/resource/guideline/OECD%20413> ;
-        ont:guidelineLabel           "OECD 413" ;
-        ont:histopathology_all_gross_lesions_and_masses
-                "in the nasal cavity, minimal to slight goblet cell hyperplasia of the respiratory mucosa was noted in males and females from the highest dose group. slight, not statistically significant decreases in ovaries and testes weight were also observed. " ;
-        ont:observation_organ_weight_organ_body_weight
-                "analysis of organ weight data indicated slight but statistically significant increases in liver weight (relative and absolute) for the 49.2 and 87.7 ppm (female) and 233 ppm (female/male) groups after treatment." ;
-        ont:observation_respiratory  "no mortality was observed in any of the treated or control groups and no clinical signs of toxicity were noted which were considered treatment-related." ;
-        ont:type                     "in vivo" .
+<http://toxin.vub.be/resource/compound/Decamethylcyclopentasiloxane%20%28cyclopentasiloxane%2C%20D5%29>
+        a               ont:Compound ;
+        rdfs:label      "Decamethylcyclopentasiloxane (cyclopentasiloxane, D5)" ;
+        ont:compoundOf  <http://toxin.vub.be/resource/dossier/Decamethylcyclopentasiloxane%20%28cyclopentasiloxane%2C%20D5%29> .
+
+<http://toxin.vub.be/resource/test/repeated-dose-toxicity/oecd_413/3>
+        a       ont:Test .
 
 <http://toxin.vub.be/resource/test/repeated-dose-toxicity/oecd_413/1>
-        a                   ont:Test ;
-        ont:compound        <http://toxin.vub.be/resource/compound/decamethylcyclopentasiloxane> ;
-        ont:compoundLabel   "decamethylcyclopentasiloxane" ;
-        ont:guideline       <http://toxin.vub.be/resource/guideline/OECD%20413> ;
-        ont:guidelineLabel  "OECD 413" ;
-        ont:observation_organ_weight_organ_body_weight
+        a                               ont:Test ;
+        ont:additional_information      "taken from SCCS/1241/10. SCCS conclusion on general toxicity: the SCCS has identified the liver as a potential target organ following repeated-dose oral exposure and liver, lungs and uterus as potential target organs following repeated-dose inhalation exposure. the effects observed on the liver were mainly an increase in liver weight. in the subchronic oral study (ref 45), this increase in liver weight was not accompanied by histopathological lesions and no biologically relevant alterations in enzymatic activities were observed. no liver effects were reported in the chronic inhalation toxicity/carcinogenicity study. therefore, the SCCS followed the hed guidance document on how to interpret hepatocellular hypertrophy (2002) and concluded that these liver effects are not adverse. therefore the oral dose of 100 mg/kg bw may be considered as a NOAEL. concerning exposure to d5 by inhalation, the inhaled concentration of 49 ppm was considered as a noaec." ;
+        ont:compound                    <http://toxin.vub.be/resource/compound/Decamethylcyclopentasiloxane%20%28cyclopentasiloxane%2C%20D5%29> ;
+        ont:compoundLabel               "Decamethylcyclopentasiloxane (cyclopentasiloxane, D5)" ;
+        ont:dossier                     "Decamethylcyclopentasiloxane (cyclopentasiloxane, D5)" ;
+        ont:endpoints_conclusion        "under the same test conditions, D5 caused no biological or toxicological effect in male rats. " ;
+        ont:endpoints_critical_effect   "female liver weight" ;
+        ont:endpoints_description_of_pod
+                "NOAEC" ;
+        ont:endpoints_discussion_and_results
+                "the 120-ppm female 90-day terminal sacrifice group had a statistically significant increase in relative liver weight when compared to controls. the liver weight in females returned to normal values at the end of the recovery period." ;
+        ont:endpoints_observations_organ_weight_and_organbody_weight
                 "increase relative liver weight when compared to controls. It turned normal in females after the recovery period" ;
-        ont:type            "in vivo" .
+        ont:endpoints_point_of_departure_noael
+                "59" ;
+        ont:endpoints_target_organ      "liver" ;
+        ont:guideline                   "OECD 413" ;
+        ont:guideline                   <http://toxin.vub.be/resource/guideline/OECD%20413> ;
+        ont:guidelineLabel              "OECD 413" ;
+        ont:pdf_link                    "https://ec.europa.eu/health/scientific_committees/consumer_safety/docs/SCCS_o_174.pdf" ;
+        ont:reliability_control_group   "a control and test group consisting of 10 male and female rats each were exposed, respectively, to 0 and 120 ppm for 13 weeks and were observed for 28 days for reversibility, persistence or delayed toxic effects. " ;
+        ont:reliability_glp             "yes" ;
+        ont:reliability_ref_in_dossier  "46" ;
+        ont:reliability_sccs_comment_to_test
+                "this study followed the GLP and OECD 413 guidelines criteria. based on the increase in the female liver weight, a NOAEC of 59 ppm may be derived from this study. " ;
+        ont:test_method__test_condition_dose_level_unit
+                "ppm" ;
+        ont:test_method__test_condition_exposure_period_day
+                "90" ;
+        ont:test_method__test_condition_nominal_concentrations
+                "0, 1, 20, 59, 119, 120 " ;
+        ont:test_method__test_condition_recovery_period
+                "28" ;
+        ont:test_method__test_condition_repeated_administration_scheme
+                "6h/day, 7 days/week for 28 days (two groups 1 & 120ppm), four groups(0, 20, 59 and 119 ppm): similar regime for a period of 13 weeks." ;
+        ont:test_method__test_condition_test_animal__speciesstrain
+                "rat/sprague-dawley" ;
+        ont:test_method__test_condition_test_animal_n_animals__group
+                "20" ;
+        ont:test_method__test_condition_test_animal_number_of_satellite_group
+                "20" ;
+        ont:test_method__test_condition_test_animal_sex
+                "f & m" ;
+        ont:test_method_test_substance_additional_info
+                "test substance: D5" ;
+        ont:type                        "in vivo" ;
+        ont:type_of_study               "in vivo" .
+
+<http://toxin.vub.be/resource/test/repeated-dose-toxicity/oecd_413/6>
+        a       ont:Test ;
+        ont:endpoints_observations_clinical_observation_changes_in_skin
+                "47" .

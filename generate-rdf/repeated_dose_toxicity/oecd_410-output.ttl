@@ -4,88 +4,236 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 @prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
 
-<http://toxin.vub.be/resource/compound/2-amino-4-hydroxyethylaminoanisole%20sulfate>
+<http://toxin.vub.be/resource/compound/2-Amino-4-hydroxyethylaminoanisole%20sulfate%20%28COLIPA%20n°%20A84%29>
         a               ont:Compound ;
-        rdfs:label      "2-amino-4-hydroxyethylaminoanisole sulfate" ;
-        ont:compoundOf  <http://toxin.vub.be/resource/dossier/2-amino-4-hydroxyethylaminoanisole%20sulfate> .
+        rdfs:label      "2-Amino-4-hydroxyethylaminoanisole sulfate (COLIPA n° A84)" ;
+        ont:compoundOf  <http://toxin.vub.be/resource/dossier/2-Amino-4-hydroxyethylaminoanisole%20sulfate%20%28COLIPA%20n°%20A84%29> .
 
-<http://toxin.vub.be/resource/dossier/decamethylcyclopentasiloxane>
+<http://toxin.vub.be/resource/test/repeated-dose-toxicity/oecd_410/1>
+        a                               ont:Test ;
+        ont:additional_information      "cellulose patch, tape and residual test substance were removed after 6 hours. clipped skin of dorsal area,  hair of this region was clipped before first administration and then once a week" ;
+        ont:compound                    <http://toxin.vub.be/resource/compound/Hydroxyethyl-p-phenylenediamine%20sulfate> ;
+        ont:compoundLabel               "Hydroxyethyl-p-phenylenediamine sulfate" ;
+        ont:endpoints_conclusion        "Based on the local effects in this study the NOAEL was 250 mg/kg bw/day for both sexes. The NOAEL for systemic effects is 1000 mg/kg bw/day." ;
+        ont:endpoints_critical_effect   "local effect: acanthosis, chromodacryorrhoea" ;
+        ont:endpoints_description_of_pod
+                "NOAEL mg/kg bw/day for both sexes for local effects;  for systemic effects" ;
+        ont:endpoints_observations_clinical_examination_ophtalmological_examination
+                "no dose-related abnormalities with respect to ophthalmoscopy were observed." ;
+        ont:endpoints_observations_clinical_observation_changes_in_skin
+                "staining of skin, fur and bedding material in all dosed animals was observed: the incidence and the intensity of the staining increased with dose indicating that the staining was most probably due to oxytol-b-sulfate. these effects are regarded non-toxic. chromodacryorrhoea (excessive secretion of coloured tears) was observed with increased dose. " ;
+        ont:endpoints_observations_clinical_observation_foodwater_consumption
+                "no significant effect on feed consumption was observed." ;
+        ont:endpoints_observations_clinical_observation_organ_weight_and_organbody_weight
+                "no significant effect on body weight and organ weight  was observed." ;
+        ont:endpoints_pathology_gross_necropsy_normal_and_treated_skin
+                "in the 1000 mg/kg bw/day dose group 3/10 animals showed acanthosis indicating local irritation." ;
+        ont:endpoints_pathology_histopathology_all_gross_lesions
+                "in one of the animals showing acanthosis also an ulcer was observed. no other histopathological alterations were found." ;
+        ont:endpoints_point_of_departure
+                "250; 1000" ;
+        ont:guideline                   <http://toxin.vub.be/resource/guideline/OECD%20410> ;
+        ont:guidelineLabel              "OECD 410" ;
+        ont:pdf_link                    "https://ec.europa.eu/health/scientific_committees/consumer_safety/docs/SCCS_o_017.pdf" ;
+        ont:reliability_control_group__satellite_group
+                "a negative control group (5 male and 5 female rats) did not receive the test item, but was treated with the same cellulose patch and adhesive tape as the dosed animals. in addition, two groups (5 male and 5 female rats) were treated with 0 or 1000 mg/kg bw in the same way as their corresponding groups, but were kept then for a further 14 days without test substance administration in an attempt to observe regression or progression of test substance induced lesions." ;
+        ont:reliability_glp             "yes" ;
+        ont:reliability_klimisch_score  "2" ;
+        ont:reliability_preliminary_study
+                "this dose-range was based on a preliminary study, in which a non significant reduction in body weight and food consumption was observed at a dose of 2000 mg/kg bw. the NOEL of this study was 500 mg/kg bw. oxytol-B-sulfate was dissolved in distilled water." ;
+        ont:reliability_ref_in_dossier  "24" ;
+        ont:reliability_sccs_comment_to_test
+                "the test substance solution was not tested for stability." ;
+        ont:reliability_year            "1990" ;
+        ont:test_method_test_condition_dermal_exposure_body_surface
+                "5 x6 cm2,  at least 10% of the body surface." ;
+        ont:test_method_test_condition_dermal_exposure_exposure_period
+                "28" ;
+        ont:test_method_test_condition_dermal_exposure_exposure_time_of_at_least_6h
+                "yes" ;
+        ont:test_method_test_condition_dermal_exposure_patching
+                "yes" ;
+        ont:test_method_test_condition_dose_level_unit
+                "mg/kg bw" ;
+        ont:test_method_test_condition_dose_levels
+                "0, 62.5, 250, 1000 " ;
+        ont:test_method_test_condition_recovery_period
+                "14" ;
+        ont:test_method_test_condition_repeated_administration_scheme
+                "5 days/week" ;
+        ont:test_method_test_condition_test_animal_n_animals__group
+                "10" ;
+        ont:test_method_test_condition_test_animal_sex
+                "f & m" ;
+        ont:test_method_test_condition_test_animal_speciesstrain
+                "rat/Wistar CRL:(WI) BR" ;
+        ont:test_method_test_substance_achieved_concentration
+                "4" ;
+        ont:test_method_test_substance_additional_info
+                "test substance: Oxytol-B-sulfate (betoxolsulfate)" ;
+        ont:test_method_test_substance_composition
+                "moistened test substance in the vehicle" ;
+        ont:test_method_test_substance_purity
+                "> 98" ;
+        ont:test_method_test_substance_treatment_prior_to_application
+                "The test substance preparation was applied and spread using a plastic spatula. As far as necessary, some drops of distilled water were applied additionally to allow a distribution of the test substance on the whole administration area." ;
+        ont:test_method_test_substance_vehicle_name
+                "koleston 2000" ;
+        ont:type                        "in vivo" .
+
+<http://toxin.vub.be/resource/compound/Hydroxyethyl-p-phenylenediamine%20sulfate>
+        a               ont:Compound ;
+        rdfs:label      "Hydroxyethyl-p-phenylenediamine sulfate" ;
+        ont:compoundOf  <http://toxin.vub.be/resource/dossier/Hydroxyethyl-p-phenylenediamine%20sulfate> .
+
+<http://toxin.vub.be/resource/test/repeated-dose-toxicity/oecd_410/4>
+        a                               ont:Test ;
+        ont:additional_information      "SCCS conclusion on general toxicity: the SCCS has identified the liver as a potential target organ following repeated-dose oral exposure and liver, lungs and uterus as potential target organs following repeated-dose inhalation exposure. the effects observed on the liver were mainly an increase in liver weight. in the subchronic oral study (ref 45), this increase in liver weight was not accompanied by histopathological lesions and a control and a test group, each consisting of five male and five female rats, were treated respectively with 0 and 1600 mg/kg bw and observed for 14 days after the treatment period for reversibility, persistence and delayed effects. no biologically relevant alterations in enzymatic activities were observed. no liver effects were reported in the chronic inhalation toxicity/carcinogenicity study. therefore, the SCCS followed the hed guidance document on how to interpret hepatocellular hypertrophy (2002) and concluded that these liver effects are not adverse. therefore the oral dose of 100 mg/kg bw may be considered as a NOAEL. concerning exposure to d5 by inhalation, the inhaled concentration of 49 ppm was considered as a noaec." ;
+        ont:compound                    <http://toxin.vub.be/resource/compound/Decamethylcyclopentasiloxane%20%28cyclopentasiloxane%2C%20D5%29> ;
+        ont:compoundLabel               "Decamethylcyclopentasiloxane (cyclopentasiloxane, D5)" ;
+        ont:endpoints_conclusion        "dermal applications of d5 at a dose level of up to 1600 mg/kg bw did not produce significant toxicological effects." ;
+        ont:endpoints_discussion_and_results
+                "a comparison of mean body weight, food consumption or haematological data between control and test groups showed no treatmentrelated effects. no statistically or biologically significant differences in organ weights were seen between the control and treated groups. the few statistically significant differences in clinical chemistry parameters between the control and test groups were within normal biological variation. no treatment-related effects were identified by histopathology at either the terminal or recovery sacrifices. based on urinalysis, there was some evidence of dermal absorption and metabolism." ;
+        ont:guideline                   <http://toxin.vub.be/resource/guideline/OECD%20410> ;
+        ont:guidelineLabel              "OECD 410" ;
+        ont:pdf_link                    "https://ec.europa.eu/health/scientific_committees/consumer_safety/docs/SCCS_o_174.pdf" ;
+        ont:reliability_control_group__satellite_group
+                "a control and a test group, each consisting of five male and five female rats, were treated respectively with 0 and 1600 mg/kg bw and observed for 14 days after the treatment period for reversibility, persistence and delayed effects. " ;
+        ont:reliability_glp             "yes" ;
+        ont:reliability_ref_in_dossier  "44" ;
+        ont:reliability_sccs_comment_to_test
+                "this study followed the glp and oecd 410 guidelines criteria." ;
+        ont:test_method_test_condition_dermal_exposure_exposure_period
+                "28" ;
+        ont:test_method_test_condition_dermal_exposure_exposure_time_of_at_least_6h
+                "yes" ;
+        ont:test_method_test_condition_dermal_exposure_patching
+                "occluded" ;
+        ont:test_method_test_condition_dose_level_unit
+                "mg/kg bw/day" ;
+        ont:test_method_test_condition_dose_levels
+                "0, 200, 800, 1600 " ;
+        ont:test_method_test_condition_recovery_period
+                "14" ;
+        ont:test_method_test_condition_repeated_administration_scheme
+                "7 days per week, " ;
+        ont:test_method_test_condition_test_animal_n_animals__group
+                "20" ;
+        ont:test_method_test_condition_test_animal_sex
+                "f & m" ;
+        ont:test_method_test_condition_test_animal_speciesstrain
+                "rat/sprague-dawley" ;
+        ont:test_method_test_substance_additional_info
+                "test substance: D5" ;
+        ont:type                        "in vivo" .
+
+<http://toxin.vub.be/resource/dossier/Decamethylcyclopentasiloxane%20%28cyclopentasiloxane%2C%20D5%29>
         a              ont:Report ;
-        rdfs:label     "decamethylcyclopentasiloxane" ;
-        rdfs:seeAlso   <https://ec.europa.eu/health/scientific_committees/consumer_safety/docs/sccs_o_174.pdf> ;
+        rdfs:label     "Decamethylcyclopentasiloxane (cyclopentasiloxane, D5)" ;
+        rdfs:seeAlso   <https://ec.europa.eu/health/scientific_committees/consumer_safety/docs/SCCS_o_174.pdf> ;
         ont:contains   <http://toxin.vub.be/resource/test/repeated-dose-toxicity/oecd_410/4> , <http://toxin.vub.be/resource/test/repeated-dose-toxicity/oecd_410/3> ;
         ont:guideline  "OECD 410" .
 
-<http://toxin.vub.be/resource/test/repeated-dose-toxicity/oecd_410/1>
-        a                           ont:Test ;
-        ont:changes_skin_fur_eyes_mucous_membranes
-                "staining of skin, fur and bedding material in all dosed animals was observed: the incidence and the intensity of the staining increased with dose indicating that the staining was most probably due to oxytol-b-sulfate. these effects are regarded non-toxic. chromodacryorrhoea (excessive secretion of coloured tears) was observed with increased dose. " ;
-        ont:clinical_observation    "staining of skin, fur and bedding material in all dosed animals was observed: the incidence and the intensity of the staining increased with dose indicating that the staining was most probably due to oxytol-b-sulfate. these effects are regarded non-toxic. chromodacryorrhoea (excessive secretion of coloured tears) was observed with increased dose. " ;
-        ont:compound                <http://toxin.vub.be/resource/compound/hydroxyethyl-p-phenylenediamine%20sulfate> ;
-        ont:compoundLabel           "hydroxyethyl-p-phenylenediamine sulfate" ;
-        ont:food_water_consumption  "no significant effect on feed consumption was observed." ;
-        ont:guideline               <http://toxin.vub.be/resource/guideline/OECD%20410> ;
-        ont:guidelineLabel          "OECD 410" ;
-        ont:histopathology_all_gross_lesions
-                "in one of the animals showing acanthosis also an ulcer was observed. no other histopathological alterations were found." ;
-        ont:observation_ophtalmological_examination
-                "no dose-related abnormalities with respect to ophthalmoscopy were observed." ;
-        ont:observation_organ_weight_organ_body_weight
-                "no significant effect on body weight and organ weight  was observed." ;
-        ont:type                    "in vivo" .
-
-<http://toxin.vub.be/resource/dossier/hydroxyethyl-p-phenylenediamine%20sulfate>
-        a              ont:Report ;
-        rdfs:label     "hydroxyethyl-p-phenylenediamine sulfate" ;
-        rdfs:seeAlso   <https://ec.europa.eu/health/scientific_committees/consumer_safety/docs/sccs_o_017.pdf> ;
-        ont:contains   <http://toxin.vub.be/resource/test/repeated-dose-toxicity/oecd_410/1> ;
-        ont:guideline  "OECD 410" .
-
-<http://toxin.vub.be/resource/test/repeated-dose-toxicity/oecd_410/4>
-        a                   ont:Test ;
-        ont:compound        <http://toxin.vub.be/resource/compound/decamethylcyclopentasiloxane> ;
-        ont:compoundLabel   "decamethylcyclopentasiloxane" ;
-        ont:guideline       <http://toxin.vub.be/resource/guideline/OECD%20410> ;
-        ont:guidelineLabel  "OECD 410" ;
-        ont:type            "in vivo" .
-
 <http://toxin.vub.be/resource/test/repeated-dose-toxicity/oecd_410/2>
-        a                              ont:Test ;
-        ont:changes_skin_fur_eyes_mucous_membranes
+        a                               ont:Test ;
+        ont:additional_information      "taken from SCCP/1172/08.  treatment was continued for 28 days and since not all animals could be necropsied on the same day, treatment was continued until the day preceding necropsy. " ;
+        ont:compound                    <http://toxin.vub.be/resource/compound/2-Amino-4-hydroxyethylaminoanisole%20sulfate%20%28COLIPA%20n°%20A84%29> ;
+        ont:compoundLabel               "2-Amino-4-hydroxyethylaminoanisole sulfate (COLIPA n° A84)" ;
+        ont:endpoints_conclusion        "no indication of systemic toxic effects was noted in a dermal 28-day toxicity study in guinea pigs up to the maximum technically achievable dose of 300 mg/kg bw/day." ;
+        ont:endpoints_discussion_and_results
+                "there were no treatment-related haematological or clinical biochemistry changes. at necropsy no gross lesions were noted." ;
+        ont:endpoints_moribund_or_dead_animals_prior_to_study_termination
+                "no" ;
+        ont:endpoints_observations_clinical_examination_haematology_haemoglobin_concentration
+                "the stability and homogeneity of the test solutions were analytically verified and were in good agreement with the nominal doses, if analysis was done within 1 h after preparation. thus, a sufficient stability and correctness of the dosing solutions can be assumed during the application period of 1 h." ;
+        ont:endpoints_observations_clinical_observation_changes_in_skin
                 "the daily skin evaluation revealed no indications of erythema or oedema formation. the hyperplasia and hyperkeratosis noted in some animals were considered due to mechanical irritations caused by the clipping process and were not considered to be treatment-related." ;
-        ont:clinical_observation       "the daily skin evaluation revealed no indications of erythema or oedema formation. the hyperplasia and hyperkeratosis noted in some animals were considered due to mechanical irritations caused by the clipping process and were not considered to be treatment-related." ;
-        ont:compound                   <http://toxin.vub.be/resource/compound/2-amino-4-hydroxyethylaminoanisole%20sulfate> ;
-        ont:compoundLabel              "2-amino-4-hydroxyethylaminoanisole sulfate" ;
-        ont:guideline                  <http://toxin.vub.be/resource/guideline/OECD%20410> ;
-        ont:guidelineLabel             "OECD 410" ;
-        ont:haemoglobin_concentration  "the stability and homogeneity of the test solutions were analytically verified and were in good agreement with the nominal doses, if analysis was done within 1 h after preparation. thus, a sufficient stability and correctness of the dosing solutions can be assumed during the application period of 1 h." ;
-        ont:observation_organ_weight_organ_body_weight
+        ont:endpoints_observations_clinical_observation_organ_weight_and_organbody_weight
                 "organ weights did not reveal any differences between the dose groups." ;
-        ont:observation_other_signs_of_toxicity
+        ont:endpoints_observations_clinical_observation_other_signs_of_toxicity
                 "no mortalities or clinical signs of toxicity were noted. the body weight was not affected by the treatment." ;
-        ont:type                       "in vivo" .
+        ont:guideline                   <http://toxin.vub.be/resource/guideline/OECD%20410> ;
+        ont:guidelineLabel              "OECD 410" ;
+        ont:pdf_link                    "https://ec.europa.eu/health//sites/health/files/scientific_committees/consumer_safety/opinions/SCCS_o_003.pdf" ;
+        ont:reliability_glp             "yes" ;
+        ont:reliability_klimisch_score  "3" ;
+        ont:reliability_ref_in_dossier  "26" ;
+        ont:test_method_test_condition_dermal_exposure_body_surface
+                "3 x 4 cm (~ 10 percent total body surface)" ;
+        ont:test_method_test_condition_dermal_exposure_exposure_period
+                "28" ;
+        ont:test_method_test_condition_dose_level_unit
+                "mg/kg bw/day" ;
+        ont:test_method_test_condition_dose_levels
+                "0, 50, 150, 300 " ;
+        ont:test_method_test_condition_dose_volume_mlkg_bw
+                "1" ;
+        ont:test_method_test_condition_repeated_administration_scheme
+                "once daily" ;
+        ont:test_method_test_condition_test_animal_n_animals__group
+                "10" ;
+        ont:test_method_test_condition_test_animal_sex
+                "f & m" ;
+        ont:test_method_test_condition_test_animal_speciesstrain
+                "guinea pig/SPF Pirbright White (BOR)" ;
+        ont:test_method_test_substance_achieved_concentration
+                "0, 5, 15, 30 " ;
+        ont:test_method_test_substance_additional_info
+                "test substance: Lehmannblausulfat. doses were adapted weekly according to the body weight gain of the animals. due to technical limits the maximum dose was 300 mg/kg bw/day. 30% represented the maximum concentration achievable in water and 1 ml/kg bw/day was the maximum volume to be used for application" ;
+        ont:test_method_test_substance_homogeneity_and_stability
+                "the stability and homogeneity of the test solutions were analytically verified and were in good agreement with the nominal doses, if analysis was done within 1 h after preparation. thus, a sufficient stability and correctness of the dosing solutions can be assumed during the application period of 1 h. " ;
+        ont:test_method_test_substance_purity
+                "98" ;
+        ont:test_method_test_substance_vehicle_name
+                "water" ;
+        ont:type                        "in vivo" .
 
-<http://toxin.vub.be/resource/compound/hydroxyethyl-p-phenylenediamine%20sulfate>
+<http://toxin.vub.be/resource/compound/Decamethylcyclopentasiloxane%20%28cyclopentasiloxane%2C%20D5%29>
         a               ont:Compound ;
-        rdfs:label      "hydroxyethyl-p-phenylenediamine sulfate" ;
-        ont:compoundOf  <http://toxin.vub.be/resource/dossier/hydroxyethyl-p-phenylenediamine%20sulfate> .
+        rdfs:label      "Decamethylcyclopentasiloxane (cyclopentasiloxane, D5)" ;
+        ont:compoundOf  <http://toxin.vub.be/resource/dossier/Decamethylcyclopentasiloxane%20%28cyclopentasiloxane%2C%20D5%29> .
 
-<http://toxin.vub.be/resource/compound/decamethylcyclopentasiloxane>
-        a               ont:Compound ;
-        rdfs:label      "decamethylcyclopentasiloxane" ;
-        ont:compoundOf  <http://toxin.vub.be/resource/dossier/decamethylcyclopentasiloxane> .
-
-<http://toxin.vub.be/resource/dossier/2-amino-4-hydroxyethylaminoanisole%20sulfate>
+<http://toxin.vub.be/resource/dossier/2-Amino-4-hydroxyethylaminoanisole%20sulfate%20%28COLIPA%20n°%20A84%29>
         a              ont:Report ;
-        rdfs:label     "2-amino-4-hydroxyethylaminoanisole sulfate" ;
-        rdfs:seeAlso   <https://ec.europa.eu/health//sites/health/files/scientific_committees/consumer_safety/opinions/sccs_o_003.pdf> ;
+        rdfs:label     "2-Amino-4-hydroxyethylaminoanisole sulfate (COLIPA n° A84)" ;
+        rdfs:seeAlso   <https://ec.europa.eu/health//sites/health/files/scientific_committees/consumer_safety/opinions/SCCS_o_003.pdf> ;
         ont:contains   <http://toxin.vub.be/resource/test/repeated-dose-toxicity/oecd_410/2> ;
         ont:guideline  "OECD 410" .
 
+<http://toxin.vub.be/resource/dossier/Hydroxyethyl-p-phenylenediamine%20sulfate>
+        a              ont:Report ;
+        rdfs:label     "Hydroxyethyl-p-phenylenediamine sulfate" ;
+        rdfs:seeAlso   <https://ec.europa.eu/health/scientific_committees/consumer_safety/docs/SCCS_o_017.pdf> ;
+        ont:contains   <http://toxin.vub.be/resource/test/repeated-dose-toxicity/oecd_410/1> ;
+        ont:guideline  "OECD 410" .
+
 <http://toxin.vub.be/resource/test/repeated-dose-toxicity/oecd_410/3>
-        a                   ont:Test ;
-        ont:compound        <http://toxin.vub.be/resource/compound/decamethylcyclopentasiloxane> ;
-        ont:compoundLabel   "decamethylcyclopentasiloxane" ;
-        ont:guideline       <http://toxin.vub.be/resource/guideline/OECD%20410> ;
-        ont:guidelineLabel  "OECD 410" ;
-        ont:type            "in vivo" .
+        a                               ont:Test ;
+        ont:additional_information      "SCCS conclusion on general toxicity: the SCCS has identified the liver as a potential target organ following repeated-dose oral exposure and liver, lungs and uterus as potential target organs following repeated-dose inhalation exposure. the effects observed on the liver were mainly an increase in liver weight. in the subchronic oral study (ref 45), this increase in liver weight was not accompanied by histopathological lesions and no biologically relevant alterations in enzymatic activities were observed. no liver effects were reported in the chronic inhalation toxicity/carcinogenicity study. therefore, the SCCS followed the hed guidance document on how to interpret hepatocellular hypertrophy (2002) and concluded that these liver effects are not adverse. therefore the oral dose of 100 mg/kg bw may be considered as a NOAEL. concerning exposure to d5 by inhalation, the inhaled concentration of 49 ppm was considered as a noaec." ;
+        ont:compound                    <http://toxin.vub.be/resource/compound/Decamethylcyclopentasiloxane%20%28cyclopentasiloxane%2C%20D5%29> ;
+        ont:compoundLabel               "Decamethylcyclopentasiloxane (cyclopentasiloxane, D5)" ;
+        ont:guideline                   <http://toxin.vub.be/resource/guideline/OECD%20410> ;
+        ont:guidelineLabel              "OECD 410" ;
+        ont:pdf_link                    "https://ec.europa.eu/health/scientific_committees/consumer_safety/docs/SCCS_o_174.pdf" ;
+        ont:reliability_ref_in_dossier  "43" ;
+        ont:test_method_test_condition_dermal_exposure_exposure_period
+                "21" ;
+        ont:test_method_test_condition_dose_level_unit
+                "mg/kg bw" ;
+        ont:test_method_test_condition_dose_levels
+                "0, 96, 288, 960" ;
+        ont:test_method_test_condition_recovery_period
+                "14" ;
+        ont:test_method_test_condition_repeated_administration_scheme
+                "5 day/wk, for three weeks. the treatment period was followed by a two-week recovery period. " ;
+        ont:test_method_test_condition_test_animal_n_animals__group
+                "5" ;
+        ont:test_method_test_condition_test_animal_sex
+                "f & m" ;
+        ont:test_method_test_condition_test_animal_speciesstrain
+                "rabbit/new zealand white" ;
+        ont:test_method_test_substance_additional_info
+                "test substance: d5" ;
+        ont:test_method_test_substance_homogeneity_and_stability
+                "no effects were seen on clinical condition, survival, or body weight. no substance related findings were seen on gross examination or histopathology." ;
+        ont:type                        "in vivo" .

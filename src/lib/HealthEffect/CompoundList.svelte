@@ -58,22 +58,22 @@
 		.filter((d) => {
 			if (!!varFilters && !!selFilter.value) {
 				// console.log('d', d);
-				if (d.compoundLabel.toLowerCase().includes('disperse blue')) {
-					console.log('yeah');
-					console.log('varFilters', varFilters);
-					console.log(
-						'd',
-						varFilters.map((f) => d[f])
-					);
-					console.log('d', d);
-				}
-				const found = varFilters?.find((f) => {
+				const found = !!varFilters.find((f) => {
 					const str = d[f]?.toLowerCase().trim();
+					// console.log('str', str);
+					if (d.compoundLabel.toLowerCase().includes('vetiveryl acetate')) {
+						console.log('yeah');
+						console.log('varFilters', varFilters);
+						console.log('str', str);
+						// console.log('value', selFilter.value);
+						console.log('all', selFilter);
+					}
 
 					return (
 						str?.includes(selFilter.value.toLowerCase().trim()) &&
 						(str?.includes(selFilter.name.toLowerCase().trim()) ||
-							selFilter.synonyms.find((s) => str?.includes(s.toLowerCase().trim())))
+							selFilter.synonyms.find((s) => str?.includes(s.toLowerCase().trim())) ||
+							selFilter.var === f)
 					);
 				});
 				return found;

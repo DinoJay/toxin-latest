@@ -7,12 +7,12 @@
 
 <http://toxin.vub.be/resource/name/alkaline%20phosphatase>
         a               skos:Concept ;
-        skos:altLabel   "blood_serum_biomarkers" , "other_enzymes_and_biomarker" , "clinical_chemistry_other" , "other_enzymes_and_bile_acids" , "alkaline_phosphatase" ;
+        skos:altLabel   "blood_serum_biomarkers" , "clinical_chemistry_other" , "other_enzymes_and_biomarker" , "other_enzymes_and_bile_acids" , "alkaline_phosphatase" ;
         skos:prefLabel  "alkaline phosphatase" .
 
 <http://toxin.vub.be/resource/name/low-density%20lipoprotein%20%28ldl%29>
         a               skos:Concept ;
-        skos:altLabel   "blood_serum biomarkers" , "lipids" , "analyses_of_lipids" , "clinical_chemistry_other" , "serum_other" , "low_density_lipoprotein" ;
+        skos:altLabel   "blood_serum biomarkers" , "clinical_chemistry_other" , "analyses_of_lipids" , "serum_other" , "low_density_lipoprotein" , "lipids" ;
         skos:prefLabel  "low-density lipoprotein (ldl)" .
 
 <http://toxin.vub.be/resource/name/histopathology%3A%20liver>
@@ -32,7 +32,7 @@
 
 <http://toxin.vub.be/resource/name/sorbitol%20dehydrogenase>
         a               skos:Concept ;
-        skos:altLabel   "blood_serum_biomarkers" , "other_enzymes_and_biomarker" , "clinical_chemistry_other" , "sorbitol_dehydrogenase" ;
+        skos:altLabel   "blood_serum_biomarkers" , "clinical_chemistry_other" , "sorbitol_dehydrogenase" , "other_enzymes_and_biomarker" ;
         skos:prefLabel  "sorbitol dehydrogenase" .
 
 <http://toxin.vub.be/resource/name/total%20protein>
@@ -47,12 +47,12 @@
 
 <http://toxin.vub.be/resource/name/high-density%20lipoprotein%20%28hdl%29>
         a               skos:Concept ;
-        skos:altLabel   "blood_serum_biomarkers" , "lipids" , "analyses_of_lipids" , "clinical_chemistry_other" , "serum_other" , "high_density_lipoprotein" ;
+        skos:altLabel   "blood_serum_biomarkers" , "clinical_chemistry_other" , "analyses_of_lipids" , "serum_other" , "high_density_lipoprotein" , "lipids" ;
         skos:prefLabel  "high-density lipoprotein (hdl)" .
 
 <http://toxin.vub.be/resource/name/gamma%20glutamyl%20transpeptidase>
         a               skos:Concept ;
-        skos:altLabel   "blood_and_serum_biomarkers" , "gamma_glutamyl_transpeptidase " , "clinical_chemistry_other" , "gamma_glutamyl_transpeptidase" ;
+        skos:altLabel   "blood_and_serum_biomarkers" , "clinical_chemistry_other" , "gamma_glutamyl_transpeptidase" ;
         skos:prefLabel  "gamma glutamyl transpeptidase" .
 
 <http://toxin.vub.be/resource/name/albumin>
@@ -72,7 +72,7 @@
 
 <http://toxin.vub.be/resource/name/fasting%20triglycerides>
         a               skos:Concept ;
-        skos:altLabel   "blood_serum_biomarkers" , "analyses_of_lipids" , "triglycerides" , "fasting_triglycerides" ;
+        skos:altLabel   "blood_serum_biomarkers" , "analyses_of_lipids" , "fasting_triglycerides" , "triglycerides" ;
         skos:prefLabel  "fasting triglycerides" .
 
 <http://toxin.vub.be/resource/guideline/OECD%20407> {
@@ -119,50 +119,6 @@
             skos:altLabel  "fasting_triglycerides" .
 }
 
-<http://toxin.vub.be/resource/guideline/non%20OECD> {
-    <http://toxin.vub.be/resource/name/alkaline%20phosphatase>
-            skos:altLabel  "blood_serum_biomarkers" .
-    
-    <http://toxin.vub.be/resource/name/low-density%20lipoprotein%20%28ldl%29>
-            skos:altLabel  "blood_serum biomarkers" .
-    
-    <http://toxin.vub.be/resource/name/histopathology%3A%20liver>
-            skos:altLabel  "histopathology" .
-    
-    <http://toxin.vub.be/resource/name/total%20cholesterol>
-            skos:altLabel  "blood_serum_biomarkers" .
-    
-    <http://toxin.vub.be/resource/name/total%20bilirubin>
-            skos:altLabel  "blood_serum_biomarkers" .
-    
-    <http://toxin.vub.be/resource/name/sorbitol%20dehydrogenase>
-            skos:altLabel  "blood_serum_biomarkers" .
-    
-    <http://toxin.vub.be/resource/name/total%20protein>
-            skos:altLabel  "blood_serum_biomarkers" .
-    
-    <http://toxin.vub.be/resource/name/alanine%20aminotransferase>
-            skos:altLabel  "blood_serum_biomarkers" .
-    
-    <http://toxin.vub.be/resource/name/high-density%20lipoprotein%20%28hdl%29>
-            skos:altLabel  "blood_serum_biomarkers" .
-    
-    <http://toxin.vub.be/resource/name/gamma%20glutamyl%20transpeptidase>
-            skos:altLabel  "blood_and_serum_biomarkers" .
-    
-    <http://toxin.vub.be/resource/name/albumin>
-            skos:altLabel  "blood_serum_biomarkers" .
-    
-    <http://toxin.vub.be/resource/name/gross%20necropsy%3A%20liver>
-            skos:altLabel  "gross_pathology" .
-    
-    <http://toxin.vub.be/resource/name/aspartate%20aminotransferase>
-            skos:altLabel  "blood_serum_biomarkers" .
-    
-    <http://toxin.vub.be/resource/name/fasting%20triglycerides>
-            skos:altLabel  "blood_serum_biomarkers" .
-}
-
 <http://toxin.vub.be/resource/guideline/OECD%20409> {
     <http://toxin.vub.be/resource/name/alkaline%20phosphatase>
             skos:altLabel  "other_enzymes_and_biomarker" .
@@ -205,6 +161,50 @@
     
     <http://toxin.vub.be/resource/name/fasting%20triglycerides>
             skos:altLabel  "analyses_of_lipids" .
+}
+
+<http://toxin.vub.be/resource/guideline/non%20OECD> {
+    <http://toxin.vub.be/resource/name/alkaline%20phosphatase>
+            skos:altLabel  "blood_serum_biomarkers" .
+    
+    <http://toxin.vub.be/resource/name/low-density%20lipoprotein%20%28ldl%29>
+            skos:altLabel  "blood_serum biomarkers" .
+    
+    <http://toxin.vub.be/resource/name/histopathology%3A%20liver>
+            skos:altLabel  "histopathology" .
+    
+    <http://toxin.vub.be/resource/name/total%20cholesterol>
+            skos:altLabel  "blood_serum_biomarkers" .
+    
+    <http://toxin.vub.be/resource/name/total%20bilirubin>
+            skos:altLabel  "blood_serum_biomarkers" .
+    
+    <http://toxin.vub.be/resource/name/sorbitol%20dehydrogenase>
+            skos:altLabel  "blood_serum_biomarkers" .
+    
+    <http://toxin.vub.be/resource/name/total%20protein>
+            skos:altLabel  "blood_serum_biomarkers" .
+    
+    <http://toxin.vub.be/resource/name/alanine%20aminotransferase>
+            skos:altLabel  "blood_serum_biomarkers" .
+    
+    <http://toxin.vub.be/resource/name/high-density%20lipoprotein%20%28hdl%29>
+            skos:altLabel  "blood_serum_biomarkers" .
+    
+    <http://toxin.vub.be/resource/name/gamma%20glutamyl%20transpeptidase>
+            skos:altLabel  "blood_and_serum_biomarkers" .
+    
+    <http://toxin.vub.be/resource/name/albumin>
+            skos:altLabel  "blood_serum_biomarkers" .
+    
+    <http://toxin.vub.be/resource/name/gross%20necropsy%3A%20liver>
+            skos:altLabel  "gross_pathology" .
+    
+    <http://toxin.vub.be/resource/name/aspartate%20aminotransferase>
+            skos:altLabel  "blood_serum_biomarkers" .
+    
+    <http://toxin.vub.be/resource/name/fasting%20triglycerides>
+            skos:altLabel  "blood_serum_biomarkers" .
 }
 
 <http://toxin.vub.be/resource/guideline/OECD%20408> {
@@ -412,7 +412,7 @@
             skos:altLabel  "serum_other" .
     
     <http://toxin.vub.be/resource/name/gamma%20glutamyl%20transpeptidase>
-            skos:altLabel  "gamma_glutamyl_transpeptidase " .
+            skos:altLabel  "gamma_glutamyl_transpeptidase" .
     
     <http://toxin.vub.be/resource/name/albumin>
             skos:altLabel  "albumin" .

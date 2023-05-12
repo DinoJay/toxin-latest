@@ -1,0 +1,126 @@
+@prefix rr:    <http://www.w3.org/ns/r2rml#> .
+@prefix ont:   <http://ontologies.vub.be/oecd#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+
+<http://toxin.vub.be/resource/test/repeated-dose-toxicity/oecd_422/2>
+        a                               ont:Test ;
+        ont:additional_information      "combined repeated dose toxicity / reproduction/ developmeNTAl toxicity screening test with nano-sized test substance" ;
+        ont:compound                    <http://toxin.vub.be/resource/compound/1%2C3%2C5-Triazine%2C%202%2C4%2C6-tris%281%2C1%27-biphenyl%29-4-yl-> ;
+        ont:compoundLabel               "1,3,5-Triazine, 2,4,6-tris(1,1'-biphenyl)-4-yl-" ;
+        ont:endpoints__observations_live_pups_count_and_sex__abnormal_behaviour_of_the_offspring
+                "the observation of the pups after birth did not reveal any increased incidence of pups dying, adverse effects on the pup body weight gains or influence on the pups’ sex ratio; furthermore, gross malformations were not found in any of the pups." ;
+        ont:endpoints_conclusion        "Overall, nanosized ETH50 did not show adverse effects to the systemic toxicity endpoints, mating and reproduction parameters, offspring survival to 5 days of age, or to grossly and microscopically evaluated organs and tissues. No Observed Adverse Effect Level is 1000 mg ETH50/kg bw/day, the highest dose tested. " ;
+        ont:endpoints_description_of_pod
+                "NOAEL mg/kg bw/d" ;
+        ont:endpoints_discussion_and_results
+                "no test item- related clinical signs were observed. clinical chemistry, haematology, and urinalysis results showed effects in some parameters of the test-item treated groups when compared to the placebo control group; however, when compared to the vehicle control group, these differences were not statistically or biologically significant and were considered as not attributable to the test item treatment.  at the post-mortem examinations of the F0 generation parent animals, test item treatment-related macroscopic observations were not revealed. none of the differences in organ weights noted between the placebo and control groups or between the test item-treated and the placebo groups were considered to be of toxicological importance. qualitative staging for testis did not indicate any abnormalities in the integrity of the various cell types present within the different stages of the spermatogenic cycle. the oestrous stages were not affected by test item or placebo treatments, and microscopic abnormalities were not revealed in the evaluation of the ovarian follicles and corpora lutea or in the evaluation of the uterus. " ;
+        ont:endpoints_evaluation_of_reproductive__developmental_effects
+                "Reproductive data evaluation showed that neither the mating nor the fertility parameters were adversely affected by the test item treatment or administration of the placebo. however, in the placebo control females, a slightly low mean number of corpora lutea, and slightly low mean number of implaNTAtions, pups delivered and live pups on day 1 post-partum were obtained. The results for all groups are summarized in the table. " ;
+        ont:endpoints_moribund_or_dead_animals_prior_to_study_termination
+                "no" ;
+        ont:endpoints_point_of_departure_noael
+                "1000" ;
+        ont:guideline                   <http://toxin.vub.be/resource/guideline/OECD%20422> ;
+        ont:guidelineLabel              "OECD 422" ;
+        ont:own_comments                "particle size and other particles description under additional information of the test substance" ;
+        ont:pdf_link                    "https://ec.europa.eu/health/scientific_committees/consumer_safety/docs/SCCS_o_070.pdf" ;
+        ont:reliability_glp             "yes" ;
+        ont:reliability_klimisch_score  "1" ;
+        ont:reliability_preliminary_study
+                "a placebo group was used to identify any effects related to the excipients; accordingly, a mixture of decyl glucoside, silicon defoamer, xantham gum, and butylene glycol was prepared and labelled fat 65’080/E-placebo. the placebo was diluted in distilled water and administered at a dose of 420 mg/mL, which was equivalent to that of the group receiving the highest dose of test item. " ;
+        ont:reliability_refin_dossier   "6 (subm. 3), 2 (subm.4)" ;
+        ont:test_method_test_condition_dose_level_unit
+                "mg ETH50/kg bw/day" ;
+        ont:test_method_test_condition_dose_volume_ml__kg_bw
+                "5" ;
+        ont:test_method_test_condition_duration_of_exposure_females
+                "14 days before mating, during the mating period (maximum of 14 days), during pregnancy and lactation, until day 4 post-partum inclusive, or until sacrifice for un-mated and non-pregnant females. day 1 corresponded to the first day of treatment period.)" ;
+        ont:test_method_test_condition_duration_of_exposure_males
+                " for 14 days before mating, during the 2 weeks mating and the 2 weeks post-mating periods until sacrifice (maximum of 6 weeks in total)" ;
+        ont:test_method_test_condition_nominal_dose_levels
+                "100, 500, 1000" ;
+        ont:test_method_test_condition_repeated_administration_scheme
+                "daily from before mating until day 4 post partum during lactation period" ;
+        ont:test_method_test_condition_route_of_exposure_oral
+                "yes, gastric intubation" ;
+        ont:test_method_test_condition_test_animal_age_at_start_of_experiment
+                "11" ;
+        ont:test_method_test_condition_test_animal_age_unit
+                "w" ;
+        ont:test_method_test_condition_test_animal_n_animals__group
+                "20" ;
+        ont:test_method_test_condition_test_animal_rat__strain
+                "rat/ Sprague Dawley, Crl CD (SD) IGS BR" ;
+        ont:test_method_test_condition_test_animal_sex
+                "f & m" ;
+        ont:test_method_test_substance_additional_info
+                "test substance: FAT 65’080/F. d(0.5)= 109 nm, test Item dose as mg a.i./kg bw / total particles dosed (number) /no. particles/kg bw / surface area of particlesdosed (m2): 100 /5.8E+13/ 2.31E+14 / 1.37;  500 / 2.8E+14 / 1.15E+15 / 6.86;  1000 / 5.8E+14 / 2.31E+15 / 13.7" ;
+        ont:test_method_test_substance_chemical_batch_nr
+                "LOT04122FC7" ;
+        ont:test_method_test_substance_purity
+                "47.6" ;
+        ont:test_method_test_substance_vehicle_name
+                "purified water" ;
+        ont:type                        "in vivo" .
+
+<http://toxin.vub.be/resource/compound/Phenylene%20Bis-Diphenyltriazine%20%28S86%29>
+        a               ont:Compound ;
+        rdfs:label      "Phenylene Bis-Diphenyltriazine (S86)" ;
+        ont:compoundOf  <http://toxin.vub.be/resource/dossier/Phenylene%20Bis-Diphenyltriazine%20%28S86%29> .
+
+<http://toxin.vub.be/resource/dossier/Phenylene%20Bis-Diphenyltriazine%20%28S86%29>
+        a              ont:Report ;
+        rdfs:label     "Phenylene Bis-Diphenyltriazine (S86)" ;
+        rdfs:seeAlso   <https://ec.europa.eu/health/sites/health/files/scientific_committees/consumer_safety/docs/SCCS_o_215.pdf> ;
+        ont:contains   <http://toxin.vub.be/resource/test/repeated-dose-toxicity/oecd_422/1> ;
+        ont:guideline  <http://toxin.vub.be/resource/guideline/OECD%20422> .
+
+<http://toxin.vub.be/resource/test/repeated-dose-toxicity/oecd_422/1>
+        a                               ont:Test ;
+        ont:additional_information      "a combined repeated dose toxicity study with the reproduction/developmeNTAl toxicity screening test" ;
+        ont:compound                    <http://toxin.vub.be/resource/compound/Phenylene%20Bis-Diphenyltriazine%20%28S86%29> ;
+        ont:compoundLabel               "Phenylene Bis-Diphenyltriazine (S86)" ;
+        ont:endpoints_absorption_data   "none of the satellite male and female rats had significant blood plasma levels on day 1 or at the end of the treatment period (blood plasma level < 0.500 ng/mL, the limit of quantification), with the exception of two satellite males and four satellite females which had blood plasma levels slightly higher than the limit of quantification on study day 1 or at the end of the treatment period. Therefore, the toxicokinetic parameters were not calculated." ;
+        ont:endpoints_description_of_pod
+                "NOEL for pareNTAl toxicity and for reproductive performance (mating and fertility) mg/kg/day; NOEL for toxic effects on progeny mg/kg/day" ;
+        ont:endpoints_moribund_or_dead_animals_prior_to_study_termination
+                "no" ;
+        ont:endpoints_point_of_departure_noael
+                "1000; 1000" ;
+        ont:guideline                   <http://toxin.vub.be/resource/guideline/OECD%20422> ;
+        ont:guidelineLabel              "OECD 422" ;
+        ont:pdf_link                    "https://ec.europa.eu/health/sites/health/files/scientific_committees/consumer_safety/docs/SCCS_o_215.pdf" ;
+        ont:reliability_glp             "yes" ;
+        ont:reliability_klimisch_score  "3" ;
+        ont:reliability_refin_dossier   "34 (CiTox Lab)" ;
+        ont:reliability_year            "2012" ;
+        ont:test_method_test_condition_dose_level_unit
+                "mg/kg bw/day" ;
+        ont:test_method_test_condition_nominal_dose_levels
+                "0, 100, 300, 1000" ;
+        ont:test_method_test_condition_route_of_exposure_oral
+                "yes, gavage" ;
+        ont:test_method_test_condition_test_animal_rat__strain
+                "rat / Sprague Dawley" ;
+        ont:test_method_test_substance_additional_info
+                "test substance: WP30 (non-ground active substance S02374)" ;
+        ont:test_method_test_substance_chemical_batch_nr
+                "LP 140" ;
+        ont:test_method_test_substance_purity
+                "99.8" ;
+        ont:type                        "in vivo" .
+
+<http://toxin.vub.be/resource/compound/1%2C3%2C5-Triazine%2C%202%2C4%2C6-tris%281%2C1%27-biphenyl%29-4-yl->
+        a               ont:Compound ;
+        rdfs:label      "1,3,5-Triazine, 2,4,6-tris(1,1'-biphenyl)-4-yl-" ;
+        ont:compoundOf  <http://toxin.vub.be/resource/dossier/1%2C3%2C5-Triazine%2C%202%2C4%2C6-tris%281%2C1%27-biphenyl%29-4-yl-> .
+
+<http://toxin.vub.be/resource/dossier/1%2C3%2C5-Triazine%2C%202%2C4%2C6-tris%281%2C1%27-biphenyl%29-4-yl->
+        a              ont:Report ;
+        rdfs:label     "1,3,5-Triazine, 2,4,6-tris(1,1'-biphenyl)-4-yl-" ;
+        rdfs:seeAlso   <https://ec.europa.eu/health/scientific_committees/consumer_safety/docs/SCCS_o_070.pdf> ;
+        ont:contains   <http://toxin.vub.be/resource/test/repeated-dose-toxicity/oecd_422/2> ;
+        ont:guideline  <http://toxin.vub.be/resource/guideline/OECD%20422> .

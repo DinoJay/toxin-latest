@@ -18,7 +18,7 @@
 	const repeatedDoseExtFilterNames = [
 		{ id: 'gross necropsy: liver', synonyms: [] },
 		{ id: 'histopathology: liver', synonyms: [] },
-		{ id: 'alanine aminotransferase', synonyms: ['ALT', 'ALAT'] },
+		{ id: 'alanine aminotransferase', var: 'alanine_aminotransferase', synonyms: ['ALT', 'ALAT'] },
 		{ id: 'aspartate aminotransferase', synonyms: [] },
 		{ id: 'alkaline phosphatase', synonyms: [] },
 		{ id: 'gamma glutamyl transpeptidase', synonyms: [] },
