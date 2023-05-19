@@ -36,7 +36,7 @@
 		<h2>Function:</h2>
 		<p class=" p-1 max-h-60 overflow-y-auto">{function_and_uses}</p>
 	</div>
-	<ChemicalAlert cas={cas_number.replace(/-/g, '')} />
+	<ChemicalAlert cas={cas_number?.replace(/-/g, '')} />
 </div>
 
 <style>

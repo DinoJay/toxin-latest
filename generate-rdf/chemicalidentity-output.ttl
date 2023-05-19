@@ -873,7 +873,7 @@
 <http://toxin.vub.be/resource/chemicalidentity/Mixture%20of%20HC%20Red%20n°%2010%20%28INCI%29%20and%20HC%20Red%20n°%2011%20%28INCI%29>
         a                              ont:Compound ;
         rdfs:comment                   "the structure of the following impurities is drawn in the opinion: 5-Chloro-2-nitro-p-phenylenediamine, Impurities A-E." ;
-        rdfs:label                     "HC Red n° 11" , "hc red n° 11" , "HC Red n° 10" , "Mixture of HC Red n° 10 (INCI) and HC Red n° 11 (INCI)" , "hc red n° 10" ;
+        rdfs:label                     "HC Red n° 11" , "hc red n° 11" , "HC Red n° 10" , "hc red n° 10" , "Mixture of HC Red n° 10 (INCI) and HC Red n° 11 (INCI)" ;
         ont:CAS_number                 "95576-92-4" , "95576-89-9" ;
         ont:EC_number                  "Rot y or Rubinrot Y: 408-240-1 (1-amino-2-nitro-4-(2',3'-dihydroxypropyl)amino-5-\r\nchlorobenzene and 1,4-bis-(2',3'-dihydroxypropyl)amino-2-nitro-5- chlorobenzene)" ;
         ont:INCI                       "HC Red n° 11" , "HC Red n° 10" ;
@@ -1517,7 +1517,7 @@
 
 <http://toxin.vub.be/resource/chemicalidentity/4-formyl-1-methylquinolinium-p-toluenesulfonate>
         a                              ont:Compound ;
-        rdfs:label                     "4-formyl-1-methylquinolinium-p-toluenesulfonate" , "quinolinium, 4-formyl-1-methyl-, salt with 4-methylbenzene sulfonic acid (1:1)" ;
+        rdfs:label                     "quinolinium, 4-formyl-1-methyl-, salt with 4-methylbenzene sulfonic acid (1:1)" , "4-formyl-1-methylquinolinium-p-toluenesulfonate" ;
         ont:CAS_number                 "223398-02-5" ;
         ont:EC_number                  "453-790-8" ;
         ont:INCI                       "4-formyl-1-methylquinolinium-p-toluenesulfonate" ;

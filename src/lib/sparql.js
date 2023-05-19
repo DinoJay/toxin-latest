@@ -6,17 +6,17 @@ import getParentCategories from "./getTestParentCategories";
 
 
 const chemicalIdentityQuery = ({ smiles, cas, inci }) => {
-	const smilesStr = smiles
+	const smilesStr = smiles !== null
 		? `?compound ont:SMILES "${smiles}" .`
-		: '?compound ont:SMILES ?smiles .';
+		: 'OPTIONAL { ?compound ont:SMILES ?smiles . }';
 
-	const casStr = cas
+	const casStr = cas !== null
 		? `?compound ont:CAS_number "${cas}" .`
-		: '?compound ont:CAS_number ?cas_number .';
+		: 'OPTIONAL { ?compound ont:CAS_number ?cas_number . }';
 
-	const inciStr = inci ? `?compound ont:INCI "${inci}" .` : '?compound ont:INCI ?inci .';
+	const inciStr = inci ? `?compound ont:INCI "${inci}" .` : 'OPTIONAL { ?compound ont:INCI ?inci . }';
 
-	return ` 
+	const ret = ` 
 			PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 			PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 			PREFIX ont: <http://ontologies.vub.be/oecd#>
@@ -25,11 +25,8 @@ const chemicalIdentityQuery = ({ smiles, cas, inci }) => {
 			{
 				?compound rdfs:label ?label .
 				${smilesStr}
-				?compound ont:SMILES ?smiles .
 				${casStr}
-				?compound ont:CAS_number ?cas_number .
 				${inciStr}
-				?compound ont:INCI ?inci .
 				?compound ?pred ?value .
 				OPTIONAL { ?compound ont:EC_number ?ec_number .  }
 				OPTIONAL { ?compound ont:additional_info ?additional_info .  }
@@ -43,6 +40,10 @@ const chemicalIdentityQuery = ({ smiles, cas, inci }) => {
 				OPTIONAL { ?compound ont:purity  ?purity .  }
 			}
 	`;
+
+	console.log('ret', ret);
+
+	return ret;
 };
 // rdfs:label                  "hc yellow n°9 Test (96)" ;
 // ont:additional_info         "test substance: hc yellow n°9" ;
@@ -101,11 +102,9 @@ export const getSparqlQueryString = ({ endpoint, smiles = null, cas = null, inci
 export const endpointMaker = (n) => `https://wise.vub.ac.be/fuseki/${n}/sparql`;
 // export const endpointMaker = (n) => `http://localhost:3030/${n}/sparql`;
 export const constructQuery = ({ endpoint, cas = null, inci = null, smiles = null, filters }) => {
-	console.log('filters', filters)
 
 	const selFilter = filters?.find(d => !!d.value)
 
-	console.log('selFilter', selFilter)
 
 	if (endpoint === REPEATED_DOSE_TOXICITY && !!selFilter) {
 		const sparqlQuery = sparqlGetSynonyms(`'${selFilter.name}'`)
