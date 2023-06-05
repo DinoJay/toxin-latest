@@ -48,7 +48,7 @@
 			<div>Loading</div>
 		{:then testsByComp}
 			<div>
-				<h3>{testsByComp.length} {label} reports found in Acute Toxicity Endpoint</h3>
+				<h3>{testsByComp.length} {label} Opinions found in Acute Toxicity Endpoint</h3>
 				<ElementList grData={testsByComp} secLabel="id" />
 			</div>
 		{/await}
@@ -58,7 +58,7 @@
 			<div>Loading</div>
 		{:then testsByComp}
 			<div>
-				<h3>{testsByComp.length} {label} reports found in Repeated Dose Toxicity Endpoint</h3>
+				<h3>{testsByComp.length} {label} Opinions found in Repeated Dose Toxicity Endpoint</h3>
 				<ElementList grData={testsByComp} secLabel="id" />
 			</div>
 		{/await}
@@ -68,7 +68,7 @@
 			<div>Loading</div>
 		{:then testsByComp}
 			<div>
-				<h3>{testsByComp.length} {label} reports found in Skin Sensitisation Unmerged Endpoint</h3>
+				<h3>{testsByComp.length} {label} Opinions found in Skin Sensitisation Unmerged Endpoint</h3>
 				<ElementList grData={testsByComp} secLabel="id" />
 			</div>
 		{/await}
@@ -78,7 +78,7 @@
 			<div>Loading</div>
 		{:then testsByComp}
 			<div>
-				<h3>{testsByComp.length} {label} reports found in Mutagenicity Endpoint</h3>
+				<h3>{testsByComp.length} {label} Opinions found in Mutagenicity Endpoint</h3>
 				<ElementList grData={testsByComp} secLabel="id" />
 			</div>
 		{/await}
@@ -88,7 +88,7 @@
 			<div>Loading</div>
 		{:then testsByComp}
 			<div>
-				<h3>{testsByComp.length} {label} reports found in Carcinogenicity Endpoint</h3>
+				<h3>{testsByComp.length} {label} Opinions found in Carcinogenicity Endpoint</h3>
 				<ElementList grData={testsByComp} secLabel="id" />
 			</div>
 		{/await}
