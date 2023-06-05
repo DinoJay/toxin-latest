@@ -1,0 +1,75 @@
+@prefix rr:    <http://www.w3.org/ns/r2rml#> .
+@prefix ont:   <http://ontologies.vub.be/oecd#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+
+<http://toxin.vub.be/resource/dossier/Cetylpyridinium%20chloride>
+        a             ont:Report ;
+        rdfs:label    "Cetylpyridinium chloride" ;
+        ont:contains  <http://toxin.vub.be/resource/test/acute-toxicity/1> ;
+        ont:seeAlso   <http://toxin.vub.be/resource/pdfLink/https%3A%2F%2Fec.europa.eu%2Fhealth%2Fscientific_committees%2Fconsumer_safety%2Fdocs%2Fsccs_o_171.pdf> .
+
+<http://toxin.vub.be/resource/test/acute-toxicity/1>
+        a                               ont:Test ;
+        ont:compound                    <http://toxin.vub.be/resource/compound/Cetylpyridinium%20chloride> ;
+        ont:compoundLabel               "Cetylpyridinium chloride" ;
+        ont:dossier                     "Cetylpyridinium chloride" ;
+        ont:endpoints_conclusion        "under the conditions of this study, the acute oral LD50 value of Cetylpyridinium chloride was estimated to be 560.3 mg/kg bw in female rats with an approximate 95% confidence interval of 950 mg/kg bw (upper) and 300 mg/kg bw (lower)." ;
+        ont:endpoints_confidence_interval
+                "an approximate 95% confidence interval of 950 mg/kg bw (upper) and 300 mg/kg bw (lower)." ;
+        ont:endpoints_discussion_and_interpretation
+                "the animal dosed with 95 mg/kg bw survived, gained body weight, and appeared active and healthy during the study. there were no signs of gross toxicity, adverse pharmacological effects, abnormal behaviour, or gross abnormalities when the animal was necropsied at the conclusion of the 14-day observation period. all animals dosed with 300 mg/kg bw survived and gained body weight during the study. 300mg/kg bw/d: no gross abnormalities were noted for any of the animals when necropsied at the conclusion of the 14-day observation period.  " ;
+        ont:endpoints_ld50              "560.3" ;
+        ont:endpoints_ld50_value_unit   "mg/kg bw/d" ;
+        ont:endpoints_observations_clinical_examiniation_changes_in_autonomic_and_central_nervous_system
+                "the animals dosed with 950 mg/kg: toxic signs noted prior to death included hypoactivity," ;
+        ont:endpoints_observations_clinical_examiniation_changes_in_skin_and_fur
+                "300mg/kg bw/d: two animals exhibited piloerection following administration of the test substance but recovered by day 2 and appeared active and healthy for the remainder of the 14-day observation period. the animals dosed with 950 mg/kg: toxic signs noted prior to death included , ano-genital staining and piloerection" ;
+        ont:endpoints_observations_clinical_examiniation_diarrhea
+                "the animals dosed with 950 mg/kg: toxic signs noted prior to death included diarrhoea" ;
+        ont:endpoints_observations_clinical_examiniation_other_sings_of_toxicity
+                "300mg/kg bw/d: two animals exhibited soft faeces, reduced faecal volume following administration of the test substance, but recovered by day 2 and appeared active and healthy for the remainder of the 14-day observation period. the animals dosed with 950 mg/kg: toxic signs noted prior to death included hunched posture, and reduced faecal volume. " ;
+        ont:endpoints_observations_pathology_all_gross_pathological_changes
+                "950 mg/kg bw/d: gross necropsy of the decedents revealed discoloration of the intestines and/or lungs and/or gaseous distention of the intestines." ;
+        ont:guideline                   "OECD 425" ;
+        ont:guidelineLabel              "OECD 425" ;
+        ont:pdf_link                    "https://ec.europa.eu/health/scientific_committees/consumer_safety/docs/sccs_o_171.pdf" ;
+        ont:reliability_glp             "yes" ;
+        ont:reliability_klimisch_score  "17" ;
+        ont:reliability_sccs_comment_to_test
+                "overall SCCS comment to acute toxicity studies: the studies on acute oral, dermal and inhalation toxicity described above and performed according to currently accepted test guidelines are the studies included in the company submission but not in submission ii. submission ii includes several studies of older date and generally not performed according to currently accepted test guidelines; these studies have not been evaluated in this opinion as the more recent studies performed according to currently accepted test guidelines are considered to be more reliable." ;
+        ont:reliability_year            "2005" ;
+        ont:test_method_test_animals_n_animals
+                "7" ;
+        ont:test_method_test_animals_sex
+                "f" ;
+        ont:test_method_test_animals_species_rodentstrain
+                "rat/ sprague-dawley derived, albino" ;
+        ont:test_method_test_condition_observation_period
+                "yes" ;
+        ont:test_method_test_condition_oral_administration_gavage
+                "yes, gavage" ;
+        ont:test_method_test_condition_rational_for_starting_dose
+                "a default starting dose level of 95 mg/kg bw was administered to one healthy female rat. following the ‘up and down procedure’, six additional female rats were dosed at levels of 300 or 950 mg/kg bw, 3 animals at each dose level." ;
+        ont:test_method_test_condition_starting_dose_levels_unity
+                "mg/kg bw" ;
+        ont:test_method_test_condition_starting_dose_levels_value
+                "95, 300, 950" ;
+        ont:test_method_test_condition_vehicle_name
+                "distilled water" ;
+        ont:test_method_test_substance_additional_info
+                "test substance: Cetylpyridinium chloride" ;
+        ont:test_method_test_substance_chemical_batch_nr
+                "Lot#00217966" ;
+        ont:test_method_test_substance_concentration
+                "40" ;
+        ont:test_method_test_substance_purity
+                "100" ;
+        ont:type                        "in vivo" ;
+        ont:type_of_study               "in vivo" .
+
+<http://toxin.vub.be/resource/compound/Cetylpyridinium%20chloride>
+        a               ont:Compound ;
+        rdfs:label      "Cetylpyridinium chloride" ;
+        ont:compoundOf  <http://toxin.vub.be/resource/dossier/Cetylpyridinium%20chloride> .
