@@ -4,6 +4,7 @@
 	import uniqBy from '$lib/uniqBy';
 	import getParentCategories from '$lib/getTestParentCategories';
 	import { groups } from '$lib/group';
+	import klimischScore from '$lib/klimischScore';
 
 	const NON_OECD = 'non OECD';
 	const IN_VIVO = 'in vivo';
@@ -36,6 +37,8 @@
 				obj[attr] = e.value;
 			});
 			obj.id = d.key;
+			obj.endpoint = endpoint;
+			obj.klimischScore = klimischScore(obj);
 			// obj.test = d.key;
 			// d.key = undefined;
 			d.values = undefined;
@@ -83,24 +86,6 @@
 			}
 		});
 
-	console.log(
-		'preresults',
-		groups(preData, (d) => d.test)
-			.map(([key, values]) => ({ key, values }))
-			.map((d) => {
-				const obj = {};
-				d.values.forEach((e) => {
-					const attr = e.pred.substring(e.pred.lastIndexOf('#') + 1);
-					obj[attr] = e.value;
-				});
-				obj.id = d.key;
-				// obj.test = d.key;
-				// d.key = undefined;
-				d.values = undefined;
-				return obj;
-			})
-	);
-
 	const reportData = uniqBy(
 		preresults.map((d) => ({ ...d, categories: getParentCategories(endpoint)(d) })),
 		(d) => d.id
@@ -136,7 +121,7 @@
 	>
 	<button
 		class="m-1 p-1 border-2 {reportSelected && selectedClass}"
-		on:click={() => (selected = 'report')}>Report View</button
+		on:click={() => (selected = 'report')}>Opinion View</button
 	>
 </div>
 <div class=" mt-3 flex flex-col ">

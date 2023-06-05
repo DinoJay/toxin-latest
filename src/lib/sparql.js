@@ -41,8 +41,6 @@ const chemicalIdentityQuery = ({ smiles, cas, inci }) => {
 			}
 	`;
 
-	console.log('ret', ret);
-
 	return ret;
 };
 // rdfs:label                  "hc yellow n°9 Test (96)" ;

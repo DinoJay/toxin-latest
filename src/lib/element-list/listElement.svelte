@@ -22,7 +22,7 @@
 					openCategory[i] = !openCategory[i];
 				}}
 			>
-				#{++i} Report
+				#{++i} Opinion
 				{v[attr]}
 			</div>
 			<CategoryElement open={openCategory[i]} categories={v.categories} />

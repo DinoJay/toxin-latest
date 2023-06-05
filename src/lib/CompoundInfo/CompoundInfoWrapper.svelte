@@ -11,7 +11,7 @@
 	const data = bindings.map(transformObject);
 	const d = data.length > 0 ? data[0] : null;
 
-	console.log('d', d);
+	console.log('compound data', d);
 </script>
 
 {#if d}
