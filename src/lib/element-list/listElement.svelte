@@ -10,7 +10,7 @@
 <div class="bg-thistle p-3 flex" role={'button'} on:click={() => (open = !open)}>
 	<span class="mr-1">+</span>
 	<span>{datum.key}</span>
-	<span class="ml-auto">{datum.values.length} studies</span>
+	<span class="ml-auto">{datum.values.length} opinions</span>
 </div>
 {#if open}
 	{#each datum.values as v, i}
