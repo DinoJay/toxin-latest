@@ -38,7 +38,7 @@
 			});
 			obj.id = d.key;
 			obj.endpoint = endpoint;
-			obj.klimischScore = klimischScore(obj);
+			// obj.klimischScore = klimischScore(obj);
 			// obj.test = d.key;
 			// d.key = undefined;
 			d.values = undefined;
