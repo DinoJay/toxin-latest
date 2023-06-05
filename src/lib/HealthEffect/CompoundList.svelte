@@ -4,7 +4,7 @@
 	import uniqBy from '$lib/uniqBy';
 	import getParentCategories from '$lib/getTestParentCategories';
 	import { groups } from '$lib/group';
-	import klimischScore from '$lib/klimischScore';
+	// import klimischScore from '$lib/klimischScore';
 
 	const NON_OECD = 'non OECD';
 	const IN_VIVO = 'in vivo';
