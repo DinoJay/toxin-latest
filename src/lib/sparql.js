@@ -28,6 +28,7 @@ const chemicalIdentityQuery = ({ smiles, cas, inci }) => {
 				${casStr}
 				${inciStr}
 				?compound ?pred ?value .
+				OPTIONAL { ?compound ont:SMILES ?smiles .  }
 				OPTIONAL { ?compound ont:EC_number ?ec_number .  }
 				OPTIONAL { ?compound ont:additional_info ?additional_info .  }
 				OPTIONAL { ?compound ont:empirical_formula ?empirical_formula .  }
@@ -40,6 +41,8 @@ const chemicalIdentityQuery = ({ smiles, cas, inci }) => {
 				OPTIONAL { ?compound ont:purity  ?purity .  }
 			}
 	`;
+
+	console.log('ret', ret);
 
 	return ret;
 };

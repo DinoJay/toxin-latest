@@ -6,7 +6,7 @@
 	import CompoundInfo from './CompoundInfo.svelte';
 	import ToxicologicalData from './ToxicologicalData.svelte';
 
-	console.log('props compoundinfo', $$props);
+	console.log('props compoundinfo WRAPPER', $$props);
 	const { bindings } = results;
 	const data = bindings.map(transformObject);
 	const d = data.length > 0 ? data[0] : null;

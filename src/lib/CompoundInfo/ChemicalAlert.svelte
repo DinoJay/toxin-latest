@@ -7,9 +7,12 @@
 	import { Result } from 'postcss';
 	import SelectData from './SelectData.svelte';
 
+	import profilingEx from './profiling_example';
+	import dataEx from './data_example';
+
 	export let cas;
 
-	const host = 'https://ecbe3fb71972.ngrok.app';
+	const host = 'https://eb601b4004c0.ngrok.app';
 
 	const q = `/api/v6/Search/cas/${cas}/true`;
 
@@ -27,7 +30,7 @@
 			const promiseProfiling = fetch(`${host}${profilingQ}`)
 				.then((res) => res.json())
 				.then((res) => {
-					console.log('profiling', res);
+					// console.log('profiling', res);
 					return res;
 				});
 
@@ -52,7 +55,7 @@
 	<h1 class="text-xl mb-3">OECD Toolbox</h1>
 	<div class=" ">
 		<div class="flex">
-			{#await profilingPromise}
+			<!-- {#await profilingPromise}
 				<div>Loading...</div>
 			{:then result}
 				<div style="min-width:50%; max-width:50%" class="pr-6">
@@ -63,7 +66,13 @@
 				</div>
 			{:catch error}
 				error: {error}
-			{/await}
+			{/await} -->
+			<div style="min-width:50%; max-width:50%" class="pr-6">
+				<SelectProfilers data={profilingEx} />
+			</div>
+			<div style="min-width:50%; max-width:50%" class="pl-6">
+				<SelectData data={dataEx} />
+			</div>
 		</div>
 	</div>
 </div>

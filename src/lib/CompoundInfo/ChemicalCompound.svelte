@@ -6,8 +6,6 @@
 	import { constructQuery, getSparqlQueryString } from '$lib/sparql';
 	import Expandable from '$lib/Expandable.svelte';
 	import { casRegex, smilesRegex } from '$lib/chemRegexes';
-	import ArrowRightSFill from 'svelte-remixicon/lib/icons/ArrowRightSFill.svelte';
-	import AttrElement from '$lib/element-list/attrElement.svelte';
 	import { CHEMICAL_IDENTITY } from '$lib/endpoint_constants';
 
 	let inputVal = 'C1=CC=C(C(=C1)NCCO)[N+](=O)[O-]';
@@ -36,6 +34,7 @@
 				console.log('res', res);
 				return {
 					...res,
+					...sparqlQueryArg,
 					imgSrc: e,
 					type: 'compound'
 				};
@@ -43,7 +42,7 @@
 		}}
 	>
 		<div class="text-lg ">
-			<label for="compound">‘CAS No’ or ‘INCI ’ or ‘ SMILES’</label>
+			<label for="compound">‘CAS No’ or ‘INCI ’ or ‘SMILES’</label>
 			<input bind:value={inputVal} class="border m-1" type="text" id="compound" name="compound" />
 			<button class="border m-1 px-1" type="submit">Go!</button>
 		</div>

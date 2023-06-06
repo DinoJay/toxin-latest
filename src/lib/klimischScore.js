@@ -20,6 +20,11 @@ function klimischScore(study) {
 
 
     //Q4
+    if (study.endpoint === 'acute-toxicity') {
+        if (!)
+
+    }
+
     if (study.endpoint === 'repeated-toxicity') {
         if (!['OECD 412', 'OECD 413', 'OECD 422'].includes(study.guidelineLabel))
             totalScore += 1;
